@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap');
+
+/* Estilos padrão -------------------------------------------------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Inria Sans', sans-serif;
+}
+
 .content{
     width: 100%;
     background-color: #fff;
@@ -11,15 +28,65 @@
     align-items: center;
 }
 
-.login-content{
-    width: 50%;
-    padding: 1%;
+.square-content{
+    width: var(--_content-width);
+    padding: 2%;
     background-color: #fff;
-    border-radius: 3%;
+    border-radius: 10%;
     height: auto;
+    box-shadow: 2px 2px 2px 1px #00000033;
 }
 
-.login-logo{
-    margin: 2vh auto;
-    width: 300px;
+/* Login ------------------------------------------------------------------------------------- */
+
+.square-content--login{
+    --_content-width: 400px;
+}
+
+img.login-logo{
+    display: block;
+    margin: 5vh auto;
+    width: 200px;
+}
+
+.login-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -15%;
+}
+
+a.login-link{
+    color: #000;
+    text-decoration: underline;
+    margin: 8vh auto;
+}
+
+.mb-3 b{
+    color: #ff0000;
+}
+
+.btn{
+    width: 100% !important;
+    text-align: center !important;
+}
+
+/* Opcções --------------------------------------------------------------------------------- */
+
+.opcoes-content{
+    border: 2px solid red;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcoes-content img{
+    width: 50%;
+}
+
+.square-content--opcoes{
+    --_content-width: 100px;
 }

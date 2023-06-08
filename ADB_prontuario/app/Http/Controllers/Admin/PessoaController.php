@@ -10,4 +10,8 @@ class PessoaController extends Controller
     public function login(){
         return view('admin.login');
     }
+
+    public function opcoes(){
+        return view('admin.opcoes');
+    }
 }

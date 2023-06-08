@@ -9,8 +9,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 
+    <link rel="icon" type="imagem/png" href="{{asset('images/logo_ADB.png')}}">
+
     <title>@yield('titulo-pagina')</title>
 </head>
 <body>
-    <div class="content">
+    <main class="content">
         
