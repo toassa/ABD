@@ -1,0 +1,25 @@
+.content{
+    width: 100%;
+    background-color: #fff;
+    background-image: url('../images/fundo.png');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    /* Alinha ao centro horizontalmente */
+    justify-content: center;
+    /* Alinha ao centro verticalmente */
+    align-items: center;
+}
+
+.login-content{
+    width: 50%;
+    padding: 1%;
+    background-color: #fff;
+    border-radius: 3%;
+    height: auto;
+}
+
+.login-logo{
+    margin: 2vh auto;
+    width: 300px;
+}

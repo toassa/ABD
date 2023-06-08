@@ -1,0 +1,14 @@
+.content{
+    width: 100%;
+    min-height: 100hv;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-content{
+    width: 50%;
+    position: absolute;
+    margin: 0 0;
+    border: 1px solid red;
+}
