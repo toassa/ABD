@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap');
 
+:root{
+    /* Font family */
+    --font-family: 'Inria Sans';
+
+    /* Font colors */
+    --background-color: #fff;
+    --text-color: #000;
+    --text-shadow-color: #808080;
+
+    /* Font sizes */
+    --size-h2: 1.3rem;
+    --size-label-form: 1.1rem;
+
+    /* Div colors */
+    --box-shadow-color: #00000033;
+}
+
 /* Estilos padrão -------------------------------------------------------------------------------- */
 
 *{
@@ -12,12 +29,12 @@
 
 body{
     overflow-x: hidden;
-    font-family: 'Inria Sans', sans-serif;
+    font-family: var(--font-family, sans-serif);
 }
 
 .content{
     width: 100%;
-    background-color: #fff;
+    background-color: var(--background-color);
     background-image: url('../images/fundo.png');
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -29,10 +46,9 @@ body{
 }
 
 .square-content{
-    width: var(--_content-width);
     padding: 2%;
-    background-color: #fff;
-    border-radius: 10%;
+    background-color: var(--background-color);
+    border-radius: 20px;
     height: auto;
     box-shadow: 2px 2px 2px 1px #00000033;
 }
@@ -40,7 +56,7 @@ body{
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
-    --_content-width: 400px;
+    width: 30%;
 }
 
 img.login-logo{
@@ -64,6 +80,10 @@ a.login-link{
     margin: 8vh auto;
 }
 
+.mb-3{
+    font-size: var(--size-label-form);
+}
+
 .mb-3 b{
     color: #ff0000;
 }
@@ -73,10 +93,28 @@ a.login-link{
     text-align: center !important;
 }
 
+/* Logout ---------------------------------------------------------------------------------  */
+
+.leave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.leave a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.leave img{
+    width: 35px;
+}
+
+
 /* Opcções --------------------------------------------------------------------------------- */
 
 .opcoes-content{
-    border: 2px solid red;
     width: 70%;
     display: flex;
     justify-content: center;
@@ -84,9 +122,28 @@ a.login-link{
 }
 
 .opcoes-content img{
-    width: 50%;
+    width: 60%;
 }
 
 .square-content--opcoes{
-    --_content-width: 100px;
+    width: 40%;
+    text-align: center;
+    padding: 5%;
+}
+
+.square-content--opcoes h2{
+    color: var(--text-color);
+    text-shadow: 1px 0.5px 2px var(--text-shadow-color);
+    font-size: var(--size-h2);
+}
+
+.square-content--opcoes button{
+    color: #2424ff;
+    background-color: var(--background-color);
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    border: 1px solid var(--box-shadow-color);
+    border-radius: 8px;
+    margin: 30px auto;
+    padding: 10px;
+    width: 200px;
 }
