@@ -11,6 +11,8 @@ class Pessoa extends Model
 
     protected $table = 'pessoas';
 
+    protected $primaryKey = 'num_USP';
+
     protected $fillable = [
         'num_USP',
         'nome',

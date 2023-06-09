@@ -137,7 +137,7 @@ a.login-link{
     font-size: var(--size-h2);
 }
 
-.square-content--opcoes button{
+.button-opcoes{
     color: #2424ff;
     background-color: var(--background-color);
     box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
@@ -146,4 +146,6 @@ a.login-link{
     margin: 30px auto;
     padding: 10px;
     width: 200px;
+    text-decoration: none;
+    display: block;
 }

@@ -13,6 +13,14 @@ class PessoaController extends Controller
     }
 
     public function opcoes(){
-        return view('admin.opcoes');
+        return view('admin.opcoes.index');
+    }
+
+    public function opcoes_pacientes(){
+        return view('admin.opcoes.pacientes');
+    }
+
+    public function opcoes_pessoas(){
+        return view('admin.opcoes.pessoas');
     }
 }
