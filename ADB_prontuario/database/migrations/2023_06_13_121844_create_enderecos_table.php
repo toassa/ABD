@@ -12,7 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('enderecos', function (Blueprint $table) {
-            $table->
+            $table->string('CEP');
+            $table->string('numero');
+
+            $table->primary(['CEP', 'numero']);
+
+            $table->string('rua');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->text('complemento');
+
             $table->timestamps();
         });
     }

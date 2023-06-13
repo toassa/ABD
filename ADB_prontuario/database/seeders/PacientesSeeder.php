@@ -33,6 +33,8 @@ class PacientesSeeder extends Seeder
             'pertence_segundo_telefone' => 'Sim',
             'data_entrada' => '01/01/2023',
             'ativo' => true,
+            'FK_CEP'=>'11111111111',
+            'FK_numero'=>'326',
             'FK_num_USP' => '1111',
         ]);
     }

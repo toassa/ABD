@@ -31,6 +31,11 @@ class Paciente extends Model
         'segundo_telefone',
         'pertence_segundo_telefone',
         'data_entrada',
+        'ativo',
+        'estado_nascimento',
+        'cidade_nascimento',
+        'FK_CEP',
+        'FK_numero',
         'FK_num_USP',
     ];
 }
