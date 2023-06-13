@@ -21,5 +21,6 @@ class Pessoa extends Model
         'senha',
         'cargo',
         'administrador',
+        'ativo',
     ];
 }

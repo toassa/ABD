@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->string('num_USP')->primary();
+
             $table->string('nome');
             $table->string('CPF');
             $table->string('email_USP')->unique();
@@ -20,6 +21,9 @@ return new class extends Migration
             $table->rememberToken();
             $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
             $table->boolean('administrador');
+
+            $table->boolean('ativo');
+            
             $table->timestamps();
         });
     }
