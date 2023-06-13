@@ -19,6 +19,7 @@ class PessoasSeeder extends Seeder
             'senha'=>bcrypt('123456'),
             'cargo'=>'aluno',
             'administrador'=>true,
+            'ativo'=>true,
         ]);
     }
 }

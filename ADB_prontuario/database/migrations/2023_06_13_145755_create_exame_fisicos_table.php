@@ -11,10 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exame_fisicos', function (Blueprint $table) {
-            $table->string('num_registro');
-            $table->timestamps();
-        });
+        // Schema::create('exame_fisicos', function (Blueprint $table) {
+        //     $table->string('num_registro');
+        //     $table->double('circunferencia_pescoco');
+        //     $table->string('sistema_digestivo');
+        //     $table->text('consideracoes_outros_sistemas');
+        //     $table->int('pressao_arterial');
+        //     $table->double('circunferencia_quadril');
+        //     $table->string('sistema_venoso');
+        //     $table->string('pulso_arteriais');
+        //     $table->double('altura');
+        //     $table->string('sistema_cardiovascular');
+        //     $table->int('frequencia_cardiaca');
+        //     $table->string('cabeca_pescoco');
+        //     $table->string('sistema_respiratorio');
+        //     $table->string('apecto_geral');
+        //     $table->double('peso');
+        //     $table->timestamps();
+        // });
     }
 
     /**
