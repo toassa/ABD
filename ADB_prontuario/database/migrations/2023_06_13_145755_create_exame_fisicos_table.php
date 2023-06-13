@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('exame_fisicos', function (Blueprint $table) {
-            $table->
+            $table->string('num_registro');
             $table->timestamps();
         });
     }
