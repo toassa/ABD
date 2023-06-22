@@ -11,17 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Schema::create('dietas', function (Blueprint $table) {
-        //     //$table->enum('tipo', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicemico','Outros']);
-        //     // $table->boolean('Segue dieta');
-        //      //$table->enum('Dificuldade dieta', ['Deixar de comer doces', 'Comer verduras, legumes e frutas', 'Respeitar a quantidade de alimentação', 'Respeitar o horário da alimentação', 'Entender lista de substituição de alimentos', 'Outros']);
-                //$table->integer('Número de consultas com nutricionista no último ano');
-                //$table->boolean('Consulta nutricionista?');
-                //$table->enum('Orientador', ['Nutricionista', 'Médico', 'Outro profissional da saúde', 'Leigo', 'Revistas/jornais', 'Internet', 'Outros']);
-                //$table->boolean('Consome dietéticos?');
-                //$table->enum('Quais dietéticos consome?', ['Adoçante', 'Gelatina', 'Pudim', 'Sorvete', 'Refrigerante', 'Bolo', 'Outros']);
-        //     $table->timestamps();
-        // });
+        Schema::create('dietas', function (Blueprint $table) {
+            $table->string('num_USP')->primary();
+            $table->foreign('num_USP')->references('num_USP')->on('pessoas')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->enum('tipo_dieta', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicêmico','Outros']);
+            $table->integer('segue_dieta');
+            $table->boolean('realiza');
+            $table->string('dificuldade_dieta');
+            $table->integer('frequencia_nutricionista');
+            $table->boolean('consulta_nutricionista');
+            $table->string('orientador');
+            $table->boolean('consome_dieteticos');
+            $table->string('produtos_dieteticos');
+
+            $table->timestamps();
+        });
     }
 
     /**

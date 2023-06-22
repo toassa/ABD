@@ -15,7 +15,7 @@ class ExamesFisicosSeeder extends Seeder
     public function run(): void
     {
         ExameFisico::create([
-                'num_registro' => '123456',
+                'num_USP' => '11111',
                 'circunferencia_pescoco' => 35.5,
                 'sistema_digestivo' => 'Normal',
                 'consideracoes_outros_sistemas' => 'Sem alterações',

@@ -12,7 +12,7 @@ class PessoasSeeder extends Seeder
     public function run(): void
     {
         Pessoa::create([
-            'num_USP'=>'1111',
+            'num_USP'=>'11111',
             'nome'=> 'Raissa Toassa Martinelli',
             'CPF'=>'78878787878',
             'email_USP'=>'raissa.toassa@unesp.br',

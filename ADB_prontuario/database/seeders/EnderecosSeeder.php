@@ -16,7 +16,7 @@ class EnderecosSeeder extends Seeder
     {
         Endereco::create([
             'CEP'=>'12345-678',
-            'numero'=>'123',
+            'numero'=>'326',
             'rua'=>'Rua das Flores',
             'bairro'=>'Centro',
             'cidade'=>'São Paulo',

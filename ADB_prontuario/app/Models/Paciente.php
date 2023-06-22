@@ -11,10 +11,10 @@ class Paciente extends Model
 
     protected $table = 'pacientes';
 
-    protected $primaryKey = 'num_registro';
+    protected $primaryKey = 'num_USP';
 
     protected $fillable = [
-        'num_registro',
+        'num_USP',
         'nome',
         'data_nascimento',
         'idade',

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\ExameFisico;
+use App\Models\Dieta;
 
 class Pessoa extends Model
 {
@@ -23,4 +25,14 @@ class Pessoa extends Model
         'administrador',
         'ativo',
     ];
+
+    public function exame_fisicos()
+    {
+        return $this->hasOne(ExameFisico::class, 'num_USP', 'num_USP');
+    }
+
+    public function dietas()
+    {
+        return $this->hasOne(Dieta::class, 'num_USP', 'num_USP');
+    }
 }

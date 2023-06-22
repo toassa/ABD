@@ -15,7 +15,7 @@ class PacientesSeeder extends Seeder
     public function run(): void
     {
         Pessoa::create([
-            'num_registro' => '123456',
+            'num_USP' => '11111',
             'nome' => 'Ednaldo Pereira',
             'data_nascimento' => '12/12/2000',
             'idade' => 60,  
@@ -33,9 +33,9 @@ class PacientesSeeder extends Seeder
             'pertence_segundo_telefone' => 'Sim',
             'data_entrada' => '01/01/2023',
             'ativo' => true,
-            'FK_CEP'=>'11111111111',
+            'FK_CEP'=>'12345-678',
             'FK_numero'=>'326',
-            'FK_num_USP' => '1111',
+            'FK_num_USP' => '11111',
         ]);
     }
 }
