@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use APP\Models\ExameFisico;
+use App\Models\ExameFisico;
 
 class ExamesFisicosSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class ExamesFisicosSeeder extends Seeder
     public function run(): void
     {
         ExameFisico::create([
-                'num_USP' => '11111',
+                'num_registro' => '11111',
                 'circunferencia_pescoco' => 35.5,
                 'sistema_digestivo' => 'Normal',
                 'consideracoes_outros_sistemas' => 'Sem alterações',

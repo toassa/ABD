@@ -13,6 +13,10 @@ class Endereco extends Model
 
     protected $primaryKey = ['CEP', 'numero'];
 
+    protected $keyType = 'string';
+
+    public $increments = false;
+
     protected $fillable = [
         'CEP',
         'numero',
@@ -22,4 +26,19 @@ class Endereco extends Model
         'estado',
         'complemento',
     ];
+
+    public function getIncrementing()
+    {
+        return false;
+    }
+
+    public function getKeyName()
+    {
+        return ['CEP', 'numero'];
+    }
+
+    public function exame_fisicos()
+    {
+        return $this->hasMany(ExameFisico::class, ['CEP', 'numero'], ['CEP', 'numero']);
+    }
 }

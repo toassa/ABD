@@ -14,8 +14,10 @@ class Dieta extends Model
 
     protected $primaryKey = 'num_USP';
 
+    public $increments = false;
+
     protected $fillable = [
-        'num_USP',
+        'num_registro',
         'tipo_dieta',
         'segue_dieta',
         'realiza',
@@ -27,8 +29,8 @@ class Dieta extends Model
         'produtos_dieteticos',
     ];
 
-    public function pessoas()
+    public function pacientes()
     {
-        return $this->belongsTo(Pessoa::class, 'num_USP', 'num_USP');
+        return $this->belongsTo(Pessoa::class, 'num_registro', 'num_registro');
     }
 }

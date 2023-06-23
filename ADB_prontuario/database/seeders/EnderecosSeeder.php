@@ -15,7 +15,7 @@ class EnderecosSeeder extends Seeder
     public function run(): void
     {
         Endereco::create([
-            'CEP'=>'12345-678',
+            'CEP'=>'12345678',
             'numero'=>'326',
             'rua'=>'Rua das Flores',
             'bairro'=>'Centro',

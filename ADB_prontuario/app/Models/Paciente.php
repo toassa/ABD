@@ -11,10 +11,12 @@ class Paciente extends Model
 
     protected $table = 'pacientes';
 
-    protected $primaryKey = 'num_USP';
+    protected $primaryKey = 'num_registro';
+
+    public $increments = false;
 
     protected $fillable = [
-        'num_USP',
+        'num_registro',
         'nome',
         'data_nascimento',
         'idade',
@@ -34,8 +36,28 @@ class Paciente extends Model
         'ativo',
         'estado_nascimento',
         'cidade_nascimento',
-        'FK_CEP',
-        'FK_numero',
-        'FK_num_USP',
+        'CEP',
+        'numero',
+        'num_USP',
     ];
+
+    public function pessoas()
+    {
+        return $this->belongsTo(Pessoa::class, 'num_USP', 'num_USP');
+    }
+
+    public function enderecos()
+    {
+        return $this->belongsTo(Pessoa::class, ['CEP', 'numero'], ['CEP', 'numero']);
+    }
+
+    public function exame_fisicos()
+    {
+        return $this->hasOne(ExameFisico::class, 'num_registro', 'num_registro');
+    }
+
+    public function dietas()
+    {
+        return $this->hasOne(Dieta::class, 'num_registro', 'num_registro');
+    }
 }

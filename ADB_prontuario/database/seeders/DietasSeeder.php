@@ -15,7 +15,7 @@ class DietasSeeder extends Seeder
     public function run(): void
     {
         Dieta::create([
-            'num_USP' => '11111',
+            'num_registro' => '11111',
             'tipo_dieta' => 'Restringe apenas açúcar e doce',
             'segue_dieta' => 2,
             'realiza' => true,

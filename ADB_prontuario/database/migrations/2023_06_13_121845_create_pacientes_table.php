@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->string('num_USP')->primary();
+            $table->string('num_registro')->primary();
 
             $table->string('nome');
             $table->string('data_nascimento');
@@ -36,14 +36,14 @@ return new class extends Migration
 
             $table->boolean('ativo');
 
-            $table->string('FK_CEP');
-            $table->foreign('FK_CEP')->constrained()->references('CEP')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('CEP');
+            $table->foreign('CEP')->constrained()->references('CEP')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('FK_numero');
-            $table->foreign('FK_numero')->constrained()->references('numero')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('numero');
+            $table->foreign('numero')->constrained()->references('numero')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('FK_num_USP');
-            $table->foreign('FK_num_USP')->constrained()->references('num_USP')->on('pessoas')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('num_USP');
+            $table->foreign('num_USP')->constrained()->references('num_USP')->on('pessoas')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

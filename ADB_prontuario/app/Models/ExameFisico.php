@@ -12,12 +12,12 @@ class ExameFisico extends Model
 
     protected $table = 'exame_fisicos';
 
-    protected $primaryKey = ['num_USP'];
+    protected $primaryKey = 'num_registro';
 
     public $increments = false;
 
     protected $fillable = [
-        'num_USP',
+        'num_registro',
         'peso',
         'altura',
         'pressao_arterial',
@@ -34,8 +34,8 @@ class ExameFisico extends Model
         'cosidereacoes_outros_sistemas',
     ];
 
-    public function pessoas()
+    public function pacientes()
     {
-        return $this->belongsTo(Pessoa::class, 'num_USP', 'num_USP');
+        return $this->belongsTo(Pessoa::class, 'num_registro', 'num_registro');
     }
 }

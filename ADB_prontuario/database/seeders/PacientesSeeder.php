@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\Pessoa;
+use App\Models\Paciente;
 
 class PacientesSeeder extends Seeder
 {
@@ -14,13 +14,13 @@ class PacientesSeeder extends Seeder
      */
     public function run(): void
     {
-        Pessoa::create([
-            'num_USP' => '11111',
+        Paciente::create([
+            'num_registro' => '11111',
             'nome' => 'Ednaldo Pereira',
             'data_nascimento' => '12/12/2000',
             'idade' => 60,  
             'sexo' => 'Masculino',
-            'cor' => 'Branca',
+            'cor' => 'Branco',
             'estado_civil' => 'Solteiro',
             'profissao' => 'Motorista',
             'escolaridade' => 'Ensino Médio',
@@ -31,11 +31,12 @@ class PacientesSeeder extends Seeder
             'telefone' => '987654321',
             'segundo_telefone' => '123456789',
             'pertence_segundo_telefone' => 'Sim',
-            'data_entrada' => '01/01/2023',
+            'estado_nascimento'=>'Sergipe',
+            'cidade_nascimento'=>'Aracaju',
             'ativo' => true,
-            'FK_CEP'=>'12345-678',
-            'FK_numero'=>'326',
-            'FK_num_USP' => '11111',
+            'CEP'=>'12345678',
+            'numero'=>'326',
+            'num_USP' => '11111',
         ]);
     }
 }
