@@ -11,21 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pessoas', function (Blueprint $table) {
-            $table->string('num_USP')->primary();
+        // Schema::create('pessoas', function (Blueprint $table) {
+        //     $table->string('num_USP')->primary();
 
-            $table->string('nome');
-            $table->string('CPF');
-            $table->string('email_USP')->unique();
-            $table->string('senha');
-            $table->rememberToken();
-            $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
-            $table->boolean('administrador');
+        //     $table->string('nome');
+        //     $table->string('CPF');
+        //     $table->string('email_USP')->unique();
+        //     $table->string('senha');
+        //     $table->rememberToken();
+        //     $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
+        //     $table->boolean('administrador');
 
-            $table->boolean('ativo');
+        //     $table->boolean('ativo');
             
-            $table->timestamps();
-        });
+        //     $table->timestamps();
+        // });
     }
 
     /**

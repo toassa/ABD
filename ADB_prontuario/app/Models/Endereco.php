@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Paciente;
 
 class Endereco extends Model
 {
@@ -39,6 +40,6 @@ class Endereco extends Model
 
     public function exame_fisicos()
     {
-        return $this->hasMany(ExameFisico::class, ['CEP', 'numero'], ['CEP', 'numero']);
+        return $this->hasMany(Paciente::class, ['CEP', 'numero'], ['CEP', 'numero']);
     }
 }

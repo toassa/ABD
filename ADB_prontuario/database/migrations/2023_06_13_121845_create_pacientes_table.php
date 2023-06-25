@@ -43,7 +43,7 @@ return new class extends Migration
             $table->foreign('numero')->constrained()->references('numero')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('num_USP');
-            $table->foreign('num_USP')->constrained()->references('num_USP')->on('pessoas')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('num_USP')->constrained()->references('num_USP')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

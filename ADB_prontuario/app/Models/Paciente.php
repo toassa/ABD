@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Paciente extends Model
 {
@@ -12,6 +13,8 @@ class Paciente extends Model
     protected $table = 'pacientes';
 
     protected $primaryKey = 'num_registro';
+
+    protected $keyType = 'string';
 
     public $increments = false;
 
@@ -41,14 +44,14 @@ class Paciente extends Model
         'num_USP',
     ];
 
-    public function pessoas()
+    public function users()
     {
-        return $this->belongsTo(Pessoa::class, 'num_USP', 'num_USP');
+        return $this->belongsTo(User::class, 'num_USP', 'num_USP');
     }
 
     public function enderecos()
     {
-        return $this->belongsTo(Pessoa::class, ['CEP', 'numero'], ['CEP', 'numero']);
+        return $this->belongsTo(Endereco::class, ['CEP', 'numero'], ['CEP', 'numero']);
     }
 
     public function exame_fisicos()
@@ -59,5 +62,10 @@ class Paciente extends Model
     public function dietas()
     {
         return $this->hasOne(Dieta::class, 'num_registro', 'num_registro');
+    }
+
+    public function dado_ginecologicos()
+    {
+        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
     }
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Pessoa;
+use App\Models\Paciente;
 
 class ExameFisico extends Model
 {
@@ -13,6 +13,8 @@ class ExameFisico extends Model
     protected $table = 'exame_fisicos';
 
     protected $primaryKey = 'num_registro';
+
+    protected $keyType = 'string';
 
     public $increments = false;
 
@@ -36,6 +38,6 @@ class ExameFisico extends Model
 
     public function pacientes()
     {
-        return $this->belongsTo(Pessoa::class, 'num_registro', 'num_registro');
+        return $this->belongsTo(Paciente::class, 'num_registro', 'num_registro');
     }
 }

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dietas', function (Blueprint $table) {
-            $table->string('num_USP')->primary();
-            $table->foreign('num_USP')->references('num_USP')->on('pessoas')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('num_registro')->primary();
+            $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
             $table->enum('tipo_dieta', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicêmico','Outros']);
             $table->integer('segue_dieta');

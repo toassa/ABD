@@ -15,6 +15,8 @@ class Pessoa extends Model
 
     protected $primaryKey = 'num_USP';
 
+    protected $keyType = 'string';
+
     public $increments = false;
 
     protected $fillable = [
@@ -28,8 +30,8 @@ class Pessoa extends Model
         'ativo',
     ];
 
-    public function pacientes()
-    {
-        return $this->hasMany(ExameFisico::class, 'num_USP', 'num_USP');
-    }
+    // public function pacientes()
+    // {
+    //     return $this->hasMany(Paciente::class, 'num_USP', 'num_USP');
+    // }
 }
