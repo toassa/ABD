@@ -7,25 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Paciente;
 
-class NascimentoDado extends Model
+class Comorbidade extends Model
 {
     use HasFactory;
 
-    protected $table = 'nascimento_dados';
+    protected $table = 'comorbidades';
 
     protected $primaryKey = 'num_registro';
 
     protected $keyType = 'string';
 
     public $increments = false;
-    
+
     protected $fillable = [
         'num_registro',
-        'amamentacao_exclusiva',
-        'tempo_amamentacao',
-        'ordem', 
-        'tipo_parto',
-        'peso'
+        'ocular',
+        'neuropatia',
+        'doenca_cronica',
     ];
 
     public function pacientes()

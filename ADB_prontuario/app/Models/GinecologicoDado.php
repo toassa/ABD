@@ -7,25 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Paciente;
 
-class NascimentoDado extends Model
+class GinecologicoDado extends Model
 {
     use HasFactory;
 
-    protected $table = 'nascimento_dados';
+    protected $table = 'ginecologico_dados';
 
     protected $primaryKey = 'num_registro';
 
     protected $keyType = 'string';
 
     public $increments = false;
-    
+
     protected $fillable = [
         'num_registro',
-        'amamentacao_exclusiva',
-        'tempo_amamentacao',
-        'ordem', 
-        'tipo_parto',
-        'peso'
+        'idade_menopausa',
+        'idade_menstruacao',
+        'menopausa_cirurgica',
+        'historico_obstetrico',
+        'uso_metodos_contraceptivos',
+        'metodos_contraceptivos',
+        'mamografia',
+        'papanicolau',
+        'frequencia_ginecologica',
     ];
 
     public function pacientes()

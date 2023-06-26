@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('dado_ginecologicos', function (Blueprint $table) {
+        Schema::create('ginecologico_dados', function (Blueprint $table) {
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
@@ -26,11 +26,8 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('dado_ginecologicos');
+        Schema::dropIfExists('ginecologico_dados');
     }
 };

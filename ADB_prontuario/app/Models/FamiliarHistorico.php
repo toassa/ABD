@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 use App\Models\Paciente;
 
-class DadoGinecologico extends Model
+class FamiliarHistorico extends Model
 {
     use HasFactory;
 
-    protected $table = 'dado_ginecologicos';
+    protected $table = 'familiar_historicos';
 
     protected $primaryKey = 'num_registro';
 
@@ -20,15 +21,18 @@ class DadoGinecologico extends Model
 
     protected $fillable = [
         'num_registro',
-        'idade_menopausa',
-        'idade_menstruacao',
-        'menopausa_cirurgica',
-        'historico_obstetrico',
-        'uso_metodos_contraceptivos',
-        'metodos_contraceptivos',
-        'mamografia',
-        'papanicolau',
-        'frequencia_ginecologica',
+        'dm',
+        'possui_dm1',
+        'dm1',
+        'obesidade',
+        'vitiligo',
+        'doenca_tireoideana',
+        'displidemia',
+        'alopecia',
+        'artrite_reumatoide',
+        'doenca_coronariana',
+        'has',
+        'doenca_celiaca',
     ];
 
     public function pacientes()

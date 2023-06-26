@@ -4,13 +4,14 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\DadoGinecologico;
 
-class DadosGinecologicosSeeder extends Seeder
+use App\Models\GinecologicoDado;
+
+class GinecologicoDadosSeeder extends Seeder
 {
     public function run(): void
     {
-        DadoGinecologico::create([
+        GinecologicoDado::create([
             'num_registro'=>'11111',
             'idade_menopausa'=>'53',
             'idade_menstruacao'=>'17',

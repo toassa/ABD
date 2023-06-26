@@ -64,12 +64,27 @@ class Paciente extends Model
         return $this->hasOne(Dieta::class, 'num_registro', 'num_registro');
     }
 
-    public function dado_ginecologicos()
+    public function ginecologico_dados()
+    {
+        return $this->hasOne(GinecologicoDado::class, 'num_registro', 'num_registro');
+    }
+
+    public function internacoes_historicos()
     {
         return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
     }
 
-    public function internacoes_historicos()
+    public function nascimento_dados()
+    {
+        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+    }
+
+    public function comorbidades()
+    {
+        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+    }
+
+    public function familiar_historicos()
     {
         return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
     }
