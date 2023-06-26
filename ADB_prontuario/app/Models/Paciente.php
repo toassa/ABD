@@ -68,4 +68,9 @@ class Paciente extends Model
     {
         return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
     }
+
+    public function internacoes_historicos()
+    {
+        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+    }
 }

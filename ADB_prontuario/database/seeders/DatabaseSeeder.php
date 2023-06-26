@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\ExameFisico;
+use App\Models\InternacoesHistorico;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,7 +18,8 @@ class DatabaseSeeder extends Seeder
             // PacientesSeeder::class,
             // ExamesFisicosSeeder::class,
             // DietasSeeder::class
-            DadosGinecologicosSeeder::class,
+            // DadosGinecologicosSeeder::class,
+            InternacoesHistoricosSeeder::class,
         ]);
     }
 }
