@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
             NascimentoDadosSeeder::class,
             ComorbidadesSeeder::class,
             FamiliarHistoricosSeeder::class,
+            FrequenciaAcompanhamentosSeeder::class,
+            PesExamesSeeder::class,
+            AutomonitorizacaoGlicemiaSeeder::class,
         ]);
     }
 }

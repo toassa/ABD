@@ -71,21 +71,37 @@ class Paciente extends Model
 
     public function internacoes_historicos()
     {
-        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+        return $this->hasOne(InternacoesHistorico::class, 'num_registro', 'num_registro');
     }
 
     public function nascimento_dados()
     {
-        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+        return $this->hasOne(NascimentoDado::class, 'num_registro', 'num_registro');
     }
 
     public function comorbidades()
     {
-        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+        return $this->hasOne(Comorbidade::class, 'num_registro', 'num_registro');
     }
 
     public function familiar_historicos()
     {
-        return $this->hasOne(DadoGinecologico::class, 'num_registro', 'num_registro');
+        return $this->hasOne(FamiliarHistorico::class, 'num_registro', 'num_registro');
     }
+
+    public function frequencia_acompanhamentos()
+    {
+        return $this->hasOne(FrequenciaAcompanhamento::class, 'num_registro', 'num_registro');
+    }
+
+    public function pes_exames()
+    {
+        return $this->hasOne(PesExame::class, 'num_registro', 'num_registro');
+    }
+    
+    public function automonitorizacao_glicemias()
+    {
+        return $this->hasOne(Automonitorizacao_glicemia::class, 'num_registro', 'num_registro');
+    }
+
 }
