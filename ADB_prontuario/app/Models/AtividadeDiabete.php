@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dieta extends Model
+class AtividadeDiabete extends Model
 {
     use HasFactory;
 
-    protected $table = 'dietas';
+    protected $table = 'atividade_diabetes';
 
     protected $primaryKey = 'num_registro';
 
@@ -19,15 +19,15 @@ class Dieta extends Model
 
     protected $fillable = [
         'num_registro',
-        'tipo_dieta',
-        'segue_dieta',
-        'realiza',
-        'dificuldade_dieta',
-        'frequencia_nutricionista',
-        'consulta_nutricionista',
-        'orientador',
-        'consome_dieteticos',
-        'produtos_dieteticos',
+        'consultas_enfermagem',
+        'finalidade_consulta',
+        'reunioes_diabeticos',
+        'programas_educacao_diabeticos',
+        'conhece_hba1c',
+        'significado_hba1c',
+        'valor_maximo_hba1c',
+        'conhece_valor_ultima_hba1c',
+        'valor_ultima_hba1c',
     ];
 
     public function pacientes()

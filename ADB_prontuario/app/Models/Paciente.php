@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
 
 class Paciente extends Model
 {
@@ -101,7 +100,17 @@ class Paciente extends Model
     
     public function automonitorizacao_glicemias()
     {
-        return $this->hasOne(Automonitorizacao_glicemia::class, 'num_registro', 'num_registro');
+        return $this->hasOne(AutomonitorizacaoGlicemia::class, 'num_registro', 'num_registro');
+    }
+
+    public function cardiovascular_dados()
+    {
+        return $this->hasOne(CardiovascularDado::class, 'num_registro', 'num_registro');
+    }
+
+    public function atividade_diabetes()
+    {
+        return $this->hasOne(AtividadeDiabete::class, 'num_registro', 'num_registro');
     }
 
 }

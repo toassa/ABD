@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Automonitorizacao_glicemia extends Model
+class AutomonitorizacaoGlicemia extends Model
 {
     use HasFactory;
 

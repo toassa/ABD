@@ -14,19 +14,23 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            UsersSeeder::class,
-            EnderecosSeeder::class,
-            PacientesSeeder::class,
-            ExamesFisicosSeeder::class,
-            DietasSeeder::class,
-            GinecologicoDadosSeeder::class,
-            InternacoesHistoricosSeeder::class,
-            NascimentoDadosSeeder::class,
-            ComorbidadesSeeder::class,
-            FamiliarHistoricosSeeder::class,
-            FrequenciaAcompanhamentosSeeder::class,
-            PesExamesSeeder::class,
-            AutomonitorizacaoGlicemiaSeeder::class,
+            // UsersSeeder::class,
+            // EnderecosSeeder::class,
+            // PacientesSeeder::class,
+            // ExamesFisicosSeeder::class,
+            // DietasSeeder::class,
+            // GinecologicoDadosSeeder::class,
+            // InternacoesHistoricosSeeder::class,
+            // NascimentoDadosSeeder::class,
+            // ComorbidadesSeeder::class,
+            // FamiliarHistoricosSeeder::class,
+            // FrequenciaAcompanhamentosSeeder::class,
+            // PesExamesSeeder::class,
+            // AutomonitorizacaoGlicemiasSeeder::class,
+            // CardiovascularDadosSeeder::class,
+            // AtividadeDiabetesSeeder::class,
+            HabitosVidasSeeder::class,
+            ExercicioFisicosSeeder::class,
         ]);
     }
 }

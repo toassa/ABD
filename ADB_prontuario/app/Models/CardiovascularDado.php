@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dieta extends Model
+class CardiovascularDado extends Model
 {
     use HasFactory;
 
-    protected $table = 'dietas';
+    protected $table = 'cardiovascular_dados';
 
     protected $primaryKey = 'num_registro';
 
@@ -19,15 +19,9 @@ class Dieta extends Model
 
     protected $fillable = [
         'num_registro',
-        'tipo_dieta',
-        'segue_dieta',
-        'realiza',
-        'dificuldade_dieta',
-        'frequencia_nutricionista',
-        'consulta_nutricionista',
-        'orientador',
-        'consome_dieteticos',
-        'produtos_dieteticos',
+        'saude_cardiaca',
+        'dor_peito',
+        'exames_doenca_coronariana',
     ];
 
     public function pacientes()
