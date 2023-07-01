@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\ExameFisico;
-use App\Models\FamiliarHistorico;
-use App\Models\InternacoesHistorico;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -29,8 +26,9 @@ class DatabaseSeeder extends Seeder
             // AutomonitorizacaoGlicemiasSeeder::class,
             // CardiovascularDadosSeeder::class,
             // AtividadeDiabetesSeeder::class,
-            HabitosVidasSeeder::class,
-            ExercicioFisicosSeeder::class,
+            // HabitosVidasSeeder::class,
+            // ExercicioFisicosSeeder::class,
+            NeuropaticoComprometimentosSeeder::class,
         ]);
     }
 }
