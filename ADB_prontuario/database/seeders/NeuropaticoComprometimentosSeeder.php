@@ -11,7 +11,7 @@ class NeuropaticoComprometimentosSeeder extends Seeder
 {
     public function run(): void
     {
-        NeuropaticoComprometimento::class([
+        NeuropaticoComprometimento::create([
             'num_registro'=>'11111',
             'reflexo_aquileu_direito'=>'Presente',
             'reflexo_aquileu_esquerdo'=>'Presente ao esforço',
