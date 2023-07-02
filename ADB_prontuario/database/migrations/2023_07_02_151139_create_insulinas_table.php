@@ -9,8 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('insulinas', function (Blueprint $table) {
-            $table->string('num_registro')->primary();
-
+            $table->string('nome_insulina')->primary();
             $table->timestamps();
         });
     }

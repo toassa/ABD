@@ -12,11 +12,10 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('aderencia');
-            $table->boolean('uso_medicamentos');
             $table->boolean('uso_insulina');
             $table->string('tipos_insulinas');
-            $table->string('nome_insulinas');
+            $table->string('nome_insulina');
+            $table->foreign('nome_insulina')->references('nome_insulina')->on('insulinas')->onDelete('cascade')->onUpdate('cascade');
             $table->string('frequencia');
             $table->string('dose');
             $table->string('origem_insulinas');
