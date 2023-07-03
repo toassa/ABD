@@ -17,6 +17,8 @@ class TratamentosSeeder extends Seeder
             'uso_insulina'=>false,
             'tipos_insulinas'=>null,
             'nome_insulina'=>null,
+            'frequencia_insulina'=>'3 vezes/dia',
+            'dose_insulina'=>'4 mg',
             'origem_insulinas'=>null,
             'origem_utensilho'=>null,
             'reuso_seringas_insulina'=>null,

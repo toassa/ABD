@@ -12,13 +12,10 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('HAS')->nullable();
-            $table->string('dislipidemia')->nullable();
-            $table->string('anticoagulante')->nullable();
-            $table->string('tireoide')->nullable();
-            $table->string('ansiedade_depressao')->nullable();
-            $table->string('outros')->nullable();
-            $table->string('aderencia')->nullable();
+            $table->string('nome');
+            $table->enum('tipo', ['HAS', 'dislipidemia', 'anticoagulante', 'tireoide', 'ansiedade_depressao', 'outros', 'aderencia']);
+            $table->string('posologia');
+            $table->string('origem');
 
             $table->timestamps();
         });
