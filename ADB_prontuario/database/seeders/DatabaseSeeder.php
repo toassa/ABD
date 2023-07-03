@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Diagnostico;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Illuminate\Database\Seeder;
@@ -28,7 +29,12 @@ class DatabaseSeeder extends Seeder
             // AtividadeDiabetesSeeder::class,
             // HabitosVidasSeeder::class,
             // ExercicioFisicosSeeder::class,
-            NeuropaticoComprometimentosSeeder::class,
+            // NeuropaticoComprometimentosSeeder::class,
+            PrimeiroDiagnosticosSeeder::class,
+            DiagnosticosSeeder::class,
+            ComplicacaosSeeder::class,
+            TratamentosSeeder::class,
+            MedicamentosSeeder::class,
         ]);
     }
 }

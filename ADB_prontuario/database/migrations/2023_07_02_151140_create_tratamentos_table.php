@@ -12,17 +12,15 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->string('medicamento_diabetes')->nullable();
             $table->boolean('uso_insulina');
-            $table->string('tipos_insulinas');
-            $table->string('nome_insulina');
-            $table->foreign('nome_insulina')->references('nome_insulina')->on('insulinas')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('frequencia');
-            $table->string('dose');
-            $table->string('origem_insulinas');
-            $table->string('origem_utensilho');
-            $table->enum('aplicacao', ['Caneta', 'Seringa']);
-            $table->boolean('reuso_seringas_insulina');
+            $table->string('tipos_insulinas')->nullable();
+            $table->string('insulina')->nullable();
+            $table->string('origem_insulinas')->nullable();
+            $table->string('origem_utensilho')->nullable();
+            $table->boolean('reuso_seringas_insulina')->nullable();
             $table->integer('quantia_reuso_seringas')->nullable();
+            $table->string('aderencia')->nullable();
             
             $table->timestamps();
         });

@@ -8,12 +8,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('diagnosticos', function (Blueprint $table) {
+        Schema::create('medicamentos', function (Blueprint $table) {
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('sintomas')->nullable();
-            $table->enum('libido_alterado', ['Sim', 'Não', 'Não sabe ou não quis responder', 'Não se aplica']);
+            $table->string('HAS')->nullable();
+            $table->string('dislipidemia')->nullable();
+            $table->string('anticoagulantes')->nullable();
+            $table->string('tireoide')->nullable();
+            $table->string('ansiedade_depressao')->nullable();
+            $table->string('outros')->nullable();
+            $table->string('aderencia')->nullable();
 
             $table->timestamps();
         });
@@ -21,6 +26,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('diagnosticos');
+        Schema::dropIfExists('medicamentos');
     }
 };
