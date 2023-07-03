@@ -16,7 +16,7 @@ class TratamentosSeeder extends Seeder
             'medicamento_diabetes'=>'NSOCA',
             'uso_insulina'=>false,
             'tipos_insulinas'=>null,
-            'insulina'=>null,
+            'nome_insulina'=>null,
             'origem_insulinas'=>null,
             'origem_utensilho'=>null,
             'reuso_seringas_insulina'=>null,

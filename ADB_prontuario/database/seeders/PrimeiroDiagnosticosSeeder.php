@@ -19,7 +19,7 @@ class PrimeiroDiagnosticosSeeder extends Seeder
             'como_foi_feito'=>'Internação sem cetoacidose diabética',
             'infeccoes_seis_meses'=>false,
             'quais_infeccoes'=>null,
-            'periodo_sintomas_diagnostico'=>'5 meses',
+            'periodo_sintomas_diagnostico'=>5,
             'fator_emocional'=>false,
             'qual_fator_emocional'=>null,
         ]);

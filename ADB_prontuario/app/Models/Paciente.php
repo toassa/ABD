@@ -113,4 +113,44 @@ class Paciente extends Model
         return $this->hasOne(AtividadeDiabete::class, 'num_registro', 'num_registro');
     }
 
+    public function habitos_vidas()
+    {
+        return $this->hasOne(HabitosVida::class, 'num_registro', 'num_registro');
+    }
+
+    public function exercicio_fisicos()
+    {
+        return $this->hasOne(ExercicioFisico::class, 'num_registro', 'num_registro');
+    }
+    
+    public function neuropatico_comprometimentos()
+    {
+        return $this->hasOne(NeuropaticoComprometimento::class, 'num_registro', 'num_registro');
+    }
+
+    public function primeiro_diagnosticos()
+    {
+        return $this->hasOne(PrimeiroDiagnostico::class, 'num_registro', 'num_registro');
+    }
+
+    public function diagnosticos()
+    {
+        return $this->hasOne(Diagnostico::class, 'num_registro', 'num_registro');
+    }
+
+    public function complicacaos()
+    {
+        return $this->hasOne(Complicacao::class, 'num_registro', 'num_registro');
+    }
+
+    public function tratamentos()
+    {
+        return $this->hasOne(Tratamento::class, 'num_registro', 'num_registro');
+    }
+
+    public function medicamentos()
+    {
+        return $this->hasOne(Medicamento::class, 'num_registro', 'num_registro');
+    }
+
 }

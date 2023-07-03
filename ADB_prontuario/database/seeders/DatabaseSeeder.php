@@ -30,11 +30,11 @@ class DatabaseSeeder extends Seeder
             // HabitosVidasSeeder::class,
             // ExercicioFisicosSeeder::class,
             // NeuropaticoComprometimentosSeeder::class,
-            PrimeiroDiagnosticosSeeder::class,
-            DiagnosticosSeeder::class,
-            ComplicacaosSeeder::class,
-            TratamentosSeeder::class,
-            MedicamentosSeeder::class,
+            // PrimeiroDiagnosticosSeeder::class,
+            // DiagnosticosSeeder::class,
+            // ComplicacaosSeeder::class,
+            // TratamentosSeeder::class,
+            // MedicamentosSeeder::class,
         ]);
     }
 }

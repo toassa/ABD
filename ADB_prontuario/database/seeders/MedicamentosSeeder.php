@@ -15,7 +15,7 @@ class MedicamentosSeeder extends Seeder
             'num_registro'=>'11111',
             'HAS'=>null,
             'dislipidemia'=>null,
-            'anticoagulantes'=>null,
+            'anticoagulante'=>null,
             'tireoide'=>null,
             'ansiedade_depressao'=>null,
             'outros'=>null,

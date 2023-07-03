@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('medicamento_diabetes')->nullable();
             $table->boolean('uso_insulina');
             $table->string('tipos_insulinas')->nullable();
-            $table->string('insulina')->nullable();
+            $table->string('nome_insulina')->nullable();
             $table->string('origem_insulinas')->nullable();
             $table->string('origem_utensilho')->nullable();
             $table->boolean('reuso_seringas_insulina')->nullable();

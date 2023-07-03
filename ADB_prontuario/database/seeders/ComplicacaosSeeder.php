@@ -21,8 +21,8 @@ class ComplicacaosSeeder extends Seeder
             'episodio_assintomatico'=>'',
             'nivel_episodio'=>'Grave',
             'periodo_frequente_hipoglocemia'=>'Noite',
-            'episodios_ultimo_mes',
-            'alimento_tratar_hipoglicemia',
+            'episodios_ultimo_mes'=>1,
+            'alimento_tratar_hipoglicemia'=>'beterraba',
         ]);
     }
 }

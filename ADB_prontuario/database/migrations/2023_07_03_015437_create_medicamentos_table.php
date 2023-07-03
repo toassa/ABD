@@ -14,7 +14,7 @@ return new class extends Migration
 
             $table->string('HAS')->nullable();
             $table->string('dislipidemia')->nullable();
-            $table->string('anticoagulantes')->nullable();
+            $table->string('anticoagulante')->nullable();
             $table->string('tireoide')->nullable();
             $table->string('ansiedade_depressao')->nullable();
             $table->string('outros')->nullable();
