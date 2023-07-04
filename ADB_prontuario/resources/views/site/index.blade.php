@@ -8,7 +8,7 @@
             {{route('admin.login')}}
         @endslot
     @endcomponent
-    <section class="opcoes-content">
+    <section class="align-content">
         <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador">
         <div class="square-content square-content--opcoes">
             <h2>Escolha entre as opções:</h2>

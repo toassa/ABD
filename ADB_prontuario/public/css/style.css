@@ -53,6 +53,12 @@ body{
     box-shadow: 2px 2px 2px 1px #00000033;
 }
 
+.align-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
@@ -113,20 +119,12 @@ a.login-link{
 
 
 /* Opcções --------------------------------------------------------------------------------- */
-
-.opcoes-content{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.opcoes-content img{
+.align-content img{
     width: 60%;
 }
 
 .square-content--opcoes{
-    width: 40%;
+    width: 35%;
     text-align: center;
     padding: 5%;
 }
@@ -143,9 +141,17 @@ a.login-link{
     box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
     border: 1px solid var(--box-shadow-color);
     border-radius: 8px;
-    margin: 30px auto;
+    margin: 30px 0px auto;
     padding: 10px;
     width: 200px;
     text-decoration: none;
     display: block;
+}
+
+
+
+/* Errors -------------------------------------------------------------------------- */
+
+.square-content--error{
+    width: 30%;
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Medicamento extends Model
+class TratamentoMedicamento extends Model
 {
     use HasFactory;
 
@@ -18,11 +18,20 @@ class Medicamento extends Model
     public $increments = false;
 
     protected $fillable = [
+        'num_registro',
         'nome',
+        'tipo',
+        'posologia',
+        'origem',
     ];
 
-    public function tratamento_medicamentos()
+    public function pacientes()
     {
-        return $this->hasMany(TratamentoMedicamento::class, 'nome', 'nome');
+        return $this->belongsTo(Paciente::class, 'num_registro', 'num_registro');
+    }
+
+    public function medicamentos()
+    {
+        return $this->belongsTo(Medicamento::class, 'nome', 'nome');
     }
 }
