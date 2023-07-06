@@ -17,8 +17,8 @@ return new class extends Migration
             $table->rememberToken();            
             $table->string('CPF');
             $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
-            $table->boolean('administrador');
-            $table->boolean('ativo');
+            $table->boolean('administrador')->default(false);
+            $table->boolean('ativo')->default(true);
 
             $table->timestamps();
         });

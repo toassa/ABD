@@ -1,15 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\PessoaController;
+
+use App\Http\Controllers\Site\LoginController;
+use App\Http\Controllers\Site\HomeController;
+
+use App\Http\Controllers\Admin\UserController;
 
 Route::redirect('/', 'login');
-
-Route::get('/login', [PessoaController::class, 'login'])->name('admin.login');
+Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
 
 Route::prefix('opcoes')->group(function () {
-    Route::get('/', [PessoaController::class, 'opcoes'])->name('admin.opcoes');
-    Route::get('pacientes', [PessoaController::class, 'opcao_pacientes'])->name('opcao.pacientes');
-    Route::get('pessoas', [PessoaController::class, 'opcao_pessoas'])->name('opcao.pessoas');
+    Route::get('/', [HomeController::class, 'index'])->name('admin.opcoes');
+    Route::get('pacientes', [HomeController::class, 'opcao_pacientes'])->name('opcao.pacientes');
+    Route::get('user', [HomeController::class, 'opcao_users'])->name('opcao.users');
 });
 
+Route::prefix('user/')->group(function(){
+    Route::get('cadastrar', [UserController::class, 'cadastrar'])->name('user.cadastrar');
+});

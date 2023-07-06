@@ -62,7 +62,7 @@ body{
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
-    width: 30%;
+    width: 33%;
 }
 
 img.login-logo{
@@ -124,7 +124,6 @@ a.login-link{
 }
 
 .square-content--opcoes{
-    width: 35%;
     text-align: center;
     padding: 5%;
 }
@@ -154,4 +153,11 @@ a.login-link{
 
 .square-content--error{
     width: 30%;
+}
+
+
+/* Users --------------------------------------------------------------------------- */
+.square-content--user-cadastro{
+    width: 70%;
+    margin: 11vh;
 }
