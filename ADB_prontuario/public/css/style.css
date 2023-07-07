@@ -10,6 +10,7 @@
     --text-shadow-color: #808080;
 
     /* Font sizes */
+    --size-h1: 1.5rem;
     --size-h2: 1.3rem;
     --size-label-form: 1.1rem;
 
@@ -59,10 +60,19 @@ body{
     align-items: center;
 }
 
+/* Forms ------------------------------------------------------------------------------------- */
+.form-check-input[type=checkbox] {
+    background-color: #ebecf4 !important;
+}
+
+b{
+    color: #ff0000;
+}
+
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
-    width: 33%;
+    min-width: 30%;
 }
 
 img.login-logo{
@@ -90,10 +100,6 @@ a.login-link{
     font-size: var(--size-label-form);
 }
 
-.mb-3 b{
-    color: #ff0000;
-}
-
 .btn{
     width: 100% !important;
     text-align: center !important;
@@ -114,7 +120,7 @@ a.login-link{
 }
 
 .leave img{
-    width: 35px;
+    width: 28px;
 }
 
 
@@ -157,7 +163,33 @@ a.login-link{
 
 
 /* Users --------------------------------------------------------------------------- */
+
+/* Cadastro */
 .square-content--user-cadastro{
     width: 70%;
     margin: 11vh;
 }
+
+.square-content--user-cadastro h1{
+    font-size: var(--size-h1);
+    color: var(--text-color);
+    text-shadow: 1px 0.5px 2px var(--text-shadow-color);
+    margin-bottom: 3vh;
+}
+
+/* Index */
+.user-index{
+    display: block;
+    width: 100%;
+}
+
+.user-index h1{
+    color: var(--background-color);
+}
+
+.square-content--user-index{
+    width: 70%;
+    height: 40vh;
+    margin: 0 auto;
+}
+

@@ -12,8 +12,8 @@ Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
 
 Route::prefix('opcoes')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('admin.opcoes');
-    Route::get('pacientes', [HomeController::class, 'opcao_pacientes'])->name('opcao.pacientes');
-    Route::get('user', [HomeController::class, 'opcao_users'])->name('opcao.users');
+    Route::get('pacientes', [HomeController::class, 'opcoes_pacientes'])->name('opcao.pacientes');
+    Route::get('user', [HomeController::class, 'opcoes_users'])->name('opcao.users');
 });
 
 Route::prefix('user/')->group(function(){

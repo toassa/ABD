@@ -11,11 +11,11 @@ class HomeController extends Controller
         return view('site.index');
     }
 
-    public function opcoes_pacientes(){
+    public function opcoes_users(){
         return view('site.usuario.index');
     }
 
-    public function opcoes_users(){
+    public function opcoes_pacientes(){
         return view('site.paciente.index');
     }
 }
