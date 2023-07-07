@@ -8,33 +8,113 @@
             {{route('admin.login')}}
         @endslot
     @endcomponent
-    <nav class="user-index">
-        <h1 class="text-center">Bem-vindo(a)</h1>
-        <div class="square-content square-content--user-index">
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    1 of 3
-                  </div>
-                  <div class="col">
-                    2 of 3
-                  </div>
-                  <div class="col">
-                    3 of 3
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                      1 of 3
-                    </div>
-                    <div class="col">
-                      2 of 3
-                    </div>
-                    <div class="col">
-                      3 of 3
-                    </div>
-                  </div>
-              </div>
+    <section class="user-index">
+      <h1 class="text-center">Bem-vindo(a)</h1>
+      <div class="square-content square-content--user-index">
+        <div class="container text-center">
+          <div class="row justify-content-md-center">
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
+                  person_add
+                </span>
+              @endslot
+              @slot('title')
+                  Cadastrar Usuário
+              @endslot
+              @slot('button')
+                  Cadastrar
+              @endslot
+              @slot('href')
+                  {{route('user.cadastrar')}}
+              @endslot
+            @endcomponent
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
+                  format_list_bulleted
+                </span>
+              @endslot
+              @slot('title')
+                  Listar Usuários
+              @endslot
+              @slot('button')
+                  Listar
+              @endslot
+              @slot('href')
+                  {{-- alterar --}}
+                  {{route('admin.login')}}
+              @endslot
+            @endcomponent
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
+                  manage_accounts
+                </span>
+              @endslot
+              @slot('title')
+                  Editar Usuários
+              @endslot
+              @slot('button')
+                  Editar
+              @endslot
+              @slot('href')
+                  {{-- alterar --}}
+                  {{route('admin.login')}}
+              @endslot
+            @endcomponent
+          </div>
+          <div class="row justify-content-md-center">
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
+                  block
+                </span>
+              @endslot
+              @slot('title')
+                  Desativar Usuário
+              @endslot
+              @slot('button')
+                  Desativar
+              @endslot
+              @slot('href')
+                  {{-- alterar --}}
+                  {{route('admin.login')}}
+              @endslot
+            @endcomponent
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
+                  calendar_add_on
+                </span>
+              @endslot
+              @slot('title')
+                  Agendar Paciente
+              @endslot
+              @slot('button')
+                  Cadastrar
+              @endslot
+              @slot('href')
+                  {{-- alterar --}}
+                  {{route('admin.login')}}
+              @endslot
+            @endcomponent
+          </div>
         </div>
-    </nav>
+    </section>
 @endsection

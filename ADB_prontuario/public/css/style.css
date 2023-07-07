@@ -6,6 +6,7 @@
 
     /* Font colors */
     --background-color: #fff;
+    --background-almost-white: #ebecf4;
     --text-color: #000;
     --text-shadow-color: #808080;
 
@@ -13,6 +14,7 @@
     --size-h1: 1.5rem;
     --size-h2: 1.3rem;
     --size-label-form: 1.1rem;
+    --size-card-title: 1rem;
 
     /* Div colors */
     --box-shadow-color: #00000033;
@@ -60,9 +62,31 @@ body{
     align-items: center;
 }
 
+.button-white-blue{
+    color: #2424ff;
+    background-color: var(--background-color);
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    border: 1px solid var(--box-shadow-color);
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Icons */
+.material-symbols-outlined {
+  font-size: 30px !important;
+  margin-top: 8px !important;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
 /* Forms ------------------------------------------------------------------------------------- */
 .form-check-input[type=checkbox] {
-    background-color: #ebecf4 !important;
+    background-color: var(--background-almost-white) !important;
 }
 
 b{
@@ -115,7 +139,7 @@ a.login-link{
 }
 
 .leave a{
-    color: #fff;
+    color: #FFF;
     font-size: 1.2rem;
 }
 
@@ -140,19 +164,11 @@ a.login-link{
     font-size: var(--size-h2);
 }
 
-.button-opcoes{
-    color: #2424ff;
-    background-color: var(--background-color);
-    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
-    border: 1px solid var(--box-shadow-color);
-    border-radius: 8px;
+.button-white-blue--opcoes{
     margin: 30px 0px auto;
     padding: 10px;
     width: 200px;
-    text-decoration: none;
-    display: block;
 }
-
 
 
 /* Errors -------------------------------------------------------------------------- */
@@ -185,11 +201,47 @@ a.login-link{
 
 .user-index h1{
     color: var(--background-color);
+    margin: 10vh 0;
 }
 
 .square-content--user-index{
-    width: 70%;
-    height: 40vh;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+@media(max-width: 768px){
+    .square-content--user-index{
+        width: 230px;
+    }
+}
+
+.square-content--user-item{
+    width: 250px;
+    min-width: 200px;
+    margin: 30px 20px;
+    min-height: 150px;
+    padding: 15px;
+}
+
+.square-content--user-item h2{
+    font-size: var(--size-card-title);
+    margin: 25px 0;
+}
+
+.item-circle{
+    border-radius: 50%;
+    background-color: #FFE500;
+    text-align: center;
+    width: 45px;
+    height: 45px;
     margin: 0 auto;
 }
 
+.button-white-blue--user-item{
+    background-color: var(--background-almost-white);
+    width: 50%;
+    height: 25px;
+    min-width: 100px;
+    margin: 0 auto;
+}

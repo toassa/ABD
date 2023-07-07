@@ -8,5 +8,4 @@
             {{route('admin.login')}}
         @endslot
     @endcomponent
-    
 @endsection
