@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.leave')
+    @component('components.back')
         @slot('rota_sair')
             {{route('admin.login')}}
         @endslot

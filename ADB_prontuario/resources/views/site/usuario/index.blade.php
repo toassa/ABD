@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.leave')
+    @component('components.back')
         @slot('rota_sair')
             {{route('admin.login')}}
         @endslot
@@ -29,7 +29,7 @@
                   Cadastrar
               @endslot
               @slot('href')
-                  {{route('user.cadastrar')}}
+                  {{route('users.cadastrar')}}
               @endslot
             @endcomponent
             @component('components.user-item')

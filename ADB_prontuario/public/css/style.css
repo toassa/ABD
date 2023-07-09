@@ -15,6 +15,7 @@
     --size-h2: 1.3rem;
     --size-label-form: 1.1rem;
     --size-card-title: 1rem;
+    --size-grid: 0.9rem;
 
     /* Div colors */
     --box-shadow-color: #00000033;
@@ -56,6 +57,13 @@ body{
     box-shadow: 2px 2px 2px 1px #00000033;
 }
 
+.square-content h1{
+    font-size: var(--size-h1);
+    color: var(--text-color);
+    text-shadow: 1px 0.5px 2px var(--text-shadow-color);
+    margin: 15px auto 30px auto;
+}
+
 .align-content{
     display: flex;
     justify-content: center;
@@ -92,6 +100,7 @@ body{
 b{
     color: #ff0000;
 }
+
 
 /* Login ------------------------------------------------------------------------------------- */
 
@@ -147,6 +156,18 @@ a.login-link{
     width: 28px;
 }
 
+.leave input{
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 1.2rem
+}
+
+.leave .material-symbols-outlined{
+    color: #fff !important;
+    font-size: 15px !important;
+}
+
 
 /* Opcções --------------------------------------------------------------------------------- */
 .align-content img{
@@ -180,20 +201,13 @@ a.login-link{
 
 /* Users --------------------------------------------------------------------------- */
 
-/* Cadastro */
+/* Cadastro -------------------- */
 .square-content--user-cadastro{
     width: 70%;
     margin: 11vh;
 }
 
-.square-content--user-cadastro h1{
-    font-size: var(--size-h1);
-    color: var(--text-color);
-    text-shadow: 1px 0.5px 2px var(--text-shadow-color);
-    margin-bottom: 3vh;
-}
-
-/* Index */
+/* Index ----------------------- */
 .user-index{
     display: block;
     width: 100%;
@@ -244,4 +258,43 @@ a.login-link{
     height: 25px;
     min-width: 100px;
     margin: 0 auto;
+}
+
+/* Listar ---------------------- */
+.square-content--user-listar{
+    width: 95%;
+    margin: 11vh;
+}
+
+/* Grids */
+.row{
+    margin: 5px 0;
+}
+
+.col{
+    width: 14.2%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.col-title{
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: var(--size-grid);
+}
+
+.col-text{
+    color: var(--text-color);
+    text-transform: capitalize;
+    /* overflow: hidden; */
+    font-size: var(--size-grid);
+}
+
+.col-mail{
+    color: var(--text-color);
+    text-transform: lowercase;
+    font-size: var(--size-grid);
 }

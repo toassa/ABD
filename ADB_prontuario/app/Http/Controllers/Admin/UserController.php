@@ -14,15 +14,17 @@ class UserController extends Controller
     }
 
     public function listar(){
-        $usuario_dados = User::all();
-        return view('site.usuario.listar', compact('usuario_dados'));
+        $rows = User::all();
+        return view('site.usuario.listar', compact('rows'));
     }
 
     public function cadastrar(){
         return view('site.usuario.cadastrar');
     }
 
-    public function salvar(request $Req){
-
+    public function salvar(Request $req){
+        $dados = $req->all();
+        User::create($dados);
+        return redirect()->route('users.listar');
     }
 }

@@ -3,7 +3,7 @@
 @section('titulo-pagina','Cadastro de Uusários')
 
 @section('content')
-    @component('components.leave')
+    @component('components.back')
         @slot('rota_sair')
             {{route('admin.login')}}
         @endslot
@@ -11,7 +11,7 @@
     <div class="square-content square-content--user-cadastro">
         {{-- action:route ALTERAR --}}
         <h1 class="text-center">Cadastro de Usuários</h1>
-        <form action="" method="post" class="row g-3 needs-validation" novalidate>
+        <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             @include('site.usuario._form')
             <div class="col-12">

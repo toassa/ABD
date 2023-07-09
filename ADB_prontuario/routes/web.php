@@ -21,14 +21,14 @@ Route::prefix('user')->group(function(){
     Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
     Route::prefix('/form')->group(function(){
-        Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('user.cadastrar');
+        Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
 
-        Route::post('/salvar', [UserController::class, 'salvar'])->name('user.salvar');
+        Route::post('/salvar', [UserController::class, 'salvar'])->name('users.salvar');
 
-        Route::get('/editar/{id}', [UserController::class, 'editar'])->name('user.editar');
+        Route::get('/editar/{id}', [UserController::class, 'editar'])->name('users.editar');
 
-        Route::get('/atualizar/{id}', [UserController::class, 'atualizar'])->name('user.atualizar');
+        Route::get('/atualizar/{id}', [UserController::class, 'atualizar'])->name('users.atualizar');
 
-        Route::get('/excluir/{id}', [UserController::class, 'excluir'])->name('user.excluir');
+        Route::get('/excluir/{id}', [UserController::class, 'excluir'])->name('users.excluir');
     });
 });
