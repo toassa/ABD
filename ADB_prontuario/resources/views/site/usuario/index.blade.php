@@ -48,8 +48,7 @@
                   Listar
               @endslot
               @slot('href')
-                  {{-- alterar --}}
-                  {{route('admin.login')}}
+                  {{route('users.listar')}}
               @endslot
             @endcomponent
             @component('components.user-item')
