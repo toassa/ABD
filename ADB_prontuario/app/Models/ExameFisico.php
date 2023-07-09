@@ -28,6 +28,7 @@ class ExameFisico extends Model
         'cabeca_pescoco',
         'cincurferencia_quadril',
         'circunferencia_pescoco',
+        'circunferencia_abdominal',
         'sistema_venoso',
         'sistema_digestivo',
         'sistema_respiratorio',

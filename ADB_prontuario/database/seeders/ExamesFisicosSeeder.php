@@ -21,6 +21,7 @@ class ExamesFisicosSeeder extends Seeder
             'consideracoes_outros_sistemas' => 'Sem alterações',
             'pressao_arterial' => 120,
             'circunferencia_quadril' => 95.2,
+            'circunferencia_abdominal' => 44.5,
             'sistema_venoso' => 'Normal',
             'pulso_arterial' => 'Regular',
             'altura' => 170.5,

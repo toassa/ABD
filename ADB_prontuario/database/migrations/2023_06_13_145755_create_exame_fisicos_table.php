@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('cabeca_pescoco');
             $table->double('circunferencia_quadril');
             $table->double('circunferencia_pescoco');
+            $table->double('circunferencia_abdominal');
             $table->string('sistema_venoso');
             $table->string('sistema_digestivo');
             $table->string('sistema_respiratorio');

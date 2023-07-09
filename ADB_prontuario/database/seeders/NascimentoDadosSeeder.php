@@ -18,6 +18,7 @@ class NascimentoDadosSeeder extends Seeder
             'ordem' => 'Segundo filho', 
             'tipo_parto' => 'Normal',
             'peso' => '3,1Kg - 3,5Kg',
+            'vacinacao' => 'Sim'
         ]);
     }
 }

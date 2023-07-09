@@ -23,7 +23,8 @@ class NascimentoDado extends Model
         'tempo_amamentacao',
         'ordem', 
         'tipo_parto',
-        'peso'
+        'peso',
+        'vacinacao',
     ];
 
     public function pacientes()

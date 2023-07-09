@@ -37,13 +37,13 @@ return new class extends Migration
             $table->boolean('ativo');
 
             $table->string('CEP');
-            $table->foreign('CEP')->constrained()->references('CEP')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('CEP')->constrained()->references('CEP')->on('enderecos');
 
             $table->string('numero');
-            $table->foreign('numero')->constrained()->references('numero')->on('enderecos')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('numero')->constrained()->references('numero')->on('enderecos');
 
             $table->string('num_USP');
-            $table->foreign('num_USP')->constrained()->references('num_USP')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('num_USP')->constrained()->references('num_USP')->on('users');
 
             $table->timestamps();
         });
