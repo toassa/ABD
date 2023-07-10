@@ -9,9 +9,9 @@ class TratamentoMedicamento extends Model
 {
     use HasFactory;
 
-    protected $table = 'medicamentos';
+    protected $table = 'tratamento_medicamentos';
 
-    protected $primaryKey = 'nome';
+    protected $primaryKey = ['num_registro', 'nome'];
 
     protected $keyType = 'string';
 
@@ -24,6 +24,16 @@ class TratamentoMedicamento extends Model
         'posologia',
         'origem',
     ];
+
+    public function getIncrementing()
+    {
+        return false;
+    }
+
+    public function getKeyName()
+    {
+        return ['num_registro', 'nome'];
+    }
 
     public function pacientes()
     {
