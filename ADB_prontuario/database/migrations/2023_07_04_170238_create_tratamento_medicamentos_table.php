@@ -13,7 +13,8 @@ return new class extends Migration
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('nome')->primary();
-            $table->string('nome')->references('nome')->on('medicamentos')->onDelete('cascade')->onUpdate('cascade');            ;
+            $table->foreign('nome')->references('nome')->on('medicamentos')->onUpdate('cascade');
+
             $table->enum('tipo', ['HAS', 'Dislipidemia', 'Anticoagulante', 'Tireoide', 'Ansiedade ou depressao', 'Outros']);
             $table->string('posologia');
             $table->string('origem');
