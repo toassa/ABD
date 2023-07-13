@@ -14,7 +14,7 @@ class TratamentoMedicamentoSeeder extends Seeder
         TratamentoMedicamento::create([
             'num_registro'=>'11111',
             'nome'=>'Dorflex',
-            'tipo'=>'NSOCA',
+            'tipo'=>'HAS',
             'posologia'=>'49',
             'origem'=>'Hospital Estadual',
             'aderencia'=>'NSOCA',

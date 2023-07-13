@@ -27,7 +27,7 @@ Route::prefix('user')->group(function(){
 
         Route::get('/editar/{id}', [UserController::class, 'editar'])->name('users.editar');
 
-        Route::get('/atualizar/{id}', [UserController::class, 'atualizar'])->name('users.atualizar');
+        Route::put('/atualizar/{id}', [UserController::class, 'atualizar'])->name('users.atualizar');
 
         Route::get('/excluir/{id}', [UserController::class, 'excluir'])->name('users.excluir');
     });

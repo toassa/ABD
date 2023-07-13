@@ -220,18 +220,23 @@ a.login-link{
 
 .square-content--user-index{
     width: 85%;
+    min-width: 350px;
     margin: 0 auto;
     margin-bottom: 35px;
 }
 
-@media(max-width: 768px){
+@media(max-width: 770px){
     .square-content--user-index{
-        width: 230px;
+        width: 350px;
+    }
+
+    .square-content--user-item{
+        width: 200px;
     }
 }
 
 .square-content--user-item{
-    width: 250px;
+    width: 240px;
     min-width: 200px;
     margin: 30px 20px;
     min-height: 150px;

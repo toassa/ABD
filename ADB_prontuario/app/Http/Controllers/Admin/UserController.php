@@ -24,6 +24,7 @@ class UserController extends Controller
 
     public function salvar(Request $req){
         $dados = $req->all();
+        // dd($dados);
         User::create($dados);
         return redirect()->route('users.listar');
     }
