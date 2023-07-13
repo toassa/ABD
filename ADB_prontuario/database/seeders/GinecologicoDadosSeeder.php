@@ -13,9 +13,11 @@ class GinecologicoDadosSeeder extends Seeder
     {
         GinecologicoDado::create([
             'num_registro'=>'11111',
+            'menopausa'=>true,
             'idade_menopausa'=>'53',
+            'menopausa_cirurgica'=>false,
+            'menstruacao'=>true,
             'idade_menstruacao'=>'17',
-            'menopausa_cirurgica'=>true,
             'historico_obstetrico'=>'G3P2A1: 1F e 1M',
             'uso_metodos_contraceptivos'=>true,
             'metodos_contraceptivos'=>'DIU',

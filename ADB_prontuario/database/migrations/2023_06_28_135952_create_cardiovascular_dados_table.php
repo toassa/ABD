@@ -12,7 +12,7 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('saude_cardiaca')->nullable();
+            $table->string('saude_cardiaca');
             $table->string('dor_peito');
             $table->string('exames_doenca_coronariana');
 

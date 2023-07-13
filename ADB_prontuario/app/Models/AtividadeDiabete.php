@@ -19,7 +19,7 @@ class AtividadeDiabete extends Model
 
     protected $fillable = [
         'num_registro',
-        'consultas_enfermagem',
+        'quantia_consultas_enfermagem',
         'finalidade_consulta',
         'reunioes_diabeticos',
         'programas_educacao_diabeticos',

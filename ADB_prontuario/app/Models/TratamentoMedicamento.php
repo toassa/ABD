@@ -23,6 +23,7 @@ class TratamentoMedicamento extends Model
         'tipo',
         'posologia',
         'origem',
+        'aderencia'
     ];
 
     public function getIncrementing()

@@ -12,7 +12,7 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->integer('consultas_enfermagem');
+            $table->integer('quantia_consultas_enfermagem');
             $table->string('finalidade_consulta')->nullable();
             $table->integer('reunioes_diabeticos');
             $table->integer('programas_educacao_diabeticos');

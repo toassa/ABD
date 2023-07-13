@@ -13,7 +13,7 @@ class AtividadeDiabetesSeeder extends Seeder
     {
         AtividadeDiabete::create([
             'num_registro'=>'11111',
-            'consultas_enfermagem'=>'0',
+            'quantia_consultas_enfermagem'=>0,
             'finalidade_consulta'=>null,
             'reunioes_diabeticos'=>3,
             'programas_educacao_diabeticos'=>1,

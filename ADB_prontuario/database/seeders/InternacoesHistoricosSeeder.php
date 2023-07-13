@@ -13,11 +13,12 @@ class InternacoesHistoricosSeeder extends Seeder
     {
         InternacoesHistorico::create([
             'num_registro' => '11111',
-            'local' => 'Unimed Bauru',
-            'motivo' => 'NSOCA',
-            'quantidade_dias' => 5,
-            'frequencia_ultimo_ano' => 2,
-            'fator_desencadeante' => 'Erro de administração de insulina'
+            'internacao_ultimo_ano' => false,
+            'frequencia_ultimo_ano' => null,
+            'local' => null,
+            'motivo' => null,
+            'quantidade_dias' => null,
+            'fator_desencadeante' => null,
         ]);
     }
 }

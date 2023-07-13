@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('causa_internacao')->nullable();
             $table->enum('episodio_hipoglicemia', ['Sim', 'Não', 'Não lembra']);
             $table->boolean('episodio_assintomatico');
-            $table->enum('nivel_episodio', ['Leve/moderado', 'Grave']);
+            $table->enum('nivel_episodio', ['Leve/moderado', 'Grave'])->nullable();
             $table->enum('periodo_frequente_hipoglocemia', ['Manhã', 'Tarde', 'Noite', 'Não sabe']);
             $table->integer('episodios_ultimo_mes');
             $table->string('alimento_tratar_hipoglicemia');

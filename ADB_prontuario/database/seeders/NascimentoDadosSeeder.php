@@ -14,7 +14,7 @@ class NascimentoDadosSeeder extends Seeder
         NascimentoDado::create([
             'num_registro' => '11111',
             'amamentacao_exclusiva' => true,
-            'tempo_amamentacao' => '5 anos',
+            'tempo_amamentacao_exclusiva' => '5 anos',
             'ordem' => 'Segundo filho', 
             'tipo_parto' => 'Normal',
             'peso' => '3,1Kg - 3,5Kg',

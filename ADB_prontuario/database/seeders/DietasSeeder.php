@@ -16,15 +16,15 @@ class DietasSeeder extends Seeder
     {
         Dieta::create([
             'num_registro' => '11111',
+            'realiza' => true,
             'tipo_dieta' => 'Restringe apenas açúcar e doce',
             'segue_dieta' => 2,
-            'realiza' => true,
             'dificuldade_dieta' => 'Deixar de comer doces',
-            'frequencia_nutricionista' => 3,
-            'consulta_nutricionista' => true,
             'orientador' => 'Nutricionista',
-            'consome_dieteticos' => true,
-            'produtos_dieteticos' => 'Gelatina',
+            'consulta_nutricionista' => true,
+            'frequencia_nutricionista' => 3,
+            'consome_dieteticos' => false,
+            'produtos_dieteticos' => null,
         ]);
 
     }

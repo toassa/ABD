@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             // ComplicacaosSeeder::class,
             // TratamentosSeeder::class,
             // MedicamentosSeeder::class,
+            TratamentoMedicamentoSeeder::class,
         ]);
     }
 }

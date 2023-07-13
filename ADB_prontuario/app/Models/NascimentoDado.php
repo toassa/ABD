@@ -20,7 +20,7 @@ class NascimentoDado extends Model
     protected $fillable = [
         'num_registro',
         'amamentacao_exclusiva',
-        'tempo_amamentacao',
+        'tempo_amamentacao_exclusiva',
         'ordem', 
         'tipo_parto',
         'peso',

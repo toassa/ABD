@@ -15,15 +15,17 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->enum('tipo_dieta', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicêmico','Outros']);
-            $table->integer('segue_dieta');
             $table->boolean('realiza');
-            $table->string('dificuldade_dieta');
-            $table->integer('frequencia_nutricionista');
+            $table->enum('tipo_dieta', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicêmico','Outros'])->nullable();
+            $table->integer('segue_dieta')->nullable();
+            $table->string('dificuldade_dieta')->nullable();
+            $table->string('orientador')->nullable();
+
             $table->boolean('consulta_nutricionista');
-            $table->string('orientador');
+            $table->integer('frequencia_nutricionista')->nullable();
+            
             $table->boolean('consome_dieteticos');
-            $table->string('produtos_dieteticos');
+            $table->string('produtos_dieteticos')->nullable();
 
             $table->timestamps();
         });

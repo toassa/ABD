@@ -19,10 +19,11 @@ class InternacoesHistorico extends Model
 
     protected $fillable = [
         'num_registro',
+        'internacao_ultimo_ano',
+        'frequencia_ultimo_ano',
         'local',
         'motivo',
         'quantidade_dias',
-        'frequencia_ultimo_ano',
         'fator_desencadeante'
     ];
 

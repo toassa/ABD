@@ -19,9 +19,11 @@ class GinecologicoDado extends Model
 
     protected $fillable = [
         'num_registro',
+        'menopausa',
         'idade_menopausa',
-        'idade_menstruacao',
         'menopausa_cirurgica',
+        'menstruacao',
+        'idade_menstruacao',
         'historico_obstetrico',
         'uso_metodos_contraceptivos',
         'metodos_contraceptivos',

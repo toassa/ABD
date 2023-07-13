@@ -19,13 +19,13 @@ class Dieta extends Model
 
     protected $fillable = [
         'num_registro',
+        'realiza',
         'tipo_dieta',
         'segue_dieta',
-        'realiza',
         'dificuldade_dieta',
-        'frequencia_nutricionista',
-        'consulta_nutricionista',
         'orientador',
+        'consulta_nutricionista',
+        'frequencia_nutricionista',
         'consome_dieteticos',
         'produtos_dieteticos',
     ];

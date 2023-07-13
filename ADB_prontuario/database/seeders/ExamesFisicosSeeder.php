@@ -16,21 +16,21 @@ class ExamesFisicosSeeder extends Seeder
     {
         ExameFisico::create([
             'num_registro' => '11111',
-            'circunferencia_pescoco' => 35.5,
-            'sistema_digestivo' => 'Normal',
-            'consideracoes_outros_sistemas' => 'Sem alterações',
+            'peso' => 70.2,
+            'altura' => 170.5,
             'pressao_arterial' => 120,
+            'pulso_arterial' => 'Regular',
+            'frequencia_cardiaca' => 75,
+            'apecto_geral' => 'Saudável',
+            'cabeca_pescoco' => 'Normal',
             'circunferencia_quadril' => 95.2,
+            'circunferencia_pescoco' => 35.5,
             'circunferencia_abdominal' => 44.5,
             'sistema_venoso' => 'Normal',
-            'pulso_arterial' => 'Regular',
-            'altura' => 170.5,
-            'sistema_cardiovascular' => 'Sem alterações',
-            'frequencia_cardiaca' => 75,
-            'cabeca_pescoco' => 'Normal',
+            'sistema_digestivo' => 'Normal',
             'sistema_respiratorio' => 'Sem alterações',
-            'apecto_geral' => 'Saudável',
-            'peso' => 70.2,
+            'sistema_cardiovascular' => 'Sem alterações',
+            'consideracoes_outros_sistemas' => 'Sem alterações',
         ]);
     }
 }

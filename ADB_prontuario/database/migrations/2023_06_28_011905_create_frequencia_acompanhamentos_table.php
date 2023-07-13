@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('cardiologista')->nullable();
             $table->string('oftalmologista')->nullable();
             $table->string('urologista')->nullable();
-            $table->boolean('exame_toque_urologista')->nullable();
+            $table->boolean('exame_toque_urologista');
             
             $table->timestamps();
         });
