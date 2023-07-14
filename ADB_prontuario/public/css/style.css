@@ -101,6 +101,34 @@ b{
     color: #ff0000;
 }
 
+.col-btn-form{
+    display: flex;
+}
+
+.col-btn-form .btn-primary{
+    margin: 0 2% !important;
+}
+
+.row-pesquisar .form-control{
+    border-radius: 8px;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.row-pesquisar .btn-primary{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.row-pesquisar.g-3{
+    --bs-gutter-x: 0rem !important;
+    margin-bottom: 15px;
+}
+
+.row-pesquisar--user{
+    width: 50%;
+    margin: 50px auto !important;
+}
 
 /* Login ------------------------------------------------------------------------------------- */
 
@@ -304,3 +332,17 @@ a.login-link{
     text-transform: lowercase;
     font-size: var(--size-grid);
 }
+
+
+/* Pacientes ---------------------------------------------------------------------------- */
+
+/* Pesquisar ------------- */
+.square-content--pacientes-pesquisar{
+    width: 30%;
+}
+
+.square-content--pacientes-pesquisar a{
+    text-decoration: none;
+    margin: 50px 0;
+}
+

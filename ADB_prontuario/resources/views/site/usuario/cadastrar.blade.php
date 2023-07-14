@@ -14,8 +14,9 @@
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             @include('site.usuario._form')
-            <div class="col-12">
+            <div class="col-12 col-btn-form">
                 <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-primary" type="reset">Limpar</button>
             </div>
         </form>
     </div>

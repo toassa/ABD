@@ -34,7 +34,9 @@ Route::prefix('user')->group(function(){
 });
 
 Route::prefix('paciente')->group(function(){
-    Route::get('/', [PacienteController::class, 'index'])->name('opcao.pacientes');
+    Route::get('/', [PacienteController::class, 'pesquisar'])->name('opcao.pacientes');
+    
+    Route::get('/index', [PacienteController::class, 'index'])->name('pacientes.index');
 
     Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
 

@@ -3,9 +3,9 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.back')
-        @slot('rota_sair')
-            {{route('admin.login')}}
-        @endslot
-    @endcomponent
+  @component('components.voltar')
+    @slot('rota_voltar')
+        {{route('admin.opcoes')}}
+    @endslot
+  @endcomponent
 @endsection
