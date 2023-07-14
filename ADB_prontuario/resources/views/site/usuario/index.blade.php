@@ -3,11 +3,11 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.back')
-        @slot('rota_sair')
-            {{route('admin.login')}}
-        @endslot
-    @endcomponent
+  @component('components.voltar')
+    @slot('rota_voltar')
+        {{route('admin.opcoes')}}
+    @endslot
+  @endcomponent
     <section class="user-index">
       <h1 class="text-center">Bem-vindo(a)</h1>
       <div class="square-content square-content--user-index">

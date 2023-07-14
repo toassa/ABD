@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.back')
+    @component('components.voltar')
         @slot('rota_voltar')
             {{route('opcao.users')}}
         @endslot
