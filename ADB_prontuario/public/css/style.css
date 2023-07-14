@@ -230,6 +230,27 @@ a.login-link{
 
 /* Users --------------------------------------------------------------------------- */
 
+/* Identificação --------------- */
+.usuario{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 4px 6px;
+}
+
+.usuario p{
+    color: #fff;
+    margin-top: 13px;
+}
+
+.usuario .material-symbols-outlined{
+    color: #fff !important;
+    font-size: 1.9rem !important;
+    margin-left: 10px;
+}
+
+
 /* Cadastro -------------------- */
 .square-content--user-cadastro{
     width: 70%;

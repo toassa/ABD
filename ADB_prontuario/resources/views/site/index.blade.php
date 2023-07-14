@@ -5,9 +5,15 @@
 @section('content')
     @component('components.leave')
         @slot('rota_sair')
-            {{route('admin.login')}}
+            {{route('login.sair')}}
         @endslot
     @endcomponent
+    <div class="usuario">
+        <p>{{Auth::user()->name}}</p>
+        <span class="material-symbols-outlined">
+            account_circle
+        </span>
+    </div>
     <section class="align-content">
         <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador">
         <nav class="square-content square-content--opcoes">
