@@ -10,14 +10,17 @@
     @endcomponent
     <section class="square-content square-content--user-listar">
         <h1 class="text-center">Listagem de Usuários</h1>
-        <div class="row g-3 row-pesquisar row-pesquisar--user">
-            <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="Digite o paciente" aria-label="Nome do paciente">
+        <form action="{{route('users.buscar', $row->name)}}" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="row g-3 row-pesquisar row-pesquisar--user">
+                <div class="col-sm-8">
+                    <input type="text" name="nome" class="form-control" placeholder="Digite o paciente" aria-label="Nome do paciente">
+                </div>
+                <div class="col-sm">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
             </div>
-            <div class="col-sm">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </div>
-        </div>
+        </form>
         <div class="grid">
             <div class="row">
                 <div class="col col-title">Nome</div>

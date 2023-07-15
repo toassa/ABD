@@ -13,11 +13,6 @@ class UserController extends Controller
         return view('site.usuario.index');
     }
 
-    public function listar(){
-        $rows = User::all();
-        return view('site.usuario.listar', compact('rows'));
-    }
-
     public function cadastrar(){
         return view('site.usuario.cadastrar');
     }
@@ -27,5 +22,16 @@ class UserController extends Controller
         // dd($dados);
         User::create($dados);
         return redirect()->route('users.listar');
+    }
+
+    public function listar(){
+        $rows = User::all();
+        return view('site.usuario.listar', compact('rows'));
+    }
+
+    public function buscar($name){
+        $rows = User::where('name', $name);
+        // dd($rows);
+        return view('site.usuario.listar', compact('rows'));
     }
 }

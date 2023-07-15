@@ -10,7 +10,8 @@
   @endcomponent
   <section class="square-content square-content--pacientes-pesquisar">¨
     <h1 class="text-center">Pesquisar Paciente</h1>
-    <form action="">
+    <form action="{{route('paciente.buscar')}}" method="post" enctype="multipart/form-data">
+      {{ csrf_field() }}
       <div class="row g-3 row-pesquisar">
         <div class="col-sm-8">
             <input type="text" class="form-control" placeholder="Digite o paciente" name="name" aria-label="Nome do paciente">

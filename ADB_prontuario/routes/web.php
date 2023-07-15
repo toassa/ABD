@@ -30,6 +30,8 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/', [UserController::class, 'index'])->name('opcao.users');
     
         Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
+
+        Route::get('/buscar/{name}', [UserController::class, 'buscar'])->name('users.buscar');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
@@ -52,6 +54,8 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/index', [PacienteController::class, 'index'])->name('pacientes.index');
     
         Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
+    
+        Route::post('/buscar', [PacienteController::class, 'buscar'])->name('paciente.buscar');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
