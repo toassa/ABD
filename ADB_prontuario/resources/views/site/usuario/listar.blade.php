@@ -10,7 +10,8 @@
     @endcomponent
     <section class="square-content square-content--user-listar">
         <h1 class="text-center">Listagem de Usuários</h1>
-        <form action="{{route('users.buscar', $row->name)}}" method="post" enctype="multipart/form-data">
+        {{-- , $row->name --}}
+        <form action="{{route('users.buscar')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="row g-3 row-pesquisar row-pesquisar--user">
                 <div class="col-sm-8">
@@ -22,7 +23,7 @@
             </div>
         </form>
         <div class="grid">
-            <div class="row">
+            <div class="row row-title">
                 <div class="col col-title">Nome</div>
                 <div class="col col-title">Num. USP</div>
                 <div class="col col-title">E-mail</div>
@@ -33,20 +34,17 @@
             </div>
         </div>
         <div class="grid">
-            {{-- rota: alterar --}}
-            <a href="" style="text-decoration: none;">
-                @foreach ($rows as $row)
-                    <div class="row row-text">
-                        <div class="col col-text">{{Str::limit($row->name, )}}</div>
-                        <div class="col col-mail">{{$row->num_USP}}</div>
-                        <div class="col col-mail">{{$row->email}}</div>
-                        <div class="col col-text">{{$row->CPF}}</div>
-                        <div class="col col-text">{{$row->cargo}}</div>
-                        <div class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</div>
-                        <div class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</div>
-                    </div>
-                @endforeach
-            </a>
+            @foreach ($rows as $row)
+                <div class="row row-text">
+                    <div class="col col-text">{{Str::limit($row->name, )}}</div>
+                    <div class="col col-mail">{{$row->num_USP}}</div>
+                    <div class="col col-mail">{{$row->email}}</div>
+                    <div class="col col-text">{{$row->CPF}}</div>
+                    <div class="col col-text">{{$row->cargo}}</div>
+                    <div class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</div>
+                    <div class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</div>
+                </div>
+            @endforeach
         </div>
     </section>
 @endsection

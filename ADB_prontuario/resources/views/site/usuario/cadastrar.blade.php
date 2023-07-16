@@ -3,12 +3,8 @@
 @section('titulo-pagina','Cadastro de Uusários')
 
 @section('content')
-    @component('components.back')
-        @slot('rota_sair')
-            {{route('admin.login')}}
-        @endslot
-    @endcomponent
-    <div class="square-content square-content--user-cadastro">
+    @component('components.back')@endcomponent
+    <section class="square-content square-content--user-cadastro">
         {{-- action:route ALTERAR --}}
         <h1 class="text-center">Cadastro de Usuários</h1>
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
@@ -19,5 +15,5 @@
                 <button class="btn btn-primary" type="reset">Limpar</button>
             </div>
         </form>
-    </div>
+    </section>
 @endsection

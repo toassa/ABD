@@ -31,18 +31,21 @@ Route::group(['middleware' => 'auth'], function(){
     
         Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
-        Route::get('/buscar/{name}', [UserController::class, 'buscar'])->name('users.buscar');
+        // /{name}
+        Route::get('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
     
             Route::post('/salvar', [UserController::class, 'salvar'])->name('users.salvar');
     
-            Route::get('/editar/{id}', [UserController::class, 'editar'])->name('users.editar');
+            Route::get('/list-editar', [UserController::class, 'list_editar'])->name('user.list-editar');
+
+            Route::get('/editar/{num_USP}', [UserController::class, 'editar'])->name('users.editar');
     
-            Route::put('/atualizar/{id}', [UserController::class, 'atualizar'])->name('users.atualizar');
+            Route::put('/atualizar/{num_USP}', [UserController::class, 'atualizar'])->name('users.atualizar');
     
-            Route::get('/excluir/{id}', [UserController::class, 'excluir'])->name('users.excluir');
+            Route::get('/excluir/{num_USP}', [UserController::class, 'excluir'])->name('users.excluir');
         });
     });
 });
@@ -61,6 +64,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
     
             Route::post('/salvar', [PacienteController::class, 'salvar'])->name('paciente.salvar');
+    
+            Route::get('/list-editar', [PacienteController::class, 'list_editar'])->name('paciente.list-editar');
     
             Route::get('/editar/{id}', [PacienteController::class, 'editar'])->name('paciente.editar');
     

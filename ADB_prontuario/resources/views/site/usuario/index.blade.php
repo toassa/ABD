@@ -67,8 +67,7 @@
                   Editar
               @endslot
               @slot('href')
-                  {{-- alterar --}}
-                  {{route('admin.login')}}
+                  {{route('user.list-editar')}}
               @endslot
             @endcomponent
           </div>

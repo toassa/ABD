@@ -29,9 +29,37 @@ class UserController extends Controller
         return view('site.usuario.listar', compact('rows'));
     }
 
-    public function buscar($name){
-        $rows = User::where('name', $name);
+    // $name
+    public function buscar(){
+        $rows = User::where('name');
         // dd($rows);
-        return view('site.usuario.listar', compact('rows'));
+        // , compact('rows')
+        return view('site.usuario.listar');
+    }
+
+    public function list_editar(){
+        $rows = User::all();
+        return view('site.usuario.list-editar', compact('rows'));
+    }
+
+    public function editar($num_USP){
+        $rows = User::find($num_USP);
+        return view('site.usuario.editar', compact('rows'));
+    }
+
+    public function atualizar(Request $req, $num_USP)
+    {
+        $dados = $req->except('_token');
+        User::where('num_USP',$num_USP)->
+        update([
+            'num_USP'=>$dados['num_USP'],
+            'name'=>$dados['name'],
+            'email'=>$dados['email'],
+            'CPF'=>$dados['CPF'],
+            'cargo'=>$dados['cargo'],
+            'administrador'=>$dados['administrador'],
+            'ativo'=>$dados['ativo'],
+        ]);
+        return redirect()->route('users.listar');
     }
 }

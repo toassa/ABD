@@ -326,6 +326,14 @@ a.login-link{
     margin: 5px 0;
 }
 
+.row-hover:hover{
+    background-color: var(--background-almost-white);
+}
+
+.row-title{
+    margin-bottom: 15px;
+}
+
 .col{
     width: 14.2%;
     text-overflow: ellipsis;
@@ -353,6 +361,16 @@ a.login-link{
     text-transform: lowercase;
     font-size: var(--size-grid);
 }
+
+/* List-editar --------------- */
+.grid-list a{
+    text-decoration: none;
+}
+
+.grid-list .material-symbols-outlined{
+    font-size: var(--size-label-form) !important;
+}
+
 
 
 /* Pacientes ---------------------------------------------------------------------------- */
