@@ -45,6 +45,8 @@ Route::group(['middleware' => 'auth'], function(){
     
             Route::put('/atualizar/{num_USP}', [UserController::class, 'atualizar'])->name('users.atualizar');
     
+            Route::get('/list-excluir', [UserController::class, 'list_excluir'])->name('users.list-excluir');
+
             Route::get('/excluir/{num_USP}', [UserController::class, 'excluir'])->name('users.excluir');
         });
     });
@@ -71,6 +73,8 @@ Route::group(['middleware' => 'auth'], function(){
     
             Route::put('/atualizar/{id}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
     
+            Route::get('/list-excluir', [PacienteController::class, 'list_excluir'])->name('paciente.list-excluir');
+            
             Route::get('/excluir/{id}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
         });
     });

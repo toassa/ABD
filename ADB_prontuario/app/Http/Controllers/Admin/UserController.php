@@ -61,4 +61,14 @@ class UserController extends Controller
         ]);
         return redirect()->route('users.listar');
     }
+
+    public function list_excluir(){
+        $rows = User::all();
+        return view('site.usuario.list-excluir', compact('rows'));
+    }
+
+    public function excluir($num_USP){
+        User::where('num_USP',$num_USP)->delete();
+        return redirect() -> route('users.listar');
+    }
 }

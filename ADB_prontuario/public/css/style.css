@@ -375,6 +375,21 @@ a.login-link{
     font-size: var(--size-label-form) !important;
 }
 
+/* List-excluir -------------- */
+.content-list-excluir button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.square-content--confirma-excluir{
+    width: 50%;
+    height: 350px;
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+}
 
 
 /* Pacientes ---------------------------------------------------------------------------- */

@@ -98,6 +98,25 @@
               @endslot
               @slot('icon')
                 <span class="material-symbols-outlined">
+                  delete
+                </span>
+              @endslot
+              @slot('title')
+                  Excluir Usuário
+              @endslot
+              @slot('button')
+                  Excluir
+              @endslot
+              @slot('href')
+                  {{route('users.list-excluir')}}
+              @endslot
+            @endcomponent
+            @component('components.user-item')
+              @slot('coluna')
+                col-md-auto
+              @endslot
+              @slot('icon')
+                <span class="material-symbols-outlined">
                   calendar_add_on
                 </span>
               @endslot
@@ -105,7 +124,7 @@
                   Agendar Paciente
               @endslot
               @slot('button')
-                  Cadastrar
+                  Agendar
               @endslot
               @slot('href')
                   {{-- alterar --}}
