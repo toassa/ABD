@@ -4,7 +4,7 @@
 
 @section('content')
     @component('components.back')@endcomponent
-    <section class="square-content square-content--user-cadastro" onLoad="hide_password();">
+    <section class="square-content square-content--user-cadastro">
         <h1 class="text-center">Editar Usuários</h1>
         <form action="{{route('users.atualizar', $rows->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}

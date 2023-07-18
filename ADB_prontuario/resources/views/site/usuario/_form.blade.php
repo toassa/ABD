@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Senha<b>*</b></label>
+    <label for="validationCustom03" id="labelValidationCustom03" class="form-label">Senha<b>*</b></label>
     <input type="password" class="form-control" id="validationCustom03" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" required>
     <div class="invalid-feedback">
         Insira uma senha para o usuário
@@ -45,6 +45,7 @@
 </div>
 <div class="col-12">
     <div class="form-check">
+    <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <label class="form-check-label" for="invalidCheck">
         Administrador? <b>*</b>
@@ -53,6 +54,7 @@
 </div>
 <div class="col-12">
     <div class="form-check">
+    <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <label class="form-check-label" for="invalidCheck">
         Ativo? <b>*</b>

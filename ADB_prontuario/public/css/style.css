@@ -321,6 +321,10 @@ a.login-link{
     margin: 11vh;
 }
 
+.btn-list-editar{
+    margin-top: 30px;
+}
+
 /* Grids */
 .row{
     margin: 5px 0;

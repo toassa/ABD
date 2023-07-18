@@ -50,8 +50,7 @@ class UserController extends Controller
     public function atualizar(Request $req, $num_USP)
     {
         $dados = $req->except('_token');
-        User::where('num_USP',$num_USP)->
-        update([
+        User::where('num_USP',$num_USP)->update([
             'num_USP'=>$dados['num_USP'],
             'name'=>$dados['name'],
             'email'=>$dados['email'],

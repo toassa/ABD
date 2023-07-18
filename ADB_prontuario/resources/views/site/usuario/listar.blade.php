@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina', 'Opções')
+@section('titulo-pagina', 'Listar Usuários')
 
 @section('content')
     @component('components.voltar')
@@ -36,7 +36,7 @@
         <div class="grid">
             @foreach ($rows as $row)
                 <div class="row row-text">
-                    <div class="col col-text">{{Str::limit($row->name, )}}</div>
+                    <div class="col col-text">{{$row->name}}</div>
                     <div class="col col-mail">{{$row->num_USP}}</div>
                     <div class="col col-mail">{{$row->email}}</div>
                     <div class="col col-text">{{$row->CPF}}</div>
@@ -46,5 +46,6 @@
                 </div>
             @endforeach
         </div>
+        <a href="{{route('user.list-editar')}}" class="btn btn-primary btn-list-editar">Editar Usuários</a>
     </section>
 @endsection

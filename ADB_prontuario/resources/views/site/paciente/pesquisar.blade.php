@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina', 'Opções')
+@section('titulo-pagina', 'Pesquisar Paciente')
 
 @section('content')
   @component('components.voltar')
