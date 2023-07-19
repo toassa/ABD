@@ -15,7 +15,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();            
-            $table->string('CPF');
+            $table->string('CPF')->unique();
             $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
             $table->boolean('administrador')->default(false);
             $table->boolean('ativo')->default(true);

@@ -84,3 +84,9 @@ Route::group(['middleware' => 'auth'], function(){
 Route::get('/matheus', function(){
     return view('site.usuario.editar');
 });
+
+// ARRUMAR:
+// > Usuários
+// - Permitir que itens sejam vistos paenas por administradores
+// - Dialog do list-excluir
+// - Visual do editar usuários

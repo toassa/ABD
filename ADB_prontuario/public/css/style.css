@@ -94,7 +94,12 @@ body{
 
 /* Forms ------------------------------------------------------------------------------------- */
 .form-check-input[type=checkbox] {
-    background-color: var(--background-almost-white) !important;
+    border: 1px solid #bdc1c5 !important;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd;
 }
 
 b{
@@ -385,12 +390,46 @@ a.login-link{
 
 .square-content--confirma-excluir{
     width: 50%;
-    height: 350px;
+    /* height: 350px; */
     position: absolute;
     margin: 0 auto;
-    display: flex;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /* display: flex; */
+    align-items: center;
+    align-content: center;
 }
 
+dialog::backdrop{
+    background-color: #35353559;
+}
+
+.square-content--confirma-excluir button, .square-content--confirma-excluir a{
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.square-content--confirma-excluir a{
+    background-color: #ff0000;
+}
+
+.square-content--confirma-excluir button{
+    background-color: #2424ff;
+}
+
+.buttons-dialog{
+    width: 100%;
+}
+
+.p-dialog{
+    width: 100%;
+}
 
 /* Pacientes ---------------------------------------------------------------------------- */
 

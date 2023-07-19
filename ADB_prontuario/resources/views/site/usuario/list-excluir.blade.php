@@ -41,9 +41,13 @@
                     </div>
                 </button>
                 <dialog class="square-content square-content--confirma-excluir" id="modal_excluir">
-                    <p class="text-center">Você deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
-                    <a class="a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
-                    <button id="btn_cancelar">Cancelar</button>
+                    <div class="p-dialog">
+                        <p class="text-center">Você deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
+                    </div>
+                    <div class="buttons-dialog">
+                        <a class="a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
+                        <button id="btn_cancelar">Cancelar</button>
+                    </div>
                 </dialog>
             @endforeach
         </div>

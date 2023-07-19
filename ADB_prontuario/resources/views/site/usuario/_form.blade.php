@@ -43,21 +43,21 @@
     <option value="aluno">Aluno</option>
     </select>
 </div>
-<div class="col-12">
+<div class="col-md-6">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <label class="form-check-label" for="invalidCheck">
-        Administrador? <b>*</b>
+        Administrador?<b>*</b>
     </label>
     </div>
 </div>
-<div class="col-12">
+<div class="col-md-6">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <label class="form-check-label" for="invalidCheck">
-        Ativo? <b>*</b>
+        Ativo?<b>*</b>
     </label>
     </div>
 </div>

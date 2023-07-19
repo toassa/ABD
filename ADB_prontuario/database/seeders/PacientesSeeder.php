@@ -31,11 +31,16 @@ class PacientesSeeder extends Seeder
             'telefone' => '987654321',
             'segundo_telefone' => '123456789',
             'pertence_segundo_telefone' => 'Sim',
+            'CEP'=>'12345678',
+            'numero_moradia'=>'326',
+            'rua'=>'Rua das Flores',
+            'bairro'=>'Centro',
+            'cidade'=>'São Paulo',
+            'estado'=>'SP',
+            'complemento'=>'Apartamento 1A na Zona Norte',
             'estado_nascimento'=>'Sergipe',
             'cidade_nascimento'=>'Aracaju',
             'ativo' => true,
-            'CEP'=>'12345678',
-            'numero'=>'326',
             'num_USP' => '11111',
         ]);
     }

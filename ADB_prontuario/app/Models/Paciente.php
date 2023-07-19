@@ -36,21 +36,21 @@ class Paciente extends Model
         'pertence_segundo_telefone',
         'data_entrada',
         'ativo',
+        'CEP',
+        'numero_moradia',
+        'rua',
+        'bairro',
+        'cidade',
+        'estado',
+        'complemento',
         'estado_nascimento',
         'cidade_nascimento',
-        'CEP',
-        'numero',
         'num_USP',
     ];
 
     public function users()
     {
         return $this->belongsTo(User::class, 'num_USP', 'num_USP');
-    }
-
-    public function enderecos()
-    {
-        return $this->belongsTo(Endereco::class, ['CEP', 'numero'], ['CEP', 'numero']);
     }
 
     public function exame_fisicos()

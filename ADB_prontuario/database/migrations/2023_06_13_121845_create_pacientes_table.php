@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('pacientes', function (Blueprint $table) {
@@ -31,16 +28,18 @@ return new class extends Migration
             $table->string('pertence_segundo_telefone');
             // $table->string('data_entrada');
 
+            $table->string('CEP');
+            $table->string('numero_moradia');
+            $table->string('rua');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('complemento');
+
             $table->string('estado_nascimento');
             $table->string('cidade_nascimento');
 
             $table->boolean('ativo');
-
-            $table->string('CEP');
-            $table->foreign('CEP')->constrained()->references('CEP')->on('enderecos');
-
-            $table->string('numero');
-            $table->foreign('numero')->constrained()->references('numero')->on('enderecos');
 
             $table->string('num_USP');
             $table->foreign('num_USP')->constrained()->references('num_USP')->on('users');
