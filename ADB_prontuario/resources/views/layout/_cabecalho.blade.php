@@ -16,5 +16,5 @@
     <title>@yield('titulo-pagina')</title>
 </head>
 <body onLoad="hide_password();">
-    <main class="content">
+    <main class="content align-content">
         

@@ -54,13 +54,13 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::group(['middleware' => 'auth'], function(){
     Route::prefix('paciente')->group(function(){
-        Route::get('/', [PacienteController::class, 'pesquisar'])->name('opcao.pacientes');
+        Route::get('/', [PacienteController::class, 'listar'])->name('opcao.pacientes');
         
         Route::get('/index', [PacienteController::class, 'index'])->name('pacientes.index');
     
         Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
     
-        Route::post('/buscar', [PacienteController::class, 'buscar'])->name('paciente.buscar');
+        Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');

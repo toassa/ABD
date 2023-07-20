@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Editar Usuários')
 
 @section('content')
-    @component('components.voltar')
+    @component('components.items.voltar')
         @slot('rota_voltar')
             {{route('opcao.users')}}
         @endslot

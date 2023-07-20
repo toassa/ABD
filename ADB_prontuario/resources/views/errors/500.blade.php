@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Erro 500')
 
 @section('content')
-    @component('components.error')
+    @component('components.items.error')
         @slot('nome_erro')
             {{'Erro 500'}}
         @endslot

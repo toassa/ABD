@@ -3,19 +3,19 @@
 @section('titulo-pagina', 'Listar Usuários')
 
 @section('content')
-    @component('components.voltar')
+    @component('components.items.voltar')
         @slot('rota_voltar')
             {{route('opcao.users')}}
         @endslot
     @endcomponent
-    <section class="square-content square-content--user-listar">
+    <section class="square-content square-content--listar">
         <h1 class="text-center">Listagem de Usuários</h1>
         {{-- , $row->name --}}
         <form action="{{route('users.buscar')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <div class="row g-3 row-pesquisar row-pesquisar--user">
+            <div class="row g-3 row-pesquisar">
                 <div class="col-sm-8">
-                    <input type="text" name="nome" class="form-control" placeholder="Digite o paciente" aria-label="Nome do paciente">
+                    <input type="text" name="nome" class="form-control" placeholder="Digite o usuário" aria-label="Nome do usuário">
                 </div>
                 <div class="col-sm">
                     <button type="submit" class="btn btn-primary">Buscar</button>

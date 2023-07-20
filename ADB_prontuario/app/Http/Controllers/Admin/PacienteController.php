@@ -9,12 +9,17 @@ use App\Models\Paciente;
 
 class PacienteController extends Controller
 {
-    public function pesquisar(){
-        return view('site.paciente.pesquisar');
-    }
-
     public function index(){
         return view('site.paciente.index');
+    }
+
+    public function listar(){
+        $dados = Paciente::all();
+        return view('site.paciente.pesquisar', compact('dados'));
+    }
+
+    public function pesquisar(){
+        return view('site.paciente.pesquisar');
     }
 
     public function cadastrar(){

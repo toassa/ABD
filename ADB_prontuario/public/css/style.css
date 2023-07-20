@@ -42,13 +42,9 @@ body{
     background-image: url('../images/fundo.png');
     background-repeat: no-repeat;
     min-height: 100vh;
-    display: flex;
-    /* Alinha ao centro horizontalmente */
-    justify-content: center;
-    /* Alinha ao centro verticalmente */
-    align-items: center;
 }
 
+/* Square-content ---------------- */
 .square-content{
     padding: 2%;
     background-color: var(--background-color);
@@ -64,9 +60,26 @@ body{
     margin: 15px auto 30px auto;
 }
 
+.square-content--cadastro{
+    width: 70%;
+    margin: 11vh;
+}
+
+/* Listar ---------------------- */
+.square-content--listar{
+    width: 95%;
+    margin: 11vh;
+}
+
+.btn-list-editar{
+    margin-top: 30px;
+}
+
 .align-content{
     display: flex;
+    /* Alinha ao centro horizontalmente */
     justify-content: center;
+    /* Alinha ao centro verticalmente */
     align-items: center;
 }
 
@@ -130,7 +143,7 @@ b{
     margin-bottom: 15px;
 }
 
-.row-pesquisar--user{
+.row-pesquisar{
     width: 50%;
     margin: 50px auto !important;
 }
@@ -149,10 +162,6 @@ img.login-logo{
 
 .login-link{
     width: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     margin-bottom: -15%;
 }
 
@@ -256,12 +265,6 @@ a.login-link{
 }
 
 
-/* Cadastro -------------------- */
-.square-content--user-cadastro{
-    width: 70%;
-    margin: 11vh;
-}
-
 /* Index ----------------------- */
 .user-index{
     display: block;
@@ -318,16 +321,6 @@ a.login-link{
     height: 25px;
     min-width: 100px;
     margin: 0 auto;
-}
-
-/* Listar ---------------------- */
-.square-content--user-listar{
-    width: 95%;
-    margin: 11vh;
-}
-
-.btn-list-editar{
-    margin-top: 30px;
 }
 
 /* Grids */
@@ -434,12 +427,12 @@ dialog::backdrop{
 /* Pacientes ---------------------------------------------------------------------------- */
 
 /* Pesquisar ------------- */
-.square-content--pacientes-pesquisar{
+/* .square-content--pacientes-pesquisar{
     width: 30%;
 }
 
 .square-content--pacientes-pesquisar a{
     text-decoration: none;
     margin: 50px 0;
-}
+} */
 

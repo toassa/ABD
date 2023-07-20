@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Erro 404')
 
 @section('content')
-    @component('components.error')
+    @component('components.items.error')
         @slot('nome_erro')
             {{'Erro 404'}}
         @endslot

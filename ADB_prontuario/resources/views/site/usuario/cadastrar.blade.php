@@ -1,10 +1,10 @@
 @extends('layout.site')
 
-@section('titulo-pagina','Cadastro de Uusários')
+@section('titulo-pagina','Cadastro de Usuários')
 
 @section('content')
-    @component('components.back')@endcomponent
-    <section class="square-content square-content--user-cadastro">
+    @component('components.items.back')@endcomponent
+    <section class="square-content square-content--cadastro">
         {{-- action:route ALTERAR --}}
         <h1 class="text-center">Cadastro de Usuários</h1>
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>

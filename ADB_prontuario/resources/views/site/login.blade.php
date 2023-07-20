@@ -16,8 +16,8 @@
                 <input type="password" class="form-control" id="input-senha" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
-            <div class="login-link">
-                <a href="#" class="login-link">Esqueceu a senha?</a>
+            <div class="login-link align-content">
+                <a href="#" class="login-link login-link text-center">Esqueceu a senha?</a>
             </div>
         </form>
     </section>

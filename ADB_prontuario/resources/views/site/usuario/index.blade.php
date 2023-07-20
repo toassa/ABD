@@ -3,7 +3,7 @@
 @section('titulo-pagina', 'Início - Usuários')
 
 @section('content')
-  @component('components.voltar')
+  @component('components.items.voltar')
     @slot('rota_voltar')
         {{route('admin.opcoes')}}
     @endslot
@@ -13,7 +13,7 @@
       <div class="square-content square-content--user-index">
         <div class="container text-center">
           <div class="row justify-content-md-center">
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
@@ -32,7 +32,7 @@
                   {{route('users.cadastrar')}}
               @endslot
             @endcomponent
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
@@ -51,7 +51,7 @@
                   {{route('users.listar')}}
               @endslot
             @endcomponent
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
@@ -72,7 +72,7 @@
             @endcomponent
           </div>
           <div class="row justify-content-md-center">
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
@@ -92,7 +92,7 @@
                   {{route('admin.login')}}
               @endslot
             @endcomponent
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
@@ -111,7 +111,7 @@
                   {{route('users.list-excluir')}}
               @endslot
             @endcomponent
-            @component('components.user-item')
+            @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
               @endslot
