@@ -8,7 +8,7 @@
             {{route('opcao.users')}}
         @endslot
     @endcomponent
-    <section class="square-content square-content--user-listar content-list-excluir">
+    <section class="square-content square-content--listar content-list-excluir">
         <h1 class="text-center">Excluir Usuários</h1>
         <div class="grid">
             <div class="row row-title">

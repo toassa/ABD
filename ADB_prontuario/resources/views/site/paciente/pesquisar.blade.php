@@ -6,7 +6,7 @@
 
     @component('components.items.voltar')
         @slot('rota_voltar')
-            {{route('opcao.users')}}
+            {{route('admin.opcoes')}}
         @endslot
     @endcomponent
 
@@ -52,7 +52,7 @@
           {{route('paciente.cadastrar')}}
         @endslot
 
-        @slot('route_btn')
+        @slot('text_btn')
           Cadastrar paciente
         @endslot
     @endcomponent

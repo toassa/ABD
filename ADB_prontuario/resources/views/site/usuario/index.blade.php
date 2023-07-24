@@ -88,8 +88,7 @@
                   Desativar
               @endslot
               @slot('href')
-                  {{-- alterar --}}
-                  {{route('admin.login')}}
+                {{route('users.list-desativar')}}
               @endslot
             @endcomponent
             @component('components.items.user-item')

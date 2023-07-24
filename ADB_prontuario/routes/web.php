@@ -48,6 +48,10 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/list-excluir', [UserController::class, 'list_excluir'])->name('users.list-excluir');
 
             Route::get('/excluir/{num_USP}', [UserController::class, 'excluir'])->name('users.excluir');
+    
+            Route::get('/list-desativar', [UserController::class, 'list_desativar'])->name('users.list-desativar');
+
+            Route::get('/desativar/{num_USP}', [UserController::class, 'desativar'])->name('users.desativar');
         });
     });
 });
@@ -76,6 +80,10 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/list-excluir', [PacienteController::class, 'list_excluir'])->name('paciente.list-excluir');
             
             Route::get('/excluir/{id}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
+
+            // Route::get('/list-desativar', [PacienteController::class, 'list_desativar'])->name('paciente.list-desativar');
+            
+            // Route::get('/desativar/{id}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
     });
 
@@ -90,3 +98,4 @@ Route::get('/matheus', function(){
 // - Permitir que itens sejam vistos paenas por administradores
 // - Dialog do list-excluir
 // - Visual do editar usuários
+// - Se excluir o próprio usuário, fazer logout

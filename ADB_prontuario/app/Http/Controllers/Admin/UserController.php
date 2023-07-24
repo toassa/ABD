@@ -71,4 +71,23 @@ class UserController extends Controller
         User::where('num_USP',$num_USP)->delete();
         return redirect() -> route('users.listar');
     }
+
+    public function list_desativar(){
+        $rows = User::all();
+        return view('site.usuario.list-desativar', compact('rows'));
+    }
+
+    public function desativar($num_USP){
+        $rows = User::find($num_USP);
+        if($rows['ativo']==true){
+            User::where('num_USP',$num_USP)->update([
+                'ativo'=>false,
+            ]);
+        }else{
+            User::where('num_USP',$num_USP)->update([
+                'ativo'=>true,
+            ]);
+        }
+        return redirect() -> route('users.list-desativar');
+    }
 }
