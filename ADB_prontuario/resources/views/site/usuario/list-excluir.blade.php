@@ -25,20 +25,26 @@
         <div class="grid grid-list">
             @foreach ($rows as $row)
                 <button id="btn_aparece">
-                    <div class="row row-text row-hover">
-                        <div class="col col-text">{{$row->name}}</div>
-                        <div class="col col-mail">{{$row->num_USP}}</div>
-                        <div class="col col-mail">{{$row->email}}</div>
-                        <div class="col col-text">{{$row->CPF}}</div>
-                        <div class="col col-text">{{$row->cargo}}</div>
-                        <div class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</div>
-                        <div class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</div>
-                        <div class="col col-text">
-                            <span class="material-symbols-outlined">
-                                delete
-                            </span>
+                    @if($row->ativo == true)
+                        <div class="row row-text row-hover row-inactivated">
+                    @endif
+
+                    @if($row->ativo == false)
+                        <div class="row row-text row-hover row-activated">
+                    @endif
+                            <p class="col col-text">{{$row->name}}</p>
+                            <p class="col col-mail">{{$row->num_USP}}</p>
+                            <p class="col col-mail">{{$row->email}}</p>
+                            <p class="col col-text">{{$row->CPF}}</p>
+                            <p class="col col-text">{{$row->cargo}}</p>
+                            <p class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
+                            <p class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
+                            <p class="col col-text">
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                            </p>
                         </div>
-                    </div>
                 </button>
                 <dialog class="square-content square-content--confirma-excluir" id="modal_excluir">
                     <div class="p-dialog">

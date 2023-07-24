@@ -328,6 +328,10 @@ a.login-link{
     margin: 5px 0;
 }
 
+.row p{
+    margin: 0;
+}
+
 .row-hover:hover{
     background-color: var(--background-almost-white);
 }
@@ -354,8 +358,11 @@ a.login-link{
 .col-text{
     color: var(--text-color);
     text-transform: capitalize;
-    /* overflow: hidden; */
     font-size: var(--size-grid);
+}
+
+.col-text img{
+    width: 20px;
 }
 
 .col-mail{
@@ -422,6 +429,15 @@ dialog::backdrop{
 
 .p-dialog{
     width: 100%;
+}
+
+/* List-desativar --------------------- */
+.row-inactivated p{
+    color: var(--text-color);
+}
+
+.row-activated p{
+    color: var(--text-shadow-color);
 }
 
 /* Pacientes ---------------------------------------------------------------------------- */

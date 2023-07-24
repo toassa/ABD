@@ -73,7 +73,7 @@ class UserController extends Controller
     }
 
     public function list_desativar(){
-        $rows = User::all();
+        $rows = User::all()->sortBy('nome');
         return view('site.usuario.list-desativar', compact('rows'));
     }
 

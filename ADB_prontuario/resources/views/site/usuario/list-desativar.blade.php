@@ -25,20 +25,31 @@
         <div class="grid grid-list">
             @foreach ($rows as $row)
                 <a class="a-row-list" href="{{route('users.desativar', $row->num_USP)}}">
-                {{-- <button id="btn_aparece"> --}}
-                    <div class="row row-text row-hover">
-                        <div class="col col-text">{{$row->name}}</div>
-                        <div class="col col-mail">{{$row->num_USP}}</div>
-                        <div class="col col-mail">{{$row->email}}</div>
-                        <div class="col col-text">{{$row->CPF}}</div>
-                        <div class="col col-text">{{$row->cargo}}</div>
-                        <div class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</div>
-                        <div class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</div>
-                        <div class="col col-text">
-                            <span class="material-symbols-outlined">
+                @if($row->ativo == true)
+                    <div class="row row-text row-hover row-inactivated">
+                @endif
+
+                @if($row->ativo == false)
+                    <div class="row row-text row-hover row-activated">
+                @endif
+                        <p class="col col-text">{{$row->name}}</p>
+                        <p class="col col-mail">{{$row->num_USP}}</p>
+                        <p class="col col-mail">{{$row->email}}</p>
+                        <p class="col col-text">{{$row->CPF}}</p>
+                        <p class="col col-text">{{$row->cargo}}</p>
+                        <p class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
+                        <p class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
+                        <p class="col col-text">
+                            @if($row->ativo == true)
+                                <img src="{{asset('images/icons/switch_on.png')}}" alt="Ativo">
+                            @endif
+                            @if($row->ativo == false)
+                                <img src="{{asset('images/icons/switch_off.png')}}" alt="Inativo">
+                            @endif
+                            {{-- <span class="material-symbols-outlined">
                                 switches
-                            </span>
-                        </div>
+                            </span> --}}
+                        </p>
                     </div>
                 {{-- </button> --}}
                 </a>
