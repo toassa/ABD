@@ -15,4 +15,5 @@
             </div>
         </form>
     </section>
+    <script src="{{asset('js/form-cadastro-paciente.js')}}"></script>
 @endsection

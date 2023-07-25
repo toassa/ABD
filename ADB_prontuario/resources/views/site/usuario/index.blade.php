@@ -126,8 +126,7 @@
                   Agendar
               @endslot
               @slot('href')
-                  {{-- alterar --}}
-                  {{route('admin.login')}}
+                {{route('opcao.users')}}
               @endslot
             @endcomponent
           </div>

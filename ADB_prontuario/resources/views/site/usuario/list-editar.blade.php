@@ -23,11 +23,11 @@
             @foreach ($rows as $row)
                 <a class="a-row-list" href="{{route('users.editar', $row->num_USP)}}">
                     @if($row->ativo == true)
-                        <div class="row row-text row-hover row-inactivated">
+                        <div class="row row-text row-hover row-activated">
                     @endif
 
                     @if($row->ativo == false)
-                        <div class="row row-text row-hover row-activated">
+                        <div class="row row-text row-hover row-inactivated">
                     @endif
                             <p class="col col-text">{{Str::limit($row->name, )}}</p>
                             <p class="col col-mail">{{$row->num_USP}}</p>

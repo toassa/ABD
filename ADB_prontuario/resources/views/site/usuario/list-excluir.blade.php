@@ -26,11 +26,11 @@
             @foreach ($rows as $row)
                 <button id="btn_aparece">
                     @if($row->ativo == true)
-                        <div class="row row-text row-hover row-inactivated">
+                        <div class="row row-text row-hover row-activated">
                     @endif
 
                     @if($row->ativo == false)
-                        <div class="row row-text row-hover row-activated">
+                        <div class="row row-text row-hover row-inactivated">
                     @endif
                             <p class="col col-text">{{$row->name}}</p>
                             <p class="col col-mail">{{$row->num_USP}}</p>

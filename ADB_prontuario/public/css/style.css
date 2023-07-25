@@ -196,7 +196,7 @@ a.login-link{
 }
 
 .leave img{
-    width: 28px;
+    width: 28px !important;
 }
 
 .leave input{
@@ -432,11 +432,11 @@ dialog::backdrop{
 }
 
 /* List-desativar --------------------- */
-.row-inactivated p{
+.row-activated p{
     color: var(--text-color);
 }
 
-.row-activated p{
+.row-inactivated p{
     color: var(--text-shadow-color);
 }
 
