@@ -12,7 +12,7 @@ const mascara_tel = (value) =>{
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const dataInput = document.getElementById('validationCustom40');
+    const dataInput = document.getElementById('validationCustom03');
 
     dataInput.addEventListener('input', function() {
       let value = dataInput.value;

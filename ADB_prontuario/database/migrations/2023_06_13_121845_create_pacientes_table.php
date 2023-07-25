@@ -17,6 +17,7 @@ return new class extends Migration
             $table->enum('sexo', ['Feminino', 'Masculino', 'Prefiro não dizer']);
             $table->enum('cor', ['Amarelo', 'Branco', 'Indígena', 'Pardo', 'Preto', 'Prefiro não dizer']);
             $table->enum('estado_civil', ['Casado', 'Solteiro', 'Separado', 'Divorciado', 'Viúvo']);
+            $table->boolean('desempregado_aposentado_diabetes');
             $table->string('profissao');
             $table->string('escolaridade');
             $table->double('renda_mensal', 7, 2);

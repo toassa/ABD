@@ -25,6 +25,7 @@ class Paciente extends Model
         'sexo',
         'cor',
         'estado_civil',
+        'desempregado_aposentado_diabetes',
         'profissao',
         'escolaridade',
         'renda_mensal',

@@ -22,6 +22,7 @@ class PacientesSeeder extends Seeder
             'sexo' => 'Masculino',
             'cor' => 'Branco',
             'estado_civil' => 'Solteiro',
+            'desempregado_aposentado_diabetes'=>false,
             'profissao' => 'Motorista',
             'escolaridade' => 'Ensino Médio',
             'renda_mensal' => 2500.00,
