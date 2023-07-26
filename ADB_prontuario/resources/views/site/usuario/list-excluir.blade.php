@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="grid grid-list">
-            @foreach ($rows as $row)
+           
                 <button id="btn_aparece">
                     @if($row->ativo == true)
                         <div class="row row-text row-hover row-activated">

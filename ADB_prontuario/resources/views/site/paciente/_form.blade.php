@@ -145,6 +145,20 @@
       Insira o dono do 2º telefone
   </div>
 </div>
+<div class="col-md-5">
+  <label for="validationCustom17" class="form-label">CEP <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom17" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" required>
+  <div class="invalid-feedback">
+      Insira um CEP válido
+  </div>
+</div>
+<div class="col-md-5">
+  <label for="validationCustom18" class="form-label">Número <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom18" value="{{isset($dados->numero_moradia) ? $dados->numero_moradia : ''}}" name="numero_moradia" required>
+  <div class="invalid-feedback">
+      Insira um número válido
+  </div>
+</div>
 
 {{-- <option selected disabled value="">Choose...</option> --}}
 {{-- onkeyup="escreve_tel(event)" required --}}
