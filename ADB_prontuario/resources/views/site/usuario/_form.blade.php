@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Número USP <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustom01" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" name="num_USP" required>
+    <input type="text" class="form-control" id="validationCustom01" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" maxlength="8" name="num_USP" required>
     <div class="invalid-feedback">
         Insira o número USP
     </div>
@@ -31,7 +31,7 @@
 </div>
 <div class="col-md-3">
     <label for="validationCustom05" class="form-label">CPF<b>*</b></label>
-    <input type="text" class="form-control" id="validationCustom05" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" name="CPF" required>
+    <input type="text" class="form-control" id="validationCustom05" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" name="CPF" maxlength="11" required>
     <div class="invalid-feedback">
         Insira um CPF válido
     </div>
@@ -39,8 +39,9 @@
 <div class="col-md-3">
     <label for="validationCustom04" class="form-label">Cargo<b>*</b></label>
     <select class="form-select" id="validationCustom04" name="cargo">
-    <option selected value="medico">Médico</option>
-    <option value="aluno">Aluno</option>
+        <option selected disabled value="">Clique para escolher...</option>
+        <option value="medico">Médico</option>
+        <option value="aluno">Aluno</option>
     </select>
 </div>
 <div class="col-md-6">

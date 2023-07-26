@@ -159,6 +159,58 @@
       Insira um número válido
   </div>
 </div>
+<div class="col-md-5">
+  <label for="validationCustom19" class="form-label">Rua <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom19" value="{{isset($dados->rua) ? $dados->rua : ''}}" name="rua" required>
+  <div class="invalid-feedback">
+      Insira uma rua válida
+  </div>
+</div>
+<div class="col-md-5">
+  <label for="validationCustom20" class="form-label">Bairro <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom20" value="{{isset($dados->bairro) ? $dados->bairro : ''}}" name="bairro" required>
+  <div class="invalid-feedback">
+      Insira um bairro válido
+  </div>
+</div>
+<div class="col-md-5">
+  <label for="validationCustom21" class="form-label">Cidade <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom21" value="{{isset($dados->cidade) ? $dados->cidade : ''}}" name="cidade" required>
+  <div class="invalid-feedback">
+    Insira uma cidade válida
+  </div>
+</div>
+<div class="col-md-5">
+  <label for="validationCustom22" class="form-label">Estado <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom22" value="{{isset($dados->estado) ? $dados->estado : ''}}" name="estado" required>
+  <div class="invalid-feedback">
+      Insira um estado válido
+  </div>
+</div>
+<div class="col-md-5">
+  <label for="validationCustom23" class="form-label">Complemento <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom23" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" name="complemento" required>
+  <div class="invalid-feedback">
+      Insira um complemento válido
+  </div>
+</div>
+
+<div class="col-md-5">
+  <label for="validationCustom24" class="form-label">Estado de nascimento <b>*</b></label>
+  <input type="text" class="form-control" id="validationCustom24" value="{{isset($dados->estado_nascimento) ? $dados->estado_nascimento : ''}}" name="estado_nascimento" required>
+  <div class="invalid-feedback">
+      Insira um estado de nascimento válido
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="form-check">
+  <input class="form-check-input" type="hidden" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
+  <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
+  <label class="form-check-label" for="invalidCheck">
+    Ativo <b>*</b>
+  </label>
+  </div>
+</div>
 
 {{-- <option selected disabled value="">Choose...</option> --}}
 {{-- onkeyup="escreve_tel(event)" required --}}

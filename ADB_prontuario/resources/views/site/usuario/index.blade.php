@@ -13,6 +13,7 @@
       <div class="square-content square-content--user-index">
         <div class="container text-center">
           <div class="row justify-content-md-center">
+          @if (Auth::user()->ativo == true)
             @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
@@ -32,6 +33,7 @@
                   {{route('users.cadastrar')}}
               @endslot
             @endcomponent
+            @endif
             @component('components.items.user-item')
               @slot('coluna')
                 col-md-auto
