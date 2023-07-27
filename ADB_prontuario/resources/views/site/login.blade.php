@@ -9,7 +9,7 @@
             {{ csrf_field() }}
             <div class="mb-3">
                 <label for="input-num_USP" class="form-label">Número USP <b>*</b></label>
-                <input type="text" class="form-control" id="input-num_USP" aria-describedby="emailHelp" name="num_USP" required>
+                <input type="text" class="form-control" id="validationCustom01" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" maxlength="8" name="num_USP" required>
             </div>
             <div class="mb-3">
                 <label for="input-senha" class="form-label">Senha <b>*</b></label>

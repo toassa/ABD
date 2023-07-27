@@ -7,7 +7,7 @@
 </div>
 <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Nome<b>*</b></label>
-    <input type="text" class="form-control" id="validationCustom02" value="{{isset($rows->name) ? $rows->name : ''}}" name="name" required>
+    <input type="text" class="form-control" id="validationCustom02" value="{{isset($rows->name) ? $rows->name : ''}}" name="name" maxlength="200" required>
     <div class="invalid-feedback">
         Insira o nome completo do usuário
     </div>
@@ -31,7 +31,7 @@
 </div>
 <div class="col-md-3">
     <label for="validationCustom05" class="form-label">CPF<b>*</b></label>
-    <input type="text" class="form-control" id="validationCustom05" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" name="CPF" maxlength="11" required>
+    <input type="text" class="form-control" id="validationCustom05" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" onInput="mascara(this)" name="CPF" maxlength="11" required>
     <div class="invalid-feedback">
         Insira um CPF válido
     </div>
