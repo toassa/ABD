@@ -5,18 +5,18 @@
       Insira o número de registro
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-6">
   <label for="validationCustom02" class="form-label">Nome <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom02" value="{{isset($dados->nome) ? $dados->nome : ''}}" maxlength="200" name="nome" required>
   <div class="invalid-feedback">
     Insira o nome completo do paciente
   </div>
 </div>
-<div class="col-md-6">
-  <label for="validationCustom03" class="form-label">Data de nascimento <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom03" value="{{isset($dados->data_nascimento) ? $dados->data_nascimento : ''}}" name="data_nascimento" required>
+<div class="col-md-3">
+  <label for="validationCustomData" class="form-label">Data de nascimento <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomData" value="{{isset($dados->data_nascimento) ? $dados->data_nascimento : ''}}" name="data_nascimento" required>
   <div class="invalid-feedback">
-      Insira uma data de nascimento válida para o paciente
+      Data de nascimento inválida
   </div>
 </div>
 
@@ -24,7 +24,7 @@
   <label for="validationCustom04" class="form-label">Idade <b>*</b></label>
   <input type="number" class="form-control text-center" id="validationCustom04" value="{{isset($dados->idade) ? $dados->idade : ''}}" name="idade" maxlength="2" required>
   <div class="invalid-feedback">
-      Insira uma idade válida para o paciente
+      Idade inválida
   </div>
 </div>
 <div class="col-md-3">
@@ -48,7 +48,7 @@
     <option value="Prefiro não dizer">Prefiro não dizer</option>
   </select>
 </div>
-<div class="col-md-3">
+<div class="col-md-4">
   <label for="validationCustom07" class="form-label">Estado civil <b>*</b></label>
   <select class="form-select" id="validationCustom07" name="estado_civil" required>
     <option selected disabled value="">Clique para escolher...</option>
@@ -64,7 +64,16 @@
   <label class="form-check-label" for="invalidCheck">
     Desempregado/Aposentado por causa da diabetes? <b>*</b>
   </label>
-  
+  <div class="row align-content">
+    <div class="form-check col-md-5">
+      <input type="radio" class="form-check-input" id="validationFormCheck2" name="desempregado_aposentado_diabetes	" value="true" required>
+      <label class="form-check-label" for="validationFormCheck2">Sim</label>
+    </div>
+    <div class="form-check col-md-5">
+      <input type="radio" class="form-check-input" id="validationFormCheck3" name="desempregado_aposentado_diabetes	" value="false" required>
+      <label class="form-check-label" for="validationFormCheck3">Não</label>
+    </div>
+  </div>
 </div>
 
 <div class="col-md-3">
@@ -81,7 +90,7 @@
     Insira a escolaridade do paciente 
   </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-4">
   <label for="validationCustom10" class="form-label">Renda mensal <b>*</b></label>
   <div class="input-group has-validation">
   <span class="input-group-text" id="inputGroupPrepend">$</span>
@@ -91,14 +100,14 @@
   </div>
   </div>
 </div>
-<div class="col-md-2">
+<div class="col-md-3">
   <label for="validationCustom11" class="form-label">Dependentes da renda <b>*</b></label>
   <input type="number" class="form-control text-center" id="validationCustom11" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="2" required>
   <div class="invalid-feedback">
       Insira uma quantia válida de dependentes
   </div>
 </div>
-<div class="col-md-3">
+<div class="col-md-4">
   <label for="validationCustom12" class="form-label">Transporte <b>*</b></label>
   <select class="form-select" id="validationCustom12" name="transporte" required>
     <option selected disabled value="">Clique para escolher...</option>
@@ -113,20 +122,26 @@
     <option value="Outros">Outros</option>
   </select>
 </div>
-<div class="col-md-6">
-  <div class="form-check">
-  <input class="form-check-input" type="hidden" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
-  <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
+<div class="col-md-3">
   <label class="form-check-label" for="invalidCheck">
-    Plano de saúde? <b>*</b>
+    Possui plano de saúde? <b>*</b>
   </label>
+  <div class="row align-content">
+    <div class="form-check col-md-5">
+      <input type="radio" class="form-check-input" id="validationFormCheck2" name="plano_saude" value="true" required>
+      <label class="form-check-label" for="validationFormCheck2">Sim</label>
+    </div>
+    <div class="form-check col-md-5">
+      <input type="radio" class="form-check-input" id="validationFormCheck3" name="plano_saude" value="false" required>
+      <label class="form-check-label" for="validationFormCheck3">Não</label>
+    </div>
   </div>
 </div>
 <div class="col-md-3">
   <label for="validationCustom14" class="form-label">Telefone <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom14" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
   <div class="invalid-feedback">
-      Insira um telefone válido para o paciente
+      Insira um telefone válido
   </div>
 </div>
 <div class="col-md-3">
@@ -136,62 +151,72 @@
       Insira um 2º telefone válido
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-3">
   <label for="validationCustom16" class="form-label">Dono do 2º telefone <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom16" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="nome" required>
   <div class="invalid-feedback">
       Insira o dono do 2º telefone
   </div>
 </div>
-<div class="col-md-5">
-  <label for="validationCustom17" class="form-label">CEP <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom17" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" required>
+<div class="col-md-4">
+  <label for="validationCustomCEP" class="form-label">CEP <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomCEP" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" required>
   <div class="invalid-feedback">
       Insira um CEP válido
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-2">
   <label for="validationCustom18" class="form-label">Número <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom18" value="{{isset($dados->numero_moradia) ? $dados->numero_moradia : ''}}" name="numero_moradia" required>
   <div class="invalid-feedback">
       Insira um número válido
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-3">
   <label for="validationCustom19" class="form-label">Rua <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom19" value="{{isset($dados->rua) ? $dados->rua : ''}}" name="rua" required>
   <div class="invalid-feedback">
       Insira uma rua válida
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-3">
   <label for="validationCustom20" class="form-label">Bairro <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom20" value="{{isset($dados->bairro) ? $dados->bairro : ''}}" name="bairro" required>
   <div class="invalid-feedback">
       Insira um bairro válido
   </div>
 </div>
-<div class="col-md-5">
-  <label for="validationCustom21" class="form-label">Cidade <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom21" value="{{isset($dados->cidade) ? $dados->cidade : ''}}" name="cidade" required>
-  <div class="invalid-feedback">
-    Insira uma cidade válida
-  </div>
-</div>
-<div class="col-md-5">
-  <label for="validationCustom22" class="form-label">Estado <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom22" value="{{isset($dados->estado) ? $dados->estado : ''}}" name="estado" required>
-  <div class="invalid-feedback">
-      Insira um estado válido
-  </div>
-</div>
-<div class="col-md-5">
+
+<div class="col-md-4">
   <label for="validationCustom23" class="form-label">Complemento <b>*</b></label>
   <input type="text" class="form-control text-center" id="validationCustom23" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" name="complemento" required>
   <div class="invalid-feedback">
       Insira um complemento válido
   </div>
 </div>
+<div class="col-md-4">
+  <label for="validationCustom22" class="form-label">Estado <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustom21" value="{{isset($dados->estado) ? $dados->estado : ''}}" name="estado" required>
+  <div class="invalid-feedback">
+      Insira um estado válido
+  </div>
+</div>
+<div class="col-md-4">
+  <label for="validationCustom21" class="form-label">Cidade <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustom22" value="{{isset($dados->cidade) ? $dados->cidade : ''}}" name="cidade" required>
+  <div class="invalid-feedback">
+    Insira uma cidade válida
+  </div>
+</div>
+{{-- AQUIIII
+  <select id="estado" onchange="buscaCidades(this.value)">
+  <option value="">Selecione o Estado</option>
+  <option value="AC">Acre</option>
+  <option value="AL">Alagoas</option>
+</select>
+<br />
+<select id="cidade">
+</select> --}}
 
 <div class="col-md-5">
   <label for="validationCustom24" class="form-label">Estado de nascimento <b>*</b></label>
@@ -200,13 +225,12 @@
       Insira um estado de nascimento válido
   </div>
 </div>
-<div class="col-md-6">
-  <div class="form-check">
-  <input class="form-check-input" type="hidden" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
-  <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude == true ? 'checked' : '' }} name="plano_saude" id="invalidCheck">
-  <label class="form-check-label" for="invalidCheck">
-    Ativo <b>*</b>
-  </label>
+
+<div class="col-md-5">
+  <label for="validationCustom24" class="form-label">Cidade de nascimento <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustom24" value="{{isset($dados->cidade_nascimento) ? $dados->cidade_nascimento : ''}}" name="cidade_nascimento" required>
+  <div class="invalid-feedback">
+      Cidade de nascimento inválida
   </div>
 </div>
 
