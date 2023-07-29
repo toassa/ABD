@@ -1,4 +1,3 @@
-// ESTE SERIA O CONTEÚDO DO .js
 var json_cidades = {
         "estados": [
           {
@@ -5763,8 +5762,8 @@ var json_cidades = {
 
   
   function buscaCidades(e){
-    document.querySelector("#validationCustom21").innerHTML = '';
-    var cidade_select = document.querySelector("#validationCustom22");
+    document.querySelector("#validationCustomCidade").innerHTML = '';
+    var cidade_select = document.querySelector("#validationCustomCidade");
  
     var num_estados = json_cidades.estados.length;
     var j_index = -1;
@@ -5777,14 +5776,39 @@ var json_cidades = {
     }
  
     if(j_index != -1){
-       // aqui eu percorro todas as cidades e crio os OPTIONS
-       json_cidades.estados[j_index].cidades.forEach(function(cidade){
+       json_cidades.estados[j_index].cidades.forEach(function(validationCustomCidade){
           var cid_opts = document.createElement('option');
-          cid_opts.setAttribute('value',cidade)
-          cid_opts.innerHTML = cidade;
+          cid_opts.setAttribute('value',validationCustomCidade)
+          cid_opts.innerHTML = validationCustomCidade;
           cidade_select.appendChild(cid_opts);
        });
     }else{
-       document.querySelector("#cidade").innerHTML = '';
+       document.querySelector("#validationCustomCidade").innerHTML = '';
     }
  }  
+
+ function buscaCidadesNascimento(e){
+  document.querySelector("#validationCustomCidadeNascimento").innerHTML = '';
+  var cidade_select = document.querySelector("#validationCustomCidadeNascimento");
+
+  var num_estados = json_cidades.estados.length;
+  var j_index = -1;
+
+  // aqui eu pego o index do Estado dentro do JSON
+  for(var x=0;x<num_estados;x++){
+     if(json_cidades.estados[x].sigla == e){
+        j_index = x;
+     }
+  }
+
+  if(j_index != -1){
+     json_cidades.estados[j_index].cidades.forEach(function(validationCustomCidadeNascimento){
+        var cid_opts = document.createElement('option');
+        cid_opts.setAttribute('value',validationCustomCidadeNascimento)
+        cid_opts.innerHTML = validationCustomCidadeNascimento;
+        cidade_select.appendChild(cid_opts);
+     });
+  }else{
+     document.querySelector("#validationCustomCidadeNascimento").innerHTML = '';
+  }
+}  

@@ -69,7 +69,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
     
-            Route::post('/salvar', [PacienteController::class, 'salvar'])->name('paciente.salvar');
+            Route::post('/salvar/{num_USP}', [PacienteController::class, 'salvar'])->name('paciente.salvar');
     
             Route::get('/list-editar', [PacienteController::class, 'list_editar'])->name('paciente.list-editar');
     

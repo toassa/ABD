@@ -6,7 +6,7 @@
     @component('components.items.back')@endcomponent
     <section class="square-content square-content--cadastro">
         <h1 class="text-center">Cadastro de Pacientes</h1>
-        <form action="{{route('paciente.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
+        <form action="{{route('paciente.salvar', Auth::user()->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             @include('site.paciente._form')
             <div class="col-12 col-btn-form">

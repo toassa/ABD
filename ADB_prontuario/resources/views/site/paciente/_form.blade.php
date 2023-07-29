@@ -1,13 +1,13 @@
 <div class="col-md-3">
-  <label for="validationCustom01" class="form-label">Número de registro <b>*</b></label>
-  <input type="text" class="form-control text-center" pattern="[0-9]*" id="validationCustom01" value="{{isset($dados->num_registro) ? $dados->num_registro : ''}}" name="num_registro" required>
+  <label for="validationCustomNumRegistro" class="form-label">Número de registro <b>*</b></label>
+  <input type="text" class="form-control text-center" pattern="[0-9]*" id="validationCustomNumRegistro" value="{{isset($dados->num_registro) ? $dados->num_registro : ''}}" name="num_registro" maxlength="12" required>
   <div class="invalid-feedback">
       Insira o número de registro
   </div>
 </div>
 <div class="col-md-6">
-  <label for="validationCustom02" class="form-label">Nome <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom02" value="{{isset($dados->nome) ? $dados->nome : ''}}" maxlength="200" name="nome" required>
+  <label for="validationCustomNome" class="form-label">Nome <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}" maxlength="200" name="nome"  maxlength="200"required>
   <div class="invalid-feedback">
     Insira o nome completo do paciente
   </div>
@@ -21,15 +21,15 @@
 </div>
 
 <div class="col-md-2">
-  <label for="validationCustom04" class="form-label">Idade <b>*</b></label>
-  <input type="number" class="form-control text-center" id="validationCustom04" value="{{isset($dados->idade) ? $dados->idade : ''}}" name="idade" maxlength="2" required>
+  <label for="validationCustomIdade" class="form-label">Idade <b>*</b></label>
+  <input type="number" class="form-control text-center" id="validationCustomIdade" value="{{isset($dados->idade) ? $dados->idade : ''}}" name="idade" maxlength="2" required>
   <div class="invalid-feedback">
       Idade inválida
   </div>
 </div>
 <div class="col-md-3">
-  <label for="validationCustom05" class="form-label">Sexo <b>*</b></label>
-  <select class="form-select" id="validationCustom05" name="sexo" required>
+  <label for="validationCustomSexo" class="form-label">Sexo <b>*</b></label>
+  <select class="form-select" id="validationCustomSexo" name="sexo" required>
     <option selected disabled value="">Clique para escolher...</option>
     <option value="Feminino">Feminino</option>
     <option value="Masculino">Masculino</option>
@@ -37,8 +37,8 @@
   </select>
 </div>
 <div class="col-md-3">
-  <label for="validationCustom06" class="form-label">Cor <b>*</b></label>
-  <select class="form-select" id="validationCustom06" name="cor" required>
+  <label for="validationCustomCor" class="form-label">Cor <b>*</b></label>
+  <select class="form-select" id="validationCustomCor" name="cor" required>
     <option selected disabled value="">Clique para escolher...</option>
     <option value="Amarelo">Amarelo</option>
     <option value="Branco">Branco</option>
@@ -49,8 +49,8 @@
   </select>
 </div>
 <div class="col-md-4">
-  <label for="validationCustom07" class="form-label">Estado civil <b>*</b></label>
-  <select class="form-select" id="validationCustom07" name="estado_civil" required>
+  <label for="validationCustomEstadoCivil" class="form-label">Estado civil <b>*</b></label>
+  <select class="form-select" id="validationCustomEstadoCivil" name="estado_civil" required>
     <option selected disabled value="">Clique para escolher...</option>
     <option value="Casado">Casado</option>
     <option value="Solteiro">Solteiro</option>
@@ -61,55 +61,55 @@
 </div>
 
 <div class="col-md-6">
-  <label class="form-check-label" for="invalidCheck">
+  <label class="form-check-label" for="validationFormDesempregado">
     Desempregado/Aposentado por causa da diabetes? <b>*</b>
   </label>
   <div class="row align-content">
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormCheck2" name="desempregado_aposentado_diabetes	" value="true" required>
-      <label class="form-check-label" for="validationFormCheck2">Sim</label>
+      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="plano_saude" value="true" required>
+      <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
     </div>
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormCheck3" name="desempregado_aposentado_diabetes	" value="false" required>
-      <label class="form-check-label" for="validationFormCheck3">Não</label>
+      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="plano_saude" value="false" required>
+      <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
     </div>
   </div>
 </div>
 
 <div class="col-md-3">
-  <label for="validationCustom08" class="form-label">Profissão <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom08" value="{{isset($dados->profissao) ? $dados->profissao : ''}}" name="profissao" required>
+  <label for="validationCustomProfissao" class="form-label">Profissão <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomProfissao" value="{{isset($dados->profissao) ? $dados->profissao : ''}}" name="profissao" maxlength="50" required>
   <div class="invalid-feedback">
     Insira a profissão do paciente 
   </div>
 </div>
 <div class="col-md-3">
-  <label for="validationCustom09" class="form-label">Escolaridade <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom09" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade" required>
+  <label for="validationCustomEscolaridade" class="form-label">Escolaridade <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomEscolaridade" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade"  maxlength="30" required>
   <div class="invalid-feedback">
     Insira a escolaridade do paciente 
   </div>
 </div>
 <div class="col-md-4">
-  <label for="validationCustom10" class="form-label">Renda mensal <b>*</b></label>
+  <label for="validationCustomRendaMensal" class="form-label">Renda mensal <b>*</b></label>
   <div class="input-group has-validation">
   <span class="input-group-text" id="inputGroupPrepend">$</span>
-  <input type="number" class="form-control text-center" id="validationCustom10" aria-describedby="inputGroupPrepend" value="{{isset($dados->renda_mensal) ? $dados->renda_mensal : ''}}" name="renda_mensal" step="any" required>
+  <input type="number" class="form-control text-center" id="validationCustomRendaMensal" aria-describedby="inputGroupPrepend" value="{{isset($dados->renda_mensal) ? $dados->renda_mensal : ''}}" name="renda_mensal" step="any" maxlength="10" required>
   <div class="invalid-feedback">
       Inira uma renda mensal válida para o paciente
   </div>
   </div>
 </div>
 <div class="col-md-3">
-  <label for="validationCustom11" class="form-label">Dependentes da renda <b>*</b></label>
-  <input type="number" class="form-control text-center" id="validationCustom11" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="2" required>
+  <label for="validationCustomDependentesdaRenda" class="form-label">Dependentes da renda <b>*</b></label>
+  <input type="number" class="form-control text-center" id="validationCustomDependentesdaRenda" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="3" required>
   <div class="invalid-feedback">
       Insira uma quantia válida de dependentes
   </div>
 </div>
 <div class="col-md-4">
-  <label for="validationCustom12" class="form-label">Transporte <b>*</b></label>
-  <select class="form-select" id="validationCustom12" name="transporte" required>
+  <label for="validationCustomTransporte" class="form-label">Transporte <b>*</b></label>
+  <select class="form-select" id="validationCustomTransporte" name="transporte" required>
     <option selected disabled value="">Clique para escolher...</option>
     <option value="Ônibus">Ônibus</option>
     <option value="Trem">Trem</option>
@@ -128,111 +128,183 @@
   </label>
   <div class="row align-content">
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormCheck2" name="plano_saude" value="true" required>
-      <label class="form-check-label" for="validationFormCheck2">Sim</label>
+      <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" required>
+      <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
     </div>
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormCheck3" name="plano_saude" value="false" required>
-      <label class="form-check-label" for="validationFormCheck3">Não</label>
+      <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" required>
+      <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
     </div>
   </div>
 </div>
 <div class="col-md-3">
-  <label for="validationCustom14" class="form-label">Telefone <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom14" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
+  <label for="validationCustomTelefone" class="form-label">Telefone <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomTelefone" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="13" required>
   <div class="invalid-feedback">
       Insira um telefone válido
   </div>
 </div>
+<!-- Segundo telefone -->
 <div class="col-md-3">
-  <label for="validationCustom15" class="form-label">Segundo telefone <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom15" value="{{isset($dados->segundo_telefone) ? $dados->segundo_telefone : ''}}" name="segundo_telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
+  <label for="validationCustomSegundoTelefone" class="form-label">Segundo telefone <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomSegundoTelefone" value="{{isset($dados->segundo_telefone) ? $dados->segundo_telefone : ''}}" name="segundo_telefone" onkeyup="escreve_tel(event)" maxlength="13" required>
   <div class="invalid-feedback">
       Insira um 2º telefone válido
   </div>
 </div>
+
+<!-- Dono do segundo telefone -->
 <div class="col-md-3">
-  <label for="validationCustom16" class="form-label">Dono do 2º telefone <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom16" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="nome" required>
+  <label for="validationCustomDonoSegundoTelefone" class="form-label">Dono do 2º telefone <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="nome" maxlength="50" required>
   <div class="invalid-feedback">
       Insira o dono do 2º telefone
   </div>
 </div>
+
+<!-- CEP -->
 <div class="col-md-4">
   <label for="validationCustomCEP" class="form-label">CEP <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustomCEP" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" required>
+  <input type="text" class="form-control text-center" id="validationCustomCEP" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" maxlength="9" required>
   <div class="invalid-feedback">
       Insira um CEP válido
   </div>
 </div>
+
+<!-- Número -->
 <div class="col-md-2">
-  <label for="validationCustom18" class="form-label">Número <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom18" value="{{isset($dados->numero_moradia) ? $dados->numero_moradia : ''}}" name="numero_moradia" required>
+  <label for="validationCustomNumero" class="form-label">Número <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomNumero" value="{{isset($dados->numero_moradia) ? $dados->numero_moradia : ''}}" name="numero_moradia" maxlength="8" required>
   <div class="invalid-feedback">
       Insira um número válido
   </div>
 </div>
+
+<!-- Rua -->
 <div class="col-md-3">
-  <label for="validationCustom19" class="form-label">Rua <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom19" value="{{isset($dados->rua) ? $dados->rua : ''}}" name="rua" required>
+  <label for="validationCustomRua" class="form-label">Rua <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomRua" value="{{isset($dados->rua) ? $dados->rua : ''}}" name="rua" maxlength="50" required>
   <div class="invalid-feedback">
       Insira uma rua válida
   </div>
 </div>
+
+<!-- Bairro -->
 <div class="col-md-3">
-  <label for="validationCustom20" class="form-label">Bairro <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom20" value="{{isset($dados->bairro) ? $dados->bairro : ''}}" name="bairro" required>
+  <label for="validationCustomBairro" class="form-label">Bairro <b>*</b></label>
+  <input type="text" class="form-control text-center" id="validationCustomBairro" value="{{isset($dados->bairro) ? $dados->bairro : ''}}" name="bairro" maxlength="50" required>
   <div class="invalid-feedback">
       Insira um bairro válido
   </div>
 </div>
 
+<!-- Complemento -->
 <div class="col-md-4">
-  <label for="validationCustom23" class="form-label">Complemento <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom23" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" name="complemento" required>
+  <label for="validationCustomComplemento" class="form-label">Complemento</label>
+  <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento">
   <div class="invalid-feedback">
       Insira um complemento válido
   </div>
 </div>
+
+<!-- Estado -->
 <div class="col-md-4">
-  <label for="validationCustom22" class="form-label">Estado <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom21" value="{{isset($dados->estado) ? $dados->estado : ''}}" name="estado" required>
+  <label for="validationCustomEstado" class="form-label">Estado <b>*</b></label>
+  <select class="form-select" id="validationCustomEstado" name="estado" onchange="buscaCidades(this.value)" required>
+    <option value="">Clique para escolher...</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+  </select>
   <div class="invalid-feedback">
       Insira um estado válido
   </div>
 </div>
+
+<!-- Cidade -->
 <div class="col-md-4">
-  <label for="validationCustom21" class="form-label">Cidade <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom22" value="{{isset($dados->cidade) ? $dados->cidade : ''}}" name="cidade" required>
+  <label for="validationCustomCidade" class="form-label">Cidade <b>*</b></label>
+  <select class="form-select" id="validationCustomCidade" name="cidade" required>
+    <option selected disabled value="">Clique para escolher...</option>
+  </select>
   <div class="invalid-feedback">
     Insira uma cidade válida
   </div>
 </div>
-{{-- AQUIIII
-  <select id="estado" onchange="buscaCidades(this.value)">
-  <option value="">Selecione o Estado</option>
-  <option value="AC">Acre</option>
-  <option value="AL">Alagoas</option>
-</select>
-<br />
-<select id="cidade">
-</select> --}}
 
-<div class="col-md-5">
-  <label for="validationCustom24" class="form-label">Estado de nascimento <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom24" value="{{isset($dados->estado_nascimento) ? $dados->estado_nascimento : ''}}" name="estado_nascimento" required>
+<!-- Estado -->
+<div class="col-md-4">
+  <label for="validationCustomEstadoNascimento" class="form-label">Estado de Nascimento<b>*</b></label>
+  <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" required>
+    <option value="">Clique para escolher...</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+  </select>
   <div class="invalid-feedback">
-      Insira um estado de nascimento válido
+      Insira um estado válido
   </div>
 </div>
 
-<div class="col-md-5">
-  <label for="validationCustom24" class="form-label">Cidade de nascimento <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustom24" value="{{isset($dados->cidade_nascimento) ? $dados->cidade_nascimento : ''}}" name="cidade_nascimento" required>
+<!-- Cidade -->
+<div class="col-md-4">
+  <label for="validationCustomCidadeNascimento" class="form-label">Cidade de Nascimento<b>*</b></label>
+  <select class="form-select" id="validationCustomCidadeNascimento" name="cidade_nascimento" required>
+    <option selected disabled value="">Clique para escolher...</option>
+  </select>
   <div class="invalid-feedback">
-      Cidade de nascimento inválida
+    Insira uma cidade válida
   </div>
 </div>
+
 
 {{-- <option selected disabled value="">Choose...</option> --}}
 {{-- onkeyup="escreve_tel(event)" required --}}
