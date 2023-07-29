@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cepInput.addEventListener('input', function() {
     let value = cepInput.value;
     value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-    value = value.replace(/(\d{5})(\d)/, '$1/$2'); // Adiciona uma barra após os primeiros dois dígitos
+    value = value.replace(/(\d{5})(\d)/, '$5-$2'); // Adiciona uma barra após os primeiros dois dígitos
   });
 
   dataInput.addEventListener('input', function() {
