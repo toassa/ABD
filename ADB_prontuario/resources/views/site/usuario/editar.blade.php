@@ -15,5 +15,5 @@
             </div>
         </form>
     </section>
-    <script src="{{asset('js/editar.js')}}"></script>
+    <script src="{{asset('js/functions.js')}}"></script>
 @endsection

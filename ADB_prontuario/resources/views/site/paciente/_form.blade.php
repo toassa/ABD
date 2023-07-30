@@ -31,32 +31,32 @@
   <label for="validationCustomSexo" class="form-label">Sexo <b>*</b></label>
   <select class="form-select" id="validationCustomSexo" name="sexo" required>
     <option selected disabled value="">Clique para escolher...</option>
-    <option value="Feminino">Feminino</option>
-    <option value="Masculino">Masculino</option>
-    <option value="Prefiro não dizer">Prefiro não dizer</option>
+    <option {{ isset($dados->sexo) && $dados->sexo === 'Feminino' ? 'selected' : '' }} value="Feminino">Feminino</option>
+    <option {{ isset($dados->sexo) && $dados->sexo === 'Masculino' ? 'selected' : '' }} value="Masculino">Masculino</option>
+    <option {{ isset($dados->sexo) && $dados->sexo === 'Prefiro não dizer' ? 'selected' : '' }} value="Prefiro não dizer">Prefiro não dizer</option>
   </select>
 </div>
 <div class="col-md-3">
   <label for="validationCustomCor" class="form-label">Cor <b>*</b></label>
   <select class="form-select" id="validationCustomCor" name="cor" required>
     <option selected disabled value="">Clique para escolher...</option>
-    <option value="Amarelo">Amarelo</option>
-    <option value="Branco">Branco</option>
-    <option value="Indígena">Indígena</option>
-    <option value="Pardo">Pardo</option>
-    <option value="Preto">Preto</option>
-    <option value="Prefiro não dizer">Prefiro não dizer</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Amarelo' ? 'selected' : '' }} value="Amarelo">Amarelo</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Branco' ? 'selected' : '' }} value="Branco">Branco</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Indígena' ? 'selected' : '' }} value="Indígena">Indígena</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Pardo' ? 'selected' : '' }} value="Pardo">Pardo</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Preto' ? 'selected' : '' }} value="Preto">Preto</option>
+    <option {{ isset($dados->cor) && $dados->cor === 'Prefiro não dizer' ? 'selected' : '' }} value="Prefiro não dizer">Prefiro não dizer</option>
   </select>
 </div>
 <div class="col-md-4">
   <label for="validationCustomEstadoCivil" class="form-label">Estado civil <b>*</b></label>
   <select class="form-select" id="validationCustomEstadoCivil" name="estado_civil" required>
     <option selected disabled value="">Clique para escolher...</option>
-    <option value="Casado">Casado</option>
-    <option value="Solteiro">Solteiro</option>
-    <option value="Separado">Separado</option>
-    <option value="Divorciado">Divorciado</option>
-    <option value="Viúvo">Viúvo</option>
+    <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Casado' ? 'selected' : '' }} value="Casado">Casado</option>
+    <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Solteiro' ? 'selected' : '' }} value="Solteiro">Solteiro</option>
+    <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Separado' ? 'selected' : '' }} value="Separado">Separado</option>
+    <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Divorciado' ? 'selected' : '' }} value="Divorciado">Divorciado</option>
+    <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Viúvo' ? 'selected' : '' }} value="Viúvo">Viúvo</option>
   </select>
 </div>
 
@@ -111,15 +111,15 @@
   <label for="validationCustomTransporte" class="form-label">Transporte <b>*</b></label>
   <select class="form-select" id="validationCustomTransporte" name="transporte" required>
     <option selected disabled value="">Clique para escolher...</option>
-    <option value="Ônibus">Ônibus</option>
-    <option value="Trem">Trem</option>
-    <option value="Metrô">Metrô</option>
-    <option value="Van">Van</option>
-    <option value="Carro">Carro</option>
-    <option value="Taxi">Taxi</option>
-    <option value="Uber">Uber</option>
-    <option value="A pé">A pé</option>
-    <option value="Outros">Outros</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Ônibus' ? 'selected' : '' }} value="Ônibus">Ônibus</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Trem' ? 'selected' : '' }} value="Trem">Trem</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Metrô' ? 'selected' : '' }} value="Metrô">Metrô</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Van' ? 'selected' : '' }} value="Van">Van</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Carro' ? 'selected' : '' }} value="Carro">Carro</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Taxi' ? 'selected' : '' }} value="Taxi">Taxi</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Uber' ? 'selected' : '' }} value="Uber">Uber</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'A pé' ? 'selected' : '' }} value="A pé">A pé</option>
+    <option {{ isset($dados->transporte) && $dados->transporte === 'Outros' ? 'selected' : '' }} value="Outros">Outros</option>
   </select>
 </div>
 <div class="col-md-3">
@@ -212,33 +212,33 @@
   <label for="validationCustomEstado" class="form-label">Estado <b>*</b></label>
   <select class="form-select" id="validationCustomEstado" name="estado" onchange="buscaCidades(this.value)" required>
     <option value="">Clique para escolher...</option>
-    <option value="AC">Acre</option>
-    <option value="AL">Alagoas</option>
-    <option value="AP">Amapá</option>
-    <option value="AM">Amazonas</option>
-    <option value="BA">Bahia</option>
-    <option value="CE">Ceará</option>
-    <option value="DF">Distrito Federal</option>
-    <option value="ES">Espírito Santo</option>
-    <option value="GO">Goiás</option>
-    <option value="MA">Maranhão</option>
-    <option value="MT">Mato Grosso</option>
-    <option value="MS">Mato Grosso do Sul</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="PA">Pará</option>
-    <option value="PB">Paraíba</option>
-    <option value="PR">Paraná</option>
-    <option value="PE">Pernambuco</option>
-    <option value="PI">Piauí</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="RN">Rio Grande do Norte</option>
-    <option value="RS">Rio Grande do Sul</option>
-    <option value="RO">Rondônia</option>
-    <option value="RR">Roraima</option>
-    <option value="SC">Santa Catarina</option>
-    <option value="SP">São Paulo</option>
-    <option value="SE">Sergipe</option>
-    <option value="TO">Tocantins</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AC' ? 'selected' : '' }} value="AC">Acre</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AL' ? 'selected' : '' }} value="AL">Alagoas</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AP' ? 'selected' : '' }} value="AP">Amapá</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AM' ? 'selected' : '' }} value="AM">Amazonas</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'BA' ? 'selected' : '' }} value="BA">Bahia</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'CE' ? 'selected' : '' }} value="CE">Ceará</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'DF' ? 'selected' : '' }} value="DF">Distrito Federal</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'ES' ? 'selected' : '' }} value="ES">Espírito Santo</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'GO' ? 'selected' : '' }} value="GO">Goiás</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MA' ? 'selected' : '' }} value="MA">Maranhão</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MT' ? 'selected' : '' }} value="MT">Mato Grosso</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MS' ? 'selected' : '' }} value="MS">Mato Grosso do Sul</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MG' ? 'selected' : '' }} value="MG">Minas Gerais</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PA' ? 'selected' : '' }} value="PA">Pará</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PB' ? 'selected' : '' }} value="PB">Paraíba</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PR' ? 'selected' : '' }} value="PR">Paraná</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PE' ? 'selected' : '' }} value="PE">Pernambuco</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PI' ? 'selected' : '' }} value="PI">Piauí</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RJ' ? 'selected' : '' }} value="RJ">Rio de Janeiro</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RN' ? 'selected' : '' }} value="RN">Rio Grande do Norte</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RS' ? 'selected' : '' }} value="RS">Rio Grande do Sul</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RO' ? 'selected' : '' }} value="RO">Rondônia</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RR' ? 'selected' : '' }} value="RR">Roraima</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SC' ? 'selected' : '' }} value="SC">Santa Catarina</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SP' ? 'selected' : '' }} value="SP">São Paulo</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SE' ? 'selected' : '' }} value="SE">Sergipe</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'TO' ? 'selected' : '' }} value="TO">Tocantins</option>
   </select>
   <div class="invalid-feedback">
       Insira um estado válido
@@ -261,33 +261,33 @@
   <label for="validationCustomEstadoNascimento" class="form-label">Estado de Nascimento<b>*</b></label>
   <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" required>
     <option value="">Clique para escolher...</option>
-    <option value="AC">Acre</option>
-    <option value="AL">Alagoas</option>
-    <option value="AP">Amapá</option>
-    <option value="AM">Amazonas</option>
-    <option value="BA">Bahia</option>
-    <option value="CE">Ceará</option>
-    <option value="DF">Distrito Federal</option>
-    <option value="ES">Espírito Santo</option>
-    <option value="GO">Goiás</option>
-    <option value="MA">Maranhão</option>
-    <option value="MT">Mato Grosso</option>
-    <option value="MS">Mato Grosso do Sul</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="PA">Pará</option>
-    <option value="PB">Paraíba</option>
-    <option value="PR">Paraná</option>
-    <option value="PE">Pernambuco</option>
-    <option value="PI">Piauí</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="RN">Rio Grande do Norte</option>
-    <option value="RS">Rio Grande do Sul</option>
-    <option value="RO">Rondônia</option>
-    <option value="RR">Roraima</option>
-    <option value="SC">Santa Catarina</option>
-    <option value="SP">São Paulo</option>
-    <option value="SE">Sergipe</option>
-    <option value="TO">Tocantins</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AC' ? 'selected' : '' }} value="AC">Acre</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AL' ? 'selected' : '' }} value="AL">Alagoas</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AP' ? 'selected' : '' }} value="AP">Amapá</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'AM' ? 'selected' : '' }} value="AM">Amazonas</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'BA' ? 'selected' : '' }} value="BA">Bahia</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'CE' ? 'selected' : '' }} value="CE">Ceará</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'DF' ? 'selected' : '' }} value="DF">Distrito Federal</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'ES' ? 'selected' : '' }} value="ES">Espírito Santo</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'GO' ? 'selected' : '' }} value="GO">Goiás</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MA' ? 'selected' : '' }} value="MA">Maranhão</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MT' ? 'selected' : '' }} value="MT">Mato Grosso</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MS' ? 'selected' : '' }} value="MS">Mato Grosso do Sul</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'MG' ? 'selected' : '' }} value="MG">Minas Gerais</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PA' ? 'selected' : '' }} value="PA">Pará</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PB' ? 'selected' : '' }} value="PB">Paraíba</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PR' ? 'selected' : '' }} value="PR">Paraná</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PE' ? 'selected' : '' }} value="PE">Pernambuco</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'PI' ? 'selected' : '' }} value="PI">Piauí</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RJ' ? 'selected' : '' }} value="RJ">Rio de Janeiro</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RN' ? 'selected' : '' }} value="RN">Rio Grande do Norte</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RS' ? 'selected' : '' }} value="RS">Rio Grande do Sul</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RO' ? 'selected' : '' }} value="RO">Rondônia</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'RR' ? 'selected' : '' }} value="RR">Roraima</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SC' ? 'selected' : '' }} value="SC">Santa Catarina</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SP' ? 'selected' : '' }} value="SP">São Paulo</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'SE' ? 'selected' : '' }} value="SE">Sergipe</option>
+    <option {{ isset($dados->estado) && $dados->estado === 'TO' ? 'selected' : '' }} value="TO">Tocantins</option>
   </select>
   <div class="invalid-feedback">
       Insira um estado válido
