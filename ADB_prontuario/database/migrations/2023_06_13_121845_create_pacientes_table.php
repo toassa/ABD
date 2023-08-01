@@ -4,6 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use App\Models\User;
+use App\Models\Paciente;
+
 return new class extends Migration
 {
     public function up(): void
@@ -35,7 +38,7 @@ return new class extends Migration
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
 
             $table->string('estado_nascimento');
             $table->string('cidade_nascimento');
@@ -54,6 +57,25 @@ return new class extends Migration
      */
     public function down(): void
     {
+        // Schema::table('pacientes', function (Blueprint $table) {
+        //     $table->dropForeign(['num_USP']);
+        // });
+
         Schema::dropIfExists('pacientes');
     }
+
+    // Método para remover um usuário e atualizar os pacientes relacionados
+    // public function removeUserAndRelatedPatients($num_USP): void
+    // {
+    //     // Passo 1: Obter o valor de num_USP do usuário que será excluído
+    //     $user = User::table('users')->where('num_USP', $num_USP)->first();
+
+    //     if ($user) {
+    //         // Passo 2: Atualizar a coluna num_USP na tabela pacientes para NULL (ou para um novo valor válido)
+    //         Paciente::table('pacientes')->where('num_USP', $num_USP)->update(['num_USP' => null]);
+
+    //         // Passo 3: Excluir o usuário
+    //         User::table('users')->where('num_USP', $num_USP)->delete();
+    //     }
+    // }
 };

@@ -66,11 +66,11 @@
   </label>
   <div class="row align-content">
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="plano_saude" value="true" required>
+      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="true" required>
       <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
     </div>
     <div class="form-check col-md-5">
-      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="plano_saude" value="false" required>
+      <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="false" required>
       <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
     </div>
   </div>
@@ -156,7 +156,7 @@
 <!-- Dono do segundo telefone -->
 <div class="col-md-3">
   <label for="validationCustomDonoSegundoTelefone" class="form-label">Dono do 2º telefone <b>*</b></label>
-  <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="nome" maxlength="50" required>
+  <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="pertence_segundo_telefone" maxlength="50" required>
   <div class="invalid-feedback">
       Insira o dono do 2º telefone
   </div>
@@ -257,7 +257,7 @@
 </div>
 
 <!-- Estado -->
-<div class="col-md-4">
+<div class="col-md-5">
   <label for="validationCustomEstadoNascimento" class="form-label">Estado de Nascimento<b>*</b></label>
   <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" required>
     <option value="">Clique para escolher...</option>
@@ -295,15 +295,28 @@
 </div>
 
 <!-- Cidade -->
-<div class="col-md-4">
-  <label for="validationCustomCidadeNascimento" class="form-label">Cidade de Nascimento<b>*</b></label>
-  <select class="form-select" id="validationCustomCidadeNascimento" name="cidade_nascimento" required>
-    <option selected disabled value="">Clique para escolher...</option>
-  </select>
-  <div class="invalid-feedback">
-    Insira uma cidade válida
+<div class="col-md-7 align-content">
+  <div class="col-md-6">
+    <label for="validationCustomCidadeNascimento" class="form-label">Cidade de Nascimento<b>*</b></label>
+    <select class="form-select" id="validationCustomCidadeNascimento" name="cidade_nascimento" required>
+      <option selected disabled value="">Clique para escolher...</option>
+    </select>
+    <div class="invalid-feedback">
+      Insira uma cidade válida
+    </div>
+  </div>
+
+  <div class="col-md-6" style="padding: 2% 15%">
+    <div class="form-check">
+    <input class="form-check-input" type="hidden" value="false" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+    <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+    <label class="form-check-label" for="invalidCheck">
+        Ativo?<b>*</b>
+    </label>
+    </div>
   </div>
 </div>
+
 
 
 {{-- <option selected disabled value="">Choose...</option> --}}
