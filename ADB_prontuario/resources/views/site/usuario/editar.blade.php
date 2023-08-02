@@ -11,7 +11,7 @@
             <input type="hidden" name="_method" value="put">
             @include('site.usuario._form')
             <div class="col-12 col-btn-form">
-                <button class="btn btn-primary">Atualizar</button>
+                <button class="btn btn-giga btn-primary">Atualizar</button>
             </div>
         </form>
     </section>

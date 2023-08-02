@@ -18,36 +18,23 @@
                 <button class="btn btn-primary btn-giga" type="submit">Cadastrar</button>
                 <button class="btn btn-primary btn-giga" type="reset">Limpar</button>
             </div>
-
-            <div class="col-12 col-btn-form align-content">
-                <button class="prev-btn btn btn-secondary">
-                    <span class="material-symbols-outlined">
-                        arrow_back
-                    </span>
-                </button>
-                <button class="next-btn btn btn-secondary">
-                    <span class="material-symbols-outlined">
-                        arrow_forward
-                    </span>
-                </button>
-            </div>
         </form>
+        
+    <div class="align-content">
+        <button class="prev-btn btn btn-secondary">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+        <button class="next-btn btn btn-secondary">
+            <span class="material-symbols-outlined">
+                arrow_forward
+            </span>
+        </button>
+    </div>
 
-        {{-- <div class="pagination-container">
-            <div class="pagination-content">
-                <div class="page page1">Conteúdo da página 1</div>
-                <div class="page page2">Conteúdo da página 2</div>
-                <div class="page page3">Conteúdo da página 3</div>
-                <div class="page page4">Conteúdo da página 4</div>
-                <div class="page page5">Conteúdo da página 5</div>
-            </div>
-            <div class="pagination">
-                <button class="prev-btn">Anterior</button>
-                <button class="next-btn">Próximo</button>
-            </div>
-        </div> --}}
     </section>
-
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('js/slide.js')}}"></script>
 

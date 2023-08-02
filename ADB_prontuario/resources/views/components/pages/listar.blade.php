@@ -17,5 +17,5 @@
     <div class="grid">
         {{$grid_content}}
     </div>
-    <a href="{{$route_btn}}" class="btn btn-primary btn-list-editar">{{$text_btn}}</a>
+    <a href="{{$route_btn}}" class="btn btn-primary  btn-giga btn-list-editar">{{$text_btn}}</a>
 </section>

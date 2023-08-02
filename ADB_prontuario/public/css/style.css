@@ -269,6 +269,14 @@ a.login-link{
 
 
 /* Index ----------------------- */
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 .user-index{
     display: block;
     width: 100%;

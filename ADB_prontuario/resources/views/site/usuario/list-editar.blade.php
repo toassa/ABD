@@ -29,19 +29,19 @@
                     @if($row->ativo == false)
                         <div class="row row-text row-hover row-inactivated">
                     @endif
-                            <p class="col col-text">{{Str::limit($row->name, )}}</p>
-                            <p class="col col-mail">{{$row->num_USP}}</p>
-                            <p class="col col-mail">{{$row->email}}</p>
-                            <p class="col col-text">{{$row->CPF}}</p>
-                            <p class="col col-text">{{$row->cargo}}</p>
-                            <p class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
-                            <p class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
-                            <p class="col col-text">
-                                <span class="material-symbols-outlined">
-                                    edit
-                                </span>
-                            </p>
-                        </div>
+                        <p class="col col-text">{{Str::limit($row->name, )}}</p>
+                        <p class="col col-mail">{{$row->num_USP}}</p>
+                        <p class="col col-mail">{{$row->email}}</p>
+                        <p class="col col-text">{{$row->CPF}}</p>
+                        <p class="col col-text">{{$row->cargo}}</p>
+                        <p class="col col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
+                        <p class="col col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
+                        <p class="col col-text">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </p>
+                    </div>
                 </a>
             @endforeach
         </div>
