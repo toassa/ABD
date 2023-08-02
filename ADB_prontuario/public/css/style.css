@@ -175,8 +175,11 @@ a.login-link{
     font-size: var(--size-label-form);
 }
 
-.btn{
+.btn-giga{
     width: 100% !important;
+}
+
+.btn{
     text-align: center !important;
 }
 
@@ -442,15 +445,31 @@ dialog::backdrop{
     color: var(--text-shadow-color);
 }
 
+
 /* Pacientes ---------------------------------------------------------------------------- */
 
-/* Pesquisar ------------- */
-/* .square-content--pacientes-pesquisar{
-    width: 30%;
+/* Paginação ----------------------- */
+.pagination-container {
+    margin: 0 auto;
 }
 
-.square-content--pacientes-pesquisar a{
-    text-decoration: none;
-    margin: 50px 0;
-} */
+.pagination-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
 
+.page1 {
+    display: flex;
+}
+.prev-btn, .next-btn{
+    cursor: pointer;
+    border: none !important;
+    margin: 20px !important;
+}
+
+.btn:disabled{
+    border: none !important;
+}
+  
