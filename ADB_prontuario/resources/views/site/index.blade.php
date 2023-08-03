@@ -8,18 +8,21 @@
             {{route('login.sair')}}
         @endslot
     @endcomponent
-    <div class="usuario">
-        <p>{{Auth::user()->name}}</p>
-        <span class="material-symbols-outlined">
-            account_circle
-        </span>
-    </div>
+    @component('components.items.user_name')@endcomponent
     <section class="align-content">
+        @if (Auth::user()->administrador == true)
         <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador">
+        @endif
         <nav class="square-content square-content--opcoes">
-            <h2>Escolha entre as opções:</h2>
-            <a href="{{route('opcao.pacientes')}}" class="button-white-blue button-white-blue--opcoes">Paciente</a><br>
-            <a href="{{route('opcao.users')}}" class="button-white-blue button-white-blue--opcoes">Organização</a>
+            @if (Auth::user()->administrador == true)
+                <h2>Escolha entre as opções:</h2>
+                <a href="{{route('opcao.pacientes')}}" class="button-white-blue button-white-blue--opcoes">Paciente</a><br>
+                @if (Auth::user()->administrador == true)
+                    <a href="{{route('opcao.users')}}" class="button-white-blue button-white-blue--opcoes">Organização</a>
+                @endif
+            @else
+            vc n ta ativo
+            @endif
         </nav>
     </section>
 @endsection

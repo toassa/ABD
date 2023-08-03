@@ -32,6 +32,7 @@
             <div class="col col-title">Idade</div>
             <div class="col col-title">Sexo</div>
             <div class="col col-title">Profissão</div>
+            <div class="col col-title">Numero USP</div>
           </div>
         @endslot
 
@@ -44,6 +45,7 @@
               <div class="col col-text">{{$dado->idade}}</div>
               <div class="col col-text">{{$dado->sexo}}</div>
               <div class="col col-text">{{$dado->profissao}}</div>
+              <div class="col col-text">{{$dado->num_USP}}</div>
             </div>
           @endforeach
         @endslot

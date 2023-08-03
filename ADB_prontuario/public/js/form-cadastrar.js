@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   nomeInput.addEventListener('input', function() {
     let value = nomeInput.value;
-    // value = value.replace(/\D/g, ''); AQUI
+    value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
     value = value.replace(/(\d{200})\d+?$/, '$1');
     nomeInput.value = value;
   });
@@ -110,49 +110,64 @@ document.addEventListener('DOMContentLoaded', function() {
   
   profissaoInput.addEventListener('input', function() {
     let value = profissaoInput.value;
-    //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+    value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
     value = value.replace(/(\d{50})\d+?$/, '$1');
     profissaoInput.value = value;
   });
   
   escolaridadeInput.addEventListener('input', function() {
       let value = escolaridadeInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
       value = value.replace(/(\d{30})\d+?$/, '$1');
       escolaridadeInput.value = value;
   });
   
   rendaMensalInput.addEventListener('input', function() {
-      let value = rendaMensalInput.value;
-      value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-      value = value.replace(/(\d{10})\d+?$/, '$1');
-      rendaMensalInput.value = value;
+    let value = rendaMensalInput.value;
+
+    // Remove todos os caracteres que não sejam dígitos ou a vírgula
+    value = value.replace(/[^\d,]/g, '');
+  
+    // Remove vírgulas extras e permite apenas uma vírgula
+    value = value.replace(/,+/g, ',');
+    value = value.replace(/(.*),(.*)/, '$1,$2');
+  
+    // Formata o valor com separador de milhares
+    const parts = value.split(',');
+    parts[0] = parts[0].replace(/\B(?=(\d{2})+(?!\d))/g, '.');
+    value = parts.join(',');
+  
+    rendaMensalInput.value = value;
   });
   
   dependentesInput.addEventListener('input', function() {
       let value = dependentesInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-      value = value.replace(/(\d{100})\d+?$/, '$1');
+      value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.slice(0, 2);
       dependentesInput.value = value;
   });
   
   telefoneInput.addEventListener('input', function() {
       let value = telefoneInput.value;
-      value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-      value = value.replace(/(\d{11})\d+?$/, '$1');
+      if(!value) return "";
+      value = value.replace(/\D/g,'');
+      value = value.replace(/(\d{2})(\d)/,"($1) $2");
+      value = value.replace(/(\d)(\d{4})$/,"$1-$2");
       telefoneInput.value = value;
   });
   
   segundoTelefoneInput.addEventListener('input', function() {
       let value = segundoTelefoneInput.value;
-      value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-      value = value.replace(/(\d{11})\d+?$/, '$1');
+      if(!value) return "";
+      value = value.replace(/\D/g,'');
+      value = value.replace(/(\d{2})(\d)/,"($1) $2");
+      value = value.replace(/(\d)(\d{4})$/,"$1-$2");
       segundoTelefoneInput.value = value;
   });
   
   donoSegundoTelefoneInput.addEventListener('input', function() {
       let value = donoSegundoTelefoneInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
       value = value.replace(/(\d{50})\d+?$/, '$1');
       donoSegundoTelefoneInput.value = value;
   });
@@ -166,21 +181,21 @@ document.addEventListener('DOMContentLoaded', function() {
   
   ruaInput.addEventListener('input', function() {
       let value = ruaInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
       value = value.replace(/(\d{50})\d+?$/, '$1');
       ruaInput.value = value;
   });
   
   bairroInput.addEventListener('input', function() {
       let value = bairroInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
       value = value.replace(/(\d{50})\d+?$/, '$1');
       bairroInput.value = value;
   });
   
   complementoInput.addEventListener('input', function() {
       let value = complementoInput.value;
-      //value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
       value = value.replace(/(\d{50})\d+?$/, '$1');
       complementoInput.value = value;
   });

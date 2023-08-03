@@ -15,11 +15,7 @@
           <div class="row justify-content-md-center">
             @component('components.items.user-item')
               @slot('coluna')
-                @if (Auth::user()->administrador == true)
-                  col-md-auto show
-                @else
-                  col-md-auto hide
-                @endif
+                col-md-auto
               @endslot
               @slot('icon')
                 <span class="material-symbols-outlined">
@@ -57,11 +53,7 @@
             @endcomponent
             @component('components.items.user-item')
               @slot('coluna')
-                @if (Auth::user()->administrador == true)
-                  col-md-auto show
-                @else
-                  col-md-auto hide
-                @endif
+                col-md-auto
               @endslot
               @slot('icon')
                 <span class="material-symbols-outlined">
@@ -82,11 +74,7 @@
           <div class="row justify-content-md-center">
             @component('components.items.user-item')
               @slot('coluna')
-                @if (Auth::user()->administrador == true)
-                  col-md-auto show
-                @else
-                  col-md-auto hide
-                @endif
+                col-md-auto
               @endslot
               @slot('icon')
                 <span class="material-symbols-outlined">
@@ -105,11 +93,7 @@
             @endcomponent
             @component('components.items.user-item')
               @slot('coluna')
-                @if (Auth::user()->administrador == true)
-                  col-md-auto show
-                @else
-                  col-md-auto hide
-                @endif
+                col-md-auto
               @endslot
               @slot('icon')
                 <span class="material-symbols-outlined">

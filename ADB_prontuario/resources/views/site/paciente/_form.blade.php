@@ -8,7 +8,7 @@
   </div>
   <div class="col-md-6">
     <label for="validationCustomNome" class="form-label">Nome <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}" maxlength="200" name="nome"  maxlength="200"required>
+    <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}"  name="nome"  maxlength="200" required>
     <div class="invalid-feedback">
       Insira o nome completo do paciente
     </div>
@@ -63,37 +63,21 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-  <div class="col-md-6">
+  <div class="col-md-5">
     <label class="form-check-label" for="validationFormDesempregado">
-      Desempregado/Aposentado por causa da diabetes? <b>*</b>
+      Desempregado/Aposentado pela diabetes? <b>*</b>
     </label>
     <div class="row align-content">
-      <div class="form-check col-md-5">
+      <div class="form-check col-md-3">
         <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="true" required>
         <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
       </div>
-      <div class="form-check col-md-5">
+      <div class="form-check col-md-3">
         <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="false" required>
         <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
       </div>
     </div>
   </div>
-
-  <div class="col-md-3">
-    <label for="validationCustomProfissao" class="form-label">Profissão <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomProfissao" value="{{isset($dados->profissao) ? $dados->profissao : ''}}" name="profissao" maxlength="50" required>
-    <div class="invalid-feedback">
-      Insira a profissão do paciente 
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustomEscolaridade" class="form-label">Escolaridade <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomEscolaridade" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade"  maxlength="30" required>
-    <div class="invalid-feedback">
-      Escolaridade inválida
-    </div>
-  </div>
-
   <div class="col-md-4">
     <label for="validationCustomRendaMensal" class="form-label">Renda mensal <b>*</b></label>
     <div class="input-group has-validation">
@@ -104,11 +88,25 @@
     </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <label for="validationCustomDependentesdaRenda" class="form-label">Dependentes da renda <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomDependentesdaRenda" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="3" required>
     <div class="invalid-feedback">
         Valor de dependentes inválida
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomProfissao" class="form-label">Profissão <b>*</b></label>
+    <input type="text" class="form-control text-center" id="validationCustomProfissao" value="{{isset($dados->profissao) ? $dados->profissao : ''}}" name="profissao" maxlength="50" required>
+    <div class="invalid-feedback">
+      Insira a profissão do paciente 
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomEscolaridade" class="form-label">Escolaridade <b>*</b></label>
+    <input type="text" class="form-control text-center" id="validationCustomEscolaridade" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade"  maxlength="30" required>
+    <div class="invalid-feedback">
+      Escolaridade inválida
     </div>
   </div>
   <div class="col-md-4">
@@ -146,7 +144,7 @@
   </div>
   <div class="col-md-3">
     <label for="validationCustomTelefone" class="form-label">Telefone <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomTelefone" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="13" required>
+    <input type="text" class="form-control text-center" id="validationCustomTelefone" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
     <div class="invalid-feedback">
         Insira um telefone válido
     </div>
@@ -154,7 +152,7 @@
   <!-- Segundo telefone -->
   <div class="col-md-3">
     <label for="validationCustomSegundoTelefone" class="form-label">Segundo telefone <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomSegundoTelefone" value="{{isset($dados->segundo_telefone) ? $dados->segundo_telefone : ''}}" name="segundo_telefone" onkeyup="escreve_tel(event)" maxlength="13" required>
+    <input type="text" class="form-control text-center" id="validationCustomSegundoTelefone" value="{{isset($dados->segundo_telefone) ? $dados->segundo_telefone : ''}}" name="segundo_telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
     <div class="invalid-feedback">
         Insira um 2º telefone válido
     </div>
@@ -163,7 +161,7 @@
   <!-- Dono do segundo telefone -->
   <div class="col-md-3">
     <label for="validationCustomDonoSegundoTelefone" class="form-label">Dono do 2º telefone <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="pertence_segundo_telefone" maxlength="50" required>
+    <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" onkeyup="escreve_tel(event)" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="pertence_segundo_telefone" maxlength="50" required>
     <div class="invalid-feedback">
         Insira o dono do 2º telefone
     </div>
