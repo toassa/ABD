@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Admin\Auth;
 use App\Models\Paciente;
+use Illuminate\Console\View\Components\Alert;
 
 class PacienteController extends Controller
 {
@@ -28,8 +29,13 @@ class PacienteController extends Controller
     }
 
     public function salvar(Request $req, $num_USP){
-        // dd($num_USP);
+        $tudos = Paciente::all();
         $dados = $req->all();
+        foreach($tudos as $tudo){
+            if($tudo['num_registro'] == $dados['num_registro']){
+                return view('site.usuario.cadastrar');
+            }
+        }
         Paciente::create([
             'num_registro' => $dados['num_registro'],
             'nome' => $dados['nome'],
@@ -60,7 +66,7 @@ class PacienteController extends Controller
             'ativo' => $dados['ativo'],
             'num_USP' => $num_USP,
         ]);
-        return redirect()->route('paciente.pesquisar');
+        return redirect()->route('paciente.listar');
     }
 
     public function buscar(Request $req, $nome){

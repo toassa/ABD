@@ -7,7 +7,7 @@
                 <input type="text" name="nome" class="form-control" placeholder="Digite o {{$quem}}" aria-label="Nome do {{$quem}}">
             </div>
             <div class="col-sm">
-                <button type="submit" class="btn btn-primary">Buscar</button>
+                <button type="submit" class="btn btn-giga btn-primary">Buscar</button>
             </div>
         </div>
     </form>
