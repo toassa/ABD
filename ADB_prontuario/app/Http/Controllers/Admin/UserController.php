@@ -29,12 +29,9 @@ class UserController extends Controller
         return view('site.usuario.listar', compact('rows'));
     }
 
-    // $name
-    public function buscar(){
-        $rows = User::where('name');
-        // dd($rows);
-        // , compact('rows')
-        return view('site.usuario.listar');
+    public function buscar(Request $req){
+        $rows = User::find($req);
+        return view('site.usuario.listar', compact('rows'));
     }
 
     public function list_editar(){

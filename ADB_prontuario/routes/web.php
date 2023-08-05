@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
         // /{name}
-        Route::get('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
+        Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');

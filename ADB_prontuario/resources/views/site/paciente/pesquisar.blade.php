@@ -38,15 +38,18 @@
 
         @slot('grid_content')
           @foreach ($dados as $dado)
-            <div class="row row-text">
-              <div class="col col-text">{{$dado->nome}}</div>
-              <div class="col col-mail">{{$dado->num_registro}}</div>
-              <div class="col col-mail">{{$dado->telefone}}</div>
-              <div class="col col-text">{{$dado->idade}}</div>
-              <div class="col col-text">{{$dado->sexo}}</div>
-              <div class="col col-text">{{$dado->profissao}}</div>
-              <div class="col col-text">{{$dado->num_USP}}</div>
-            </div>
+          {{-- {{route('users.editar', $row->num_USP)}} --}}
+          <a class="a-row-list" href="#">
+              <div class="row row-text">
+                <div class="col col-text">{{$dado->nome}}</div>
+                <div class="col col-mail">{{$dado->num_registro}}</div>
+                <div class="col col-mail">{{$dado->telefone}}</div>
+                <div class="col col-text">{{$dado->idade}}</div>
+                <div class="col col-text">{{$dado->sexo}}</div>
+                <div class="col col-text">{{$dado->profissao}}</div>
+                <div class="col col-text">{{$dado->num_USP}}</div>
+              </div>
+            </a>
           @endforeach
         @endslot
 

@@ -48,11 +48,17 @@
                     </button>
             <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
                 <div class="p-dialog">
-                    <p class="text-center">Você deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
+                    <p class="text-center">
+                    <span class="material-symbols-outlined">
+                        warning
+                    </span>
+                    </p>
+                    <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
+                    <p>Aviso: essa ação <strong>não</strong>poderá ser desfeita!</p>
                 </div>
-                <div class="buttons-dialog">
-                    <a class="a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
-                    <button onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
+                <div class="row buttons-dialog">
+                    <a class="col-4-md a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
+                    <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
                 </div>
          </dialog>
             
