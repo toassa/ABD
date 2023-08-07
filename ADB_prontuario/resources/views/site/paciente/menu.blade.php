@@ -11,7 +11,7 @@
   @component('components.items.user_name')@endcomponent
   <section class="user-index">
     <h1 class="text-center">Menu de paciente</h1>
-    <div class="square-content square-content--user-index">
+    <div class="square-content square-content--menu">
       <div class="container text-center">
         <div class="row justify-content-md-center">
           @component('components.items.paciente-item')

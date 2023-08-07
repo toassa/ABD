@@ -11,6 +11,7 @@
     --text-shadow-color: #808080;
 
     /* Font sizes */
+    --size-title: 2rem;
     --size-h1: 1.5rem;
     --size-h2: 1.3rem;
     --size-label-form: 1.1rem;
@@ -41,6 +42,7 @@ body{
     background-color: var(--background-color);
     background-image: url('../images/fundo.png');
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -238,10 +240,73 @@ a.login-link{
 }
 
 
+/* Menu ---------------------------------------------------------------------------- */
+.square-content--menu{
+    width: 85%;
+    min-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+@media(max-width: 770px){
+    .square-content--menu{
+        width: 350px;
+    }
+}
+
+.item-circle{
+    border-radius: 50%;
+    background-color: #FFE500;
+    text-align: center;
+}
+
+@media(max-width: 770px){
+    .square-content--menu-item{
+        width: 200px;
+    }
+}
+
+.square-content--menu-item{
+    width: 240px;
+    min-width: 200px;
+    margin: 30px 20px;
+    min-height: 150px;
+    padding: 15px;
+}
+
+.square-content--menu-item h2{
+    font-size: var(--size-card-title);
+    margin: 25px 0;
+}
+
 /* Errors -------------------------------------------------------------------------- */
 
 .square-content--error{
-    width: 30%;
+    width: 500px;
+    margin-top: 145px;
+    text-align: center;
+}
+
+.error-text{
+    margin-top: 90px;
+}
+
+.square-content--error h1{
+    font-size: var(--size-title) !important;
+    margin: 10px;
+}
+
+.square-content--error p{
+    font-size: var(--size-h1) !important;
+}
+
+.img_error{
+    width: 350px !important;
+    position: absolute;
+    margin: 0 auto;
+    top: 160px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
@@ -287,40 +352,7 @@ a.login-link{
     margin: 10vh 0;
 }
 
-.square-content--user-index{
-    width: 85%;
-    min-width: 350px;
-    margin: 0 auto;
-    margin-bottom: 35px;
-}
-
-@media(max-width: 770px){
-    .square-content--user-index{
-        width: 350px;
-    }
-
-    .square-content--user-item{
-        width: 200px;
-    }
-}
-
-.square-content--user-item{
-    width: 240px;
-    min-width: 200px;
-    margin: 30px 20px;
-    min-height: 150px;
-    padding: 15px;
-}
-
-.square-content--user-item h2{
-    font-size: var(--size-card-title);
-    margin: 25px 0;
-}
-
-.item-circle{
-    border-radius: 50%;
-    background-color: #FFE500;
-    text-align: center;
+.item-circle--user{
     width: 45px;
     height: 45px;
     margin: 0 auto;
@@ -423,7 +455,7 @@ dialog::backdrop{
     border: none;
     color: #fff;
     border-radius: 5px;
-    width: 20%;
+    width: 110px;
     text-align: center;
     padding: 20px;
     margin: 20px auto;
@@ -487,3 +519,28 @@ dialog::backdrop{
     border: none !important;
 }
   
+
+/* Menu ------------------------- */
+
+.square-content--menu-item{
+    width: 240px;
+    min-width: 200px;
+    margin: 30px 20px;
+    min-height: 150px;
+    padding: 15px;
+}
+
+.square-content--menu-item .material-symbols-outlined{
+    font-size: 45px !important;
+}
+
+.square-content--menu-item img{
+    width: 40px;
+    margin-top: 5px;
+}
+
+.item-circle--paciente{
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+}

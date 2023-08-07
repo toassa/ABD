@@ -54,7 +54,7 @@
                     </span>
                     </p>
                     <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
-                    <p>Aviso: essa ação <strong>não</strong>poderá ser desfeita!</p>
+                    <p>Aviso: essa ação <strong>não</strong> poderá ser desfeita!</p>
                 </div>
                 <div class="row buttons-dialog">
                     <a class="col-4-md a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>

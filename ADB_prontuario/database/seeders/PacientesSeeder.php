@@ -25,7 +25,7 @@ class PacientesSeeder extends Seeder
             'desempregado_aposentado_diabetes'=>false,
             'profissao' => 'Motorista',
             'escolaridade' => 'Ensino Médio',
-            'renda_mensal' => 2500.00,
+            'renda_mensal' => '1.500,50',
             'dependentes_renda' => 2,
             'transporte' => 'Carro',
             'plano_saude' => true,

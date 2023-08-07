@@ -5,10 +5,10 @@
 @section('content')
     @component('components.items.error')
         @slot('rota_erro')
-            {{asset('images/pack/404_error.png')}}
+            {{asset('images/pack/419_error.png')}}
         @endslot
         @slot('nome_erro')
-            {{'Erro 404'}}
+            {{'Erro 419'}}
         @endslot
         @slot('text_erro')
             {{'Ops! Não conseguimos encontrar essa página!'}}

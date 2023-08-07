@@ -12,9 +12,9 @@ class UsersSeeder extends Seeder
     {
         User::create([
             'num_USP'=>'11111',
-            'name'=> 'Raissa Toassa Martinelli',
+            'name'=> 'Matheus',
             'CPF'=>'78878787878',
-            'email'=>'raissa.toassa@unesp.br',
+            'email'=>'matheus.oliveira@unesp.br',
             'password'=>bcrypt('123456'),
             'cargo'=>'aluno',
             'administrador'=>true,

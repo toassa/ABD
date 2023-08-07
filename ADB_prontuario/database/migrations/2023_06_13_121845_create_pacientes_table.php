@@ -23,7 +23,7 @@ return new class extends Migration
             $table->boolean('desempregado_aposentado_diabetes');
             $table->string('profissao');
             $table->string('escolaridade');
-            $table->double('renda_mensal', 7, 2);
+            $table->string('renda_mensal');
             $table->integer('dependentes_renda');
             $table->enum('transporte', ['Ônibus', 'Trem', 'Metrô', 'Van', 'Carro', 'Taxi', 'Uber', 'A pé', 'Outros']);
             $table->boolean('plano_saude');
@@ -45,37 +45,14 @@ return new class extends Migration
 
             $table->boolean('ativo');
 
-            $table->string('num_USP');
-            $table->foreign('num_USP')->constrained()->references('num_USP')->on('users');
+            $table->string('num_USP')->nullable();
+            $table->foreign('num_USP')->constrained()->references('num_USP')->on('users')->onDelete('SET NULL')->onUpdate('cascade');
 
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        // Schema::table('pacientes', function (Blueprint $table) {
-        //     $table->dropForeign(['num_USP']);
-        // });
-
+    public function down(): void{
         Schema::dropIfExists('pacientes');
     }
-
-    // Método para remover um usuário e atualizar os pacientes relacionados
-    // public function removeUserAndRelatedPatients($num_USP): void
-    // {
-    //     // Passo 1: Obter o valor de num_USP do usuário que será excluído
-    //     $user = User::table('users')->where('num_USP', $num_USP)->first();
-
-    //     if ($user) {
-    //         // Passo 2: Atualizar a coluna num_USP na tabela pacientes para NULL (ou para um novo valor válido)
-    //         Paciente::table('pacientes')->where('num_USP', $num_USP)->update(['num_USP' => null]);
-
-    //         // Passo 3: Excluir o usuário
-    //         User::table('users')->where('num_USP', $num_USP)->delete();
-    //     }
-    // }
 };

@@ -38,7 +38,7 @@
 
         @slot('grid_content')
           @foreach ($dados as $dado)
-          <a class="a-row-list" href="{{route('paciente.menu', $dado->num_registro)}}">
+          <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('paciente.menu', $dado->num_registro)}}">
               <div class="row row-text">
                 <div class="col col-text">{{$dado->nome}}</div>
                 <div class="col col-mail">{{$dado->num_registro}}</div>
@@ -46,7 +46,13 @@
                 <div class="col col-text">{{$dado->idade}}</div>
                 <div class="col col-text">{{$dado->sexo}}</div>
                 <div class="col col-text">{{$dado->profissao}}</div>
-                <div class="col col-text">{{$dado->num_USP}}</div>
+                <div class="col col-text">
+                  @if ($dado->num_USP == null)
+                    Usuário excluído
+                  @else
+                  {{$dado->num_USP}}
+                  @endif
+                </div>
               </div>
             </a>
           @endforeach

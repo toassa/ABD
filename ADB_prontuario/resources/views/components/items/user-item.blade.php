@@ -1,6 +1,6 @@
 <div class="{{$coluna}}">
-    <div class="square-content square-content--user-item">
-        <div class="item-circle">
+    <div class="square-content square-content--menu-item">
+        <div class="item-circle item-circle--user">
             {{$icon}}
         </div>
         <div class="item-title">

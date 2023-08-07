@@ -123,36 +123,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   rendaMensalInput.addEventListener('input', function() {
-    let value = rendaMensalInput.value;
+    // Limpa qualquer formatação anterior e mantém apenas números e vírgulas
+    let value = rendaMensalInput.value.replace(/[^\d,]/g, '');
 
-    // Remove todos os caracteres que não sejam dígitos ou a vírgula
-    value = value.replace(/[^\d,]/g, '');
-  
-    // Remove vírgulas extras e permite apenas uma vírgula
-    value = value.replace(/,+/g, ',');
-    value = value.replace(/(.*),(.*)/, '$1,$2');
-  
-    // Testa a consistência da entrada usando expressão regular
-    const regex = /^\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?$/;
-  
-    // Separa a parte inteira da parte decimal (caso exista)
-    const [parteInteira, parteDecimal] = value.split(',');
-  
-    // Formata a parte inteira com separador de milhares
-    const partesInteirasFormatadas = parteInteira.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  
-    // Adiciona a vírgula antes dos dois primeiros caracteres digitados pelo usuário
-    if (parteInteira.length >= 2) {
-      value = `${parteInteira.slice(0, 2)},${parteInteira.slice(2)}`;
-    } else {
-      value = partesInteirasFormatadas;
+    // Separa a parte inteira da parte decimal
+    let [parteInteira, parteDecimal] = value.split(',');
+
+    // Remove os pontos da parte inteira
+    parteInteira = parteInteira.replace(/\./g, '');
+
+    // Adiciona um ponto a cada 3 dígitos da parte inteira
+    parteInteira = parteInteira.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+    // Limita a parte decimal a 2 dígitos
+    if (parteDecimal && parteDecimal.length > 2) {
+      parteDecimal = parteDecimal.substr(0, 2);
     }
-  
-    // Une a parte inteira formatada com a parte decimal (caso exista)
-    if (parteDecimal) {
-      value = `${value},${parteDecimal}`;
-    }
-  
+
+    // Monta o valor formatado
+    value = parteInteira + (parteDecimal ? ',' + parteDecimal : '');
+
     rendaMensalInput.value = value;
   });
   

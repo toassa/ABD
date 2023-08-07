@@ -90,6 +90,14 @@ Route::group(['middleware' => 'auth'], function(){
 
 });
 
+Route::get('/500', function(){
+    return view('errors/500');
+});
+
+Route::get('/419', function(){
+    return view('errors/419');
+});
+
 // ARRUMAR:
 // > Usuários
 // - Permitir que itens sejam vistos paenas por administradores
