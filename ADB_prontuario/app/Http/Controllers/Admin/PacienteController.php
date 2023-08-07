@@ -72,4 +72,9 @@ class PacienteController extends Controller
     public function buscar(Request $req, $nome){
         $dados = $req->Paciente::where('name', $nome);
     }
+
+    public function menu($num_registro){
+        $dados = Paciente::find($num_registro);
+        return view('site.paciente.menu', compact('dados'));
+    }
 }

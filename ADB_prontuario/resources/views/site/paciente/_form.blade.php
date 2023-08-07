@@ -82,9 +82,9 @@
     <label for="validationCustomRendaMensal" class="form-label">Renda mensal <b>*</b></label>
     <div class="input-group has-validation">
     <span class="input-group-text" id="inputGroupPrepend">$</span>
-    <input type="number" class="form-control text-center" id="validationCustomRendaMensal" aria-describedby="inputGroupPrepend" value="{{isset($dados->renda_mensal) ? $dados->renda_mensal : ''}}" name="renda_mensal" step="any" maxlength="10" required>
+    <input type="text" class="form-control text-center" id="validationCustomRendaMensal" aria-describedby="inputGroupPrepend" value="{{isset($dados->renda_mensal) ? $dados->renda_mensal : ''}}" name="renda_mensal" step="any" maxlength="12" required>
     <div class="invalid-feedback">
-        Inira uma renda mensal válida
+        Insira uma renda mensal válida
     </div>
     </div>
   </div>

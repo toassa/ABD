@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina', 'Início - Usuários')
+@section('titulo-pagina', 'Menu de usuários')
 
 @section('content')
   @component('components.items.voltar')
@@ -10,62 +10,51 @@
   @endcomponent
   @component('components.items.user_name')@endcomponent
   <section class="user-index">
-    <h1 class="text-center">Bem-vindo(a)</h1>
+    <h1 class="text-center">Menu de paciente</h1>
     <div class="square-content square-content--user-index">
       <div class="container text-center">
         <div class="row justify-content-md-center">
-          @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
             @slot('icon')
-              <span class="material-symbols-outlined">
-                person_add
-              </span>
-            @endslot
-            @slot('title')
-                Cadastrar Usuário
+              <img src="{{asset('images/icons/doctor-icon.svg')}}" alt="Ícone de médico">
             @endslot
             @slot('button')
-                Cadastrar
+              Atendimento
             @endslot
             @slot('href')
                 {{route('users.cadastrar')}}
             @endslot
           @endcomponent
-          @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
             @slot('icon')
               <span class="material-symbols-outlined">
-                format_list_bulleted
+                medication
               </span>
             @endslot
-            @slot('title')
-                Listar Usuários
-            @endslot
             @slot('button')
-                Listar
+                Medicamentos
             @endslot
             @slot('href')
                 {{route('users.listar')}}
             @endslot
           @endcomponent
-          @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
             @slot('icon')
               <span class="material-symbols-outlined">
-                manage_accounts
+                stethoscope
               </span>
             @endslot
-            @slot('title')
-                Editar Usuários
-            @endslot
             @slot('button')
-                Editar
+                Exames complementares
             @endslot
             @slot('href')
                 {{route('user.list-editar')}}
@@ -73,45 +62,39 @@
           @endcomponent
         </div>
         <div class="row justify-content-md-center">
-          @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
             @slot('icon')
               <span class="material-symbols-outlined">
-                block
+                contract_edit
               </span>
             @endslot
-            @slot('title')
-                Desativar Usuário
-            @endslot
             @slot('button')
-                Desativar
+                Questionário
             @endslot
             @slot('href')
               {{route('users.list-desativar')}}
             @endslot
           @endcomponent
-          @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
             @slot('icon')
               <span class="material-symbols-outlined">
-                delete
+                groups
               </span>
             @endslot
-            @slot('title')
-                Excluir Usuário
-            @endslot
             @slot('button')
-                Excluir
+                Equipe multi
             @endslot
             @slot('href')
                 {{route('users.list-excluir')}}
             @endslot
           @endcomponent
-          {{-- @component('components.items.user-item')
+          @component('components.items.paciente-item')
             @slot('coluna')
               col-md-auto
             @endslot
@@ -120,16 +103,13 @@
                 calendar_add_on
               </span>
             @endslot
-            @slot('title')
-                Agendar Paciente
-            @endslot
             @slot('button')
-                Agendar
+                Agendamento
             @endslot
             @slot('href')
               {{route('opcao.users')}}
             @endslot
-          @endcomponent --}}
+          @endcomponent
         </div>
       </div>
   </section>

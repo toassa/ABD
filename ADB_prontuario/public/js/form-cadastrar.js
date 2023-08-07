@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   nomeInput.addEventListener('input', function() {
     let value = nomeInput.value;
-    value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+    value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
     value = value.replace(/(\d{200})\d+?$/, '$1');
     nomeInput.value = value;
-  });
+});
 
   cepInput.addEventListener('input', function() {
     let value = cepInput.value;
@@ -110,14 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   profissaoInput.addEventListener('input', function() {
     let value = profissaoInput.value;
-    value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+    value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
     value = value.replace(/(\d{50})\d+?$/, '$1');
     profissaoInput.value = value;
   });
   
   escolaridadeInput.addEventListener('input', function() {
       let value = escolaridadeInput.value;
-      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+      value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
       value = value.replace(/(\d{30})\d+?$/, '$1');
       escolaridadeInput.value = value;
   });
@@ -132,10 +132,26 @@ document.addEventListener('DOMContentLoaded', function() {
     value = value.replace(/,+/g, ',');
     value = value.replace(/(.*),(.*)/, '$1,$2');
   
-    // Formata o valor com separador de milhares
-    const parts = value.split(',');
-    parts[0] = parts[0].replace(/\B(?=(\d{2})+(?!\d))/g, '.');
-    value = parts.join(',');
+    // Testa a consistência da entrada usando expressão regular
+    const regex = /^\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?$/;
+  
+    // Separa a parte inteira da parte decimal (caso exista)
+    const [parteInteira, parteDecimal] = value.split(',');
+  
+    // Formata a parte inteira com separador de milhares
+    const partesInteirasFormatadas = parteInteira.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  
+    // Adiciona a vírgula antes dos dois primeiros caracteres digitados pelo usuário
+    if (parteInteira.length >= 2) {
+      value = `${parteInteira.slice(0, 2)},${parteInteira.slice(2)}`;
+    } else {
+      value = partesInteirasFormatadas;
+    }
+  
+    // Une a parte inteira formatada com a parte decimal (caso exista)
+    if (parteDecimal) {
+      value = `${value},${parteDecimal}`;
+    }
   
     rendaMensalInput.value = value;
   });
@@ -167,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   donoSegundoTelefoneInput.addEventListener('input', function() {
       let value = donoSegundoTelefoneInput.value;
-      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+      value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
       value = value.replace(/(\d{50})\d+?$/, '$1');
       donoSegundoTelefoneInput.value = value;
   });
@@ -181,21 +197,21 @@ document.addEventListener('DOMContentLoaded', function() {
   
   ruaInput.addEventListener('input', function() {
       let value = ruaInput.value;
-      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+      value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
       value = value.replace(/(\d{50})\d+?$/, '$1');
       ruaInput.value = value;
   });
   
   bairroInput.addEventListener('input', function() {
       let value = bairroInput.value;
-      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+      value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
       value = value.replace(/(\d{50})\d+?$/, '$1');
       bairroInput.value = value;
   });
   
   complementoInput.addEventListener('input', function() {
       let value = complementoInput.value;
-      value = value.replace(/[^a-zA-Z\s]+/g, ''); //Aceita apenas letras
+      value = value.replace(/[^a-zA-Z\u00C0-\u024F\s]+/g, ''); // Aceita letras e acentos
       value = value.replace(/(\d{50})\d+?$/, '$1');
       complementoInput.value = value;
   });

@@ -31,7 +31,6 @@ Route::group(['middleware' => 'auth'], function(){
     
         Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
-        // /{name}
         Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
     
         Route::prefix('/form')->group(function(){
@@ -65,11 +64,13 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
     
         Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
+
+        Route::get('/menu/{num_registro}', [PacienteController::class, 'menu'])->name('paciente.menu');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
     
-            Route::post('/salvar/{num_USP}', [PacienteController::class, 'salvar'])->name('paciente.salvar');
+            Route::post('/salvar/{num_registro}', [PacienteController::class, 'salvar'])->name('paciente.salvar');
     
             Route::get('/list-editar', [PacienteController::class, 'list_editar'])->name('paciente.list-editar');
     
@@ -95,3 +96,5 @@ Route::group(['middleware' => 'auth'], function(){
 // - Dialog do list-excluir
 // - Visual do editar usuários
 // - Se excluir o próprio usuário, fazer logout
+// - Não deixar desativar todos os usuários (ao menos um ativo)
+// - Aceitar acentos 

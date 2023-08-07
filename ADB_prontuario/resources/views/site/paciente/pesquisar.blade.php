@@ -38,8 +38,7 @@
 
         @slot('grid_content')
           @foreach ($dados as $dado)
-          {{-- {{route('users.editar', $row->num_USP)}} --}}
-          <a class="a-row-list" href="#">
+          <a class="a-row-list" href="{{route('paciente.menu', $dado->num_registro)}}">
               <div class="row row-text">
                 <div class="col col-text">{{$dado->nome}}</div>
                 <div class="col col-mail">{{$dado->num_registro}}</div>
