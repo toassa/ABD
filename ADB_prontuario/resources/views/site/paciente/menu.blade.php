@@ -30,7 +30,7 @@
               Atendimento
             @endslot
             @slot('href')
-                {{route('users.cadastrar')}}
+              {{route('paciente.menu_atendimento', $dados->num_registro)}}
             @endslot
           @endcomponent
           @component('components.items.paciente-item')
@@ -46,7 +46,7 @@
                 Medicamentos
             @endslot
             @slot('href')
-                {{route('users.listar')}}
+                #
             @endslot
           @endcomponent
           @component('components.items.paciente-item')
@@ -62,7 +62,7 @@
                 Exames complementares
             @endslot
             @slot('href')
-                {{route('user.list-editar')}}
+                #
             @endslot
           @endcomponent
         </div>
@@ -80,7 +80,7 @@
                 Questionário
             @endslot
             @slot('href')
-              {{route('users.list-desativar')}}
+              #
             @endslot
           @endcomponent
           @component('components.items.paciente-item')
@@ -96,7 +96,7 @@
                 Equipe multi
             @endslot
             @slot('href')
-                {{route('users.list-excluir')}}
+               #
             @endslot
           @endcomponent
           @component('components.items.paciente-item')
@@ -112,7 +112,7 @@
                 Agendamento
             @endslot
             @slot('href')
-              {{route('opcao.users')}}
+              #
             @endslot
           @endcomponent
         </div>

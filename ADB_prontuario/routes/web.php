@@ -66,6 +66,8 @@ Route::group(['middleware' => 'auth'], function(){
         Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
 
         Route::get('/menu/{num_registro}', [PacienteController::class, 'menu'])->name('paciente.menu');
+
+        Route::get('/menu_atendimento/{num_registro}', [PacienteController::class, 'menu_atendimento'])->name('paciente.menu_atendimento');
     
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
@@ -98,6 +100,9 @@ Route::get('/419', function(){
     return view('errors/419');
 });
 
+Route::get('/caio', function(){
+    return view('site.paciente.primeiro_atendimento.cadastrar');
+});
 // ARRUMAR:
 // > Usuários
 // - Permitir que itens sejam vistos paenas por administradores

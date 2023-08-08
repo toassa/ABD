@@ -31,6 +31,7 @@ class UserController extends Controller
 
     public function buscar(Request $req){
         $rows = User::find($req);
+        dd('rows');
         return view('site.usuario.listar', compact('rows'));
     }
 

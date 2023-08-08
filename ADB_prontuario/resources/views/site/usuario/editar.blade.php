@@ -3,8 +3,9 @@
 @section('titulo-pagina', 'Editar Usuários')
 
 @section('content')
-    @component('components.items.back')@endcomponent
-        <section class="square-content square-content--user-cadastro">
+    @component('components.items.back')
+    @endcomponent
+        <section class="square-content square-content--cadastro">
             <h1 class="text-center">Editar Usuários</h1>
             <form action="{{route('users.atualizar', $rows->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
                 {{ csrf_field() }}
