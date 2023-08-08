@@ -279,6 +279,12 @@ a.login-link{
     margin: 25px 0;
 }
 
+.button-white-blue--menu-item{
+    background-color: var(--background-almost-white);
+    min-width: 100px;
+    margin: 0 auto;
+}
+
 /* Errors -------------------------------------------------------------------------- */
 
 .square-content--error{
@@ -358,12 +364,9 @@ a.login-link{
     margin: 0 auto;
 }
 
-.button-white-blue--user-item{
-    background-color: var(--background-almost-white);
+.button-white-blue--menu-item-user{
     width: 50%;
     height: 25px;
-    min-width: 100px;
-    margin: 0 auto;
 }
 
 /* Grids */
@@ -530,17 +533,21 @@ dialog::backdrop{
     padding: 15px;
 }
 
-.square-content--menu-item .material-symbols-outlined{
-    font-size: 45px !important;
+.square-content--menu-item-p .material-symbols-outlined{
+    font-size: 34px !important;
 }
 
 .square-content--menu-item img{
-    width: 40px;
+    width: 34px;
     margin-top: 5px;
 }
 
 .item-circle--paciente{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 10px auto;
+}
+
+.button-white-blue--menu-item-paciente{
+    width: 80%;
 }

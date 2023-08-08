@@ -7,7 +7,7 @@
             <h2>{{$title}}</h2>
         </div>
         <div class="item-button">
-            <a href="{{$href}}" class="button-white-blue button-white-blue--user-item">{{$button}}</a>
+            <a href="{{$href}}" class="button-white-blue button-white-blue--menu-item button-white-blue--menu-item-user">{{$button}}</a>
         </div>
     </div>
 </div>
