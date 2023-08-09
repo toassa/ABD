@@ -38,7 +38,7 @@
 
         @slot('grid_content')
           @foreach ($dados as $dado)
-          <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('paciente.menu', $dado->num_registro)}}">
+          <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('consulta.menu', $dado->num_registro)}}">
               <div class="row row-text">
                 <div class="col col-text">{{$dado->nome}}</div>
                 <div class="col col-mail">{{$dado->num_registro}}</div>

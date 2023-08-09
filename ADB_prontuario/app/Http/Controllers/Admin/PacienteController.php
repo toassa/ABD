@@ -73,14 +73,4 @@ class PacienteController extends Controller
         $dados = $req->Paciente::where('name', $nome);
         return view('site.pesquisar', compact('dados'));
     }
-
-    public function menu($num_registro){
-        $dados = Paciente::find($num_registro);
-        return view('site.paciente.menu', compact('dados'));
-    }
-
-    public function menu_atendimento($num_registro){
-        $dados = Paciente::find($num_registro);
-        return view('site.paciente.menu_atendimento', compact('dados'));
-    }
 }

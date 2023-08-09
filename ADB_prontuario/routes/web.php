@@ -7,6 +7,7 @@ use App\Http\Controllers\Site\HomeController;
 
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PacienteController;
+use App\Http\Controllers\Admin\PrimeiraConsultaController;
 
 Route::redirect('/', 'login');
 
@@ -65,10 +66,6 @@ Route::group(['middleware' => 'auth'], function(){
     
         Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
 
-        Route::get('/menu/{num_registro}', [PacienteController::class, 'menu'])->name('paciente.menu');
-
-        Route::get('/menu_atendimento/{num_registro}', [PacienteController::class, 'menu_atendimento'])->name('paciente.menu_atendimento');
-    
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
     
@@ -88,6 +85,14 @@ Route::group(['middleware' => 'auth'], function(){
             
             // Route::get('/desativar/{id}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
+
+        Route::prefix('/consulta')->group(function(){
+            Route::get('/menu/{num_registro}', [PrimeiraConsultaController::class, 'menu'])->name('consulta.menu');
+
+            Route::get('/menu_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'menu_atendimento'])->name('consulta.menu_atendimento');
+
+            Route::get('/primeiro_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_atendimento'])->name('consulta.primeiro_atendimento');
+        });
     });
 
 });
@@ -100,9 +105,6 @@ Route::get('/419', function(){
     return view('errors/419');
 });
 
-Route::get('/caio', function(){
-    return view('site.paciente.primeiro_atendimento.cadastrar');
-});
 // ARRUMAR:
 // > Usuários
 // - Permitir que itens sejam vistos paenas por administradores

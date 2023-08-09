@@ -30,7 +30,7 @@
               Atendimento
             @endslot
             @slot('href')
-              {{route('paciente.menu_atendimento', $dados->num_registro)}}
+              {{route('consulta.menu_atendimento', $dados->num_registro)}}
             @endslot
           @endcomponent
           @component('components.items.paciente-item')

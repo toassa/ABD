@@ -7,6 +7,8 @@
     /* Font colors */
     --background-color: #fff;
     --background-almost-white: #ebecf4;
+    --background-primary: #2424ff;
+    --background-most-primary:#131399f;
     --text-color: #000;
     --text-shadow-color: #808080;
 
@@ -86,7 +88,7 @@ body{
 }
 
 .button-white-blue{
-    color: #2424ff;
+    color: var(--background-primary);
     background-color: var(--background-color);
     box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
     border: 1px solid var(--box-shadow-color);
@@ -474,7 +476,7 @@ dialog::backdrop{
 }
 
 .square-content--confirma-excluir button{
-    background-color: #2424ff;
+    background-color: var(--background-primary);
 }
 
 .buttons-dialog{
@@ -550,4 +552,79 @@ dialog::backdrop{
 
 .button-white-blue--menu-item-paciente{
     width: 80%;
+}
+
+/* Consulta ------------------------ */
+.square-content--cadastro-consulta{
+    padding: 0;
+    width: 80%;
+}
+
+/* Menu lateral */
+.menu_consulta{
+    background-color: var(--background-color);
+    height: 500px;
+    width: 20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: left;
+}
+
+.menu_img{
+    width: 80%;
+    border: 1px solid red;
+    margin: 50px auto;
+}
+
+.menu_img img{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.menu-sections{
+    /* width: 80%; */
+    margin: 0 auto;
+    border: 1px solid purple;
+    width: 200px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.menu-sections a{
+    background-color: var(--background-primary);
+    color: black;
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    margin: 20px 0;
+}
+
+.menu-sections p{
+    font-size: var(--size-card-title);
+    color: var(--background-color);
+    text-transform: capitalize;
+}
+
+.menu-sections .material-symbols-outlined{
+    font-size: var(--size-grid);
+    color: var(--background-color);
+}
+
+.menu-sections a:hover {
+    background-color: #ccc;
+}
+
+.menu-sections a.active {
+    background-color: var(--background-most-primary);
+    color: white;
+}
+
+/* Conteúdo */
+.content-consulta{
+    background-color: var(--background-almost-white);
+    height: 500px;
+    width: 80%;
+    float: right;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
