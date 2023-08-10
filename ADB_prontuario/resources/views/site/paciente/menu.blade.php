@@ -117,5 +117,10 @@
           @endcomponent
         </div>
       </div>
+      <div class="row buttons-dialog align-content btn_paciente">
+        <a class="col-4-md a-row-list btn btn-primary" href="{{route('paciente.editar', $dados->num_registro)}}">Editar</a>
+        <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.excluir', $dados->num_registro)}}">Excluir</a>
+      </div>
+    </div>
   </section>
 @endsection

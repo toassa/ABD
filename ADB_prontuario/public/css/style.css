@@ -628,3 +628,9 @@ dialog::backdrop{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+/* Botões menu */
+.btn_paciente a{
+    width: 20%;
+    margin: 0 10%;
+}

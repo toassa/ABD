@@ -39,7 +39,7 @@
 <div class="col-md-4">
     <label for="validationCustomUserCargo" class="form-label">Cargo<b>*</b></label>
     <select class="form-select" id="validationCustomUserCargo" name="cargo" required>
-        <option disabled value="">Clique para escolher...</option>
+        <option disabled selected value="">Clique para escolher...</option>
         <option {{ isset($rows->cargo) && $rows->cargo === 'medico' ? 'selected' : '' }} value="medico">Médico</option>
         <option {{ isset($rows->cargo) && $rows->cargo === 'aluno' ? 'selected' : '' }} value="aluno">Aluno</option>
     </select>

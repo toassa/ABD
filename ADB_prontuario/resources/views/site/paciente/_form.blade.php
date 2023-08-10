@@ -133,15 +133,16 @@
     </label>
     <div class="row align-content">
       <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" required>
+        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'checked' : '' }} required>
         <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
       </div>
       <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" required>
+        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'checked' : '' }} required>
         <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
       </div>
     </div>
   </div>
+  
   <div class="col-md-3">
     <label for="validationCustomTelefone" class="form-label">Telefone <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomTelefone" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="15" required>

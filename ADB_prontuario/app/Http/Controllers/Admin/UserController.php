@@ -19,9 +19,14 @@ class UserController extends Controller
 
     public function salvar(Request $req){
         $dados = $req->all();
-        // dd($dados);
         User::create($dados);
         return redirect()->route('users.listar');
+        // if($dados['num_USP'] == $req['num_USP'] || $dados['email'] == $req['email'] || $dados['CPF'] == $req['CPF']){
+        //     return view('site.usuario.index');
+        // }else{
+        // User::create($dados);
+        // return redirect()->route('users.listar');
+        // }
     }
 
     public function listar(){

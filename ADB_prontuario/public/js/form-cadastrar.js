@@ -179,10 +179,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   numeroInput.addEventListener('input', function() {
-      let value = numeroInput.value;
-      value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-      value = value.replace(/(\d{8})\d+?$/, '$1');
-      numeroInput.value = value;
+    let value = numeroInput.value;
+    value = value.replace(/[^\d-]/g, ''); // Remove todos os caracteres que não sejam dígitos nem '-'
+    value = value.replace(/(\d{8})\d+?$/, '$1');
+    numeroInput.value = value;
   });
   
   ruaInput.addEventListener('input', function() {

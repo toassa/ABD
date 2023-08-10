@@ -1,4 +1,5 @@
 <!-- exame fisico -->
+
 <div class="col-md-4">
     <label for="validationCustomNumUSP" class="form-label">Peso <b>*</b></label>
     <input type="number" class="text-center form-control" id="validationCustomPeso" value="{{isset($rows->peso) ? $rows->peso : ''}}" maxlength="8" name="peso" required>
@@ -988,7 +989,7 @@ exerc<!-- icio_fisicos -->
     </div>
 </div>
 
-neuro<!-- patico_comprometimentos -->
+<!-- neuropatico_comprometimentos -->
 
 <div class="col-md-4">
     <label for="validationCustomReflexoAquileuDireito" class="form-label">Reflexo Aquileu Direito</label>
@@ -1107,6 +1108,373 @@ neuro<!-- patico_comprometimentos -->
     <label for="validationCustomObservacoes" class="form-label">Observações</label>
     <input type="text" class="form-control" id="validationCustomObservacoes" value="{{ isset($rows->observacoes) ? $rows->observacoes : '' }}" name="observacoes">
     <div class="invalid-feedback">
-        Insira observações (opcional)
+        Insira observações 
+    </div>
+</div>
+
+<!-- primeiro_diagnosticos -->
+
+<div class="col-md-4">
+    <label for="validationCustomAno" class="form-label">Ano</label>
+    <input type="number" class="form-control" id="validationCustomAno" value="{{ isset($rows->ano) ? $rows->ano : '' }}" name="ano" required>
+    <div class="invalid-feedback">
+        Insira o ano do diagnóstico
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomIdade" class="form-label">Idade</label>
+    <input type="number" class="form-control" id="validationCustomIdade" value="{{ isset($rows->idade) ? $rows->idade : '' }}" name="idade" required>
+    <div class="invalid-feedback">
+        Insira a idade no diagnóstico
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomSintomas" class="form-label">Sintomas</label>
+    <input type="text" class="form-control" id="validationCustomSintomas" value="{{ isset($rows->sintomas) ? $rows->sintomas : '' }}" name="sintomas" required>
+    <div class="invalid-feedback">
+        Insira os sintomas apresentados
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomComoFoiFeito" class="form-label">Como Foi Feito o Diagnóstico</label>
+    <select class="form-select" id="validationCustomComoFoiFeito" name="como_foi_feito" required>
+        <option value="Internação com cetoacidose diabética" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Internação com cetoacidose diabética' ? 'selected' : '' }}>Internação com cetoacidose diabética</option>
+        <option value="Internação sem cetoacidose diabética" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Internação sem cetoacidose diabética' ? 'selected' : '' }}>Internação sem cetoacidose diabética</option>
+        <option value="Glicemia de jejum" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Glicemia de jejum' ? 'selected' : '' }}>Glicemia de jejum</option>
+        <option value="Curva glicêmica" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Curva glicêmica' ? 'selected' : '' }}>Curva glicêmica</option>
+        <option value="Glicemia ao acaso" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Glicemia ao acaso' ? 'selected' : '' }}>Glicemia ao acaso</option>
+        <option value="Outros" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Outros' ? 'selected' : '' }}>Outros</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione como foi feito o diagnóstico
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomInfeccoesSeisMeses" class="form-label">Teve Infecções nos Últimos Seis Meses?</label>
+    <select class="form-select" id="validationCustomInfeccoesSeisMeses" name="infeccoes_seis_meses" required>
+        <option value="1" {{ isset($rows->infeccoes_seis_meses) && $rows->infeccoes_seis_meses == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->infeccoes_seis_meses) && $rows->infeccoes_seis_meses == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se teve infecções nos últimos seis meses
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomQuaisInfeccoes" class="form-label">Quais Infecções?</label>
+    <input type="text" class="form-control" id="validationCustomQuaisInfeccoes" value="{{ isset($rows->quais_infeccoes) ? $rows->quais_infeccoes : '' }}" name="quais_infeccoes">
+    <div class="invalid-feedback">
+        Insira quais infecções teve 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomPeriodoSintomasDiagnostico" class="form-label">Período Entre Sintomas e Diagnóstico (meses)</label>
+    <input type="number" class="form-control" id="validationCustomPeriodoSintomasDiagnostico" value="{{ isset($rows->periodo_sintomas_diagnostico) ? $rows->periodo_sintomas_diagnostico : '' }}" name="periodo_sintomas_diagnostico" required>
+    <div class="invalid-feedback">
+        Insira o período entre sintomas e diagnóstico
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomFatorEmocional" class="form-label">Fator Emocional?</label>
+    <select class="form-select" id="validationCustomFatorEmocional" name="fator_emocional" required>
+        <option value="1" {{ isset($rows->fator_emocional) && $rows->fator_emocional == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->fator_emocional) && $rows->fator_emocional == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se houve fator emocional
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomQualFatorEmocional" class="form-label">Qual Fator Emocional?</label>
+    <input type="text" class="form-control" id="validationCustomQualFatorEmocional" value="{{ isset($rows->qual_fator_emocional) ? $rows->qual_fator_emocional : '' }}" name="qual_fator_emocional">
+    <div class="invalid-feedback">
+        Insira qual foi o fator emocional 
+    </div>
+</div>
+
+<!-- diagnosticos -->
+
+<div class="col-md-4">
+    <label for="validationCustomSintomas" class="form-label">Sintomas</label>
+    <input type="text" class="form-control" id="validationCustomSintomas" value="{{ isset($rows->sintomas) ? $rows->sintomas : '' }}" name="sintomas" required>
+    <div class="invalid-feedback">
+        Insira os sintomas
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomLibidoAlterado" class="form-label">Libido Alterado?</label>
+    <select class="form-select" id="validationCustomLibidoAlterado" name="libido_alterado" required>
+        <option value="Sim" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Sim' ? 'selected' : '' }}>Sim</option>
+        <option value="Não" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não' ? 'selected' : '' }}>Não</option>
+        <option value="Não sabe ou não quis responder" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não sabe ou não quis responder' ? 'selected' : '' }}>Não sabe ou não quis responder</option>
+        <option value="Não se aplica" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não se aplica' ? 'selected' : '' }}>Não se aplica</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se houve alteração na libido
+    </div>
+</div>
+
+<!-- complicacoes -->
+
+<div class="col-md-4">
+    <label for="validationCustomComplicacoes" class="form-label">Complicações?</label>
+    <select class="form-select" id="validationCustomComplicacoes" name="complicacoes" required>
+        <option value="1" {{ isset($rows->complicacoes) && $rows->complicacoes == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->complicacoes) && $rows->complicacoes == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se há complicações
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomQuaisComplicacoes" class="form-label">Quais Complicações?</label>
+    <input type="text" class="form-control" id="validationCustomQuaisComplicacoes" value="{{ isset($rows->quais_complicacoes) ? $rows->quais_complicacoes : '' }}" name="quais_complicacoes">
+    <div class="invalid-feedback">
+        Insira quais complicações 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomInternacaoComplicacao" class="form-label">Teve Internação por Complicação?</label>
+    <select class="form-select" id="validationCustomInternacaoComplicacao" name="internacao_complicacao" required>
+        <option value="1" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se houve internação por complicação
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomCausaInternacao" class="form-label">Causa da Internação</label>
+    <input type="text" class="form-control" id="validationCustomCausaInternacao" value="{{ isset($rows->causa_internacao) ? $rows->causa_internacao : '' }}" name="causa_internacao">
+    <div class="invalid-feedback">
+        Insira a causa da internação 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomEpisodioHipoglicemia" class="form-label">Teve Episódio de Hipoglicemia?</label>
+    <select class="form-select" id="validationCustomEpisodioHipoglicemia" name="episodio_hipoglicemia" required>
+        <option value="Sim" {{ isset($rows->episodio_hipoglicemia) && $rows->episodio_hipoglicemia === 'Sim' ? 'selected' : '' }}>Sim</option>
+        <option value="Não" {{ isset($rows->episodio_hipoglicemia) && $rows->episodio_hipoglicemia === 'Não' ? 'selected' : '' }}>Não</option>
+        <option value="Não lembra" {{ isset($rows->episodio_hipoglicemia) && $rows->episodio_hipoglicemia === 'Não lembra' ? 'selected' : '' }}>Não lembra</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se houve episódio de hipoglicemia
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático?</label>
+    <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico" required>
+        <option value="1" {{ isset($rows->episodio_assintomatico) && $rows->episodio_assintomatico == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->episodio_assintomatico) && $rows->episodio_assintomatico == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se o episódio foi assintomático
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomNivelEpisodio" class="form-label">Nível do Episódio</label>
+    <select class="form-select" id="validationCustomNivelEpisodio" name="nivel_episodio">
+        <option value="Leve/moderado" {{ isset($rows->nivel_episodio) && $rows->nivel_episodio === 'Leve/moderado' ? 'selected' : '' }}>Leve/moderado</option>
+        <option value="Grave" {{ isset($rows->nivel_episodio) && $rows->nivel_episodio === 'Grave' ? 'selected' : '' }}>Grave</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione o nível do episódio 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomPeriodoFrequenteHipoglicemia" class="form-label">Período Frequente de Hipoglicemia</label>
+    <select class="form-select" id="validationCustomPeriodoFrequenteHipoglicemia" name="periodo_frequente_hipoglocemia">
+        <option value="Manhã" {{ isset($rows->periodo_frequente_hipoglocemia) && $rows->periodo_frequente_hipoglocemia === 'Manhã' ? 'selected' : '' }}>Manhã</option>
+        <option value="Tarde" {{ isset($rows->periodo_frequente_hipoglocemia) && $rows->periodo_frequente_hipoglocemia === 'Tarde' ? 'selected' : '' }}>Tarde</option>
+        <option value="Noite" {{ isset($rows->periodo_frequente_hipoglocemia) && $rows->periodo_frequente_hipoglocemia === 'Noite' ? 'selected' : '' }}>Noite</option>
+        <option value="Não sabe" {{ isset($rows->periodo_frequente_hipoglocemia) && $rows->periodo_frequente_hipoglocemia === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione o período frequente de hipoglicemia 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomEpisodiosUltimoMes" class="form-label">Episódios no Último Mês</label>
+    <input type="number" class="form-control" id="validationCustomEpisodiosUltimoMes" value="{{ isset($rows->episodios_ultimo_mes) ? $rows->episodios_ultimo_mes : '' }}" name="episodios_ultimo_mes" required>
+    <div class="invalid-feedback">
+        Insira a quantidade de episódios no último mês
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomAlimentoTratarHipoglicemia" class="form-label">Alimento para Tratar Hipoglicemia</label>
+    <input type="text" class="form-control" id="validationCustomAlimentoTratarHipoglicemia" value="{{ isset($rows->alimento_tratar_hipoglicemia) ? $rows->alimento_tratar_hipoglicemia : '' }}" name="alimento_tratar_hipoglicemia" required>
+    <div class="invalid-feedback">
+        Insira o alimento utilizado para tratar hipoglicemia
+    </div>
+</div>
+
+
+<!-- tratamentos -->
+
+<div class="col-md-4">
+    <label for="validationCustomMedicamentoDiabetes" class="form-label">Medicamento para Diabetes</label>
+    <input type="text" class="form-control" id="validationCustomMedicamentoDiabetes" value="{{ isset($rows->medicamento_diabetes) ? $rows->medicamento_diabetes : '' }}" name="medicamento_diabetes">
+    <div class="invalid-feedback">
+        Insira o medicamento para diabetes 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomUsoInsulina" class="form-label">Uso de Insulina</label>
+    <select class="form-select" id="validationCustomUsoInsulina" name="uso_insulina" required>
+        <option value="1" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se há uso de insulina
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomTiposInsulinas" class="form-label">Tipos de Insulinas</label>
+    <input type="text" class="form-control" id="validationCustomTiposInsulinas" value="{{ isset($rows->tipos_insulinas) ? $rows->tipos_insulinas : '' }}" name="tipos_insulinas">
+    <div class="invalid-feedback">
+        Insira os tipos de insulinas 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomNomeInsulina" class="form-label">Nome da Insulina</label>
+    <input type="text" class="form-control" id="validationCustomNomeInsulina" value="{{ isset($rows->nome_insulina) ? $rows->nome_insulina : '' }}" name="nome_insulina">
+    <div class="invalid-feedback">
+        Insira o nome da insulina 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomFrequenciaInsulina" class="form-label">Frequência de Insulina</label>
+    <input type="text" class="form-control" id="validationCustomFrequenciaInsulina" value="{{ isset($rows->frequencia_insulina) ? $rows->frequencia_insulina : '' }}" name="frequencia_insulina">
+    <div class="invalid-feedback">
+        Insira a frequência de insulina 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomDoseInsulina" class="form-label">Dose de Insulina</label>
+    <input type="text" class="form-control" id="validationCustomDoseInsulina" value="{{ isset($rows->dose_insulina) ? $rows->dose_insulina : '' }}" name="dose_insulina">
+    <div class="invalid-feedback">
+        Insira a dose de insulina 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomOrigemInsulinas" class="form-label">Origem das Insulinas</label>
+    <input type="text" class="form-control" id="validationCustomOrigemInsulinas" value="{{ isset($rows->origem_insulinas) ? $rows->origem_insulinas : '' }}" name="origem_insulinas">
+    <div class="invalid-feedback">
+        Insira a origem das insulinas 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomOrigemUtensilho" class="form-label">Origem do Utensílio</label>
+    <input type="text" class="form-control" id="validationCustomOrigemUtensilho" value="{{ isset($rows->origem_utensilho) ? $rows->origem_utensilho : '' }}" name="origem_utensilho">
+    <div class="invalid-feedback">
+        Insira a origem do utensílio 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomReusoSeringasInsulina" class="form-label">Reuso de Seringas para Insulina</label>
+    <select class="form-select" id="validationCustomReusoSeringasInsulina" name="reuso_seringas_insulina" required>
+        <option value="1" {{ isset($rows->reuso_seringas_insulina) && $rows->reuso_seringas_insulina == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($rows->reuso_seringas_insulina) && $rows->reuso_seringas_insulina == 0 ? 'selected' : '' }}>Não</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione se há reuso de seringas para insulina
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomQuantiaReusoSeringas" class="form-label">Quantidade de Reuso de Seringas</label>
+    <input type="number" class="form-control" id="validationCustomQuantiaReusoSeringas" value="{{ isset($rows->quantia_reuso_seringas) ? $rows->quantia_reuso_seringas : '' }}" name="quantia_reuso_seringas">
+    <div class="invalid-feedback">
+        Insira a quantidade de reuso de seringas 
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomAderencia" class="form-label">Aderência ao Tratamento</label>
+    <input type="text" class="form-control" id="validationCustomAderencia" value="{{ isset($rows->aderencia) ? $rows->aderencia : '' }}" name="aderencia">
+    <div class="invalid-feedback">
+        Insira a aderência ao tratamento 
+    </div>
+</div>
+
+<!-- tratamento_medicamentos -->
+
+<div class="col-md-4">
+    <label for="validationCustomNumRegistro" class="form-label">Número de Registro</label>
+    <input type="text" class="form-control" id="validationCustomNumRegistro" value="{{ isset($rows->num_registro) ? $rows->num_registro : '' }}" name="num_registro" required>
+    <div class="invalid-feedback">
+        Insira o número de registro
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomNomeMedicamento" class="form-label">Nome do Medicamento</label>
+    <input type="text" class="form-control" id="validationCustomNomeMedicamento" value="{{ isset($rows->nome) ? $rows->nome : '' }}" name="nome" required>
+    <div class="invalid-feedback">
+        Insira o nome do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomTipo" class="form-label">Tipo</label>
+    <select class="form-select" id="validationCustomTipo" name="tipo" required>
+        <option value="HAS" {{ isset($rows->tipo) && $rows->tipo === 'HAS' ? 'selected' : '' }}>HAS</option>
+        <option value="Dislipidemia" {{ isset($rows->tipo) && $rows->tipo === 'Dislipidemia' ? 'selected' : '' }}>Dislipidemia</option>
+        <option value="Anticoagulante" {{ isset($rows->tipo) && $rows->tipo === 'Anticoagulante' ? 'selected' : '' }}>Anticoagulante</option>
+        <option value="Tireoide" {{ isset($rows->tipo) && $rows->tipo === 'Tireoide' ? 'selected' : '' }}>Tireoide</option>
+        <option value="Ansiedade ou depressao" {{ isset($rows->tipo) && $rows->tipo === 'Ansiedade ou depressao' ? 'selected' : '' }}>Ansiedade ou depressão</option>
+        <option value="Outros" {{ isset($rows->tipo) && $rows->tipo === 'Outros' ? 'selected' : '' }}>Outros</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione o tipo de medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomPosologia" class="form-label">Posologia</label>
+    <input type="text" class="form-control" id="validationCustomPosologia" value="{{ isset($rows->posologia) ? $rows->posologia : '' }}" name="posologia" required>
+    <div class="invalid-feedback">
+        Insira a posologia do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomOrigem" class="form-label">Origem</label>
+    <input type="text" class="form-control" id="validationCustomOrigem" value="{{ isset($rows->origem) ? $rows->origem : '' }}" name="origem" required>
+    <div class="invalid-feedback">
+        Insira a origem do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomAderencia" class="form-label">Aderência</label>
+    <input type="text" class="form-control" id="validationCustomAderencia" value="{{ isset($rows->aderencia) ? $rows->aderencia : '' }}" name="aderencia" required>
+    <div class="invalid-feedback">
+        Insira a aderência ao tratamento do medicamento
     </div>
 </div>
