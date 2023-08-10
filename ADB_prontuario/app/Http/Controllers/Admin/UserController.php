@@ -21,11 +21,11 @@ class UserController extends Controller
         $dados = $req->all();
         User::create($dados);
         return redirect()->route('users.listar');
-        // if($dados['num_USP'] == $req['num_USP'] || $dados['email'] == $req['email'] || $dados['CPF'] == $req['CPF']){
+        // if($req['num_USP'] == $dados['num_USP']  || $req['email'] == $dados['email'] || $req['CPF'] == $dados['CPF']){
         //     return view('site.usuario.index');
         // }else{
-        // User::create($dados);
-        // return redirect()->route('users.listar');
+        //     User::create($dados);
+        //     return redirect()->route('users.listar');
         // }
     }
 

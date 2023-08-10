@@ -4,6 +4,7 @@
 
 @section('content')
     @component('components.items.back')@endcomponent
+    @component('components.items.user_name')@endcomponent
     <section class="square-content square-content--cadastro">
         {{-- action:route ALTERAR --}}
         <h1 class="text-center">Cadastro de Usuários</h1>

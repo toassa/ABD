@@ -19,7 +19,8 @@
                     <a href="{{route('opcao.users')}}" class="button-white-blue button-white-blue--opcoes">Organização</a>
                 @endif
             @else
-            vc n ta ativo
+                {{-- <h2>Ops... Parece que você não está ativo no nosso sistema</h2> --}}
+                {{-- <p>Tente entrar em contato com os administradores da plataforma para resolver o problema</p> --}}
             @endif
         </nav>
     </section>

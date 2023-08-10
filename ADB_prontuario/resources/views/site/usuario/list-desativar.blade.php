@@ -8,6 +8,7 @@
             {{route('opcao.users')}}
         @endslot
     @endcomponent
+    @component('components.items.user_name')@endcomponent
     <section class="square-content square-content--listar content-list-excluir">
         <h1 class="text-center">Desativar Usuários</h1>
         <div class="grid">

@@ -9,7 +9,7 @@
             {{route('opcao.users')}}
         @endslot
     @endcomponent
-
+    @component('components.items.user_name')@endcomponent
     @component('components.pages.listar')
         @slot('title')
           <h1 class="text-center">Listagem de Usuários</h1>
