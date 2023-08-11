@@ -8,6 +8,7 @@
     --background-color: #fff;
     --background-almost-white: #ebecf4;
     --background-primary: #2424ff;
+    --background-primary-darker: #063f96;
     --background-most-primary:#131399f;
     --text-color: #000;
     --text-shadow-color: #808080;
@@ -108,6 +109,14 @@ body{
   'opsz' 48
 }
 
+/* Textinhos */
+.textinho{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
 
 /* Forms ------------------------------------------------------------------------------------- */
 .form-check-input[type=checkbox] {
@@ -121,6 +130,11 @@ body{
 
 b{
     color: #ff0000;
+}
+
+.btn-primary-darker, .btn-primary-darker:hover{
+    background-color: var(--background-primary-darker);
+    color: var(--background-color);
 }
 
 .col-btn-form{
@@ -572,7 +586,6 @@ dialog::backdrop{
 
 .menu_img{
     width: 80%;
-    border: 1px solid red;
     margin: 50px auto;
 }
 
@@ -582,32 +595,33 @@ dialog::backdrop{
 }
 
 .menu-sections{
-    /* width: 80%; */
     margin: 0 auto;
-    border: 1px solid purple;
     width: 200px;
-    height: 150px;
+    height: 300px;
     overflow-y: auto;
+    border: 1px solid rgb(190, 190, 190);
 }
 
 .menu-sections a{
     background-color: var(--background-primary);
     color: black;
     display: flex;
-    padding: 12px;
+    padding: 7px;
     text-decoration: none;
-    margin: 20px 0;
+    margin: 0px 0px 20px 0px;
 }
 
 .menu-sections p{
     font-size: var(--size-card-title);
     color: var(--background-color);
     text-transform: capitalize;
+    margin: 0;
 }
 
 .menu-sections .material-symbols-outlined{
-    font-size: var(--size-grid);
+    font-size: var(--size-label-form) !important;
     color: var(--background-color);
+    margin: 5px !important;
 }
 
 .menu-sections a:hover {

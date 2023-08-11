@@ -58,8 +58,8 @@
                     <p>Aviso: essa ação <strong>não</strong> poderá ser desfeita!</p>
                 </div>
                 <div class="row buttons-dialog">
-                    <a class="col-4-md a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
                     <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
+                    <a class="col-4-md a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
                 </div>
          </dialog>
             

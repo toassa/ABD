@@ -1,20 +1,20 @@
 <div class="row g-3 needs-validation page page1">
   <div class="col-md-3">
-    <label for="validationCustomNumRegistro" class="form-label">Número de registro <b>*</b></label>
+    <label for="validationCustomNumRegistro" class="form-label textinho">Número de registro <b>*</b></label>
     <input type="text" class="form-control text-center" pattern="[0-9]*" id="validationCustomNumRegistro" value="{{isset($dados->num_registro) ? $dados->num_registro : ''}}" name="num_registro" maxlength="12" required>
     <div class="invalid-feedback">
         Insira o número de registro
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustomNome" class="form-label">Nome <b>*</b></label>
+    <label for="validationCustomNome" class="form-label textinho">Nome <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}"  name="nome"  maxlength="200" required>
     <div class="invalid-feedback">
       Insira o nome completo do paciente
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustomData" class="form-label">Data de nascimento <b>*</b></label>
+    <label for="validationCustomData" class="form-label textinho">Data de nascimento <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomData" value="{{isset($dados->data_nascimento) ? $dados->data_nascimento : ''}}" name="data_nascimento" required>
     <div class="invalid-feedback">
         Data de nascimento inválida
@@ -22,14 +22,14 @@
   </div>
 
   <div class="col-md-2">
-    <label for="validationCustomIdade" class="form-label">Idade <b>*</b></label>
+    <label for="validationCustomIdade" class="form-label textinho">Idade <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomIdade" value="{{isset($dados->idade) ? $dados->idade : ''}}" name="idade" maxlength="2" required>
     <div class="invalid-feedback">
         Idade inválida
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustomSexo" class="form-label">Sexo <b>*</b></label>
+    <label for="validationCustomSexo" class="form-label textinho">Sexo <b>*</b></label>
     <select class="form-select" id="validationCustomSexo" name="sexo" required>
       <option selected disabled value="">Clique para escolher...</option>
       <option {{ isset($dados->sexo) && $dados->sexo === 'Feminino' ? 'selected' : '' }} value="Feminino">Feminino</option>
@@ -38,7 +38,7 @@
     </select>
   </div>
   <div class="col-md-3">
-    <label for="validationCustomCor" class="form-label">Cor <b>*</b></label>
+    <label for="validationCustomCor" class="form-label textinho">Cor <b>*</b></label>
     <select class="form-select" id="validationCustomCor" name="cor" required>
       <option selected disabled value="">Clique para escolher...</option>
       <option {{ isset($dados->cor) && $dados->cor === 'Amarelo' ? 'selected' : '' }} value="Amarelo">Amarelo</option>
@@ -50,7 +50,7 @@
     </select>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomEstadoCivil" class="form-label">Estado civil <b>*</b></label>
+    <label for="validationCustomEstadoCivil" class="form-label textinho">Estado civil <b>*</b></label>
     <select class="form-select" id="validationCustomEstadoCivil" name="estado_civil" required>
       <option selected disabled value="">Clique para escolher...</option>
       <option {{ isset($dados->estado_civil) && $dados->estado_civil === 'Casado' ? 'selected' : '' }} value="Casado">Casado</option>
@@ -63,23 +63,19 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-  <div class="col-md-5">
-    <label class="form-check-label" for="validationFormDesempregado">
-      Desempregado/Aposentado pela diabetes? <b>*</b>
-    </label>
-    <div class="row align-content">
-      <div class="form-check col-md-3">
-        <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="true" required>
-        <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
-      </div>
-      <div class="form-check col-md-3">
-        <input type="radio" class="form-check-input" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" value="false" required>
-        <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
-      </div>
-    </div>
-  </div>
+
   <div class="col-md-4">
-    <label for="validationCustomRendaMensal" class="form-label">Renda mensal <b>*</b></label>
+    <label for="validationFormDesempregado" class="form-label textinho">Desempregado/Aposentado pela diabetes? <b>*</b></label>
+    <select class="form-select" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" required>
+        <option selected disabled value="">Clique para escolher...</option>
+        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'true' ? 'selected' : '' }} value="true">Sim</option>
+        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'false' ? 'selected' : '' }} value="false">Não</option>
+    </select>
+</div>
+
+
+  <div class="col-md-4">
+    <label for="validationCustomRendaMensal" class="form-label textinho">Renda mensal <b>*</b></label>
     <div class="input-group has-validation">
     <span class="input-group-text" id="inputGroupPrepend">$</span>
     <input type="text" class="form-control text-center" id="validationCustomRendaMensal" aria-describedby="inputGroupPrepend" value="{{isset($dados->renda_mensal) ? $dados->renda_mensal : ''}}" name="renda_mensal" step="any" maxlength="12" required>
@@ -89,28 +85,29 @@
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustomDependentesdaRenda" class="form-label">Dependentes da renda <b>*</b></label>
+    <label for="validationCustomDependentesdaRenda" class="form-label textinho">Dependentes da renda <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomDependentesdaRenda" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="3" required>
     <div class="invalid-feedback">
         Valor de dependentes inválida
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomProfissao" class="form-label">Profissão <b>*</b></label>
+    <label for="validationCustomProfissao" class="form-label textinho">Profissão <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomProfissao" value="{{isset($dados->profissao) ? $dados->profissao : ''}}" name="profissao" maxlength="50" required>
     <div class="invalid-feedback">
       Insira a profissão do paciente 
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomEscolaridade" class="form-label">Escolaridade <b>*</b></label>
+    <label for="validationCustomEscolaridade" class="form-label textinho">Escolaridade <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomEscolaridade" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade"  maxlength="30" required>
     <div class="invalid-feedback">
       Escolaridade inválida
     </div>
   </div>
+  
   <div class="col-md-4">
-    <label for="validationCustomTransporte" class="form-label">Transporte <b>*</b></label>
+    <label for="validationCustomTransporte" class="form-label textinho">Transporte <b>*</b></label>
     <select class="form-select" id="validationCustomTransporte" name="transporte" required>
       <option selected disabled value="">Clique para escolher...</option>
       <option {{ isset($dados->transporte) && $dados->transporte === 'Ônibus' ? 'selected' : '' }} value="Ônibus">Ônibus</option>
@@ -123,28 +120,40 @@
       <option {{ isset($dados->transporte) && $dados->transporte === 'A pé' ? 'selected' : '' }} value="A pé">A pé</option>
       <option {{ isset($dados->transporte) && $dados->transporte === 'Outros' ? 'selected' : '' }} value="Outros">Outros</option>
     </select>
-  </div>
+</div>
+
+
+
 </div>
 
 <div class="row g-3 needs-validation page page3">
-  <div class="col-md-3">
-    <label class="form-check-label" for="invalidCheck">
+  {{-- <div class="col-md-3">
+    <label class="form-check-label textinho" for="invalidCheck">
       Possui plano de saúde? <b>*</b>
     </label>
     <div class="row align-content">
       <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'checked' : '' }} required>
+        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'checked' : '' }} >
         <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
       </div>
       <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'checked' : '' }} required>
+        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'checked' : '' }} >
         <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
       </div>
     </div>
-  </div>
+  </div> --}}
   
   <div class="col-md-3">
-    <label for="validationCustomTelefone" class="form-label">Telefone <b>*</b></label>
+    <label for="validationFormPlanoSaude" class="form-label textinho">Possui plano de saúde? <b>*</b></label>
+    <select class="form-select" id="validationFormPlanoSaude" name="plano_saude" required>
+      <option selected disabled value="">Clique para escolher...</option>
+      <option {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'selected' : '' }} value="true">Sim</option>
+      <option {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'selected' : '' }} value="false">Não</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationCustomTelefone" class="form-label textinho">Telefone <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomTelefone" value="{{isset($dados->telefone) ? $dados->telefone : ''}}" name="telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
     <div class="invalid-feedback">
         Insira um telefone válido
@@ -152,7 +161,7 @@
   </div>
   <!-- Segundo telefone -->
   <div class="col-md-3">
-    <label for="validationCustomSegundoTelefone" class="form-label">Segundo telefone <b>*</b></label>
+    <label for="validationCustomSegundoTelefone" class="form-label textinho">Segundo telefone <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomSegundoTelefone" value="{{isset($dados->segundo_telefone) ? $dados->segundo_telefone : ''}}" name="segundo_telefone" onkeyup="escreve_tel(event)" maxlength="15" required>
     <div class="invalid-feedback">
         Insira um 2º telefone válido
@@ -161,7 +170,7 @@
 
   <!-- Dono do segundo telefone -->
   <div class="col-md-3">
-    <label for="validationCustomDonoSegundoTelefone" class="form-label">Dono do 2º telefone <b>*</b></label>
+    <label for="validationCustomDonoSegundoTelefone" class="form-label textinho">Dono do 2º telefone <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomDonoSegundoTelefone" onkeyup="escreve_tel(event)" value="{{isset($dados->nome) ? $dados->nome : ''}}" name="pertence_segundo_telefone" maxlength="50" required>
     <div class="invalid-feedback">
         Insira o dono do 2º telefone
@@ -170,7 +179,7 @@
 
   <!-- Estado -->
   <div class="col-md-5">
-    <label for="validationCustomEstadoNascimento" class="form-label">Estado de Nascimento<b>*</b></label>
+    <label for="validationCustomEstadoNascimento" class="form-label textinho">Estado de Nascimento<b>*</b></label>
     <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" required>
       <option value="">Clique para escolher...</option>
       <option {{ isset($dados->estado) && $dados->estado === 'AC' ? 'selected' : '' }} value="AC">Acre</option>
@@ -209,7 +218,7 @@
   <!-- Cidade -->
   <div class="col-md-7 align-content">
     <div class="col-md-6">
-      <label for="validationCustomCidadeNascimento" class="form-label">Cidade de Nascimento<b>*</b></label>
+      <label for="validationCustomCidadeNascimento" class="form-label textinho">Cidade de Nascimento<b>*</b></label>
       <select class="form-select" id="validationCustomCidadeNascimento" name="cidade_nascimento" required>
         <option selected disabled value="">Clique para escolher...</option>
       </select>
@@ -222,18 +231,19 @@
       <div class="form-check">
       <input class="form-check-input" type="hidden" value="false" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
       <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
-      <label class="form-check-label" for="invalidCheck">
+      <label class="form-check-label textinho" for="invalidCheck">
           Ativo?<b>*</b>
       </label>
       </div>
     </div>
   </div>
+
 </div>
 
 <div class="row g-3 needs-validation page page4">
   <!-- CEP -->
   <div class="col-md-4">
-    <label for="validationCustomCEP" class="form-label">CEP <b>*</b></label>
+    <label for="validationCustomCEP" class="form-label textinho">CEP <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomCEP" value="{{isset($dados->CEP) ? $dados->CEP : ''}}" name="CEP" maxlength="9" required>
     <div class="invalid-feedback">
         Insira um CEP válido
@@ -242,7 +252,7 @@
 
   <!-- Número -->
   <div class="col-md-2">
-    <label for="validationCustomNumero" class="form-label">Número <b>*</b></label>
+    <label for="validationCustomNumero" class="form-label textinho">Número <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomNumero" value="{{isset($dados->numero_moradia) ? $dados->numero_moradia : ''}}" name="numero_moradia" maxlength="8" required>
     <div class="invalid-feedback">
         Insira um número válido
@@ -251,7 +261,7 @@
 
   <!-- Rua -->
   <div class="col-md-3">
-    <label for="validationCustomRua" class="form-label">Rua <b>*</b></label>
+    <label for="validationCustomRua" class="form-label textinho">Rua <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomRua" value="{{isset($dados->rua) ? $dados->rua : ''}}" name="rua" maxlength="50" required>
     <div class="invalid-feedback">
         Insira uma rua válida
@@ -260,7 +270,7 @@
 
   <!-- Bairro -->
   <div class="col-md-3">
-    <label for="validationCustomBairro" class="form-label">Bairro <b>*</b></label>
+    <label for="validationCustomBairro" class="form-label textinho">Bairro <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomBairro" value="{{isset($dados->bairro) ? $dados->bairro : ''}}" name="bairro" maxlength="50" required>
     <div class="invalid-feedback">
         Insira um bairro válido
@@ -269,7 +279,7 @@
 
   <!-- Complemento -->
   <div class="col-md-4">
-    <label for="validationCustomComplemento" class="form-label">Complemento</label>
+    <label for="validationCustomComplemento" class="form-label textinho">Complemento</label>
     <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento">
     <div class="invalid-feedback">
         Insira um complemento válido
@@ -278,7 +288,7 @@
 
   <!-- Estado -->
   <div class="col-md-4">
-    <label for="validationCustomEstado" class="form-label">Estado <b>*</b></label>
+    <label for="validationCustomEstado" class="form-label textinho">Estado <b>*</b></label>
     <select class="form-select" id="validationCustomEstado" name="estado" onchange="buscaCidades(this.value)" required>
       <option value="">Clique para escolher...</option>
       <option {{ isset($dados->estado) && $dados->estado === 'AC' ? 'selected' : '' }} value="AC">Acre</option>
@@ -316,7 +326,7 @@
 
   <!-- Cidade -->
   <div class="col-md-4">
-    <label for="validationCustomCidade" class="form-label">Cidade <b>*</b></label>
+    <label for="validationCustomCidade" class="form-label textinho">Cidade <b>*</b></label>
     <select class="form-select" id="validationCustomCidade" name="cidade" required>
       <option selected disabled value="">Clique para escolher...</option>
     </select>

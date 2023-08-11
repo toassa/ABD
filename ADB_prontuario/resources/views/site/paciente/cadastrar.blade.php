@@ -15,8 +15,8 @@
             </div>
             
             <div class="col-12 col-btn-form">
+                <button class="btn btn-primary-darker btn-giga" type="reset">Limpar</button>
                 <button class="btn btn-primary btn-giga" type="submit">Cadastrar</button>
-                <button class="btn btn-primary btn-giga" type="reset">Limpar</button>
             </div>
         </form>
         

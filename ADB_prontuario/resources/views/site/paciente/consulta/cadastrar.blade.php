@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina','Cadastro de Pacientes')
+@section('titulo-pagina','Primeiro Atendimento')
 
 @section('content')
     @component('components.items.back')@endcomponent
@@ -20,7 +20,7 @@
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Moléstia atual
+                    Atividades Educativas
                 @endslot
                 @endcomponent
 
@@ -34,7 +34,105 @@
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Patológica pregressa
+                    Automonitorização
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Dados Cardiovasculares
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Comorbidade
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Complicações
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Diagnóstico Atual
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Dieta
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Exames físicos
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Exercícios físicos
                 @endslot
                 @endcomponent
 
@@ -49,6 +147,132 @@
                 @endslot
                 @slot('text_menu')
                     Histórico familiar
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Frequência de acompanhamento
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Dados ginecológicos
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Hábitos de vida
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Internações
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Nascimento
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Comprometimento Neuropático
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Exame dos pés
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Primeiro Diagnóstico
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sick
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Tratamento
                 @endslot
                 @endcomponent
             </div>
