@@ -25,8 +25,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'password_verify',
+        'mesa',
         'CPF',
         'cargo',
+        'funcao',
         'administrador',
         'ativo',
     ];

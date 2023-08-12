@@ -16,7 +16,10 @@ class UsersSeeder extends Seeder
             'CPF'=>'78878787878',
             'email'=>'matheus.oliveira@unesp.br',
             'password'=>bcrypt('123456'),
-            'cargo'=>'aluno',
+            'password_verify'=>bcrypt('123456'),
+            'cargo'=>'coordenador',
+            'funcao'=>'nutricao',
+            'mesa'=>4,
             'administrador'=>true,
             'ativo'=>true,
         ]);

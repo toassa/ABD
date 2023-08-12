@@ -14,9 +14,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();            
+            $table->string('password_verify');
+            $table->rememberToken();
             $table->string('CPF')->unique();
-            $table->enum('cargo', ['medico', 'aluno'])->default('aluno');
+            $table->integer('mesa');          
+            $table->enum('cargo', ['medico', 'membro fixo', 'coordenador'])->default('coordenador');
+            $table->string('funcao');
             $table->boolean('administrador')->default(false);
             $table->boolean('ativo')->default(true);
 

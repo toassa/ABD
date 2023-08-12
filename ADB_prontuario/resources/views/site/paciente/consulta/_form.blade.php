@@ -787,7 +787,7 @@ cardi<!-- ovascular_dados -->
     </div>
 </div>
 
-ativi<!-- dade_diabetes -->
+<!-- atividade_diabetes -->
 
 <div class="col-md-4">
     <label for="validationCustomQuantiaConsultasEnfermagem" class="form-label">Quantidade de Consultas de Enfermagem</label>

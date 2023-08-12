@@ -606,7 +606,7 @@ dialog::backdrop{
     background-color: var(--background-primary);
     color: black;
     display: flex;
-    padding: 7px;
+    padding: 7px 0;
     text-decoration: none;
     margin: 0px 0px 20px 0px;
 }
@@ -631,6 +631,26 @@ dialog::backdrop{
 .menu-sections a.active {
     background-color: var(--background-most-primary);
     color: white;
+}
+
+/* width */
+.menu-sections::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.menu-sections::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.menu-sections::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.menu-sections::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* Conteúdo */

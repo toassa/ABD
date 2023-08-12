@@ -96,6 +96,9 @@ Route::group(['middleware' => 'auth'], function(){
     });
 
 });
+Route::get('/teste', function(){
+    return view('site\paciente\consulta\atividades_educativas\cadastrar');
+});
 
 Route::get('/500', function(){
     return view('errors/500');

@@ -19,6 +19,7 @@ class UserController extends Controller
 
     public function salvar(Request $req){
         $dados = $req->all();
+        
         User::create($dados);
         return redirect()->route('users.listar');
         // if($req['num_USP'] == $dados['num_USP']  || $req['email'] == $dados['email'] || $req['CPF'] == $dados['CPF']){
@@ -58,7 +59,9 @@ class UserController extends Controller
             'name'=>$dados['name'],
             'email'=>$dados['email'],
             'CPF'=>$dados['CPF'],
+            'mesa'=>$dados['mesa'],
             'cargo'=>$dados['cargo'],
+            'funcao'=>$dados['funcao'],
             'administrador'=>$dados['administrador'],
             'ativo'=>$dados['ativo'],
         ]);
