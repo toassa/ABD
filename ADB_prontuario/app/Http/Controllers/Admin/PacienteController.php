@@ -72,6 +72,7 @@ class PacienteController extends Controller
     public function salvar(Request $req, $num_USP){
         $tudos = Paciente::all();
         $dados = $req->all();
+
         foreach($tudos as $tudo){
             if($tudo['num_registro'] == $dados['num_registro']){
                 return view('site.usuario.cadastrar');

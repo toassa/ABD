@@ -668,3 +668,8 @@ dialog::backdrop{
     width: 20%;
     margin: 0 10%;
 }
+
+/* Medicamentos ---------------------------- */
+.square-content--medicamentos{
+    width: 80%;
+}

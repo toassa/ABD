@@ -67,11 +67,11 @@
   <div class="col-md-4">
     <label for="validationFormDesempregado" class="form-label textinho">Desempregado/Aposentado pela diabetes? <b>*</b></label>
     <select class="form-select" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" required>
-        <option selected disabled value="">Clique para escolher...</option>
-        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'true' ? 'selected' : '' }} value="true">Sim</option>
-        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'false' ? 'selected' : '' }} value="false">Não</option>
+        <option disabled value="">Clique para escolher...</option>
+        <option  value="true" {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'true' ? 'selected' : '' }} >Sim</option>
+        <option  value="false"{{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'false' ? 'selected' : '' }} >Não</option>
     </select>
-</div>
+  </div>
 
 
   <div class="col-md-4">
@@ -127,7 +127,7 @@
 </div>
 
 <div class="row g-3 needs-validation page page3">
-  {{-- <div class="col-md-3">
+  <!-- {{-- <div class="col-md-3">
     <label class="form-check-label textinho" for="invalidCheck">
       Possui plano de saúde? <b>*</b>
     </label>
@@ -141,14 +141,14 @@
         <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
       </div>
     </div>
-  </div> --}}
+  </div> --}} -->
   
   <div class="col-md-3">
     <label for="validationFormPlanoSaude" class="form-label textinho">Possui plano de saúde? <b>*</b></label>
     <select class="form-select" id="validationFormPlanoSaude" name="plano_saude" required>
-      <option selected disabled value="">Clique para escolher...</option>
-      <option {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'selected' : '' }} value="true">Sim</option>
-      <option {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'selected' : '' }} value="false">Não</option>
+      <option disabled value="">Clique para escolher...</option>
+      <option value="TRUE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'TRUE' ? 'selected' : '' }} >Sim</option>
+      <option value="FALSE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'FALSE' ? 'selected' : '' }} >Não</option>
     </select>
   </div>
 

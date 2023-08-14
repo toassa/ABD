@@ -8,6 +8,7 @@ use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PacienteController;
 use App\Http\Controllers\Admin\PrimeiraConsultaController;
+use App\Http\Controllers\Admin\MedicamentoController;
 
 Route::redirect('/', 'login');
 
@@ -92,6 +93,10 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/menu_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'menu_atendimento'])->name('consulta.menu_atendimento');
 
             Route::get('/primeiro_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_atendimento'])->name('consulta.primeiro_atendimento');
+        });
+
+        Route::prefix('/medicamentos')->group(function(){
+            Route::get('/index/{num_registro}', [MedicamentoController::class, 'menu'])->name('medicamento.index');
         });
     });
 
