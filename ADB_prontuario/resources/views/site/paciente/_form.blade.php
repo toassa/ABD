@@ -63,7 +63,6 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-
   <div class="col-md-4">
     <label for="validationFormDesempregado" class="form-label textinho">Desempregado/Aposentado pela diabetes? <b>*</b></label>
     <select class="form-select" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" required>
@@ -84,6 +83,7 @@
     </div>
     </div>
   </div>
+
   <div class="col-md-3">
     <label for="validationCustomDependentesdaRenda" class="form-label textinho">Dependentes da renda <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomDependentesdaRenda" value="{{isset($dados->dependentes_renda) ? $dados->dependentes_renda : ''}}" name="dependentes_renda" maxlength="3" required>
@@ -98,6 +98,7 @@
       Insira a profissão do paciente 
     </div>
   </div>
+
   <div class="col-md-4">
     <label for="validationCustomEscolaridade" class="form-label textinho">Escolaridade <b>*</b></label>
     <input type="text" class="form-control text-center" id="validationCustomEscolaridade" value="{{isset($dados->escolaridade) ? $dados->escolaridade : ''}}" name="escolaridade"  maxlength="30" required>
@@ -120,29 +121,10 @@
       <option {{ isset($dados->transporte) && $dados->transporte === 'A pé' ? 'selected' : '' }} value="A pé">A pé</option>
       <option {{ isset($dados->transporte) && $dados->transporte === 'Outros' ? 'selected' : '' }} value="Outros">Outros</option>
     </select>
+  </div>
 </div>
 
-
-
-</div>
-
-<div class="row g-3 needs-validation page page3">
-  <!-- {{-- <div class="col-md-3">
-    <label class="form-check-label textinho" for="invalidCheck">
-      Possui plano de saúde? <b>*</b>
-    </label>
-    <div class="row align-content">
-      <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="true" {{ isset($dados->plano_saude) && $dados->plano_saude === 'true' ? 'checked' : '' }} >
-        <label class="form-check-label" for="validationFormPlanoSaude">Sim</label>
-      </div>
-      <div class="form-check col-md-5">
-        <input type="radio" class="form-check-input" id="validationFormPlanoSaude" name="plano_saude" value="false" {{ isset($dados->plano_saude) && $dados->plano_saude === 'false' ? 'checked' : '' }} >
-        <label class="form-check-label" for="validationFormPlanoSaude">Não</label>
-      </div>
-    </div>
-  </div> --}} -->
-  
+<div class="row g-3 needs-validation page page3">  
   <div class="col-md-3">
     <label for="validationFormPlanoSaude" class="form-label textinho">Possui plano de saúde? <b>*</b></label>
     <select class="form-select" id="validationFormPlanoSaude" name="plano_saude" required>

@@ -675,5 +675,6 @@ dialog::backdrop{
 }
 
 .square-content--medicamento_item{
-    width: 20%;
+    width: 33.33%;
+    cursor: pointer;
 }
