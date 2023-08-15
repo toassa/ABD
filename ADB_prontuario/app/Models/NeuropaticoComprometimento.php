@@ -30,6 +30,7 @@ class NeuropaticoComprometimento extends Model
         'total_pontos',
         'diagnostico_neuropatia_periferica',
         'observacoes',
+        'num_USP',
     ];
 
     public function pacientes()

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('ocular');
             $table->string('neuropatia');
             $table->string('doenca_cronica');
+            $table->string('num_USP');
 
             $table->timestamps();
         });

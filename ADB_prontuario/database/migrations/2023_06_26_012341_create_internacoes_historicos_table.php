@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('motivo')->nullable();
             $table->integer('quantidade_dias')->nullable();
             $table->enum('fator_desencadeante', ['Infecção', 'Erro de administração de insulina', 'Estresse', 'Não hove fator desencadeante', 'Outro'])->nullable();
-            
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

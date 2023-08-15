@@ -20,7 +20,8 @@ return new class extends Migration
             $table->enum('sobre_drogas_ilicitas', ['Usuário', 'Ex-usuário', 'Nunca usou', 'Usou uma vez']);
             $table->string('quais_periodo_drogas')->nullable();
             $table->enum('sobre_anabolizantes', ['Usuário', 'Ex-usuário', 'Nunca usou', 'Usou uma vez']);
-            
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

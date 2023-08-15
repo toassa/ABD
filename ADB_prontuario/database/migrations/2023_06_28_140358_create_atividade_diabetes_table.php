@@ -21,7 +21,8 @@ return new class extends Migration
             $table->integer('valor_maximo_hba1c');
             $table->boolean('conhece_valor_ultima_hba1c');
             $table->integer('valor_ultima_hba1c')->nullable();
-            
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

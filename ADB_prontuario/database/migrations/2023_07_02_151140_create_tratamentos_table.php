@@ -23,7 +23,8 @@ return new class extends Migration
             $table->boolean('reuso_seringas_insulina')->nullable();
             $table->integer('quantia_reuso_seringas')->nullable();
             $table->string('aderencia')->nullable();
-            
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

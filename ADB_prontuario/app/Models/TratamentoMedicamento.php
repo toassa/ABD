@@ -23,7 +23,8 @@ class TratamentoMedicamento extends Model
         'tipo',
         'posologia',
         'origem',
-        'aderencia'
+        'aderencia',
+        'num_USP',
     ];
 
     public function getIncrementing()

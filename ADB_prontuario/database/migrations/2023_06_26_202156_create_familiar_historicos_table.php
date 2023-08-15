@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('doenca_coronariana');
             $table->string('has');
             $table->string('doenca_celiaca');
+            $table->string('num_USP');
 
             $table->timestamps();
         });

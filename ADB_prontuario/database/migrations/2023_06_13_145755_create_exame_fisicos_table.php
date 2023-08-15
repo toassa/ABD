@@ -31,6 +31,8 @@ return new class extends Migration
             $table->string('sistema_cardiovascular');
             $table->string('consideracoes_outros_sistemas');
 
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

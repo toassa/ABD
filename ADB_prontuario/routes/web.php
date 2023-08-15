@@ -81,10 +81,6 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/list-excluir', [PacienteController::class, 'list_excluir'])->name('paciente.list-excluir');
             
             Route::get('/excluir/{id}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
-
-            // Route::get('/list-desativar', [PacienteController::class, 'list_desativar'])->name('paciente.list-desativar');
-            
-            // Route::get('/desativar/{id}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
 
         Route::prefix('/consulta')->group(function(){
@@ -96,11 +92,17 @@ Route::group(['middleware' => 'auth'], function(){
         });
 
         Route::prefix('/medicamentos')->group(function(){
-            Route::get('/index/{num_registro}', [MedicamentoController::class, 'menu'])->name('medicamento.index');
+            Route::get('/index/{num_registro}', [MedicamentoController::class, 'index'])->name('medicamento.index');
+
+            Route::get('/cadastrar/{num_registro}', [MedicamentoController::class, 'cadastrar'])->name('medicamento.cadastrar');
+
+            Route::prefix('/form')->group(function(){
+                Route::get('/salvar/{num_registro}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
+            });
         });
     });
-
 });
+
 Route::get('/teste', function(){
     return view('site\paciente\consulta\atividades_educativas\cadastrar');
 });

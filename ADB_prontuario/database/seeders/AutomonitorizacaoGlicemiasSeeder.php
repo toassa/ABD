@@ -17,7 +17,8 @@ class AutomonitorizacaoGlicemiasSeeder extends Seeder
             'realiza_automonitorizacao'=>true,
             'frequencia_medicoes'=>'3 vezes ao dia',
             'origem_fitas'=>'Compra em farmácia comum',
-            'contagem_carboidratos'=>'Não'
+            'contagem_carboidratos'=>'Não',
+            'num_USP' => '11111',
         ]);
     }
 }

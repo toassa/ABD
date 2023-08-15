@@ -29,6 +29,7 @@ class Complicacao extends Model
         'periodo_frequente_hipoglocemia',
         'episodios_ultimo_mes',
         'alimento_tratar_hipoglicemia',
+        'num_USP',
     ];
 
     public function pacientes()

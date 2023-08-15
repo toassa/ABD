@@ -15,6 +15,7 @@ class DiagnosticosSeeder extends Seeder
             'num_registro'=>'11111',
             'sintomas'=>'Nenhum',
             'libido_alterado'=>'Não se aplica',
+            'num_USP' => '11111',
         ]);
     }
 }

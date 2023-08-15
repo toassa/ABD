@@ -24,6 +24,7 @@ class FrequenciaAcompanhamento extends Model
         'oftalmologista',
         'urologista',
         'exame_toque_urologista',
+        'num_USP',
     ];
 
     public function pacientes()

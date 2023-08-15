@@ -21,6 +21,7 @@ class Diagnostico extends Model
         'num_registro',
         'sintomas',
         'libido_alterado',
+        'num_USP',
     ];
     
     public function pacientes()

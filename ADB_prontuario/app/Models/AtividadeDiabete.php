@@ -28,6 +28,7 @@ class AtividadeDiabete extends Model
         'valor_maximo_hba1c',
         'conhece_valor_ultima_hba1c',
         'valor_ultima_hba1c',
+        'num_USP',
     ];
 
     public function pacientes()

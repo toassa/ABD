@@ -22,6 +22,7 @@ class PrimeiroDiagnosticosSeeder extends Seeder
             'periodo_sintomas_diagnostico'=>5,
             'fator_emocional'=>false,
             'qual_fator_emocional'=>null,
+            'num_USP' => '11111',
         ]);
     }
 }

@@ -27,6 +27,7 @@ class HabitosVida extends Model
         'sobre_drogas_ilicitas',
         'quais_periodo_drogas',
         'sobre_anabolizantes',
+        'num_USP',
     ];
 
     public function pacientes()

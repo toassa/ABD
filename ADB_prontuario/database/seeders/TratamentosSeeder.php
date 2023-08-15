@@ -24,6 +24,7 @@ class TratamentosSeeder extends Seeder
             'reuso_seringas_insulina'=>null,
             'quantia_reuso_seringas'=>null,
             'aderencia'=>null,
+            'num_USP' => '11111',
         ]);
     }
 }

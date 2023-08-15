@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('mamografia');
             $table->boolean('papanicolau');
             $table->string('frequencia_ginecologica');
+            $table->string('num_USP');
 
             $table->timestamps();
         });

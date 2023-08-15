@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('saude_cardiaca');
             $table->string('dor_peito');
             $table->string('exames_doenca_coronariana');
+            $table->string('num_USP');
 
             $table->timestamps();
         });

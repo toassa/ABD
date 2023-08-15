@@ -25,6 +25,7 @@ class NascimentoDado extends Model
         'tipo_parto',
         'peso',
         'vacinacao',
+        'num_USP',
     ];
 
     public function pacientes()

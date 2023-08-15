@@ -22,6 +22,7 @@ class ExercicioFisico extends Model
         'exercicios_rotineiros',
         'tipo_atividades',
         'frequencia_periodo',
+        'num_USP',
     ];
 
     public function pacientes()

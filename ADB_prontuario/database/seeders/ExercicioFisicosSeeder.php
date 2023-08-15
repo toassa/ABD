@@ -16,6 +16,7 @@ class ExercicioFisicosSeeder extends Seeder
             'exercicios_rotineiros'=>true,
             'tipo_atividades'=>'Ballet',
             'frequencia_periodo'=>'2 vezes na semana e 45 minutos por dia',
+            'num_USP' => '11111',
         ]);
     }
 }

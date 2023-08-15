@@ -25,6 +25,7 @@ class DietasSeeder extends Seeder
             'frequencia_nutricionista' => 3,
             'consome_dieteticos' => false,
             'produtos_dieteticos' => null,
+            'num_USP' => '11111',
         ]);
 
     }

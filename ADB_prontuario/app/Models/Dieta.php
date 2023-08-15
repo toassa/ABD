@@ -28,6 +28,7 @@ class Dieta extends Model
         'frequencia_nutricionista',
         'consome_dieteticos',
         'produtos_dieteticos',
+        'num_USP',
     ];
 
     public function pacientes()

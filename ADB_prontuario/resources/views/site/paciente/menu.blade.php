@@ -46,7 +46,7 @@
                 Medicamentos
             @endslot
             @slot('href')
-                #
+              {{route('medicamento.index', $dados->num_registro)}}
             @endslot
           @endcomponent
           @component('components.items.paciente-item')

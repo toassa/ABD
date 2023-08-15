@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('medicamentos', function (Blueprint $table) {
             $table->string('nome')->primary();
+
             $table->timestamps();
         });
     }

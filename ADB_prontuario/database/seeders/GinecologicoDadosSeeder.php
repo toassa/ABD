@@ -24,6 +24,7 @@ class GinecologicoDadosSeeder extends Seeder
             'mamografia'=>true,
             'papanicolau'=>false,
             'frequencia_ginecologica'=>'4 vezes ao ano',
+            'num_USP' => '11111',
         ]);
     }
 }

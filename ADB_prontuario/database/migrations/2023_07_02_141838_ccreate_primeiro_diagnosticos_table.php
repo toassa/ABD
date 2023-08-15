@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('periodo_sintomas_diagnostico');
             $table->boolean('fator_emocional');
             $table->string('qual_fator_emocional')->nullable();
+            $table->string('num_USP');
 
             $table->timestamps();
         });

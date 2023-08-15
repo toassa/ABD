@@ -22,6 +22,7 @@ class AtividadeDiabetesSeeder extends Seeder
             'valor_maximo_hba1c'=>8,
             'conhece_valor_ultima_hba1c'=>false,
             'valor_ultima_hba1c'=>null,
+            'num_USP'=>'11111',
         ]);
     }
 }

@@ -22,6 +22,7 @@ class Comorbidade extends Model
         'ocular',
         'neuropatia',
         'doenca_cronica',
+        'num_USP',
     ];
 
     public function pacientes()

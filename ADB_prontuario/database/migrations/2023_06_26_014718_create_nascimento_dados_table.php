@@ -18,6 +18,7 @@ return new class extends Migration
             $table->enum('tipo_parto', ['Normal', 'Cesárea', 'Não sabe']);
             $table->enum('peso', ['<2Kg', '2,1Kg - 2,5Kg', '2,6Kg - 3 Kg', '3,1Kg - 3,5Kg', '3,6Kg - 4Kg', '> 4Kg', 'Não sabe']);
             $table->enum('vacinacao', ['Sim', 'Não', 'Não sei']);
+            $table->string('num_USP');
 
             $table->timestamps();
         });

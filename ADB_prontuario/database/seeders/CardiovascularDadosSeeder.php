@@ -16,6 +16,7 @@ class CardiovascularDadosSeeder extends Seeder
             'saude_cardiaca'=>'Arritimia cardíaca',
             'dor_peito'=>'Sente dor no peito',
             'exames_doenca_coronariana'=>'Nunca fez',
+            'num_USP' => '11111',
         ]);
     }
 }

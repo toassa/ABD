@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('alteracoes_neuropaticas')->nullable();
             $table->string('demais_alteracoes')->nullable();
             $table->string('observacoes')->nullable();
+            $table->string('num_USP');
 
             $table->timestamps();
         });

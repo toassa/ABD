@@ -28,6 +28,7 @@ class PrimeiroDiagnostico extends Model
         'periodo_sintomas_diagnostico',
         'fator_emocional',
         'qual_fator_emocional',
+        'num_USP',
     ];
     
     public function pacientes()

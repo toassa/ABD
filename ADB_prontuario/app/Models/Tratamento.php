@@ -28,6 +28,7 @@ class Tratamento extends Model
         'reuso_seringas_insulina',
         'quantia_reuso_seringas',
         'aderencia',
+        'num_USP',
     ];
 
     public function pacientes()

@@ -24,6 +24,7 @@ class NeuropaticoComprometimentosSeeder extends Seeder
             'total_pontos'=>'Sinais moderados',
             'diagnostico_neuropatia_periferica'=>true,
             'observacoes'=>null,
+            'num_USP' => '11111',
         ]);
     }
 }

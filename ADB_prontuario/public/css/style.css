@@ -673,3 +673,7 @@ dialog::backdrop{
 .square-content--medicamentos{
     width: 80%;
 }
+
+.square-content--medicamento_item{
+    width: 20%;
+}

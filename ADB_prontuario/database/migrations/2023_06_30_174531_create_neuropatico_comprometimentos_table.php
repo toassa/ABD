@@ -23,6 +23,7 @@ return new class extends Migration
             $table->enum('total_pontos', ['Sinais leves', 'Sinais moderados', 'Sinais graves']);
             $table->boolean('diagnostico_neuropatia_periferica');
             $table->string('observacoes')->nullable();
+            $table->string('num_USP');
 
 
             $table->timestamps();

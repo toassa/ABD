@@ -31,6 +31,7 @@ class FamiliarHistorico extends Model
         'doenca_coronariana',
         'has',
         'doenca_celiaca',
+        'num_USP',
     ];
 
     public function pacientes()

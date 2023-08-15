@@ -14,6 +14,7 @@ return new class extends Migration
 
             $table->string('sintomas');
             $table->enum('libido_alterado', ['Sim', 'Não', 'Não sabe ou não quis responder', 'Não se aplica']);
+            $table->string('num_USP');
 
             $table->timestamps();
         });

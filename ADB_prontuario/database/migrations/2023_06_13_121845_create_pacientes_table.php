@@ -30,7 +30,6 @@ return new class extends Migration
             $table->string('telefone');
             $table->string('segundo_telefone');
             $table->string('pertence_segundo_telefone');
-            // $table->string('data_entrada');
 
             $table->string('CEP');
             $table->string('numero_moradia');

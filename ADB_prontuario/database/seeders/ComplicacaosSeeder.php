@@ -23,6 +23,7 @@ class ComplicacaosSeeder extends Seeder
             'periodo_frequente_hipoglocemia'=>'Noite',
             'episodios_ultimo_mes'=>1,
             'alimento_tratar_hipoglicemia'=>'beterraba',
+            'num_USP' => '11111',
         ]);
     }
 }

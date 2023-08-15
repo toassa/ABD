@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('posologia');
             $table->string('origem');
             $table->string('aderencia');
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

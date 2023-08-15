@@ -22,6 +22,7 @@ class PesExamesSeeder extends Seeder
             'alteracoes_neuropaticas'=>'pérda de sensibilidade térmica (teste quente/frio) no pé E',
             'demais_alteracoes'=>'alteração na caminhada com calcanhares',
             'observacoes'=>null,
+            'num_USP' => '11111',
         ]);
     }
 }

@@ -1,20 +1,21 @@
 <!-- tratamento_medicamentos -->
 
 <div class="col-md-4">
-    <label for="validationCustomNumRegistro" class="form-label">Número de Registro</label>
-    <input type="text" class="form-control" id="validationCustomNumRegistro" value="{{ isset($rows->num_registro) ? $rows->num_registro : '' }}" name="num_registro" required>
-    <div class="invalid-feedback">
-        Insira o número de registro
-    </div>
+    <label for="validationFormMedicamentos" class="form-label textinho">Nome do medicamento<b>*</b></label>
+    <select class="form-select" id="validationFormMedicamentos" name="nome" required>
+        <option disabled value="">Clique para escolher...</option>
+        
+        <?php
+        // Supondo que $medicamentos seja um array de objetos contendo os dados dos medicamentos da tabela
+        foreach ($medicamentos as $medicamento) {
+            $selected = isset($dados->medicamento) && $dados->medicamento === $medicamento->valor ? 'selected' : '';
+            echo '<option value="' . $medicamento->valor . '" ' . $selected . '>' . $medicamento->nome . '</option>';
+        }
+        ?>
+        
+    </select>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomNomeMedicamento" class="form-label">Nome do Medicamento</label>
-    <input type="text" class="form-control" id="validationCustomNomeMedicamento" value="{{ isset($rows->nome) ? $rows->nome : '' }}" name="nome" required>
-    <div class="invalid-feedback">
-        Insira o nome do medicamento
-    </div>
-</div>
 
 <div class="col-md-4">
     <label for="validationCustomTipo" class="form-label">Tipo</label>

@@ -27,6 +27,9 @@ return new class extends Migration
             $table->boolean('consome_dieteticos');
             $table->string('produtos_dieteticos')->nullable();
 
+            $table->string('num_USP');
+
+
             $table->timestamps();
         });
     }

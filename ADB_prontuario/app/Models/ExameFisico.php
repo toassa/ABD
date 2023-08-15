@@ -34,6 +34,7 @@ class ExameFisico extends Model
         'sistema_respiratorio',
         'sistema_cardiovascular',
         'cosidereacoes_outros_sistemas',
+        'num_USP',
     ];
 
     public function pacientes()

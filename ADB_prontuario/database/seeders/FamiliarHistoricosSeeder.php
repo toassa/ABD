@@ -25,6 +25,7 @@ class FamiliarHistoricosSeeder extends Seeder
             'doenca_coronariana' => 'Não sabe',
             'has' => 'Não há histórico familiar',
             'doenca_celiaca' => 'Pai',
+            'num_USP' => '11111',
         ]);
     }
 }

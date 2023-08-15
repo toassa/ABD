@@ -21,6 +21,7 @@ class HabitosVidasSeeder extends Seeder
             'sobre_drogas_ilicitas'=>'Usou uma vez',
             'quais_periodo_drogas'=>null,
             'sobre_anabolizantes'=>'Usuário',
+            'num_USP' => '11111',
         ]);
     }
 }

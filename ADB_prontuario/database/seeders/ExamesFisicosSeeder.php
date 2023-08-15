@@ -31,6 +31,7 @@ class ExamesFisicosSeeder extends Seeder
             'sistema_respiratorio' => 'Sem alterações',
             'sistema_cardiovascular' => 'Sem alterações',
             'consideracoes_outros_sistemas' => 'Sem alterações',
+            'num_USP' => '11111',
         ]);
     }
 }

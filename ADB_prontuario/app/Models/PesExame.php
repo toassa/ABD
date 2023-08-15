@@ -28,6 +28,7 @@ class PesExame extends Model
         'alteracoes_neuropaticas',
         'demais_alteracoes',
         'observacoes',
+        'num_USP',
     ];
 
     public function pacientes()

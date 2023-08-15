@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('periodo_frequente_hipoglocemia', ['Manhã', 'Tarde', 'Noite', 'Não sabe']);
             $table->integer('episodios_ultimo_mes');
             $table->string('alimento_tratar_hipoglicemia');
+            $table->string('num_USP');
 
             $table->timestamps();
         });

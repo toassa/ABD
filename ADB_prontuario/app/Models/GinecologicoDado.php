@@ -30,6 +30,7 @@ class GinecologicoDado extends Model
         'mamografia',
         'papanicolau',
         'frequencia_ginecologica',
+        'num_USP',
     ];
 
     public function pacientes()

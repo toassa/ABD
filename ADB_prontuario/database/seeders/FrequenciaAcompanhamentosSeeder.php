@@ -18,6 +18,7 @@ class FrequenciaAcompanhamentosSeeder extends Seeder
             'oftalmologista'=>'2 vezes ao ano',
             'urologista'=>'nunca',
             'exame_toque_urologista'=>false,
+            'num_USP' => '11111',
         ]);
     }
 }

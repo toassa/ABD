@@ -22,7 +22,8 @@ class AutomonitorizacaoGlicemia extends Model
         'realiza_automonitorizacao',
         'frequencia_medicoes',
         'origem_fitas',
-        'contagem_carboidratos'
+        'contagem_carboidratos',
+        'num_USP',
     ];
 
     public function pacientes()

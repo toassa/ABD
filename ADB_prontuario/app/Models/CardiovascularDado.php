@@ -22,6 +22,7 @@ class CardiovascularDado extends Model
         'saude_cardiaca',
         'dor_peito',
         'exames_doenca_coronariana',
+        'num_USP',
     ];
 
     public function pacientes()

@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('oftalmologista')->nullable();
             $table->string('urologista')->nullable();
             $table->boolean('exame_toque_urologista');
-            
+            $table->string('num_USP');
+
             $table->timestamps();
         });
     }

@@ -24,7 +24,8 @@ class InternacoesHistorico extends Model
         'local',
         'motivo',
         'quantidade_dias',
-        'fator_desencadeante'
+        'fator_desencadeante',
+        'num_USP',
     ];
 
     public function pacientes()

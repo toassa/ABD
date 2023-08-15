@@ -16,6 +16,7 @@ class ComorbidadesSeeder extends Seeder
             'ocular'=>'Catarata',
             'neuropatia'=>'Mononeuropatia',
             'doenca_cronica'=>'HAS',
+            'num_USP' => '11111',
         ]);
     }
 }

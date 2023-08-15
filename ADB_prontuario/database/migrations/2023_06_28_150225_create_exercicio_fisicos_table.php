@@ -15,6 +15,7 @@ return new class extends Migration
             $table->boolean('exercicios_rotineiros');
             $table->string('tipo_atividades')->nullable();
             $table->string('frequencia_periodo')->nullable();
+            $table->string('num_USP');
 
             $table->timestamps();
         });

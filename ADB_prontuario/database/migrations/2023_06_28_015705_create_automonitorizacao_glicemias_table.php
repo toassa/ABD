@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('frequencia_medicoes')->nullable();
             $table->string('origem_fitas')->nullable();
             $table->enum('contagem_carboidratos', ['Sim', 'Não', 'Não sabe'])->nullable();
+            $table->string('num_USP');
 
             $table->timestamps();
         });

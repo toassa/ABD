@@ -19,6 +19,7 @@ class InternacoesHistoricosSeeder extends Seeder
             'motivo' => null,
             'quantidade_dias' => null,
             'fator_desencadeante' => null,
+            'num_USP' => '11111',
         ]);
     }
 }
