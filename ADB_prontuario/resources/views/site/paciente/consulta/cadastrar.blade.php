@@ -22,6 +22,9 @@
                 @slot('text_menu')
                     Atividades Educativas
                 @endslot
+                @slot('route_menu')
+                    {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -35,6 +38,9 @@
                 @endslot
                 @slot('text_menu')
                     Automonitorização
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -50,6 +56,9 @@
                 @slot('text_menu')
                     Dados Cardiovasculares
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -63,6 +72,9 @@
                 @endslot
                 @slot('text_menu')
                     Comorbidade
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -78,6 +90,9 @@
                 @slot('text_menu')
                     Complicações
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -91,6 +106,9 @@
                 @endslot
                 @slot('text_menu')
                     Diagnóstico Atual
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -106,6 +124,9 @@
                 @slot('text_menu')
                     Dieta
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -119,6 +140,9 @@
                 @endslot
                 @slot('text_menu')
                     Exames físicos
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -134,6 +158,9 @@
                 @slot('text_menu')
                     Exercícios físicos
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -147,6 +174,9 @@
                 @endslot
                 @slot('text_menu')
                     Histórico familiar
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -162,6 +192,9 @@
                 @slot('text_menu')
                     Frequência de acompanhamento
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -175,6 +208,9 @@
                 @endslot
                 @slot('text_menu')
                     Dados ginecológicos
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -190,6 +226,9 @@
                 @slot('text_menu')
                     Hábitos de vida
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -203,6 +242,9 @@
                 @endslot
                 @slot('text_menu')
                     Internações
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -218,6 +260,9 @@
                 @slot('text_menu')
                     Nascimento
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -231,6 +276,9 @@
                 @endslot
                 @slot('text_menu')
                     Comprometimento Neuropático
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -246,6 +294,9 @@
                 @slot('text_menu')
                     Exame dos pés
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -260,6 +311,9 @@
                 @slot('text_menu')
                     Primeiro Diagnóstico
                 @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                @endslot
                 @endcomponent
 
                 @component('components.items.menu-section')
@@ -273,6 +327,9 @@
                 @endslot
                 @slot('text_menu')
                     Tratamento
+                @endslot
+                @slot('route_menu')
+                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
             </div>

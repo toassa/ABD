@@ -24,6 +24,11 @@ class PrimeiraConsultaController extends Controller
         return view('site.paciente.menu_atendimento', compact('dados'));
     }
 
+    public function atividades_educativas($num_registro){
+        $dados = Paciente::find($num_registro);
+        return view('site.paciente.consulta.atividades_educativas.index', compact('dados'));
+    }
+
     public function primeiro_atendimento($num_registro){
         $dados = Paciente::find($num_registro);
         return view('site.paciente.consulta.cadastrar', compact('dados'));

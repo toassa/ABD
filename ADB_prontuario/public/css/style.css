@@ -583,15 +583,15 @@ dialog::backdrop{
     border-bottom-left-radius: 20px;
     float: left;
 }
-
+/* 
 .menu_img{
     width: 80%;
     margin: 50px auto;
-}
+} */
 
 .menu_img img{
     width: 120px;
-    margin: 0 auto;
+    margin: 50px 21%;
 }
 
 .menu-sections{
