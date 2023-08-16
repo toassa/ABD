@@ -193,7 +193,7 @@
                     Frequência de acompanhamento
                 @endslot
                 @slot('route_menu')
-                                  {{route('consulta.atividades_educativas', $dados->num_registro)}}
+                    {{route('consulta.atividades_educativas', $dados->num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -334,16 +334,8 @@
                 @endcomponent
             </div>
         </div>
-        <div class="content-consulta align-content">
-            {{-- ALTERAR CONSULTA - ROTA --}}
-            <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
-                {{ csrf_field() }}
-                @include('site.paciente.consulta.atividades_educativas._form')
-                <div class="col-12 col-btn-form">
-                    <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                    <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
-                </div>
-            </form>
+        <div class="content-consulta">
+
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -354,14 +346,3 @@
     <script src="{{asset('js/form-cadastro-paciente.js')}}"></script>
     <script src="{{asset('js/cidades-form.js')}}"></script>
 @endsection
-
-
-
-{{-- @component('components.pages.menu_consulta')
-    @slot('num_registro')
-        $dados->num_registro
-    @endslot
-    @slot('content_menu')
-        aladlkalkdsdkl
-    @endslot
-@endcomponent --}}
