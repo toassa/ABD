@@ -25,7 +25,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomProgramasEducacaoDiabeticos" class="form-label">Programas de Educação para Diabéticos <b>*</b></label>
+    <label for="validationCustomProgramasEducacaoDiabeticos" class="form-label">Programas de Educação <b>*</b></label>
     <input type="number" class="form-control" id="validationCustomProgramasEducacaoDiabeticos" value="{{ isset($rows->programas_educacao_diabeticos) ? $rows->programas_educacao_diabeticos : '' }}" name="programas_educacao_diabeticos" required>
     <div class="invalid-feedback">
         Insira a quantidade de programas de educação para diabéticos
@@ -35,7 +35,7 @@
 <div class="col-md-4">
     <label for="validationCustomConheceHbA1c" class="form-label">Conhece HbA1c <b>*</b></label>
     <select class="form-select" id="validationCustomConheceHbA1c" name="conhece_hba1c">
-        <option selected disabled value="">Clique para escolher...</option>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->conhece_hba1c) && $rows->conhece_hba1c == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->conhece_hba1c) && $rows->conhece_hba1c == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -46,7 +46,8 @@
 
 <div class="col-md-4">
     <label for="validationCustomSignificadoHbA1c" class="form-label">Significado da HbA1c <b>*</b></label>
-    <select class="form-select" id="validationCustomSignificadoHbA1c" name="significado_hba1c">
+    <select class="form-select" id="validationCustomSignificadoHbA1c" name="significado_hba1c">   
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Controle do diabetes atual" {{ isset($rows->significado_hba1c) && $rows->significado_hba1c === 'Controle do diabetes atual' ? 'selected' : '' }}>Controle do diabetes atual</option>
         <option value="Controle do diabetes dos últimos 3 meses" {{ isset($rows->significado_hba1c) && $rows->significado_hba1c === 'Controle do diabetes dos últimos 3 meses' ? 'selected' : '' }}>Controle do diabetes dos últimos 3 meses</option>
         <option value="Controle do diabetes no último ano" {{ isset($rows->significado_hba1c) && $rows->significado_hba1c === 'Controle do diabetes no último ano' ? 'selected' : '' }}>Controle do diabetes no último ano</option>
@@ -67,6 +68,7 @@
 <div class="col-md-4">
     <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">Conhece Valor da Última HbA1c <b>*</b></label>
     <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="conhece_valor_ultima_hba1c">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->conhece_valor_ultima_hba1c) && $rows->conhece_valor_ultima_hba1c == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->conhece_valor_ultima_hba1c) && $rows->conhece_valor_ultima_hba1c == 0 ? 'selected' : '' }}>Não</option>
     </select>

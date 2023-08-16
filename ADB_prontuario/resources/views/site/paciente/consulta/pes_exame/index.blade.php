@@ -6,7 +6,7 @@
         {{-- ALTERAR CONSULTA - ROTA --}}
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
-            @include('site.paciente.consulta.atividades_educativas._form')
+            @include('site.paciente.consulta.pes_exame._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>

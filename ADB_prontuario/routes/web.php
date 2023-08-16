@@ -87,10 +87,47 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/menu/{num_registro}', [PrimeiraConsultaController::class, 'menu'])->name('consulta.menu');
 
             Route::get('/menu_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'menu_atendimento'])->name('consulta.menu_atendimento');
-
-            Route::get('/atividades_educativas/{num_registro}', [PrimeiraConsultaController::class, 'atividades_educativas'])->name('consulta.atividades_educativas');
-
+            
             Route::get('/primeiro_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_atendimento'])->name('consulta.primeiro_atendimento');
+        
+            Route::get('/atividades_educativas/{num_registro}', [PrimeiraConsultaController::class, 'atividades_educativas'])->name('consulta.atividades_educativas');
+        
+            Route::get('/automonitorizacao/{num_registro}', [PrimeiraConsultaController::class, 'automonitorizacao'])->name('consulta.automonitorizacao');
+            
+            Route::get('/cardiovascular_dados/{num_registro}', [PrimeiraConsultaController::class, 'cardiovascular_dados'])->name('consulta.cardiovascular_dados');
+
+            Route::get('/comorbidades/{num_registro}', [PrimeiraConsultaController::class, 'comorbidades'])->name('consulta.comorbidades');
+
+            Route::get('/complicacoes/{num_registro}', [PrimeiraConsultaController::class, 'complicacoes'])->name('consulta.complicacoes');
+
+            Route::get('/diagnostico_atual/{num_registro}', [PrimeiraConsultaController::class, 'diagnostico_atual'])->name('consulta.diagnostico_atual');
+
+            Route::get('/dieta/{num_registro}', [PrimeiraConsultaController::class, 'dieta'])->name('consulta.dieta');
+
+            Route::get('/exames_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exames_fisicos'])->name('consulta.exames_fisicos');
+
+            Route::get('/exercicios_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exercicios_fisicos'])->name('consulta.exercicios_fisicos');
+
+            Route::get('/familiar_historico/{num_registro}', [PrimeiraConsultaController::class, 'familiar_historico'])->name('consulta.familiar_historico');
+
+            Route::get('/frequencia_acompanhamento/{num_registro}', [PrimeiraConsultaController::class, 'frequencia_acompanhamento'])->name('consulta.frequencia_acompanhamento');
+
+            Route::get('/ginecologico_dados/{num_registro}', [PrimeiraConsultaController::class, 'ginecologico_dados'])->name('consulta.ginecologico_dados');
+
+            Route::get('/habitos_vida/{num_registro}', [PrimeiraConsultaController::class, 'habitos_vida'])->name('consulta.habitos_vida');
+
+            Route::get('/internacoes/{num_registro}', [PrimeiraConsultaController::class, 'internacoes'])->name('consulta.internacoes');
+
+            Route::get('/nascimento/{num_registro}', [PrimeiraConsultaController::class, 'nascimento'])->name('consulta.nascimento');
+
+            Route::get('/neuropatico_comprometimento/{num_registro}', [PrimeiraConsultaController::class, 'neuropatico_comprometimento'])->name('consulta.neuropatico_comprometimento');
+
+            Route::get('/pes_exame/{num_registro}', [PrimeiraConsultaController::class, 'pes_exame'])->name('consulta.pes_exame');
+
+            Route::get('/primeiro_diagnostico/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_diagnostico'])->name('consulta.primeiro_diagnostico');
+
+            Route::get('/tratamento/{num_registro}', [PrimeiraConsultaController::class, 'tratamento'])->name('consulta.tratamento');
+
         });
 
         Route::prefix('/medicamentos')->group(function(){

@@ -27,6 +27,7 @@
 <div class="col-md-4">
     <label for="validationCustomComoFoiFeito" class="form-label">Como Foi Feito o Diagnóstico</label>
     <select class="form-select" id="validationCustomComoFoiFeito" name="como_foi_feito" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Internação com cetoacidose diabética" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Internação com cetoacidose diabética' ? 'selected' : '' }}>Internação com cetoacidose diabética</option>
         <option value="Internação sem cetoacidose diabética" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Internação sem cetoacidose diabética' ? 'selected' : '' }}>Internação sem cetoacidose diabética</option>
         <option value="Glicemia de jejum" {{ isset($rows->como_foi_feito) && $rows->como_foi_feito === 'Glicemia de jejum' ? 'selected' : '' }}>Glicemia de jejum</option>
@@ -42,6 +43,7 @@
 <div class="col-md-4">
     <label for="validationCustomInfeccoesSeisMeses" class="form-label">Teve Infecções nos Últimos Seis Meses?</label>
     <select class="form-select" id="validationCustomInfeccoesSeisMeses" name="infeccoes_seis_meses" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->infeccoes_seis_meses) && $rows->infeccoes_seis_meses == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->infeccoes_seis_meses) && $rows->infeccoes_seis_meses == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -69,6 +71,7 @@
 <div class="col-md-4">
     <label for="validationCustomFatorEmocional" class="form-label">Fator Emocional?</label>
     <select class="form-select" id="validationCustomFatorEmocional" name="fator_emocional" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->fator_emocional) && $rows->fator_emocional == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->fator_emocional) && $rows->fator_emocional == 0 ? 'selected' : '' }}>Não</option>
     </select>

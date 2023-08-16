@@ -11,6 +11,7 @@
 <div class="col-md-4">
     <label for="validationCustomUsoInsulina" class="form-label">Uso de Insulina</label>
     <select class="form-select" id="validationCustomUsoInsulina" name="uso_insulina" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -70,6 +71,7 @@
 <div class="col-md-4">
     <label for="validationCustomReusoSeringasInsulina" class="form-label">Reuso de Seringas para Insulina</label>
     <select class="form-select" id="validationCustomReusoSeringasInsulina" name="reuso_seringas_insulina" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->reuso_seringas_insulina) && $rows->reuso_seringas_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->reuso_seringas_insulina) && $rows->reuso_seringas_insulina == 0 ? 'selected' : '' }}>Não</option>
     </select>

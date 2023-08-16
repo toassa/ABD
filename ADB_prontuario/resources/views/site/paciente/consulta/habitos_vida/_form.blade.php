@@ -3,6 +3,7 @@
 <div class="col-md-4">
     <label for="validationCustomSobreEtilismo" class="form-label">Sobre Etilismo</label>
     <select class="form-select" id="validationCustomSobreEtilismo" name="sobre_etilismo">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Etilista' ? 'selected' : '' }}>Etilista</option>
         <option value="Ex-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Ex-etilista' ? 'selected' : '' }}>Ex-etilista</option>
         <option value="Não-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Não-etilista' ? 'selected' : '' }}>Não-etilista</option>
@@ -23,6 +24,7 @@
 <div class="col-md-4">
     <label for="validationCustomClassificacaoEtilismo" class="form-label">Classificação do Etilismo</label>
     <select class="form-select" id="validationCustomClassificacaoEtilismo" name="classificacao_etilismo">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Leve" {{ isset($rows->classificacao_etilismo) && $rows->classificacao_etilismo === 'Leve' ? 'selected' : '' }}>Leve</option>
         <option value="Moderado" {{ isset($rows->classificacao_etilismo) && $rows->classificacao_etilismo === 'Moderado' ? 'selected' : '' }}>Moderado</option>
         <option value="Grave" {{ isset($rows->classificacao_etilismo) && $rows->classificacao_etilismo === 'Grave' ? 'selected' : '' }}>Grave</option>
@@ -35,6 +37,7 @@
 <div class="col-md-4">
     <label for="validationCustomSobreTabagismo" class="form-label">Sobre Tabagismo</label>
     <select class="form-select" id="validationCustomSobreTabagismo" name="sobre_tabagismo">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Fumante diário" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante diário' ? 'selected' : '' }}>Fumante diário</option>
         <option value="Fumante ocasional" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante ocasional' ? 'selected' : '' }}>Fumante ocasional</option>
         <option value="Ex-fumante" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Ex-fumante' ? 'selected' : '' }}>Ex-fumante</option>
@@ -56,6 +59,7 @@
 <div class="col-md-4">
     <label for="validationCustomSobreDrogasIlicitas" class="form-label">Sobre Drogas Ilícitas</label>
     <select class="form-select" id="validationCustomSobreDrogasIlicitas" name="sobre_drogas_ilicitas">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Usuário" {{ isset($rows->sobre_drogas_ilicitas) && $rows->sobre_drogas_ilicitas === 'Usuário' ? 'selected' : '' }}>Usuário</option>
         <option value="Ex-usuário" {{ isset($rows->sobre_drogas_ilicitas) && $rows->sobre_drogas_ilicitas === 'Ex-usuário' ? 'selected' : '' }}>Ex-usuário</option>
         <option value="Nunca usou" {{ isset($rows->sobre_drogas_ilicitas) && $rows->sobre_drogas_ilicitas === 'Nunca usou' ? 'selected' : '' }}>Nunca usou</option>
@@ -77,6 +81,7 @@
 <div class="col-md-4">
     <label for="validationCustomSobreAnabolizantes" class="form-label">Sobre Anabolizantes</label>
     <select class="form-select" id="validationCustomSobreAnabolizantes" name="sobre_anabolizantes">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Usuário" {{ isset($rows->sobre_anabolizantes) && $rows->sobre_anabolizantes === 'Usuário' ? 'selected' : '' }}>Usuário</option>
         <option value="Ex-usuário" {{ isset($rows->sobre_anabolizantes) && $rows->sobre_anabolizantes === 'Ex-usuário' ? 'selected' : '' }}>Ex-usuário</option>
         <option value="Nunca usou" {{ isset($rows->sobre_anabolizantes) && $rows->sobre_anabolizantes === 'Nunca usou' ? 'selected' : '' }}>Nunca usou</option>

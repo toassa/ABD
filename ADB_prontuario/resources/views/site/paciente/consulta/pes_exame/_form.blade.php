@@ -2,6 +2,7 @@
 <div class="col-md-4">
     <label for="validationCustomCasosUlcera" class="form-label">Casos de Úlceras</label>
     <select class="form-select" id="validationCustomCasosUlcera" name="casos_ulceras">
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>
     </select>

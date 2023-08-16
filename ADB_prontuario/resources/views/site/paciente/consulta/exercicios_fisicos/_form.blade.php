@@ -3,6 +3,7 @@
 <div class="col-md-4">
     <label for="validationCustomExerciciosRotineiros" class="form-label">Exercícios Rotineiros</label>
     <select class="form-select" id="validationCustomExerciciosRotineiros" name="exercicios_rotineiros">
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->exercicios_rotineiros) && $rows->exercicios_rotineiros == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->exercicios_rotineiros) && $rows->exercicios_rotineiros == 0 ? 'selected' : '' }}>Não</option>
     </select>

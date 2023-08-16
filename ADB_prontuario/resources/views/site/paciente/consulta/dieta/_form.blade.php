@@ -3,6 +3,7 @@
 <div class="col-md-4">
     <label for="validationCustomRealiza" class="form-label">Realização <b>*</b></label>
     <select class="form-select" id="validationCustomRealiza" name="realiza" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->realiza) && $rows->realiza == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->realiza) && $rows->realiza == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -15,6 +16,7 @@
 <div class="col-md-4">
     <label for="validationCustomTipoDieta" class="form-label">Tipo de Dieta</label>
     <select class="form-select" id="validationCustomTipoDieta" name="tipo_dieta">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Restringe apenas açúcar e doce" {{ isset($rows->tipo_dieta) && $rows->tipo_dieta === 'Restringe apenas açúcar e doce' ? 'selected' : '' }}>Restringe apenas açúcar e doce</option>
         <option value="Dieta de calorias" {{ isset($rows->tipo_dieta) && $rows->tipo_dieta === 'Dieta de calorias' ? 'selected' : '' }}>Dieta de calorias</option>
         <option value="Contagem de carboidratos" {{ isset($rows->tipo_dieta) && $rows->tipo_dieta === 'Contagem de carboidratos' ? 'selected' : '' }}>Contagem de carboidratos</option>
@@ -54,6 +56,7 @@
 <div class="col-md-4">
     <label for="validationCustomConsultaNutricionista" class="form-label">Consulta com Nutricionista <b>*</b></label>
     <select class="form-select" id="validationCustomConsultaNutricionista" name="consulta_nutricionista" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->consulta_nutricionista) && $rows->consulta_nutricionista == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->consulta_nutricionista) && $rows->consulta_nutricionista == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -73,6 +76,7 @@
 <div class="col-md-4">
     <label for="validationCustomConsomeDieteticos" class="form-label">Consome Produtos Dietéticos <b>*</b></label>
     <select class="form-select" id="validationCustomConsomeDieteticos" name="consome_dieteticos" required>
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->consome_dieteticos) && $rows->consome_dieteticos == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->consome_dieteticos) && $rows->consome_dieteticos == 0 ? 'selected' : '' }}>Não</option>
     </select>

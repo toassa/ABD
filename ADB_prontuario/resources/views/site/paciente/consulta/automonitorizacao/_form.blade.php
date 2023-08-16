@@ -3,6 +3,7 @@
 <div class="col-md-4">
     <label for="validationCustomRealizaAutomonitorizacao" class="form-label">Realiza Automonitorização</label>
     <select class="form-select" id="validationCustomRealizaAutomonitorizacao" name="realiza_automonitorizacao">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -30,6 +31,7 @@
 <div class="col-md-4">
     <label for="validationCustomContagemCarboidratos" class="form-label">Contagem de Carboidratos</label>
     <select class="form-select" id="validationCustomContagemCarboidratos" name="contagem_carboidratos">
+         <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Sim' ? 'selected' : '' }}>Sim</option>
         <option value="Não" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Não' ? 'selected' : '' }}>Não</option>
         <option value="Não sabe" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>

@@ -11,6 +11,7 @@
 <div class="col-md-4">
     <label for="validationCustomPossuiDM1" class="form-label">Possui Diabetes Mellitus Tipo 1 (DM1)</label>
     <select class="form-select" id="validationCustomPossuiDM1" name="possui_dm1">
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->possui_dm1) && $rows->possui_dm1 == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->possui_dm1) && $rows->possui_dm1 == 0 ? 'selected' : '' }}>Não</option>
     </select>

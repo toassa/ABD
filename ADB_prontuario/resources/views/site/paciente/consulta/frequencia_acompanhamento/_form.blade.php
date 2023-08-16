@@ -35,6 +35,7 @@
 <div class="col-md-4">
     <label for="validationCustomExameToqueUrologista" class="form-label">Exame de Toque Urológico</label>
     <select class="form-select" id="validationCustomExameToqueUrologista" name="exame_toque_urologista">
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->exame_toque_urologista) && $rows->exame_toque_urologista == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->exame_toque_urologista) && $rows->exame_toque_urologista == 0 ? 'selected' : '' }}>Não</option>
     </select>
