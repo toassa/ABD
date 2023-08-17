@@ -55,8 +55,8 @@
     <select class="form-select" id="validationCustomUserCargo" name="cargo" required>
         <option disabled selected value="">Clique para escolher...</option>
         <option {{ isset($rows->cargo) && $rows->cargo === 'medico' ? 'selected' : '' }} value="medico">Médico</option>
-        <option {{ isset($rows->cargo) && $rows->cargo === 'membro fixo' ? 'selected' : '' }} value="aluno">Membro fixo</option>
-        <option {{ isset($rows->cargo) && $rows->cargo === 'coordenador' ? 'selected' : '' }} value="aluno">Coordenador</option>
+        <option {{ isset($rows->cargo) && $rows->cargo === 'membro fixo' ? 'selected' : '' }} value="membro fixo">Membro fixo</option>
+        <option {{ isset($rows->cargo) && $rows->cargo === 'coordenador' ? 'selected' : '' }} value="coordenador">Coordenador</option>
     </select>
     <div class="invalid-feedback">
         Cargo inválido

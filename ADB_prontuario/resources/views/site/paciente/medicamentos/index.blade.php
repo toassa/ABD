@@ -39,6 +39,9 @@
                 </a>
                 @endforeach
             @endslot
+            @slot('route_btn')
+            {{route('medicamento.cadastrar', $dados->num_registro)}}
+            @endslot
         @endcomponent
             {{-- @component('components.items.paciente-item')
                 @slot('coluna')
