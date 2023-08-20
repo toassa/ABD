@@ -12,7 +12,7 @@
       </div>
     <section class="square-content square-content--medicamentos">
         <h1 class="text-center">Cadastro de Medicamentos</h1>
-        <form action="{{route('medicamento.salvar', $dados->num_registro)}}" method="post" class="row g-3 needs-validation" novalidate>
+        <form action="{{route('medicamento.salvar', $dados->num_registro, Auth::user()->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             @include('site.paciente.medicamentos.tratamento_medicamentos._form')
             <div class="col-12 col-btn-form">

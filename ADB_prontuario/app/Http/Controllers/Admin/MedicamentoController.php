@@ -23,7 +23,7 @@ class MedicamentoController extends Controller
         return view('site.paciente.medicamentos.cadastrar', compact('dados'), compact('medicamentos'));
     }
 
-    public function salvar(Request $req, $num_USP, $num_registro){
+    public function salvar(Request $req, $num_registro, $num_USP){
         $dados = $req->all();
 
         TratamentoMedicamento::create([
