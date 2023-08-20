@@ -136,7 +136,7 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/cadastrar/{num_registro}', [MedicamentoController::class, 'cadastrar'])->name('medicamento.cadastrar');
 
             Route::prefix('/form')->group(function(){
-                Route::post('/salvar/{num_registro}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
+                Route::post('/salvar/{num_registro}/{num_USP}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
             });
         });
     });

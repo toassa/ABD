@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('tratamento_medicamentos', function (Blueprint $table) {
 
-            $table->string('num_registro')->unique();
-            $table->string('nome')->unique();
+            $table->string('num_registro');
+            $table->string('nome');
             $table->primary(['num_registro', 'nome']);
 
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');

@@ -34,7 +34,12 @@ class TratamentoMedicamento extends Model
 
     public function getKeyName()
     {
-        return ['num_registro', 'nome'];
+        return null; // Retorna null para usar a chave primária composta definida no array abaixo
+    }
+
+    public function getKey()
+    {
+        return [$this->num_registro, $this->nome]; // Retorna a combinação de valores da chave primária composta
     }
 
     public function pacientes()

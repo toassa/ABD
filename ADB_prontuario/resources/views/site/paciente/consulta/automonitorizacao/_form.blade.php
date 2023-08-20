@@ -2,8 +2,8 @@
 
 <div class="col-md-4">
     <label for="validationCustomRealizaAutomonitorizacao" class="form-label">Realiza Automonitorização</label>
-    <select class="form-select" id="validationCustomRealizaAutomonitorizacao" name="realiza_automonitorizacao">
-         <option selected disabled value="">Clique para escolher...</option>
+    <select class="form-select" id="validationCustomRealizaAutomonitorizacao" name="realiza_automonitorizacao" required>
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -14,7 +14,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomFrequenciaMedicoes" class="form-label">Frequência de Medições</label>
-    <input type="text" class="form-control" id="validationCustomFrequenciaMedicoes" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes">
+    <input type="text" class="form-control" id="validationCustomFrequenciaMedicoes" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" required>
     <div class="invalid-feedback">
         Insira a frequência de medições
     </div>
@@ -22,7 +22,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomOrigemFitas" class="form-label">Origem das Fitas</label>
-    <input type="text" class="form-control" id="validationCustomOrigemFitas" value="{{ isset($rows->origem_fitas) ? $rows->origem_fitas : '' }}" name="origem_fitas">
+    <input type="text" class="form-control" id="validationCustomOrigemFitas" value="{{ isset($rows->origem_fitas) ? $rows->origem_fitas : '' }}" name="origem_fitas" required>
     <div class="invalid-feedback">
         Insira a origem das fitas
     </div>

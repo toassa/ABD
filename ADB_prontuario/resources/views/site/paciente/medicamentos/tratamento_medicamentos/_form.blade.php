@@ -4,12 +4,12 @@
     <label for="validationFormMedicamentos" class="form-label textinho">Nome do medicamento<b>*</b></label>
     <select class="form-select" id="validationFormMedicamentos" name="nome" required>
         <option disabled selected value="">Clique para escolher...</option>
-        <?php
-            foreach ($medicamentos as $medicamento) {
+        @foreach ($medicamentos as $medicamento)
+            @php
                 $selected = isset($dados->medicamento) && $dados->medicamento === $medicamento->valor ? 'selected' : '';
-                echo '<option value="' . $medicamento->valor . '" ' . $selected . '>' . $medicamento->nome . '</option>';
-            }
-        ?>
+            @endphp
+            <option value="{{ $medicamento->nome }}" {{ $selected }}>{{ $medicamento->nome }}</option>
+        @endforeach
     </select>
 </div>
 

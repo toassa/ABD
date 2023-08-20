@@ -3,7 +3,11 @@
 @section('titulo-pagina', 'Editar Pacientes')
 
 @section('content')
-    @component('components.items.back')@endcomponent
+    @component('components.items.voltar')
+    @slot('rota_voltar')
+        {{route('consulta.menu', $dados->num_registro)}}
+    @endslot
+    @endcomponent
     <div class="usuario">
         <p>{{$dados->nome}}</p>
         <span class="material-symbols-outlined">
@@ -24,19 +28,28 @@
                     <div class="col text-center col-title">Posologia</div>
                     <div class="col text-center col-title">Origem</div>
                     <div class="col text-center col-title">Aderência</div>
+                    <div class="col text-center col-title">Num USP</div>
                 </div>
             @endslot
             @slot('grid_content')
                 @foreach ($tratamento_medicamentos as $tratamento_medicamento)
-                <a href="{{route('medicamento.cadastrar', $dados->num_registro)}}">
-                    <div class="row row-text row-hover">
-                        <p class="col text-center col-text">{{$tratamento_medicamento->nome}}</p>
-                        <p class="col text-center col-mail">{{$tratamento_medicamento->tipo}}</p>
-                        <p class="col text-center col-mail">{{$tratamento_medicamento->posologia}}</p>
-                        <p class="col text-center col-text">{{$tratamento_medicamento->origem}}</p>
-                        <p class="col text-center col-text">{{$tratamento_medicamento->aderencia}}</p>
-                    </div>
-                </a>
+                {{-- ARRUMA AQUI --}}
+                    @if ($tratamento_medicamento->num_registro == null)
+                        n cadastro nada burro
+                    @else
+                        @if ($tratamento_medicamento->num_registro == $dados->num_registro)
+                        <a href="{{route('medicamento.cadastrar', $dados->num_registro)}}">
+                            <div class="row row-text row-hover">
+                                <p class="col text-center col-text">{{$tratamento_medicamento->nome}}</p>
+                                <p class="col text-center col-mail">{{$tratamento_medicamento->tipo}}</p>
+                                <p class="col text-center col-mail">{{$tratamento_medicamento->posologia}}</p>
+                                <p class="col text-center col-text">{{$tratamento_medicamento->origem}}</p>
+                                <p class="col text-center col-text">{{$tratamento_medicamento->aderencia}}</p>
+                                <p class="col text-center col-text">{{$tratamento_medicamento->num_USP}}</p>
+                            </div>
+                        </a>
+                        @endif
+                    @endif
                 @endforeach
             @endslot
             @slot('route_btn')

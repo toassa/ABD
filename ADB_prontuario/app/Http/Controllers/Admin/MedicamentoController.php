@@ -33,7 +33,8 @@ class MedicamentoController extends Controller
             'posologia'=>$dados['posologia'],
             'origem'=>$dados['origem'],
             'aderencia'=>$dados['aderencia'],
+            'num_USP'=>$num_USP,
         ]);
-        return redirect()->route('paciente.listar');
+        return redirect()->route('medicamento.index', $num_registro);
     }
 }
