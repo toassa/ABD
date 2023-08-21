@@ -74,13 +74,13 @@ Route::group(['middleware' => 'auth'], function(){
     
             Route::get('/list-editar', [PacienteController::class, 'list_editar'])->name('paciente.list-editar');
     
-            Route::get('/editar/{id}', [PacienteController::class, 'editar'])->name('paciente.editar');
+            Route::get('/editar/{num_registro}', [PacienteController::class, 'editar'])->name('paciente.editar');
     
-            Route::put('/atualizar/{id}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
+            Route::put('/atualizar/{num_registro}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
     
             Route::get('/list-excluir', [PacienteController::class, 'list_excluir'])->name('paciente.list-excluir');
             
-            Route::get('/excluir/{id}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
+            Route::get('/excluir/{num_registro}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
         });
 
         Route::prefix('/consulta')->group(function(){
@@ -134,9 +134,13 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/index/{num_registro}', [MedicamentoController::class, 'index'])->name('medicamento.index');
 
             Route::get('/cadastrar/{num_registro}', [MedicamentoController::class, 'cadastrar'])->name('medicamento.cadastrar');
+            
+            Route::get('/editar/{num_registro}/{nome}', [MedicamentoController::class, 'editar'])->name('medicamento.editar');
 
             Route::prefix('/form')->group(function(){
                 Route::post('/salvar/{num_registro}/{num_USP}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
+
+                Route::put('/atualizar/{num_registro}/{nome}/{num_usp}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
             });
         });
     });

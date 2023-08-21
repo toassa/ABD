@@ -2,7 +2,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomSintomas" class="form-label">Sintomas</label>
-    <input type="text" class="form-control" id="validationCustomSintomas" value="{{ isset($rows->sintomas) ? $rows->sintomas : '' }}" name="sintomas" required>
+    <input type="text" class="form-control" id="validationCustomSintomas" value="{{ isset($rows->sintomas) ? $rows->sintomas : '' }}" name="sintomas" placeholder="Insira os sintomas" required>
     <div class="invalid-feedback">
         Insira os sintomas
     </div>

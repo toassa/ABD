@@ -14,7 +14,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomFrequenciaMedicoes" class="form-label">Frequência de Medições</label>
-    <input type="text" class="form-control" id="validationCustomFrequenciaMedicoes" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" required>
+    <input type="text" class="form-control" id="validationCustomFrequenciaMedicoes" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
     <div class="invalid-feedback">
         Insira a frequência de medições
     </div>
@@ -22,7 +22,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomOrigemFitas" class="form-label">Origem das Fitas</label>
-    <input type="text" class="form-control" id="validationCustomOrigemFitas" value="{{ isset($rows->origem_fitas) ? $rows->origem_fitas : '' }}" name="origem_fitas" required>
+    <input type="text" class="form-control" id="validationCustomOrigemFitas" value="{{ isset($rows->origem_fitas) ? $rows->origem_fitas : '' }}" name="origem_fitas" placeholder="Digite a origem das fitas" required>
     <div class="invalid-feedback">
         Insira a origem das fitas
     </div>
@@ -30,7 +30,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomContagemCarboidratos" class="form-label">Contagem de Carboidratos</label>
-    <select class="form-select" id="validationCustomContagemCarboidratos" name="contagem_carboidratos">
+    <select class="form-select" id="validationCustomContagemCarboidratos" name="contagem_carboidratos" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Sim' ? 'selected' : '' }}>Sim</option>
         <option value="Não" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Não' ? 'selected' : '' }}>Não</option>

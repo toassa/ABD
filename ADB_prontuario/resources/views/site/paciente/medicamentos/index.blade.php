@@ -38,7 +38,7 @@
                         n cadastro nada burro
                     @else
                         @if ($tratamento_medicamento->num_registro == $dados->num_registro)
-                        <a href="{{route('medicamento.cadastrar', $dados->num_registro)}}">
+                        <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $dados->nome])}}">
                             <div class="row row-text row-hover">
                                 <p class="col text-center col-text">{{$tratamento_medicamento->nome}}</p>
                                 <p class="col text-center col-mail">{{$tratamento_medicamento->tipo}}</p>

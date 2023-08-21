@@ -12,7 +12,6 @@
     </div>
 </div>
 
-
 <div class="col-md-4">
     <label for="validationCustomTipoDieta" class="form-label">Tipo de Dieta</label>
     <select class="form-select" id="validationCustomTipoDieta" name="tipo_dieta">
@@ -28,10 +27,9 @@
     </div>
 </div>
 
-
 <div class="col-md-4">
     <label for="validationCustomSegueDieta" class="form-label">Segue Dieta</label>
-    <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($rows->segue_dieta) ? $rows->segue_dieta : '' }}" name="segue_dieta">
+    <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($rows->segue_dieta) ? $rows->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue">
     <div class="invalid-feedback">
         Insira a dieta que segue
     </div>
@@ -39,7 +37,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomDificuldadeDieta" class="form-label">Dificuldade na Dieta</label>
-    <input type="text" class="form-control" id="validationCustomDificuldadeDieta" value="{{ isset($rows->dificuldade_dieta) ? $rows->dificuldade_dieta : '' }}" name="dificuldade_dieta">
+    <input type="text" class="form-control" id="validationCustomDificuldadeDieta" value="{{ isset($rows->dificuldade_dieta) ? $rows->dificuldade_dieta : '' }}" name="dificuldade_dieta" placeholder="Insira a dificuldade na dieta">
     <div class="invalid-feedback">
         Insira a dificuldade na dieta
     </div>
@@ -47,7 +45,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomOrientador" class="form-label">Orientador</label>
-    <input type="text" class="form-control" id="validationCustomOrientador" value="{{ isset($rows->orientador) ? $rows->orientador : '' }}" name="orientador">
+    <input type="text" class="form-control" id="validationCustomOrientador" value="{{ isset($rows->orientador) ? $rows->orientador : '' }}" name="orientador" placeholder="Insira o nome do orientador">
     <div class="invalid-feedback">
         Insira o nome do orientador
     </div>
@@ -67,7 +65,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomFreqConsulta" class="form-label">Frequência de Consulta</label>
-    <input type="number" class="text-center form-control" id="validationCustomFreqConsulta" value="{{ isset($rows->frequencia_nutricionista) ? $rows->frequencia_nutricionista : '' }}" name="frequencia_nutricionista">
+    <input type="number" class="text-center form-control" id="validationCustomFreqConsulta" value="{{ isset($rows->frequencia_nutricionista) ? $rows->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
     <div class="invalid-feedback">
         Insira a frequência da consulta com nutricionista
     </div>
@@ -87,7 +85,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomProdutosDieteticos" class="form-label">Produtos Dietéticos Consumidos</label>
-    <input type="text" class="form-control" id="validationCustomProdutosDieteticos" value="{{ isset($rows->produtos_dieteticos) ? $rows->produtos_dieteticos : '' }}" name="produtos_dieteticos">
+    <input type="text" class="form-control" id="validationCustomProdutosDieteticos" value="{{ isset($rows->produtos_dieteticos) ? $rows->produtos_dieteticos : '' }}" name="produtos_dieteticos" placeholder="Insira os produtos dietéticos consumidos" required>
     <div class="invalid-feedback">
         Insira os produtos dietéticos consumidos
     </div>
