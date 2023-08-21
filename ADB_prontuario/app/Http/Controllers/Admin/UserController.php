@@ -36,8 +36,7 @@ class UserController extends Controller
     }
 
     public function buscar(Request $req){
-        $rows = User::find($req);
-        dd('rows');
+        $rows = User::where('name', $req['name'])->get();
         return view('site.usuario.listar', compact('rows'));
     }
 

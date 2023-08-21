@@ -1,4 +1,7 @@
 @component('components.pages.menu_consulta')
+    @slot('rota_volta')
+        {{route('consulta.menu_atendimento', $dados->num_registro)}}
+    @endslot
     @slot('num_registro')
         $dados->num_registro
     @endslot

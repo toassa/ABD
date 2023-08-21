@@ -140,7 +140,7 @@ Route::group(['middleware' => 'auth'], function(){
             Route::prefix('/form')->group(function(){
                 Route::post('/salvar/{num_registro}/{num_USP}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
 
-                Route::put('/atualizar/{num_registro}/{nome}/{num_usp}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
+                Route::put('/atualizar/{num_registro}/{nome}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
             });
         });
     });

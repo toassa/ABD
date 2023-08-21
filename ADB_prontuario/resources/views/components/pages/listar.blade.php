@@ -4,7 +4,7 @@
         {{ csrf_field() }}
         <div class="row g-3 row-pesquisar row-pesquisar">
             <div class="col-sm-8">
-                <input type="text" name="nome" class="form-control" placeholder="Digite o {{$quem}}" aria-label="Nome do {{$quem}}">
+                <input type="text" name="name" class="form-control" placeholder="Digite o {{$quem}}" aria-label="Nome do {{$quem}}">
             </div>
             <div class="col-sm">
                 <button type="submit" class="btn btn-giga btn-primary">Buscar</button>

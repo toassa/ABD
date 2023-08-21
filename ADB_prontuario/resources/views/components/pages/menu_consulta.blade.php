@@ -3,7 +3,11 @@
 @section('titulo-pagina','Primeiro Atendimento')
 
 @section('content')
-    @component('components.items.back')@endcomponent
+    @component('components.items.voltar')
+        @slot('rota_voltar')
+            {{$rota_volta}}
+        @endslot
+    @endcomponent
     <section class="square-content square-content--cadastro-consulta">
         <div class="menu_consulta">
             <div class="menu_img">

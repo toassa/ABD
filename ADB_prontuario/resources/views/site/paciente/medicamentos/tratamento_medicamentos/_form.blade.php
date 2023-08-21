@@ -32,11 +32,14 @@
 
 <div class="col-md-4">
     <label for="validationCustomPosologia" class="form-label">Posologia <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomPosologia" value="{{ isset($tratamento_medicamentos->posologia) ? $tratamento_medicamentos->posologia : '' }}" name="posologia" required>
+    <input type="text" class="form-control" id="validationCustomPosologia" value="{{isset($tratamento_medicamentos->posologia) ? $tratamento_medicamentos->posologia : '' }}" name="posologia" required>
     <div class="invalid-feedback">
         Insira a posologia do medicamento
     </div>
 </div>
+
+{{-- {{$tratamento_medicamentos->posologia}} --}}
+{{$tratamento_medicamentos}}
 
 <div class="col-md-4">
     <label for="validationCustomOrigem" class="form-label">Origem <b>*</b></label>

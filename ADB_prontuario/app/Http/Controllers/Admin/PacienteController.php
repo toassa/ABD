@@ -20,9 +20,9 @@ class PacienteController extends Controller
         return view('site.paciente.pesquisar', compact('dados'));
     }
 
-    public function pesquisar(){
-        return view('site.paciente.pesquisar');
-    }
+    // public function pesquisar(){
+    //     return view('site.paciente.pesquisar');
+    // }
 
     public function editar($num_registro){
         $dados = Paciente::find($num_registro);
@@ -111,8 +111,9 @@ class PacienteController extends Controller
         return redirect()->route('paciente.listar');
     }
 
-    public function buscar(Request $req, $nome){
-        $dados = $req->Paciente::where('name', $nome);
-        return view('site.pesquisar', compact('dados'));
+    public function pesquisar(Request $req){
+        $dados = Paciente::where('nome', $req['name'])->get();
+        // dd($dados);
+        return view('site.paciente.pesquisar', compact('dados'));
     }
 }

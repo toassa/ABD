@@ -13,7 +13,7 @@ class MedicamentoController extends Controller
 {
     public function index($num_registro){
         $dados = Paciente::find($num_registro);
-        $tratamento_medicamentos = TratamentoMedicamento::all();
+        $tratamento_medicamentos = TratamentoMedicamento::where('num_registro', $num_registro)->get();
         return view('site.paciente.medicamentos.index', compact('dados', 'tratamento_medicamentos'));
     }
 
@@ -42,8 +42,8 @@ class MedicamentoController extends Controller
         $dados = Paciente::find($num_registro);
         $medicamentos = Medicamento::all();
         $tratamento_medicamentos = TratamentoMedicamento::where('num_registro', $num_registro)->where('nome', $nome)->get();
-        // dd($medicamentos);
-        return view('site.paciente.medicamentos.editar', compact('dados', 'tratamento_medicamentos', 'medicamentos'));
+        // dd($tratamento_medicamentos);
+        return view('site.paciente.medicamentos.editar', compact('dados', 'medicamentos', 'tratamento_medicamentos'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
