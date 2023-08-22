@@ -3,7 +3,10 @@
 @section('titulo-pagina', 'Menu de usuários')
 
 @section('content')
-  @component('components.items.back')
+  @component('components.items.voltar')
+    @slot('rota_voltar')
+        {{route('consulta.menu', $dados->num_registro)}}
+    @endslot
   @endcomponent
   <div class="usuario">
     <p>{{$dados->nome}}</p>

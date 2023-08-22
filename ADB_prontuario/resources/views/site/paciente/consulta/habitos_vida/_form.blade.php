@@ -12,8 +12,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomPeriodoQuantiaEtilismo" class="form-label">Período e Quantidade de Etilismo <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomPeriodoQuantiaEtilismo" value="{{ isset($rows->periodo_quantia_etilismo) ? $rows->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
+    <label for="validationCustomLetra" class="form-label">Período e Quantidade de Etilismo <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->periodo_quantia_etilismo) ? $rows->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
     <div class="invalid-feedback">
         Insira o período e a quantidade de etilismo
     </div>
@@ -47,8 +47,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomQuantiaTabagismo" class="form-label">Quantidade de Tabagismo <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomQuantiaTabagismo" value="{{ isset($rows->quantia_tabagismo) ? $rows->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
+    <label for="validationCustomLetra" class="form-label">Quantidade de Tabagismo <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quantia_tabagismo) ? $rows->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
         Insira a quantidade de tabagismo
     </div>
@@ -69,8 +69,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomQuaisPeriodoDrogas" class="form-label">Quais Drogas e Período <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomQuaisPeriodoDrogas" value="{{ isset($rows->quais_periodo_drogas) ? $rows->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required>
+    <label for="validationCustomLetra" class="form-label">Quais Drogas e Período <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quais_periodo_drogas) ? $rows->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required>
     <div class="invalid-feedback">
         Insira quais drogas e período de uso
     </div>

@@ -5,6 +5,9 @@
     @slot('num_registro')
         {{$dados->num_registro}}
     @endslot
+    @slot('nome')
+        {{$dados->nome}}
+    @endslot
     @slot('content_menu')
         {{-- ALTERAR CONSULTA - ROTA --}}
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>

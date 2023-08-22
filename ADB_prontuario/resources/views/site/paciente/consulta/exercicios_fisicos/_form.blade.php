@@ -14,15 +14,15 @@
 
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Tipo de Atividades <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomTipoAtividades" value="{{ isset($rows->tipo_atividades) ? $rows->tipo_atividades : '' }}" name="tipo_atividades" placeholder="Insira o tipo de atividades" required>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->tipo_atividades) ? $rows->tipo_atividades : '' }}" name="tipo_atividades" placeholder="Insira o tipo de atividades" required>
     <div class="invalid-feedback">
         Insira o tipo de atividades
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomFrequenciaPeriodo" class="form-label">Frequência e Período <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomFrequenciaPeriodo" value="{{ isset($rows->frequencia_periodo) ? $rows->frequencia_periodo : '' }}" name="frequencia_periodo" placeholder="Insira a frequência e o período de exercícios" required>
+    <label for="validationCustomLetra" class="form-label">Frequência e Período <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_periodo) ? $rows->frequencia_periodo : '' }}" name="frequencia_periodo" placeholder="Insira a frequência e o período de exercícios" required>
     <div class="invalid-feedback">
         Insira a frequência e o período de exercícios
     </div>

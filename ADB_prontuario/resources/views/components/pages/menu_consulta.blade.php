@@ -8,6 +8,12 @@
             {{$rota_volta}}
         @endslot
     @endcomponent
+    <div class="usuario">
+      <p>{{$nome}}</p>
+      <span class="material-symbols-outlined">
+        person_search
+      </span>
+    </div>
     <section class="square-content square-content--cadastro-consulta">
         <div class="menu_consulta">
             <div class="menu_img">
@@ -20,7 +26,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        history_edu
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -37,7 +43,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        ecg
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -54,7 +60,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        cardiology
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -71,7 +77,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        accessible_forward
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -88,7 +94,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        problem
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -105,7 +111,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        diagnosis
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -122,7 +128,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        monitor_weight_gain
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -139,7 +145,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        sports_gymnastic
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -156,7 +162,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        direction_run
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -173,7 +179,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        diversity_3
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -190,7 +196,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        autofps_select
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -207,7 +213,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        contract
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -224,7 +230,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        nightlife
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -241,7 +247,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        ward
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -258,7 +264,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        child_care
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -275,7 +281,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                    psychology
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -292,7 +298,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        footprint
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -309,7 +315,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        
                     </span>
                 @endslot
                 @slot('text_menu')

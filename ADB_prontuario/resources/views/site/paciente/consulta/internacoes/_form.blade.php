@@ -11,32 +11,32 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomFreqInternacao" class="form-label">Frequência de Internação no Último Ano <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomFreqInternacao" value="{{ isset($rows->frequencia_ultimo_ano) ? $rows->frequencia_ultimo_ano : '' }}" name="frequencia_ultimo_ano" placeholder="Insira a frequência de internação no último ano" required>
+    <label for="validationCustomNum" class="form-label">Frequência de Internação no Último Ano <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomNum" value="{{ isset($rows->frequencia_ultimo_ano) ? $rows->frequencia_ultimo_ano : '' }}" name="frequencia_ultimo_ano" placeholder="Insira a frequência de internação no último ano" required>
     <div class="invalid-feedback">
         Insira a frequência de internação no último ano
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLocalInternacao" class="form-label">Local da Internação <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLocalInternacao" value="{{ isset($rows->local) ? $rows->local : '' }}" name="local" placeholder="Insira o local da internação" required>
+    <label for="validationCustomLetra" class="form-label">Local da Internação <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->local) ? $rows->local : '' }}" name="local" placeholder="Insira o local da internação" required>
     <div class="invalid-feedback">
         Insira o local da internação
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomMotivoInternacao" class="form-label">Motivo da Internação <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomMotivoInternacao" value="{{ isset($rows->motivo) ? $rows->motivo : '' }}" name="motivo" placeholder="Insira o motivo da internação" required>
+    <label for="validationCustomLetra" class="form-label">Motivo da Internação <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->motivo) ? $rows->motivo : '' }}" name="motivo" placeholder="Insira o motivo da internação" required>
     <div class="invalid-feedback">
         Insira o motivo da internação
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomDiasInternado" class="form-label">Quantidade de Dias Internado <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomDiasInternado" value="{{ isset($rows->quantidade_dias) ? $rows->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado" required>
+    <label for="validationCustomNum" class="form-label">Quantidade de Dias Internado <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomNum" value="{{ isset($rows->quantidade_dias) ? $rows->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado" required>
     <div class="invalid-feedback">
         Insira a quantidade de dias internado
     </div>

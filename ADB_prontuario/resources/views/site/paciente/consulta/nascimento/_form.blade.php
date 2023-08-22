@@ -11,8 +11,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTempoAmamentacao" class="form-label">Tempo de Amamentação Exclusiva <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomTempoAmamentacao" value="{{ isset($rows->tempo_amamentacao_exclusiva) ? $rows->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
+    <label for="validationCustomLetra" class="form-label">Tempo de Amamentação Exclusiva <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->tempo_amamentacao_exclusiva) ? $rows->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
     <div class="invalid-feedback">
         Insira o tempo de amamentação exclusiva
     </div>

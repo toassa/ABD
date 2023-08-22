@@ -31,8 +31,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomPosologia" class="form-label">Posologia <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomPosologia" value="{{isset($tratamento_medicamentos->posologia) ? $tratamento_medicamentos->posologia : '' }}" name="posologia" required>
+    <label for="validationCustomLetra" class="form-label">Posologia <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{isset($tratamento_medicamentos->posologia) ? $tratamento_medicamentos->posologia : '' }}" name="posologia" required>
     <div class="invalid-feedback">
         Insira a posologia do medicamento
     </div>
@@ -42,16 +42,16 @@
 {{$tratamento_medicamentos}}
 
 <div class="col-md-4">
-    <label for="validationCustomOrigem" class="form-label">Origem <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomOrigem" value="{{ isset($tratamento_medicamentos->origem) ? $tratamento_medicamentos->origem : '' }}" name="origem" required>
+    <label for="validationCustomLetra" class="form-label">Origem <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->origem) ? $tratamento_medicamentos->origem : '' }}" name="origem" required>
     <div class="invalid-feedback">
         Insira a origem do medicamento
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomAderencia" class="form-label">Aderência <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomAderencia" value="{{ isset($tratamento_medicamentos->aderencia) ? $tratamento_medicamentos->aderencia : '' }}" name="aderencia" required>
+    <label for="validationCustomLetra" class="form-label">Aderência <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->aderencia) ? $tratamento_medicamentos->aderencia : '' }}" name="aderencia" required>
     <div class="invalid-feedback">
         Insira a aderência ao tratamento do medicamento
     </div>
