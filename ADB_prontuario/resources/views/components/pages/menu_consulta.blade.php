@@ -315,7 +315,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        
+                        first_page
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -332,7 +332,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sick
+                        medication_liquid
                     </span>
                 @endslot
                 @slot('text_menu')

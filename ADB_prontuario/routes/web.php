@@ -36,7 +36,9 @@ Route::group(['middleware' => 'auth'], function(){
         Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
     
         Route::prefix('/form')->group(function(){
-            Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
+            Route::middleware(['admin.check'])->group(function () {
+                Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
+            });
     
             Route::post('/salvar', [UserController::class, 'salvar'])->name('users.salvar');
     
