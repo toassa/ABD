@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let value = idadeInput.value;
     value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
     value = value.replace(/(\d{3})\d+?$/, '$1');
-    idadeInput.value = value;
+    idadeInput.value = value;''
   });
   
   profissaoInput.addEventListener('input', function() {
