@@ -1,5 +1,6 @@
 <!-- complicacoes -->
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomComplicacoes" class="form-label">Complicações? <b>*</b> </label>
     <select class="form-select" id="validationCustomComplicacoes" name="complicacoes" required>
@@ -20,6 +21,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomInternacaoComplicacao" class="form-label">Teve Internação por Complicação? <b>*</b> </label>
     <select class="form-select" id="validationCustomInternacaoComplicacao" name="internacao_complicacao" required>

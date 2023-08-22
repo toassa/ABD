@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const Num = document.getElementById('validationCustomNum');
     
     Num.addEventListener('input', function() {
-    let value1 = Num.value;
-    value1 = value1.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
-    value1 = value1.replace(/(\d{50})\d+?$/, '$1');
-    Letra.value = value1;
+        let value1 = Num.value;
+        value1 = value1.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+        value1 = value1.replace(/(\d{50})\d+?$/, '$1');
+        Letra.value = value1;
     });
 
     Letra.addEventListener('input', function() {

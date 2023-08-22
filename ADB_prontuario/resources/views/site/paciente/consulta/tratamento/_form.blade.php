@@ -18,6 +18,8 @@
     </div>
 </div>
 
+
+
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Tipos de Insulinas <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->tipos_insulinas) ? $rows->tipos_insulinas : '' }}" name="tipos_insulinas" required>
@@ -25,6 +27,8 @@
         Insira os tipos de insulinas 
     </div>
 </div>
+
+<!-- MUDAR FORM -->
 
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Nome da Insulina <b>*</b> </label>
@@ -77,6 +81,8 @@
         Selecione se há reuso de seringas para insulina
     </div>
 </div>
+
+<!-- MUDAR FORM -->
 
 <div class="col-md-4">
     <label for="validationCustomNum" class="form-label">Quantidade de Reuso de Seringas <b>*</b> </label>

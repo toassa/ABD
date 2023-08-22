@@ -1,3 +1,4 @@
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomCasosUlcera" class="form-label">Casos de Úlceras <b>*</b> </label>
     <select class="form-select" id="validationCustomCasosUlcera" name="casos_ulceras" required>

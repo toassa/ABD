@@ -52,6 +52,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomConsultaNutricionista" class="form-label">Consulta com Nutricionista <b>*</b> <b>*</b> </label>
     <select class="form-select" id="validationCustomConsultaNutricionista" name="consulta_nutricionista" required>
@@ -64,7 +65,6 @@
     </div>
 </div>
 
-{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomNum" class="form-label">Frequência de Consulta <b>*</b> </label>
     <input type="number" class="text-center form-control" id="validationCustomFreqConsulta" value="{{ isset($rows->frequencia_nutricionista) ? $rows->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
@@ -72,6 +72,8 @@
         Insira a frequência da consulta com nutricionista
     </div>
 </div>
+
+{{-- MUDAR FORMA --}}
 
 <div class="col-md-4">
     <label for="validationCustomConsomeDieteticos" class="form-label">Consome Produtos Dietéticos <b>*</b> <b>*</b> </label>
@@ -84,8 +86,6 @@
         Selecione se consome produtos dietéticos
     </div>
 </div>
-
-{{-- MUDAR FORMA --}}
 
 <div class="col-md-4">
     <label for="validationCustomProdutosDieteticos" class="form-label">Produtos Dietéticos Consumidos <b>*</b> </label>

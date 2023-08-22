@@ -38,6 +38,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomInfeccoesSeisMeses" class="form-label">Teve Infecções nos Últimos Seis Meses? <b>*</b> </label>
     <select class="form-select" id="validationCustomInfeccoesSeisMeses" name="infeccoes_seis_meses" required >
@@ -66,6 +67,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomFatorEmocional" class="form-label">Fator Emocional? <b>*</b> </label>
     <select class="form-select" id="validationCustomFatorEmocional" name="fator_emocional" required >

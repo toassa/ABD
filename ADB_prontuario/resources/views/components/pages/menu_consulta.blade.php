@@ -145,7 +145,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        sports_gymnastic
+                        sports_gymnastics
                     </span>
                 @endslot
                 @slot('text_menu')
@@ -162,7 +162,7 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        direction_run
+                        directions_run
                     </span>
                 @endslot
                 @slot('text_menu')

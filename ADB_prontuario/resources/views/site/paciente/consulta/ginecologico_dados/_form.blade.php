@@ -1,3 +1,4 @@
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomMenopausa" class="form-label">Menopausa  <b>*</b> </label>
     <select class="form-select" id="validationCustomMenopausa" name="menopausa" required>
@@ -30,6 +31,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomMenstruacao" class="form-label">Menstruação <b>*</b> <b>*</b> </label>
     <select class="form-select" id="validationCustomMenstruacao" name="menstruacao" required>
@@ -58,6 +60,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomUsoMetodosContraceptivos" class="form-label">Uso de Métodos Contraceptivos <b>*</b> <b>*</b> </label>
     <select class="form-select" id="validationCustomUsoMetodosContraceptivos" name="uso_metodos_contraceptivos" required>

@@ -8,13 +8,36 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Finalidade da Consulta <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->finalidade_consulta) ? $rows->finalidade_consulta : '' }}" name="finalidade_consulta" placeholder="Digite a finalidade da consulta" required>
+    {{-- <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->finalidade_consulta) ? $rows->finalidade_consulta : '' }}" name="finalidade_consulta" placeholder="Digite a finalidade da consulta" required> --}}
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+        <label class="form-check-label" for="validationFormCheck1">Receber fitas de glicosímetro ou insulina</label>
+    </div>
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+        <label class="form-check-label" for="validationFormCheck1">Receber instrução/ educação sobre diabetes</label>
+
+    </div>
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+        <label class="form-check-label" for="validationFormCheck1">Ambas</label>
+    </div>
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+        <label class="form-check-label" for="validationFormCheck1">Outros</label>
+    </div>
     <div class="invalid-feedback">
         Insira a finalidade da consulta
     </div>
 </div>
+{{-- <div class="form-check mb-3">
+    <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+    <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+    <div class="invalid-feedback">Example invalid feedback text</div>
+</div> --}}
 
 <div class="col-md-4">
     <label for="validationCustomNum" class="form-label">Reuniões para Diabéticos <b>*</b></label>
@@ -61,10 +84,11 @@
     <label for="validationCustomNum" class="form-label">Valor Máximo da HbA1c <b>*</b></label>
     <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($rows->valor_maximo_hba1c) ? $rows->valor_maximo_hba1c : '' }}" name="valor_maximo_hba1c" placeholder="Digite o valor máximo da HbA1c" required>
     <div class="invalid-feedback">
-        Insira o valor máximo da HbA1c
+        Insira o valor máximo da HbA1c estimado pelo paciente
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">Conhece Valor da Última HbA1c <b>*</b></label>
     <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="conhece_valor_ultima_hba1c" required>

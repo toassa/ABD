@@ -1,3 +1,4 @@
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomAmamentacao" class="form-label">Amamentação Exclusiva  <b>*</b> </label>
     <select class="form-select" id="validationCustomAmamentacao" name="amamentacao_exclusiva" required required>
@@ -55,7 +56,7 @@
     <label for="validationCustomPesoBebe" class="form-label">Peso do Bebê <b>*</b> </label>
     <select class="form-select" id="validationCustomPesoBebe" name="peso" required>
          <option selected disabled value="">Clique para escolher...</option>
-        <option value="<2Kg" {{ isset($rows->peso) && $rows->peso === '< 2Kg' ? 'selected' : '' }}><2Kg</option>
+        <option value="<2Kg" {{ isset($rows->peso) && $rows->peso === '< 2Kg' ? 'selected' : '' }}> < 2Kg </option>
         <option value="2,1Kg - 2,5Kg" {{ isset($rows->peso) && $rows->peso === '2,1Kg - 2,5Kg' ? 'selected' : '' }}>2,1Kg - 2,5Kg</option>
         <option value="2,6Kg - 3Kg" {{ isset($rows->peso) && $rows->peso === '2,6Kg - 3Kg' ? 'selected' : '' }}>2,6Kg - 3Kg</option>
         <option value="3,1Kg - 3,5Kg" {{ isset($rows->peso) && $rows->peso === '3,1Kg - 3,5Kg' ? 'selected' : '' }}>3,1Kg - 3,5Kg</option>
@@ -69,7 +70,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomVacinacao" class="form-label">Vaccinação <b>*</b> </label>
+    <label for="validationCustomVacinacao" class="form-label">Vacinação <b>*</b> </label>
     <select class="form-select" id="validationCustomVacinacao" name="vacinacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->vacinacao) && $rows->vacinacao === 'Sim' ? 'selected' : '' }}>Sim</option>

@@ -6,6 +6,7 @@
     </div>
 </div>
 
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomPossuiDM1" class="form-label">Possui Diabetes Mellitus Tipo 1 (DM1) <b>*</b> </label>
     <select class="form-select" id="validationCustomPossuiDM1" name="possui_dm1" required>

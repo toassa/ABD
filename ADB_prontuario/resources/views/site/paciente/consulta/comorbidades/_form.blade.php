@@ -12,7 +12,7 @@
     <label for="validationCustomLetra" class="form-label">Neuropatia <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->neuropatia) ? $rows->neuropatia : '' }}" name="neuropatia" placeholder="Insira a neuropatia" required>
     <div class="invalid-feedback">
-        Insira a neuropatia
+        Insira a neuropatia diabética
     </div>
 </div>
 

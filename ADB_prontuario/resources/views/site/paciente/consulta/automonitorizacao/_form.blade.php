@@ -1,5 +1,7 @@
 {{-- automonitorizacao_glicemias --}}
 
+
+{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomRealizaAutomonitorizacao" class="form-label">Realiza Automonitorização <b>*</b> </label>
     <select class="form-select" id="validationCustomRealizaAutomonitorizacao" name="realiza_automonitorizacao" required>
@@ -16,7 +18,7 @@
     <label for="validationCustomLetra" class="form-label">Frequência de Medições <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
     <div class="invalid-feedback">
-        Insira a frequência de medições
+        Insira a frequência de medições diárias
     </div>
 </div>
 

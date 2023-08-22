@@ -4,7 +4,7 @@
     <label for="validationCustomLetra" class="form-label">Sintomas <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->sintomas) ? $rows->sintomas : '' }}" name="sintomas" placeholder="Insira os sintomas" required>
     <div class="invalid-feedback">
-        Insira os sintomas
+        Insira os sintomas que apresenta agora
     </div>
 </div>
 
