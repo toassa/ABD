@@ -13,7 +13,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTipoAtividades" class="form-label">Tipo de Atividades <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Tipo de Atividades <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomTipoAtividades" value="{{ isset($rows->tipo_atividades) ? $rows->tipo_atividades : '' }}" name="tipo_atividades" placeholder="Insira o tipo de atividades" required>
     <div class="invalid-feedback">
         Insira o tipo de atividades

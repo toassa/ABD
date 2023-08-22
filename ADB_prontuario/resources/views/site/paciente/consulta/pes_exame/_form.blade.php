@@ -20,7 +20,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Características das Úlceras <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLet" value="{{ isset($rows->caracteristicas_ulceras) ? $rows->caracteristicas_ulceras : '' }}" name="caracteristicas_ulceras" required>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->caracteristicas_ulceras) ? $rows->caracteristicas_ulceras : '' }}" name="caracteristicas_ulceras" required>
     <div class="invalid-feedback">
         Insira as características das úlceras
     </div>
