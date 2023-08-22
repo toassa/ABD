@@ -1,5 +1,5 @@
 <div class="col-md-4">
-    <label for="validationCustomAmamentacao" class="form-label">Amamentação Exclusiva <b>*</b></label>
+    <label for="validationCustomAmamentacao" class="form-label">Amamentação Exclusiva  <b>*</b> </label>
     <select class="form-select" id="validationCustomAmamentacao" name="amamentacao_exclusiva" required required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->amamentacao_exclusiva) && $rows->amamentacao_exclusiva == 1 ? 'selected' : '' }}>Sim</option>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTempoAmamentacao" class="form-label">Tempo de Amamentação Exclusiva</label>
+    <label for="validationCustomTempoAmamentacao" class="form-label">Tempo de Amamentação Exclusiva <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomTempoAmamentacao" value="{{ isset($rows->tempo_amamentacao_exclusiva) ? $rows->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
     <div class="invalid-feedback">
         Insira o tempo de amamentação exclusiva
@@ -19,7 +19,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomOrdemFilho" class="form-label">Ordem do Filho</label>
+    <label for="validationCustomOrdemFilho" class="form-label">Ordem do Filho <b>*</b> </label>
     <select class="form-select" id="validationCustomOrdemFilho" name="ordem" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Primeiro filho" {{ isset($rows->ordem) && $rows->ordem === 'Primeiro filho' ? 'selected' : '' }}>Primeiro filho</option>
@@ -39,7 +39,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTipoParto" class="form-label">Tipo de Parto</label>
+    <label for="validationCustomTipoParto" class="form-label">Tipo de Parto <b>*</b> </label>
     <select class="form-select" id="validationCustomTipoParto" name="tipo_parto" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Normal" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Normal' ? 'selected' : '' }}>Normal</option>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomPesoBebe" class="form-label">Peso do Bebê</label>
+    <label for="validationCustomPesoBebe" class="form-label">Peso do Bebê <b>*</b> </label>
     <select class="form-select" id="validationCustomPesoBebe" name="peso" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="<2Kg" {{ isset($rows->peso) && $rows->peso === '< 2Kg' ? 'selected' : '' }}><2Kg</option>
@@ -69,7 +69,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomVacinacao" class="form-label">Vaccinação</label>
+    <label for="validationCustomVacinacao" class="form-label">Vaccinação <b>*</b> </label>
     <select class="form-select" id="validationCustomVacinacao" name="vacinacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->vacinacao) && $rows->vacinacao === 'Sim' ? 'selected' : '' }}>Sim</option>

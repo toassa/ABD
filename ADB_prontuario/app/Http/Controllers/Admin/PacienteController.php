@@ -113,7 +113,6 @@ class PacienteController extends Controller
 
     public function pesquisar(Request $req){
         $dados = Paciente::where('nome', $req['name'])->get();
-        // dd($dados);
         return view('site.paciente.pesquisar', compact('dados'));
     }
 }

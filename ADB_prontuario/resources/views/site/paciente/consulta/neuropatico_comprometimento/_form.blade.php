@@ -1,5 +1,5 @@
 <div class="col-md-4">
-    <label for="validationCustomReflexoAquileuDireito" class="form-label">Reflexo Aquileu Direito</label>
+    <label for="validationCustomReflexoAquileuDireito" class="form-label">Reflexo Aquileu Direito <b>*</b> </label>
     <select class="form-select" id="validationCustomReflexoAquileuDireito" name="reflexo_aquileu_direito" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->reflexo_aquileu_direito) && $rows->reflexo_aquileu_direito === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomReflexoAquileuEsquerdo" class="form-label">Reflexo Aquileu Esquerdo</label>
+    <label for="validationCustomReflexoAquileuEsquerdo" class="form-label">Reflexo Aquileu Esquerdo <b>*</b> </label>
     <select class="form-select" id="validationCustomReflexoAquileuEsquerdo" name="reflexo_aquileu_esquerdo" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->reflexo_aquileu_esquerdo) && $rows->reflexo_aquileu_esquerdo === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -25,7 +25,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeVibratoriaDireita" class="form-label">Sensibilidade Vibratória Direita</label>
+    <label for="validationCustomSensibilidadeVibratoriaDireita" class="form-label">Sensibilidade Vibratória Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeVibratoriaDireita" name="sensibilidade_vibratoria_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_vibratoria_direita) && $rows->sensibilidade_vibratoria_direita === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -37,7 +37,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeVibratoriaEsquerda" class="form-label">Sensibilidade Vibratória Esquerda</label>
+    <label for="validationCustomSensibilidadeVibratoriaEsquerda" class="form-label">Sensibilidade Vibratória Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeVibratoriaEsquerda" name="sensibilidade_vibratoria_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_vibratoria_esquerda) && $rows->sensibilidade_vibratoria_esquerda === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -49,7 +49,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeDolorosaDireita" class="form-label">Sensibilidade Dolorosa Direita</label>
+    <label for="validationCustomSensibilidadeDolorosaDireita" class="form-label">Sensibilidade Dolorosa Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeDolorosaDireita" name="sensibilidade_dolorosa_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_dolorosa_direita) && $rows->sensibilidade_dolorosa_direita === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -61,7 +61,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeDolorosaEsquerda" class="form-label">Sensibilidade Dolorosa Esquerda</label>
+    <label for="validationCustomSensibilidadeDolorosaEsquerda" class="form-label">Sensibilidade Dolorosa Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeDolorosaEsquerda" name="sensibilidade_dolorosa_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_dolorosa_esquerda) && $rows->sensibilidade_dolorosa_esquerda === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -73,7 +73,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeTermicaDireita" class="form-label">Sensibilidade Térmica Direita</label>
+    <label for="validationCustomSensibilidadeTermicaDireita" class="form-label">Sensibilidade Térmica Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeTermicaDireita" name="sensibilidade_termica_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_termica_direita) && $rows->sensibilidade_termica_direita === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -85,7 +85,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSensibilidadeTermicaEsquerda" class="form-label">Sensibilidade Térmica Esquerda</label>
+    <label for="validationCustomSensibilidadeTermicaEsquerda" class="form-label">Sensibilidade Térmica Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeTermicaEsquerda" name="sensibilidade_termica_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Presente" {{ isset($rows->sensibilidade_termica_esquerda) && $rows->sensibilidade_termica_esquerda === 'Presente' ? 'selected' : '' }}>Presente</option>
@@ -97,7 +97,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTotalPontos" class="form-label">Total de Pontos</label>
+    <label for="validationCustomTotalPontos" class="form-label">Total de Pontos <b>*</b> </label>
     <select class="form-select" id="validationCustomTotalPontos" name="total_pontos" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sinais leves" {{ isset($rows->total_pontos) && $rows->total_pontos === 'Sinais leves' ? 'selected' : '' }}>Sinais leves</option>
@@ -110,7 +110,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomDiagnosticoNeuropatiaPeriferica" class="form-label">Diagnóstico de Neuropatia Periférica</label>
+    <label for="validationCustomDiagnosticoNeuropatiaPeriferica" class="form-label">Diagnóstico de Neuropatia Periférica <b>*</b> </label>
     <select class="form-select" id="validationCustomDiagnosticoNeuropatiaPeriferica" name="diagnostico_neuropatia_periferica" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->diagnostico_neuropatia_periferica) && $rows->diagnostico_neuropatia_periferica == 1 ? 'selected' : '' }}>Sim</option>
@@ -122,7 +122,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomObservacoes" class="form-label">Observações</label>
+    <label for="validationCustomObservacoes" class="form-label">Observações <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomObservacoes" value="{{ isset($rows->observacoes) ? $rows->observacoes : '' }}" name="observacoes" required>
     <div class="invalid-feedback">
         Insira observações 

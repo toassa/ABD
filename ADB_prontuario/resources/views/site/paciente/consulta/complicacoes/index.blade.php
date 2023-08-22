@@ -4,12 +4,13 @@
         {{-- {{route('consulta.menu_atendimento', $dados->num_registro)}} --}}
     @endslot
     @slot('num_registro')
-        $dados->num_registro
+        {{$dados->num_registro}}
     @endslot
     @slot('content_menu')
         {{-- ALTERAR CONSULTA - ROTA --}}
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
+            <h1 class="text-center">Complicações</h1>
             @include('site.paciente.consulta.complicacoes._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
