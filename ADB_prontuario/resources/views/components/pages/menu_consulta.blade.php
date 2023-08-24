@@ -344,7 +344,7 @@
                 @endcomponent
             </div>
         </div>
-        <div class="content-consulta align-content">
+        <div class="content-consulta">
             {{$content_menu}}
         </div>
     </section>

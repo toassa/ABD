@@ -166,6 +166,10 @@ b{
     margin: 50px auto !important;
 }
 
+.label_check{
+    font-size: var(--size-card-title) !important;
+}
+
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
@@ -572,6 +576,7 @@ dialog::backdrop{
 .square-content--cadastro-consulta{
     padding: 0;
     width: 80%;
+    margin: 80px auto;
 }
 
 /* Menu lateral */
@@ -656,7 +661,7 @@ dialog::backdrop{
 /* Conteúdo */
 .content-consulta{
     background-color: var(--background-almost-white);
-    height: 500px;
+    min-height: 500px;
     width: 80%;
     float: right;
     border-top-right-radius: 20px;
