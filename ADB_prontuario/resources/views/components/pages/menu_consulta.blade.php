@@ -43,6 +43,23 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
+                        diagnosis
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Diagnóstico Atual
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.diagnostico_atual', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
                         history_edu
                     </span>
                 @endslot
@@ -119,23 +136,6 @@
                 @endslot
                 @slot('route_menu')
                     {{route('consulta.complicacoes', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        diagnosis
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Diagnóstico Atual
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.diagnostico_atual', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -348,6 +348,8 @@
             {{$content_menu}}
         </div>
     </section>
+    <script src="{{asset('js/show-input.js')}}"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('js/slide.js')}}"></script>
 

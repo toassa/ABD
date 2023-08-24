@@ -170,6 +170,10 @@ b{
     font-size: var(--size-card-title) !important;
 }
 
+#input_show, #input_show2{
+    display: none;
+}
+
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{
