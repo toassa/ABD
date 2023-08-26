@@ -42,7 +42,7 @@ class MedicamentoController extends Controller
         $dados = Paciente::find($num_registro);
         $medicamentos = Medicamento::all();
         $tratamento_medicamentos = TratamentoMedicamento::where('num_registro', $num_registro)->where('nome', $nome)->get();
-        // dd($tratamento_medicamentos);
+        $tratamento_medicamentos = $tratamento_medicamentos->get(0);
         return view('site.paciente.medicamentos.editar', compact('dados', 'medicamentos', 'tratamento_medicamentos'));
     }
 

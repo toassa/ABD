@@ -60,6 +60,23 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
+                        sync_problem
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Complicações
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.complicacoes', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
                         history_edu
                     </span>
                 @endslot
@@ -119,23 +136,6 @@
                 @endslot
                 @slot('route_menu')
                     {{route('consulta.comorbidades', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        problem
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Complicações
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.complicacoes', $num_registro)}}
                 @endslot
                 @endcomponent
 

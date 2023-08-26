@@ -29,32 +29,33 @@ Route::group(['middleware' => 'auth'], function(){
     
 Route::group(['middleware' => 'auth'], function(){
     Route::prefix('user')->group(function(){
-        Route::get('/', [UserController::class, 'index'])->name('opcao.users');
-    
-        Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
+        Route::middleware(['admin.check'])->group(function () {
+            Route::get('/', [UserController::class, 'index'])->name('opcao.users');
+        
+            Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
-        Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
-    
-        Route::prefix('/form')->group(function(){
-            Route::middleware(['admin.check'])->group(function () {
+            Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
+        
+            Route::prefix('/form')->group(function(){
+                
                 Route::get('/cadastrar', [UserController::class, 'cadastrar'])->name('users.cadastrar');
+        
+                Route::post('/salvar', [UserController::class, 'salvar'])->name('users.salvar');
+        
+                Route::get('/list-editar', [UserController::class, 'list_editar'])->name('user.list-editar');
+
+                Route::get('/editar/{num_USP}', [UserController::class, 'editar'])->name('users.editar');
+        
+                Route::put('/atualizar/{num_USP}', [UserController::class, 'atualizar'])->name('users.atualizar');
+        
+                Route::get('/list-excluir', [UserController::class, 'list_excluir'])->name('users.list-excluir');
+
+                Route::get('/excluir/{num_USP}', [UserController::class, 'excluir'])->name('users.excluir');
+        
+                Route::get('/list-desativar', [UserController::class, 'list_desativar'])->name('users.list-desativar');
+
+                Route::get('/desativar/{num_USP}', [UserController::class, 'desativar'])->name('users.desativar');
             });
-    
-            Route::post('/salvar', [UserController::class, 'salvar'])->name('users.salvar');
-    
-            Route::get('/list-editar', [UserController::class, 'list_editar'])->name('user.list-editar');
-
-            Route::get('/editar/{num_USP}', [UserController::class, 'editar'])->name('users.editar');
-    
-            Route::put('/atualizar/{num_USP}', [UserController::class, 'atualizar'])->name('users.atualizar');
-    
-            Route::get('/list-excluir', [UserController::class, 'list_excluir'])->name('users.list-excluir');
-
-            Route::get('/excluir/{num_USP}', [UserController::class, 'excluir'])->name('users.excluir');
-    
-            Route::get('/list-desativar', [UserController::class, 'list_desativar'])->name('users.list-desativar');
-
-            Route::get('/desativar/{num_USP}', [UserController::class, 'desativar'])->name('users.desativar');
         });
     });
 });
@@ -148,10 +149,6 @@ Route::group(['middleware' => 'auth'], function(){
     });
 });
 
-Route::get('/teste', function(){
-    return view('site\paciente\consulta\atividades_educativas\cadastrar');
-});
-
 Route::get('/500', function(){
     return view('errors/500');
 });
@@ -159,6 +156,10 @@ Route::get('/500', function(){
 Route::get('/419', function(){
     return view('errors/419');
 });
+
+Route::get('/404', function(){
+    return view('errors/404');
+})->name('404error');
 
 // ARRUMAR:
 // > Usuários
@@ -168,3 +169,4 @@ Route::get('/419', function(){
 // - Se excluir o próprio usuário, fazer logout
 // - Não deixar desativar todos os usuários (ao menos um ativo)
 // - Aceitar acentos 
+// - Apresentar o nome do usuário, não o número USP

@@ -11,7 +11,7 @@
         <label for="validationCustomNum" class="form-label">Idade ao diagnóstico <b>*</b> </label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dadoas->idade) ? $dados->idade : '' }}" name="idade" placeholder="Idade que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
-            Insira a idade do diagnóstico
+            Insira a idade ao diagnóstico
         </div>
     </div>
 
@@ -43,6 +43,15 @@
         </div>
     </div>
 
+       {{-- MUDAR INPUT SHOW --}}
+       <div class="col-md-6" id="input_show">
+        <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
+        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
+        <div class="invalid-feedback">
+            Insira qual foi o fator emocional 
+        </div>
+    </div>
+    
     {{-- MUDAR FORMA --}}
     <div class="col-md-6">
         <label for="validationCustomSelectDefine2" class="form-label">O paciente apresentou alguma infecção nos últimos seis meses? <b>*</b> </label>
@@ -56,14 +65,7 @@
         </div>
     </div>
 
-    {{-- MUDAR INPUT SHOW --}}
-    <div class="col-md-6" id="input_show">
-        <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
-        <div class="invalid-feedback">
-            Insira qual foi o fator emocional 
-        </div>
-    </div>
+ 
 
 
     <div class="col-md-6" id="input_show2">

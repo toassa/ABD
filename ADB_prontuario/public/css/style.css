@@ -170,7 +170,7 @@ b{
     font-size: var(--size-card-title) !important;
 }
 
-#input_show, #input_show2{
+#input_show, #input_show2, #input_show_double, #input_show_double2{
     display: none;
 }
 
@@ -591,6 +591,7 @@ dialog::backdrop{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     float: left;
+    display: grid;
 }
 /* 
 .menu_img{
@@ -606,7 +607,8 @@ dialog::backdrop{
 .menu-sections{
     margin: 0 auto;
     width: 200px;
-    height: 300px;
+    height: 95%;
+    margin-bottom: 20px;
     overflow-y: auto;
     border: 1px solid rgb(190, 190, 190);
 }

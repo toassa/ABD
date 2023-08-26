@@ -70,7 +70,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomVacinacao" class="form-label">Vacinação <b>*</b> </label>
+    <label for="validationCustomVacinacao" class="form-label">Completou o esquema de vacinação? <b>*</b> </label>
     <select class="form-select" id="validationCustomVacinacao" name="vacinacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->vacinacao) && $rows->vacinacao === 'Sim' ? 'selected' : '' }}>Sim</option>

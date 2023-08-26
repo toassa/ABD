@@ -53,7 +53,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Histórico Obstétrico <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Histórico Obstétrico(gestações, paridade, abortos, sexo dos filhos) <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->historico_obstetrico) ? $rows->historico_obstetrico : '' }}" name="historico_obstetrico" placeholder="Insira o histórico obstétrico" required>
     <div class="invalid-feedback">
         Insira o histórico obstétrico
@@ -82,7 +82,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomMamografia" class="form-label">Mamografia <b>*</b> </label>
+    <label for="validationCustomMamografia" class="form-label">Mamografia último ano? <b>*</b> </label>
     <select class="form-select" id="validationCustomMamografia" name="mamografia" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->mamografia) && $rows->mamografia == 1 ? 'selected' : '' }}>Sim</option>
@@ -94,7 +94,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomPapanicolau" class="form-label">Papanicolau <b>*</b> </label>
+    <label for="validationCustomPapanicolau" class="form-label">Papanicolau no último ano?<b>*</b> </label>
     <select class="form-select" id="validationCustomPapanicolau" name="papanicolau" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->papanicolau) && $rows->papanicolau == 1 ? 'selected' : '' }}>Sim</option>
@@ -106,9 +106,9 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Frequência Ginecológica <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Frequência Consulta Ginecológica <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_ginecologica) ? $rows->frequencia_ginecologica : '' }}" name="frequencia_ginecologica" placeholder="Insira a frequência ginecológica" required>
     <div class="invalid-feedback">
-        Insira a frequência ginecológica
+        Insira a frequência de consulta ginecológica
     </div>
 </div>

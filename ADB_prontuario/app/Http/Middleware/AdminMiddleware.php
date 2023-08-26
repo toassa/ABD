@@ -20,6 +20,6 @@ class AdminMiddleware
         {
             return $next($request);
         }
-        return redirect()->route('login.sair');
+        return redirect()->route('404error');
     }
 }

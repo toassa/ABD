@@ -1,10 +1,12 @@
 @component('components.pages.menu_consulta')
     @slot('rota_volta')
-    aaaaaa
-        {{-- {{route('consulta.menu_atendimento', $dados->num_registro)}} --}}
+        {{route('consulta.menu_atendimento', $dados->num_registro)}}
     @endslot
     @slot('num_registro')
         {{$dados->num_registro}}
+    @endslot
+    @slot('nome')
+        {{$dados->nome}}
     @endslot
     @slot('content_menu')
         {{-- ALTERAR CONSULTA - ROTA --}}

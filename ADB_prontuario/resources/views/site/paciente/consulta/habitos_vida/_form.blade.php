@@ -12,11 +12,11 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Período e Quantidade de Etilismo <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Período e Quantidade de bebida que ingeria <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->periodo_quantia_etilismo) ? $rows->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
     <div class="invalid-feedback">
-        Insira o período e a quantidade de etilismo
-    </div>
+        Insira o período e a quantidade de bebiue 
+  ingeria  </div>
 </div>
 
 <div class="col-md-4">
@@ -47,11 +47,10 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quantidade de Tabagismo <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Quantidade de Tabaanos-maço(Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.)*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quantia_tabagismo) ? $rows->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
-        Insira a quantidade de tabagismo
-    </div>
+        Insira a quantidade de tabaanos-maço  </div>
 </div>
 
 {{-- MUDAR FORMA --}}
@@ -78,7 +77,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSobreAnabolizantes" class="form-label">Sobre Anabolizantes <b>*</b> </label>
+    <label for="validationCustomSobreAnabolizantes" class="form-label">Sobre Anabolizantes <b> hormonais*</b> </label>
     <select class="form-select" id="validationCustomSobreAnabolizantes" name="sobre_anabolizantes" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Usuário" {{ isset($rows->sobre_anabolizantes) && $rows->sobre_anabolizantes === 'Usuário' ? 'selected' : '' }}>Usuário</option>
@@ -88,5 +87,5 @@
     </select>
     <div class="invalid-feedback">
         Selecione a categoria de anabolizantes
-    </div>
+   hormonais  </div>
 </div>

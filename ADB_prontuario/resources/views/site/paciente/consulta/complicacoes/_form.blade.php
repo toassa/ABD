@@ -1,9 +1,9 @@
 <!-- complicacoes -->
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4">
-    <label for="validationCustomComplicacoes" class="form-label">Complicações? <b>*</b> </label>
-    <select class="form-select" id="validationCustomComplicacoes" name="complicacoes" required>
+<div class="col-md-6">
+    <label for="validationCustomSelectDefineDouble" class="form-label">Já teve complicações do diabetes? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefineDouble" name="complicacoes" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->complicacoes) && $rows->complicacoes == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->complicacoes) && $rows->complicacoes == 0 ? 'selected' : '' }}>Não</option>
@@ -13,18 +13,18 @@
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quais Complicações? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quais_complicacoes) ? $rows->quais_complicacoes : '' }}" name="quais_complicacoes" placeholder="Insira quais complicações" required>
+<div class="col-md-6" id="input_show_double">
+    <label for="validationCustomLetra" class="form-label">Descreva as complicações <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quais_complicacoes) ? $rows->quais_complicacoes : '' }}" name="quais_complicacoes" placeholder="Insira quais complicações">
     <div class="invalid-feedback">
         Insira quais complicações 
     </div>
 </div>
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4">
-    <label for="validationCustomInternacaoComplicacao" class="form-label">Teve Internação por Complicação? <b>*</b> </label>
-    <select class="form-select" id="validationCustomInternacaoComplicacao" name="internacao_complicacao" required>
+<div class="col-md-6" id="input_show_double2">
+    <label for="validationCustomInternacaoComplicacao" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine" name="internacao_complicacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 0 ? 'selected' : '' }}>Não</option>
@@ -34,8 +34,8 @@
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Causa da Internação <b>*</b> </label>
+<div class="col-md-6" id="input_show">
+    <label for="validationCustomLetra" class="form-label">Descreva as complicações que desencadearam a internação <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->causa_internacao) ? $rows->causa_internacao : '' }}" name="causa_internacao" placeholder="Insira a causa da internação" required>
     <div class="invalid-feedback">
         Insira a causa da internação 
@@ -43,7 +43,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomEpisodioHipoglicemia" class="form-label">Teve Episódio de Hipoglicemia? <b>*</b> </label>
+    <label for="validationCustomEpisodioHipoglicemia" class="form-label">Já teve episódio(s) de hipoglicemia? <b>*</b> </label>
     <select class="form-select" id="validationCustomEpisodioHipoglicemia" name="episodio_hipoglicemia" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->episodio_hipoglicemia) && $rows->episodio_hipoglicemia === 'Sim' ? 'selected' : '' }}>Sim</option>
@@ -56,7 +56,14 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático? <b>*</b> </label>
+    <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático? 
+        <b>*</b>
+        <a href="#" id="btn_aparece" onclick="show_dialog_excluir()">
+            <span class="material-symbols-outlined">
+                info
+            </span>
+        </a>
+    </label>
     <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->episodio_assintomatico) && $rows->episodio_assintomatico == 1 ? 'selected' : '' }}>Sim</option>

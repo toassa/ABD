@@ -39,7 +39,7 @@
 </div>
 
 {{-- {{$tratamento_medicamentos->posologia}} --}}
-{{$tratamento_medicamentos}}
+{{-- {{$tratamento_medicamentos}} --}}
 
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Origem <b>*</b></label>
