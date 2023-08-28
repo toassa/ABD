@@ -170,8 +170,22 @@ b{
     font-size: var(--size-card-title) !important;
 }
 
+/* Sumir os campos */
 #input_show, #input_show2, #input_show_double, #input_show_double2{
     display: none;
+}
+
+/* Olinho pra senha */
+.password-container {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    top: 62%;
+    right: 17px;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 /* Login ------------------------------------------------------------------------------------- */

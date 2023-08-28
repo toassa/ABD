@@ -36,6 +36,15 @@ const mascara_tel = (value) =>{
   return value;
 }
 
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("validationCustomPass");
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+  } else {
+      passwordInput.type = "password";
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const dataInput = document.getElementById('validationCustomData');
   const cepInput = document.getElementById('validationCustomCEP');

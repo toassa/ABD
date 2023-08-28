@@ -42,15 +42,6 @@
             Selecione se houve fator emocional
         </div>
     </div>
-
-       {{-- MUDAR INPUT SHOW --}}
-       <div class="col-md-6" id="input_show">
-        <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
-        <div class="invalid-feedback">
-            Insira qual foi o fator emocional 
-        </div>
-    </div>
     
     {{-- MUDAR FORMA --}}
     <div class="col-md-6">
@@ -64,8 +55,15 @@
             Selecione se teve infecções nos últimos seis meses
         </div>
     </div>
-
  
+       {{-- MUDAR INPUT SHOW --}}
+    <div class="col-md-6" id="input_show">
+        <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
+        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
+        <div class="invalid-feedback">
+            Insira qual foi o fator emocional 
+        </div>
+    </div>
 
 
     <div class="col-md-6" id="input_show2">

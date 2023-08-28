@@ -29,9 +29,12 @@
     </div>
     </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-4 password-container">
     <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b>*</b></label>
-    <input type="password" class="text-center form-control" id="validationCustomUserPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
+    <input type="password" class="text-center form-control" id="validationCustomPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
+    <span class="material-symbols-outlined show-password" onclick="togglePasswordVisibility()">
+        visibility_off
+    </span>
     <div class="invalid-feedback">
         Senha inválida
     </div>
@@ -43,7 +46,7 @@
         Mesa inválida
     </div>
   </div>
-<div class="col-md-4">
+<div class="col-md-3">
     <label for="validationCustomUserCargo" class="form-label textinho">Cargo<b>*</b></label>
     <select class="form-select" id="validationCustomUserCargo" name="cargo" required>
         <option disabled selected value="">Clique para escolher...</option>
@@ -78,7 +81,7 @@
         Função inválida
     </div>
 </div>
-<div class="col-md-2">
+<div class="col-md-3" style="padding-top: 3%">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
@@ -87,7 +90,7 @@
     </label>
     </div>
 </div>
-<div class="col-md-2">
+<div class="col-md-2" style="padding-top: 3%">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
