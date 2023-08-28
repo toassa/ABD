@@ -23,6 +23,10 @@ class TratamentoMedicamento extends Model
         'tipo',
         'posologia',
         'origem',
+        'consulta',
+        'dose',
+        'periodo',
+        'observacao',
         'aderencia',
         'num_USP',
     ];

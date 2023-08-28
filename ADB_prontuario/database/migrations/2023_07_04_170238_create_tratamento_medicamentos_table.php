@@ -20,6 +20,10 @@ return new class extends Migration
             $table->enum('tipo', ['HAS', 'Dislipidemia', 'Anticoagulante', 'Tireoide', 'Ansiedade ou depressao', 'Outros']);
             $table->string('posologia');
             $table->string('origem');
+            $table->string('consulta');
+            $table->string('dose');
+            $table->string('periodo');
+            $table->string('observacao');
             $table->string('aderencia');
             $table->string('num_USP');
 

@@ -21,23 +21,31 @@
         @endslot
 
         @slot('quem')
-          usuário
+        usuário
         @endslot
 
-        @slot('grid_titles')
-            <div class="row row-title">
-                <div class="col text-center col-title">Nome</div>
-                <div class="col text-center col-title">Num. USP</div>
-                <div class="col text-center col-title">E-mail</div>
-                <div class="col text-center col-title">Mesa</div>
-                <div class="col text-center col-title">Cargo</div>
-                <div class="col text-center col-title">Permissão</div>
-                <div class="col text-center col-title">Situação</div>
-            </div>
-        @endslot
+        @if ($rows=='[]')
+            @slot('grid_titles')
+                n tem
+            @endslot
+            @slot('grid_content')
+                burro
+            @endslot
+        @else
+            @slot('grid_titles')
+                <div class="row row-title">
+                    <div class="col text-center col-title">Nome</div>
+                    <div class="col text-center col-title">Num. USP</div>
+                    <div class="col text-center col-title">E-mail</div>
+                    <div class="col text-center col-title">Mesa</div>
+                    <div class="col text-center col-title">Cargo</div>
+                    <div class="col text-center col-title">Permissão</div>
+                    <div class="col text-center col-title">Situação</div>
+                </div>
+            @endslot
 
-        @slot('grid_content')
-            @foreach ($rows as $row)
+            @slot('grid_content')
+                @foreach ($rows as $row)
                 @if($row->ativo == true)
                     <div class="row row-text row-hover row-activated">
                 @endif
@@ -53,15 +61,16 @@
                         <p class="col text-center col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
                         <p class="col text-center col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
                     </div>
-            @endforeach
-        @endslot
+                @endforeach
+            @endslot
+        @endif
 
         @slot('route_btn')
             {{route('user.list-editar')}}
         @endslot
 
         @slot('text_btn')
-          Editar usuários
+            Editar usuários
         @endslot
     @endcomponent
 @endsection

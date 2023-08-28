@@ -37,13 +37,6 @@
     </div>
 </div>
 <div class="col-md-4">
-    <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Confirmação de senha<b>*</b></label>
-    <input type="password" class="text-center form-control" id="validationCustomUserPass" value="{{isset($rows->password_verify) ? $rows->password_verify : ''}}" name="password_verify" placeholder="Digite a senha novamente" required>
-    <div class="invalid-feedback">
-        Confirmação de senha inválida
-    </div>
-</div>
-<div class="col-md-4">
     <label for="validationCustomUserMesa" class="form-label textinho">Mesa <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomIdade" value="{{isset($rows->mesa) ? $rows->mesa : ''}}" name="mesa" maxlength="2" placeholder="Digite o número da mesa" required>
     <div class="invalid-feedback">
@@ -85,7 +78,7 @@
         Função inválida
     </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-2">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
@@ -94,7 +87,7 @@
     </label>
     </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-2">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
