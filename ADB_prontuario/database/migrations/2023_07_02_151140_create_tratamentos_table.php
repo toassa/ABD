@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('frequencia_insulina')->nullable();
             $table->string('dose_insulina')->nullable();
             $table->string('origem_insulinas')->nullable();
+            $table->enum('utensilho', ['Caneta', 'Seringa'])->nullable();
             $table->string('origem_utensilho')->nullable();
             $table->boolean('reuso_seringas_insulina')->nullable();
             $table->integer('quantia_reuso_seringas')->nullable();

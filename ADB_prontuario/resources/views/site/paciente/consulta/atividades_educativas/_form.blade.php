@@ -44,7 +44,7 @@
 
     <div class="textinho col-md-6">
         <label for="validationCustomNum" class="form-label">O paciente participou de quantas reuniões de grupos de pacientes diabéticos no último ano? <b>*</b></label>
-        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
+        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="reunioes_diabeticos" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="0" {{ isset($rows->reunioes_diabeticos) && $rows->reunioes_diabeticos == 0 ? 'selected' : '' }}>0 reuniões</option>
             <option value="1" {{ isset($rows->reunioes_diabeticos) && $rows->reunioes_diabeticos == 1 ? 'selected' : '' }}>1 reuniões</option>
@@ -59,7 +59,7 @@
 
     <div class="textinho col-md-6">
         <label for="validationCustomNum" class="form-label">O paciente participou de quantos programas de educação para pacientes diabéticos no último ano? <b>*</b></label>
-        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
+        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="programas_educacao_diabeticos" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="0" {{ isset($rows->programas_educacao_diabeticos) && $rows->programas_educacao_diabeticos == 0 ? 'selected' : '' }}>0 programas</option>
             <option value="1" {{ isset($rows->programas_educacao_diabeticos) && $rows->programas_educacao_diabeticos == 1 ? 'selected' : '' }}>1 programa</option>
@@ -101,7 +101,7 @@
 
     <div class="textinho col-md-12">
         <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">O paciente sabe qual o valor ideal máximo de HbA1c para pacientes com diabetes? <b>*</b></label>
-        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
+        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="valor_maximo_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($rows->valor_maximo_hba1c) && $rows->valor_maximo_hba1c == 1 ? 'selected' : '' }}>1</option>
             <option value="2" {{ isset($rows->valor_maximo_hba1c) && $rows->valor_maximo_hba1c == 2 ? 'selected' : '' }}>2</option>

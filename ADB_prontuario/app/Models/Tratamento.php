@@ -24,6 +24,7 @@ class Tratamento extends Model
         'tipos_insulinas',
         'nome_insulina',
         'origem_insulinas',
+        'utensilho',
         'origem_utensilho',
         'reuso_seringas_insulina',
         'quantia_reuso_seringas',
