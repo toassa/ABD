@@ -171,7 +171,7 @@ b{
 }
 
 /* Sumir os campos */
-#input_show, #input_show2, #input_show_double, #input_show_double2{
+#input_show, #input_show2, #input_show_double, #input_show_double2, #input_show_multiple,  #input_show_multiple2, #input_show_multiple3, #input_show_multiple4, #input_show_multiple5, #input_show_multiple6, #input_show_multiple7, #input_show_multiple8{
     display: none;
 }
 
@@ -598,6 +598,11 @@ dialog::backdrop{
     margin: 80px auto;
 }
 
+/* Form */
+.btn_info .material-symbols-outlined{
+    font-size: 20px !important;
+}
+
 /* Menu lateral */
 .menu_consulta{
     background-color: var(--background-color);
@@ -703,4 +708,22 @@ dialog::backdrop{
 .square-content--medicamento_item{
     width: 33.33%;
     cursor: pointer;
+}
+
+.span-dialog{
+    position: relative;
+}
+
+.show-dialog{
+    position: absolute;
+    top: 15%;
+    right: -73px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px !important;
+    color: gray;
+}
+
+#dialog_info{
+    display: none;
 }

@@ -20,4 +20,5 @@
             </div>
         </form>
     @endslot
+    <script src="{{asset('js/dialog-info.js')}}"></script>
 @endcomponent

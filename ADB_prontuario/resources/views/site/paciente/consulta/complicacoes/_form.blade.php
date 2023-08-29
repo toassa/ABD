@@ -58,11 +58,19 @@
 <div class="textinho col-md-4">
     <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático? 
         <b>*</b>
-        <a href="#" id="btn_aparece" onclick="show_dialog_excluir()">
-            <span class="material-symbols-outlined">
+        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+            <span class="material-symbols-outlined show-dialog">
                 info
             </span>
         </a>
+        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
+            <div class="p-dialog">
+                aadasd
+            </div>
+            <div class="row buttons-dialog">
+                dfddfsf
+            </div>
+        </dialog>
     </label>
     <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico" required>
          <option selected disabled value="">Clique para escolher...</option>

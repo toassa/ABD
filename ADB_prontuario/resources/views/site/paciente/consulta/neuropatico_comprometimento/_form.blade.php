@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomReflexoAquileuDireito" class="form-label">Reflexo Aquileu Direito <b>*</b> </label>
     <select class="form-select" id="validationCustomReflexoAquileuDireito" name="reflexo_aquileu_direito" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomReflexoAquileuEsquerdo" class="form-label">Reflexo Aquileu Esquerdo <b>*</b> </label>
     <select class="form-select" id="validationCustomReflexoAquileuEsquerdo" name="reflexo_aquileu_esquerdo" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeVibratoriaDireita" class="form-label">Sensibilidade Vibratória Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeVibratoriaDireita" name="sensibilidade_vibratoria_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -36,7 +36,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeVibratoriaEsquerda" class="form-label">Sensibilidade Vibratória Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeVibratoriaEsquerda" name="sensibilidade_vibratoria_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeDolorosaDireita" class="form-label">Sensibilidade Dolorosa Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeDolorosaDireita" name="sensibilidade_dolorosa_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeDolorosaEsquerda" class="form-label">Sensibilidade Dolorosa Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeDolorosaEsquerda" name="sensibilidade_dolorosa_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeTermicaDireita" class="form-label">Sensibilidade Térmica Direita <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeTermicaDireita" name="sensibilidade_termica_direita" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomSensibilidadeTermicaEsquerda" class="form-label">Sensibilidade Térmica Esquerda <b>*</b> </label>
     <select class="form-select" id="validationCustomSensibilidadeTermicaEsquerda" name="sensibilidade_termica_esquerda" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -96,7 +96,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomTotalPontos" class="form-label">Total de Pontos <b>*</b> </label>
     <select class="form-select" id="validationCustomTotalPontos" name="total_pontos" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -109,7 +109,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomDiagnosticoNeuropatiaPeriferica" class="form-label">Diagnóstico de Neuropatia Periférica <b>*</b> </label>
     <select class="form-select" id="validationCustomDiagnosticoNeuropatiaPeriferica" name="diagnostico_neuropatia_periferica" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -121,7 +121,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomLetra" class="form-label">Observações <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->observacoes) ? $rows->observacoes : '' }}" name="observacoes" required>
     <div class="invalid-feedback">

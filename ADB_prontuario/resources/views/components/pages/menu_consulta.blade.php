@@ -70,6 +70,23 @@
                     {{route('consulta.complicacoes', $num_registro)}}
                 @endslot
                 @endcomponent
+                
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        medication_liquid
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Tratamento
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.tratamento', $num_registro)}}
+                @endslot
+                @endcomponent
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
@@ -323,23 +340,6 @@
                 @endslot
                 @slot('route_menu')
                     {{route('consulta.pes_exame', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        medication_liquid
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Tratamento
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.tratamento', $num_registro)}}
                 @endslot
                 @endcomponent
             </div>

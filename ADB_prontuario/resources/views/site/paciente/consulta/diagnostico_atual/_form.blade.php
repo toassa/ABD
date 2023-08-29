@@ -2,7 +2,7 @@
 
 <div class="row g-3 needs-validation page page2">
     {{-- MUDAR VALIDACAO --}}
-    <div class="textinho col-md-12">
+    <div class="textinho col-md-12 ">
         <label for="validationCustomLetra" class="form-label">Selecione os principais sintomas que apresenta agora <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-4 form-check mb-3">

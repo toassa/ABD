@@ -1,7 +1,7 @@
 <!-- dieta -->
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomRealiza" class="form-label">Realização  <b>*</b> </label>
     <select class="form-select" id="validationCustomRealiza" name="realiza" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomTipoDieta" class="form-label">Tipo de Dieta <b>*</b> </label>
     <select class="form-select" id="validationCustomTipoDieta" name="tipo_dieta">
          <option selected disabled value="">Clique para escolher...</option>
@@ -29,7 +29,7 @@
 </div>
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4"> 
+<div class="col-md-4 textinho">
     <label for="validationCustomSegueDieta" class="form-label">Segue Dieta <b>*</b> </label>
     <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($rows->segue_dieta) ? $rows->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue">
     <div class="invalid-feedback">
@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomDificuldadeDieta" class="form-label">Qual a maior dificuldade que você acha para seguir a dieta? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
@@ -71,7 +71,7 @@
 </div>
 
 
-<div class="col-md-12">
+<div class="col-md-12 textinho">
     <label for="validationCustomOrientador" class="form-label">Quem é o principal orientador da sua dieta? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
@@ -110,7 +110,7 @@
 
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomConsultaNutricionista" class="form-label">Consulta com Nutricionista <b>*</b>  </label>
     <select class="form-select" id="validationCustomConsultaNutricionista" name="consulta_nutricionista" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -122,7 +122,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomNum" class="form-label">Frequência de Consulta <b>*</b> </label>
     <input type="number" class="text-center form-control" id="validationCustomFreqConsulta" value="{{ isset($rows->frequencia_nutricionista) ? $rows->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
     <div class="invalid-feedback">
@@ -132,7 +132,7 @@
 
 {{-- MUDAR FORMA --}}
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomConsomeDieteticos" class="form-label">Consome Produtos Dietéticos <b>*</b></label>
     <select class="form-select" id="validationCustomConsomeDieteticos" name="consome_dieteticos" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -144,7 +144,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 textinho">
     <label for="validationCustomProdutosDieteticos" class="form-label">Se consome produtos dietéticos: quais?  </label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
