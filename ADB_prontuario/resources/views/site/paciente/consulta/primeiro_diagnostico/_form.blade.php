@@ -1,5 +1,5 @@
 <div class="row g-3 needs-validation page page1">
-    <div class="col-md-3 textinho">
+    <div class="col-md-3">
         <label for="validationCustomNum" class="form-label">Ano ao diagnóstico <b>*</b> </label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->ano) ? $dados->ano : '' }}" name="ano" placeholder="Ano que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="col-md-3 textinho">
+    <div class="col-md-3">
         <label for="validationCustomNum" class="form-label">Idade ao diagnóstico <b>*</b> </label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dadoas->idade) ? $dados->idade : '' }}" name="idade" placeholder="Idade que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="col-md-6 textinho">
+    <div class="col-md-6">
         <label for="validationCustomComoFoiFeito" class="form-label">Como Foi Feito o Diagnóstico <b>*</b> </label>
         <select class="form-select" id="validationCustomComoFoiFeito" name="como_foi_feito" required >
             <option selected disabled value="">Clique para escolher...</option>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="col-md-6 textinho">
+    <div class="col-md-6">
         <label for="validationCustomSelectDefine" class="form-label">O paciente acredita que fatores emocionais\psicológicos contribuiram para início da doença? <b>*</b> </label>
         <select class="form-select" id="validationCustomSelectDefine" name="fator_emocional" required >
             <option selected disabled value="">Clique para escolher...</option>
@@ -44,7 +44,7 @@
     </div>
     
     {{-- MUDAR FORMA --}}
-    <div class="col-md-6 textinho">
+    <div class="col-md-6">
         <label for="validationCustomSelectDefine2" class="form-label">O paciente apresentou alguma infecção nos últimos seis meses? <b>*</b> </label>
         <select class="form-select" id="validationCustomSelectDefine2" name="infeccoes_seis_meses" required >
             <option selected disabled value="">Clique para escolher...</option>
@@ -57,7 +57,7 @@
     </div>
  
        {{-- MUDAR INPUT SHOW --}}
-    <div class="col-md-6 textinho" id="input_show">
+    <div class="col-md-6" id="input_show">
         <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
         <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
         <div class="invalid-feedback">
@@ -66,7 +66,7 @@
     </div>
 
 
-    <div class="col-md-6 textinho" id="input_show2">
+    <div class="col-md-6" id="input_show2">
         <label for="validationCustomLetra" class="form-label">Quais Infecções? <b>*</b> </label>
         <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quais_infeccoes) ? $dados->quais_infeccoes : '' }}" name="quais_infeccoes" required>
         <div class="invalid-feedback">
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="col-md-6 textinho">
+    <div class="col-md-6">
         <label for="validationCustomNum" class="form-label">Tempo decorrido entre o início dos sintomas e o diagnóstico? <b>*</b> </label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->periodo_sintomas_diagnostico) ? $dados->periodo_sintomas_diagnostico : '' }}" name="periodo_sintomas_diagnostico" placeholder="Digite o período em meses" required>
         <div class="invalid-feedback">
@@ -85,7 +85,7 @@
 
 <div class="row g-3 needs-validation page page2">
     {{-- MUDAR VALIDACAO --}}
-    <div class="col-md-12 textinho">
+    <div class="col-md-12">
         <label for="validationCustomLetra" class="form-label">Selecione os sintomas ao diagnóstico <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-4 form-check mb-3">

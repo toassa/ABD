@@ -70,7 +70,7 @@
                     {{route('consulta.complicacoes', $num_registro)}}
                 @endslot
                 @endcomponent
-                
+
                 @component('components.items.menu-section')
                 @slot('id_menu')
                     section_molestia
@@ -85,23 +85,6 @@
                 @endslot
                 @slot('route_menu')
                     {{route('consulta.tratamento', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        history_edu
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Atividades Educativas
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.atividades_educativas', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -128,116 +111,14 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        cardiology
+                        child_care
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Dados Cardiovasculares
+                    Nascimento
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.cardiovascular_dados', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        accessible_forward
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Comorbidade
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.comorbidades', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        monitor_weight_gain
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Dieta
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.dieta', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        sports_gymnastics
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Exames físicos
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.exames_fisicos', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        directions_run
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Exercícios físicos
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.exercicios_fisicos', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        diversity_3
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Histórico familiar
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.familiar_historico', $num_registro)}}
-                @endslot
-                @endcomponent
-
-                @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        autofps_select
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Frequência de acompanhamento
-                @endslot
-                @slot('route_menu')
-                {{route('consulta.frequencia_acompanhamento', $num_registro)}}
+                    {{route('consulta.nascimento', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -258,20 +139,23 @@
                 @endslot
                 @endcomponent
 
+                
+
+                
                 @component('components.items.menu-section')
                 @slot('id_menu')
                     section_molestia
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        nightlife
+                        autofps_select
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Hábitos de vida
+                    Frequência de acompanhamento
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.habitos_vida', $num_registro)}}
+                {{route('consulta.frequencia_acompanhamento', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -298,14 +182,50 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                        child_care
+                        cardiology
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Nascimento
+                    Dados Cardiovasculares
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.nascimento', $num_registro)}}
+                    {{route('consulta.cardiovascular_dados', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        accessible_forward
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Comorbidade
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.comorbidades', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        diversity_3
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Histórico familiar
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.familiar_historico', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -315,14 +235,82 @@
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
-                    psychology
+                        nightlife
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Comprometimento Neuropático
+                    Hábitos de vida
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.neuropatico_comprometimento', $num_registro)}}
+                    {{route('consulta.habitos_vida', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        directions_run
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Exercícios físicos
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.exercicios_fisicos', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                  @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        monitor_weight_gain
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Dieta
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.dieta', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        history_edu
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Atividades Educativas
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.atividades_educativas', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        sports_gymnastics
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Exames físicos
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.exames_fisicos', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -342,6 +330,42 @@
                     {{route('consulta.pes_exame', $num_registro)}}
                 @endslot
                 @endcomponent
+
+                
+                @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                    psychology
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Comprometimento Neuropático
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.neuropatico_comprometimento', $num_registro)}}
+                @endslot
+                @endcomponent
+
+                {{-- @component('components.items.menu-section')
+                @slot('id_menu')
+                    section_molestia
+                @endslot
+                @slot('icon_menu')
+                    <span class="material-symbols-outlined">
+                        history_edu
+                    </span>
+                @endslot
+                @slot('text_menu')
+                    Atividades Educativas
+                @endslot
+                @slot('route_menu')
+                    {{route('consulta.atividades_educativas', $num_registro)}}
+                @endslot
+                @endcomponent --}}
+
             </div>
         </div>
         <div class="content-consulta">

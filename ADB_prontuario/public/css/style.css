@@ -603,6 +603,11 @@ dialog::backdrop{
     font-size: 20px !important;
 }
 
+/* Divs dos formulários alinhadas */
+.input-translate{
+    transform: translatey(24%);
+}
+
 /* Menu lateral */
 .menu_consulta{
     background-color: var(--background-color);

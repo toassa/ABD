@@ -1,7 +1,7 @@
 <!-- tratamento_medicamentos -->
 
 <div class="col-md-4">
-    <label for="validationFormMedicamentos" class="form-label textinho">Nome do medicamento<b>*</b></label>
+    <label for="validationFormMedicamentos" class="form-label">Nome do medicamento<b>*</b></label>
     <select class="form-select" id="validationFormMedicamentos" name="nome" required>
         <option disabled selected value="">Clique para escolher...</option>
         @foreach ($medicamentos as $medicamento)

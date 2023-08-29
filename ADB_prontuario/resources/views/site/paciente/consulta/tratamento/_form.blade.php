@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="col-md-6 textinho">
+<div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Faz uso de insulina? <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine" name="uso_insulina" required required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho" id="input_show">
+<div class="col-md-12" id="input_show">
     <label class="form-label">Quais tipos de insulinas são utilizados no esquema de insulinização atual? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-6">
@@ -66,7 +66,7 @@
 
 <!-- MUDAR FORM -->
 
-<div class="col-md-6 textinho" id="input_show_multiple">
+<div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomLetra" class="form-label">Quais insulinas são utilizadas? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->nome_insulina) ? $rows->nome_insulina : '' }}" name="nome_insulina" required>
     <div class="invalid-feedback">
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div class="col-md-6 textinho" id="input_show_multiple2">
+<div class="col-md-6" id="input_show_multiple2">
     <label for="validationCustomLetra" class="form-label">Qual a frequência das insulinas utilizadas? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_insulina) ? $rows->frequencia_insulina : '' }}" name="frequencia_insulina" required>
     <div class="invalid-feedback">
@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<div class="col-md-6 textinho" id="input_show_multiple3">
+<div class="col-md-6" id="input_show_multiple3">
     <label for="validationCustomLetra" class="form-label">Qual a dose dose das insulinas utilizadas? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->dose_insulina) ? $rows->dose_insulina : '' }}" name="dose_insulina" required>
     <div class="invalid-feedback">
@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<div class="col-md-6 textinho" id="input_show_multiple4">
+<div class="col-md-6" id="input_show_multiple4">
     <label for="validationCustomLetra" class="form-label">Onde consegue cada tipo de insulina? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->origem_insulinas) ? $rows->origem_insulinas : '' }}" name="origem_insulinas" required>
     <div class="invalid-feedback">
@@ -99,7 +99,7 @@
 </div>
 
 <div class="col-md-3" id="input_show_multiple8">
-    <label for="validationCustomUtensilho" class="form-label textinho">Qual o utensilho para aplicação de insulina? <b>*</b></label>
+    <label for="validationCustomUtensilho" class="form-label">Qual o utensilho para aplicação de insulina? <b>*</b></label>
     <select class="form-select" id="validationCustomUtensilho" name="utensilho" required>
       <option selected disabled value="">Clique para escolher...</option>
       <option {{ isset($dados->utensilho) && $dados->utensilho === 'Caneta' ? 'selected' : '' }} value="Caneta">Caneta</option>
@@ -107,7 +107,7 @@
     </select>
 </div>
 
-<div class="col-md-12 textinho" id="input_show_multiple5">
+<div class="col-md-12" id="input_show_multiple5">
     <label for="validationCustomOrigemUtensilio" class="form-label">Onde consegue cada tipo de insulina? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-4">
@@ -138,7 +138,7 @@
 </div>
 
 <!-- MUDAR FORM -->
-<div class="col-md-6 textinho" id="input_show_multiple">
+<div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomReusoSeringasInsulina" class="form-label">Reuso de Seringas para Insulina <b>*</b> </label>
     <select class="form-select" id="validationCustomReusoSeringasInsulina" name="reuso_seringas_insulina" required required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -150,7 +150,7 @@
     </div>
 </div>
 
-<div class="col-md-6 textinho" id="input_show_multiple6">
+<div class="col-md-6" id="input_show_multiple6">
     <label for="validationCustomNum" class="form-label">Quantidade de Reuso de Seringas <b>*</b> </label>
     <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($rows->quantia_reuso_seringas) ? $rows->quantia_reuso_seringas : '' }}" name="quantia_reuso_seringas" required>
     <div class="invalid-feedback">
@@ -158,7 +158,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho" id="input_show_multiple7">
+<div class="col-md-12" id="input_show_multiple7">
     <label for="validationCustomAderencia" class="form-label">Aderência ao Tratamento <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-12">

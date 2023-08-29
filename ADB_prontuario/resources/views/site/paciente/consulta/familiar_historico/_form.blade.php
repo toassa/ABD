@@ -1,4 +1,4 @@
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui algum parente com diagnóstico de DM? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
@@ -37,7 +37,7 @@
 
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4 textinho">
+<div class="col-md-4">
     <label for="validationCustomPossuiDM1" class="form-label">Algum desses parentes possui Diabetes Mellitus Tipo 1 (DM1)? <b>*</b> </label>
     <select class="form-select" id="validationCustomPossuiDM1" name="possui_dm1" required>
         <option selected disabled value="">Clique para escolher...</option>
@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="col-md-4 textinho">
+<div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Descreva a DM Tipo 1 (se sim) <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->dm1) ? $rows->dm1 : '' }}" name="dm1" placeholder="Insira informações sobre DM Tipo 1" required>
     <div class="invalid-feedback">
@@ -57,7 +57,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui algum parente com obesidade? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
@@ -95,7 +95,7 @@
 </div>
 
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui algum parente com vitiligo? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -146,7 +146,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui parente com doença tireoidiana? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui parente com displidemia? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -249,7 +249,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui parente com alopecia? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -300,7 +300,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetrae" class="form-label">Possui parente com artrite reumatoide? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -351,7 +351,7 @@
     </div>
 </div>
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui parente com doença coronariana? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -403,7 +403,7 @@
 </div>
 
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui parente com Hipertensão Arterial Sistêmica (HAS)? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">
@@ -455,7 +455,7 @@
 </div>
 
 
-<div class="col-md-12 textinho">
+<div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">possui parente com doença celíaca? <b>*</b> </label>
     <div class="row align-content">
         <div class="col-md-4 ">

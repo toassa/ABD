@@ -1,6 +1,20 @@
+
+<div class="col-md-6">
+    <label for="validationCustomTipoParto" class="form-label">Nasceu de parto normal ou cesária? <b>*</b> </label>
+    <select class="form-select" id="validationCustomTipoParto" name="tipo_parto" required>
+         <option selected disabled value="">Clique para escolher...</option>
+        <option value="Normal" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Normal' ? 'selected' : '' }}>Normal</option>
+        <option value="Cesárea" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Cesárea' ? 'selected' : '' }}>Cesárea</option>
+        <option value="Não sabe" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
+    </select>
+    <div class="invalid-feedback">
+        Selecione o tipo de parto
+    </div>
+</div>
+
 {{-- MUDAR FORMA --}}
-<div class="col-md-4 textinho">
-    <label for="validationCustomAmamentacao" class="form-label">Amamentação Exclusiva  <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomAmamentacao" class="form-label">Qual a ordem do nascimento? <b>*</b> </label>
     <select class="form-select" id="validationCustomAmamentacao" name="amamentacao_exclusiva" required required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->amamentacao_exclusiva) && $rows->amamentacao_exclusiva == 1 ? 'selected' : '' }}>Sim</option>
@@ -11,16 +25,25 @@
     </div>
 </div>
 
-<div class="col-md-4 textinho">
-    <label for="validationCustomLetra" class="form-label">Tempo de Amamentação Exclusiva <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->tempo_amamentacao_exclusiva) ? $rows->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
+<div class="col-md-6">
+    <label for="validationCustomPesoBebe" class="form-label">Peso do Bebê <b>*</b> </label>
+    <select class="form-select" id="validationCustomPesoBebe" name="peso" required>
+         <option selected disabled value="">Clique para escolher...</option>
+        <option value="<2Kg" {{ isset($rows->peso) && $rows->peso === '<2Kg' ? 'selected' : '' }}> < 2Kg </option>
+        <option value="2,1Kg - 2,5Kg" {{ isset($rows->peso) && $rows->peso === '2,1Kg - 2,5Kg' ? 'selected' : '' }}>2,1Kg - 2,5Kg</option>
+        <option value="2,6Kg - 3Kg" {{ isset($rows->peso) && $rows->peso === '2,6Kg - 3Kg' ? 'selected' : '' }}>2,6Kg - 3Kg</option>
+        <option value="3,1Kg - 3,5Kg" {{ isset($rows->peso) && $rows->peso === '3,1Kg - 3,5Kg' ? 'selected' : '' }}>3,1Kg - 3,5Kg</option>
+        <option value="3,6Kg - 4Kg" {{ isset($rows->peso) && $rows->peso === '3,6Kg - 4Kg' ? 'selected' : '' }}>3,6Kg - 4Kg</option>
+        <option value="> 4Kg" {{ isset($rows->peso) && $rows->peso === '> 4Kg' ? 'selected' : '' }}>> 4Kg</option>
+        <option value="Não sabe" {{ isset($rows->peso) && $rows->peso === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
+    </select>
     <div class="invalid-feedback">
-        Insira o tempo de amamentação exclusiva
+        Selecione o peso do bebê
     </div>
 </div>
 
-<div class="col-md-4 textinho">
-    <label for="validationCustomOrdemFilho" class="form-label">Ordem do Filho <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomOrdemFilho" class="form-label">Teve amamentação exclusiva com leite materno? <b>*</b> </label>
     <select class="form-select" id="validationCustomOrdemFilho" name="ordem" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Primeiro filho" {{ isset($rows->ordem) && $rows->ordem === 'Primeiro filho' ? 'selected' : '' }}>Primeiro filho</option>
@@ -39,38 +62,31 @@
     </div>
 </div>
 
-<div class="col-md-4 textinho">
-    <label for="validationCustomTipoParto" class="form-label">Tipo de Parto <b>*</b> </label>
-    <select class="form-select" id="validationCustomTipoParto" name="tipo_parto" required>
-         <option selected disabled value="">Clique para escolher...</option>
-        <option value="Normal" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Normal' ? 'selected' : '' }}>Normal</option>
-        <option value="Cesárea" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Cesárea' ? 'selected' : '' }}>Cesárea</option>
-        <option value="Não sabe" {{ isset($rows->tipo_parto) && $rows->tipo_parto === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
-    </select>
+<div class="col-md-6">
+    <label for="validationCustomLetra" class="form-label">Por quanto tempo teve amamentação exclusiva com leite materno? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->tempo_amamentacao_exclusiva) ? $rows->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
     <div class="invalid-feedback">
-        Selecione o tipo de parto
+        Insira o tempo de amamentação exclusiva
     </div>
 </div>
 
-<div class="col-md-4 textinho">
-    <label for="validationCustomPesoBebe" class="form-label">Peso do Bebê <b>*</b> </label>
-    <select class="form-select" id="validationCustomPesoBebe" name="peso" required>
-         <option selected disabled value="">Clique para escolher...</option>
-        <option value="<2Kg" {{ isset($rows->peso) && $rows->peso === '<2Kg' ? 'selected' : '' }}> < 2Kg </option>
-        <option value="2,1Kg - 2,5Kg" {{ isset($rows->peso) && $rows->peso === '2,1Kg - 2,5Kg' ? 'selected' : '' }}>2,1Kg - 2,5Kg</option>
-        <option value="2,6Kg - 3Kg" {{ isset($rows->peso) && $rows->peso === '2,6Kg - 3Kg' ? 'selected' : '' }}>2,6Kg - 3Kg</option>
-        <option value="3,1Kg - 3,5Kg" {{ isset($rows->peso) && $rows->peso === '3,1Kg - 3,5Kg' ? 'selected' : '' }}>3,1Kg - 3,5Kg</option>
-        <option value="3,6Kg - 4Kg" {{ isset($rows->peso) && $rows->peso === '3,6Kg - 4Kg' ? 'selected' : '' }}>3,6Kg - 4Kg</option>
-        <option value="> 4Kg" {{ isset($rows->peso) && $rows->peso === '> 4Kg' ? 'selected' : '' }}>> 4Kg</option>
-        <option value="Não sabe" {{ isset($rows->peso) && $rows->peso === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
-    </select>
-    <div class="invalid-feedback">
-        Selecione o peso do bebê
-    </div>
-</div>
-
-<div class="col-md-4 textinho">
-    <label for="validationCustomVacinacao" class="form-label">Completou o esquema de vacinação? <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomVacinacao" class="form-label">O paciente completou esquema de vacinação do Ministério da Saúde?
+         <b>*</b>
+        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+            <span class="material-symbols-outlined show-dialog">
+                info
+            </span>
+        </a>
+        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
+            <div class="p-dialog">
+                aadasd
+            </div>
+            <div class="row buttons-dialog">
+                dfddfsf
+            </div>
+        </dialog>
+    </label>
     <select class="form-select" id="validationCustomVacinacao" name="vacinacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($rows->vacinacao) && $rows->vacinacao === 'Sim' ? 'selected' : '' }}>Sim</option>
