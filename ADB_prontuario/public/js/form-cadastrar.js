@@ -38,10 +38,13 @@ const mascara_tel = (value) =>{
 
 function togglePasswordVisibility() {
   var passwordInput = document.getElementById("validationCustomPass");
+  var passwordIcon = document.getElementById("olhinho");
   if (passwordInput.type === "password") {
-      passwordInput.type = "text";
+    passwordInput.type = "text";
+    passwordIcon.innerHTML = "visibility";
   } else {
-      passwordInput.type = "password";
+    passwordInput.type = "password";
+    passwordIcon.innerHTML = "visibility_off";
   }
 }
 

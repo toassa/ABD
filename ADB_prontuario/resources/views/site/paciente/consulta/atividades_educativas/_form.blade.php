@@ -1,6 +1,6 @@
 <!-- atividade_diabetes -->
 <div class="row g-3 needs-validation page page1">
-    <div class="col-md-4">
+    <div class="textinho col-md-4">
         <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">O paciente teve quantas consultas de enfermagem no último ano? <b>*</b></label>
         <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div class="col-md-8">
+    <div class="textinho col-md-8">
         <label for="validationCustomLetra" class="form-label">Qual foi a finalidade da consulta com enfermagem? <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-6 form-check mb-3">
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="textinho col-md-6">
         <label for="validationCustomNum" class="form-label">O paciente participou de quantas reuniões de grupos de pacientes diabéticos no último ano? <b>*</b></label>
         <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="textinho col-md-6">
         <label for="validationCustomNum" class="form-label">O paciente participou de quantos programas de educação para pacientes diabéticos no último ano? <b>*</b></label>
         <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -74,7 +74,7 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-    <div class="col-md-5">
+    <div class="textinho col-md-5">
         <label for="validationCustomConheceHbA1c" class="form-label">O paciente sabe o que significa HbA1c? <b>*</b></label>
         <select class="form-select" id="validationCustomConheceHbA1c" name="conhece_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="col-md-7">
+    <div class="textinho col-md-7">
         <label for="validationCustomSignificadoHbA1c" class="form-label">Marque a opção que o paciente acha que significa HbA1c? <b>*</b></label>
         <select class="form-select" id="validationCustomSignificadoHbA1c" name="significado_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    <div class="col-md-12">
+    <div class="textinho col-md-12">
         <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">O paciente sabe qual o valor ideal máximo de HbA1c para pacientes com diabetes? <b>*</b></label>
         <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="quantia_consultas_enfermagem" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -119,7 +119,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="textinho col-md-6">
         <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">Qual o valor da última HbA1c do paciente? <b>*</b></label>
         <select class="form-select" id="validationCustomSelectDefine" name="conhece_valor_ultima_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="col-md-6" id="input_show">
+    <div class="textinho col-md-6" id="input_show">
         <label for="validationCustomNum" class="form-label">Valor da última HbA1c do paciente <b>*</b></label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($rows->valor_ultima_hba1c) ? $rows->valor_ultima_hba1c : '' }}" name="valor_ultima_hba1c" placeholder="Digite o valor da última HbA1c" required>
         <div class="invalid-feedback">

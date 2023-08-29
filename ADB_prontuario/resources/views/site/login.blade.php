@@ -11,9 +11,12 @@
                 <label for="input-num_USP" class="form-label">Número USP <b>*</b></label>
                 <input type="text" class="form-control" id="validationCustom01" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" maxlength="8" placeholder="Digite seu número USP" name="num_USP" required>
             </div>
-            <div class="mb-3">
-                <label for="input-senha" class="form-label">Senha <b>*</b></label>
-                <input type="password" class="form-control" id="input-senha" name="password" placeholder="Digite sua senha" required>
+            <div class="mb-3 password-container">
+                <label for="validationCustomPass" class="form-label">Senha <b>*</b></label>
+                <input type="password" class="form-control" id="validationCustomPass" name="password" placeholder="Digite sua senha" required>
+                <span class="material-symbols-outlined show-password" id="olhinho" onclick="togglePasswordVisibility()">
+                    visibility_off
+                </span>
             </div>
             <button type="submit" class="btn btn-primary btn-giga">Entrar</button>
             <div class="login-link align-content">

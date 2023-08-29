@@ -186,6 +186,7 @@ b{
     right: 17px;
     transform: translateY(-50%);
     cursor: pointer;
+    font-size: 25px !important;
 }
 
 /* Login ------------------------------------------------------------------------------------- */

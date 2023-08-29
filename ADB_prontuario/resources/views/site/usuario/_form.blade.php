@@ -32,7 +32,7 @@
 <div class="col-md-4 password-container">
     <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b>*</b></label>
     <input type="password" class="text-center form-control" id="validationCustomPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
-    <span class="material-symbols-outlined show-password" onclick="togglePasswordVisibility()">
+    <span class="material-symbols-outlined show-password" id="olhinho" onclick="togglePasswordVisibility()">
         visibility_off
     </span>
     <div class="invalid-feedback">
