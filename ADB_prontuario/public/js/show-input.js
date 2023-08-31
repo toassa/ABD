@@ -17,17 +17,7 @@ let input_double = document.getElementById('input_show_double');
 let input_double2 = document.getElementById('input_show_double2');
 
 select.addEventListener('change', function() {
-    if (select.value == '1') {
-        input.style.display = 'block';
-        input_multiple.style.display = 'block';
-        input_multiple2.style.display = 'block';
-        input_multiple3.style.display = 'block';
-        input_multiple4.style.display = 'block';
-        input_multiple5.style.display = 'block';
-        input_multiple6.style.display = 'block';
-        input_multiple7.style.display = 'block';
-        input_multiple8.style.display = 'block';
-    } else {
+    if (select.value == '0') {
         input.style.display = 'none';
         input_multiple.style.display = 'none';
         input_multiple2.style.display = 'none';
@@ -37,6 +27,16 @@ select.addEventListener('change', function() {
         input_multiple6.style.display = 'none';
         input_multiple7.style.display = 'none';
         input_multiple8.style.display = 'none';
+    } else {
+        input.style.display = 'block';
+        input_multiple.style.display = 'block';
+        input_multiple2.style.display = 'block';
+        input_multiple3.style.display = 'block';
+        input_multiple4.style.display = 'block';
+        input_multiple5.style.display = 'block';
+        input_multiple6.style.display = 'block';
+        input_multiple7.style.display = 'block';
+        input_multiple8.style.display = 'block';
     }
 });
 

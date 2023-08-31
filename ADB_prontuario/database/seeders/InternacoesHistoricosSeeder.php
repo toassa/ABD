@@ -13,7 +13,6 @@ class InternacoesHistoricosSeeder extends Seeder
     {
         InternacoesHistorico::create([
             'num_registro' => '11111',
-            'internacao_ultimo_ano' => false,
             'frequencia_ultimo_ano' => null,
             'local' => null,
             'motivo' => null,

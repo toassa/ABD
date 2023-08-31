@@ -30,7 +30,7 @@
 
 {{-- MUDAR FORMA --}}
 <div class="col-md-4">
-    <label for="validationCustomSegueDieta" class="form-label">Segue Dieta <b>*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Segue Dieta <b>*</b> </label>
     <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($rows->segue_dieta) ? $rows->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue">
     <div class="invalid-feedback">
         Insira a dieta que segue
