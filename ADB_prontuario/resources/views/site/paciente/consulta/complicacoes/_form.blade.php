@@ -58,11 +58,11 @@
 <div class="col-md-4">
     <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático? 
         <b>*</b>
-        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+        <button href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
             <span class="material-symbols-outlined show-dialog">
                 info
             </span>
-        </a>
+        </button>
         <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
             <div class="p-dialog">
                 aadasd

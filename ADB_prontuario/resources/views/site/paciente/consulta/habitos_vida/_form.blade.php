@@ -1,26 +1,41 @@
-<div class="col-md-4">
-    <label for="validationCustomSobreEtilismo" class="form-label">Sobre Etilismo <b>*</b> </label>
+<div class="col-md-12">
+    <label for="validationCustomSobreEtilismo" class="form-label">Qual das opções se relaciona com os hábitos etilistas? <b>*</b> </label>
     <select class="form-select" id="validationCustomSobreEtilismo" name="sobre_etilismo" required>
          <option selected disabled value="">Clique para escolher...</option>
-        <option value="Etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Etilista' ? 'selected' : '' }}>Etilista</option>
-        <option value="Ex-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Ex-etilista' ? 'selected' : '' }}>Ex-etilista</option>
-        <option value="Não-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Não-etilista' ? 'selected' : '' }}>Não-etilista</option>
+        <option value="Etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Etilista' ? 'selected' : '' }}>Etilista: Consumo de pelo menos 1 dose de qualquer bebida alcoólica no último ano.</option>
+        <option value="Ex-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Ex-etilista' ? 'selected' : '' }}>Ex-etilista: Já consumiu bebida alcoólica, mas parou de consumir no último ano.</option>
+        <option value="Não-etilista" {{ isset($rows->sobre_etilismo) && $rows->sobre_etilismo === 'Não-etilista' ? 'selected' : '' }}>Não-etilista: Nunca consumiu bebida alcóolica na vida</option>
     </select>
     <div class="invalid-feedback">
         Selecione a categoria de etilismo
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Período e Quantidade de bebida que ingeria <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomLetra" class="form-label">Quanto bebia e por quanto tempo foi etilista? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->periodo_quantia_etilismo) ? $rows->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
     <div class="invalid-feedback">
-        Insira o período e a quantidade de bebiue 
-  ingeria  </div>
+        Insira o período e a quantidade de bebida ingerida
+    </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomClassificacaoEtilismo" class="form-label">Classificação do Etilismo <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomClassificacaoEtilismo" class="form-label">Qual a classificação do grau de etilismo? 
+        <b>*</b> 
+        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+            <span class="material-symbols-outlined show-dialog">
+                info
+            </span>
+        </a>
+        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
+            <div class="p-dialog">
+                aadasd
+            </div>
+            <div class="row buttons-dialog">
+                dfddfsf
+            </div>
+        </dialog>
+    </label>
     <select class="form-select" id="validationCustomClassificacaoEtilismo" name="classificacao_etilismo" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Leve" {{ isset($rows->classificacao_etilismo) && $rows->classificacao_etilismo === 'Leve' ? 'selected' : '' }}>Leve</option>
@@ -33,13 +48,13 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomSobreTabagismo" class="form-label">Sobre Tabagismo <b>*</b> </label>
+    <label for="validationCustomSobreTabagismo" class="form-label">Qual das opções se relaciona com os hábitos tabagistas?  <b>*</b> </label>
     <select class="form-select" id="validationCustomSobreTabagismo" name="sobre_tabagismo" required>
          <option selected disabled value="">Clique para escolher...</option>
-        <option value="Fumante diário" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante diário' ? 'selected' : '' }}>Fumante diário</option>
-        <option value="Fumante ocasional" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante ocasional' ? 'selected' : '' }}>Fumante ocasional</option>
-        <option value="Ex-fumante" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Ex-fumante' ? 'selected' : '' }}>Ex-fumante</option>
-        <option value="Não fumante" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Não fumante' ? 'selected' : '' }}>Não fumante</option>
+        <option value="Fumante diário" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante diário' ? 'selected' : '' }}>Fumante diário (pelo menos 1 cigarro/dia por no mínimo 1 mês)</option>
+        <option value="Fumante ocasional" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Fumante ocasional' ? 'selected' : '' }}>Fumante ocasional( < 1 cigarro/dia por no mínimo 1 mês)</option>
+        <option value="Ex-fumante" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Ex-fumante' ? 'selected' : '' }}>Ex- Fumante (pararam de fumar há pelo menos 1 mês)</option>
+        <option value="Não fumante" {{ isset($rows->sobre_tabagismo) && $rows->sobre_tabagismo === 'Não fumante' ? 'selected' : '' }}>Não Fumante (não fumam, ou fumam há menos de 1 mês)</option>
     </select>
     <div class="invalid-feedback">
         Selecione a categoria de tabagismo

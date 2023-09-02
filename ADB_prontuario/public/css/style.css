@@ -598,9 +598,14 @@ dialog::backdrop{
     margin: 80px auto;
 }
 
-/* Form */
+/* Form ----------------------------- */
 .btn_info .material-symbols-outlined{
     font-size: 20px !important;
+}
+
+/* Borda dos inputs alinhados horizontalmente */
+.input-border{
+    border-right: 2px dotted var(--text-shadow-color);
 }
 
 /* Divs dos formulários alinhadas */
@@ -622,11 +627,6 @@ dialog::backdrop{
     float: left;
     display: grid;
 }
-/* 
-.menu_img{
-    width: 80%;
-    margin: 50px auto;
-} */
 
 .menu_img img{
     width: 120px;
@@ -673,22 +673,18 @@ dialog::backdrop{
     color: white;
 }
 
-/* width */
 .menu-sections::-webkit-scrollbar {
     width: 7px;
 }
 
-/* Track */
 .menu-sections::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-/* Handle */
 .menu-sections::-webkit-scrollbar-thumb {
     background: #888;
 }
 
-/* Handle on hover */
 .menu-sections::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
