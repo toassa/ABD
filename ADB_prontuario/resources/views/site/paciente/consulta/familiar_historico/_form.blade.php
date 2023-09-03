@@ -1,3 +1,26 @@
+<style>
+    #stuff {
+    opacity: 0.0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+#hover {
+    width:80px;
+    height:20px;
+    background-color:green;
+    margin-bottom:15px;
+}
+#hover:hover + #stuff {
+    opacity: 1.0;
+}
+</style>
+
+<div id="hover">Hover</div>
+<div id="stuff">stuff</div>
+
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-6">
         <label for="validationCustomLetra" class="form-label">Possui algum parente com diagnóstico de DM? <b>*</b> </label>
@@ -23,8 +46,8 @@
                 <label class="form-check-label label_check" for="checkbox49">Avós ou Tios ou Primos</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox50" name="dm[]" value="Não há história familiar">
-                <label class="form-check-label label_check" for="checkbox50">Não há história familiar</label>
+                <input type="checkbox" class="form-check-input" id="checkbox50" name="dm[]" value="Não há histórico familiar">
+                <label class="form-check-label label_check" for="checkbox50">Não há histórico familiar</label>
             </div>
             <div class="col-md-4 form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="checkbox51" name="dm[]" value="Não sabe">
@@ -87,8 +110,8 @@
                 <label class="form-check-label label_check" for="checkbox56">Avós ou Tios ou Primos</label>
             </div>
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox57" name="obesidade[]" value="Não há história familiar">
-                <label class="form-check-label label_check" for="checkbox57">Não há história familiar</label>
+                <input type="checkbox" class="form-check-input" id="checkbox57" name="obesidade[]" value="Não há histórico familiar">
+                <label class="form-check-label label_check" for="checkbox57">Não há histórico familiar</label>
             </div>
             <div class="col-md-6 form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="checkbox58" name="obesidade[]" value="Não sabe">
@@ -241,8 +264,8 @@
             </div>
             <div class="col-md-4 ">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="checkboxDisplidemiaSemHistorico" name="displidemia[]" value="Não há história familiar">
-                    <label class="form-check-label label_check" for="checkboxDisplidemiaSemHistorico">Não há história familiar</label>
+                    <input type="checkbox" class="form-check-input" id="checkboxDisplidemiaSemHistorico" name="displidemia[]" value="Não há histórico familiar">
+                    <label class="form-check-label label_check" for="checkboxDisplidemiaSemHistorico">Não há histórico familiar</label>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -398,8 +421,8 @@
             </div>
             <div class="col-md-4 ">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="checkboxDoencaCoronarianaSemHistorico" name="doenca_coronariana[]" value="Não há história familiar">
-                    <label class="form-check-label label_check" for="checkboxDoencaCoronarianaSemHistorico">Não há história familiar</label>
+                    <input type="checkbox" class="form-check-input" id="checkboxDoencaCoronarianaSemHistorico" name="doenca_coronariana[]" value="Não há histórico familiar">
+                    <label class="form-check-label label_check" for="checkboxDoencaCoronarianaSemHistorico">Não há histórico familiar</label>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -450,8 +473,8 @@
             </div>
             <div class="col-md-4 ">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="checkboxHASHasSemHistorico" name="has[]" value="Não há história familiar">
-                    <label class="form-check-label label_check" for="checkboxHASHasSemHistorico">Não há história familiar</label>
+                    <input type="checkbox" class="form-check-input" id="checkboxHASHasSemHistorico" name="has[]" value="Não há histórico familiar">
+                    <label class="form-check-label label_check" for="checkboxHASHasSemHistorico">Não há histórico familiar</label>
                 </div>
             </div>
             <div class="col-md-4 ">

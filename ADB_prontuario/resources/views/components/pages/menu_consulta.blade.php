@@ -138,9 +138,6 @@
                     {{route('consulta.ginecologico_dados', $num_registro)}}
                 @endslot
                 @endcomponent
-
-                
-
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')

@@ -47,7 +47,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-7">
     <label for="validationCustomSobreTabagismo" class="form-label">Qual das opções se relaciona com os hábitos tabagistas?  <b>*</b> </label>
     <select class="form-select" id="validationCustomSobreTabagismo" name="sobre_tabagismo" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -61,16 +61,31 @@
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quantidade de Tabaanos-maço(Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.)*</b> </label>
+<div class="col-md-5">
+    <label for="validationCustomLetra" class="form-label">Quantidade de anos-maço fuma/fumou? 
+        <b>*</b>
+        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+            <span class="material-symbols-outlined show-dialog">
+                info
+            </span>
+        </a>
+        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
+            <div class="p-dialog">
+                aadasd
+            </div>
+            <div class="row buttons-dialog">
+                dfddfsf
+            </div>
+        </dialog> 
+    </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quantia_tabagismo) ? $rows->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
         Insira a quantidade de tabaanos-maço  </div>
 </div>
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-4">
-    <label for="validationCustomSobreDrogasIlicitas" class="form-label">Sobre Drogas Ilícitas <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomSobreDrogasIlicitas" class="form-label">Qual das opções relacionam-se ao uso de drogas ilícitas? <b>*</b> </label>
     <select class="form-select" id="validationCustomSobreDrogasIlicitas" name="sobre_drogas_ilicitas" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Usuário" {{ isset($rows->sobre_drogas_ilicitas) && $rows->sobre_drogas_ilicitas === 'Usuário' ? 'selected' : '' }}>Usuário</option>
@@ -83,16 +98,16 @@
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quais Drogas e Período <b>*</b> </label>
+<div class="col-md-6">
+    <label for="validationCustomLetra" class="form-label">Quais são/foram as drogas utilizadas? Por quanto tempo (anos)? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->quais_periodo_drogas) ? $rows->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required>
     <div class="invalid-feedback">
         Insira quais drogas e período de uso
     </div>
 </div>
 
-<div class="col-md-4">
-    <label for="validationCustomSobreAnabolizantes" class="form-label">Sobre Anabolizantes hormonais <b> *</b> </label>
+<div class="col-md-12">
+    <label for="validationCustomSobreAnabolizantes" class="form-label">Qual das opções relacionam-se ao uso de anabolizantes hormonais <b> *</b> </label>
     <select class="form-select" id="validationCustomSobreAnabolizantes" name="sobre_anabolizantes" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Usuário" {{ isset($rows->sobre_anabolizantes) && $rows->sobre_anabolizantes === 'Usuário' ? 'selected' : '' }}>Usuário</option>
