@@ -1,8 +1,8 @@
 {{-- MUDAR FORMA --}}
 <div class="row g-3 needs-validation page page1">
-    <div class="col-md-4">
-        <label for="validationCustomCasosUlcera" class="form-label">Casos de Úlceras? <b>*</b> </label>
-        <select class="form-select" id="validationCustomCasosUlcera" name="casos_ulceras" required>
+    <div class="col-md-6">
+        <label for="validationCustomSelectDefine" class="form-label">Casos de Úlceras? <b>*</b> </label>
+        <select class="form-select" id="validationCustomSelectDefine" name="casos_ulceras" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>
@@ -12,7 +12,7 @@
         </div>
     </div>
     
-    <div class="col-md-12">
+    <div class="col-md-12" id="show_input">
         <label class="form-label">Regiões das Úlceras <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-4">

@@ -599,6 +599,10 @@ dialog::backdrop{
 }
 
 /* Form ----------------------------- */
+textarea{
+    resize: none;
+}
+
 .btn_info .material-symbols-outlined{
     font-size: 20px !important;
 }
