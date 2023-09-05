@@ -33,7 +33,7 @@
                     Primeiro Diagnóstico
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.primeiro_diagnostico', $num_registro)}}
+                    {{route('primeiro_diagnostico.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -50,7 +50,7 @@
                     Diagnóstico Atual
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.diagnostico_atual', $num_registro)}}
+                    {{route('diagnostico_atual.index', $num_registro)}}
                 @endslot
                 @endcomponent
 

@@ -32,7 +32,7 @@
               1ª Consulta
             @endslot
             @slot('href')
-              {{route('consulta.primeiro_diagnostico', $dados->num_registro)}}
+              {{route('primeiro_diagnostico.index', $dados->num_registro)}}
             @endslot
           @endcomponent
           @component('components.items.paciente-item')

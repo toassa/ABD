@@ -5,9 +5,6 @@ namespace App\Http\Controllers\Admin\Consulta;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\Admin\Auth;
-use Illuminate\Console\View\Components\Alert;
-
 use App\Models\Paciente;
 use App\Models\PrimeiroDiagnostico;
 
@@ -36,6 +33,30 @@ class PrimeiroDiagnosticoController extends Controller
             'num_USP' => $num_USP,
         ]);
 
-        return redirect()->route('paciente.listar', compact('num_registro', 'num_USP'));
+        return redirect()->route('primeiro_diagnostico.editar', compact('num_registro', 'num_USP'));
+    }
+
+    public function editar($num_registro){
+        $dados = PrimeiroDiagnostico::find($num_registro);
+        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados'));
+    }
+
+    public function atualizar(Request $req, $num_registro, $num_USP)
+    {
+        $request = $req->except('_token');
+        PrimeiroDiagnostico::where('num_registro',$num_registro)->update([
+            'num_registro'=>$num_registro,
+            'ano'=>$request['ano'],
+            'idade'=>$request['idade'],
+            'sintomas'=>$request['sintomas'],
+            'como_foi_feito'=>$request['como_foi_feito'],
+            'infeccoes_seis_meses'=>$request['infeccoes_seis_meses'],
+            'quais_infeccoes'=>$request['quais_infeccoes'],
+            'periodo_sintomas_diagnostico'=>$request['periodo_sintomas_diagnostico'],
+            'fator_emocional'=>$request['fator_emocional'],
+            'qual_fator_emocional'=>$request['qual_fator_emocional'],
+            'num_USP' => $num_USP,
+        ]);
+        return redirect()->route('pacientes.listar');
     }
 }

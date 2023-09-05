@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\MedicamentoController;
 
 use App\Http\Controllers\Admin\Consulta\ExameFisicosController;
 use App\Http\Controllers\Admin\Consulta\PrimeiroDiagnosticoController;
+use App\Http\Controllers\Admin\Consulta\DiagnosticoAtualController;
 
 use App\Models\ExameFisico;
 use App\Models\PrimeiroDiagnostico;
@@ -97,7 +98,15 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/menu_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'menu_atendimento'])->name('consulta.menu_atendimento');
             
-            Route::get('/primeiro_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_atendimento'])->name('consulta.primeiro_atendimento');
+            Route::prefix('/diagnostico_atual')->group(function(){
+                Route::get('/{num_registro}', [DiagnosticoAtualController::class, 'index'])->name('diagnostico_atual.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'salvar'])->name('diagnostico_atual.salvar');
+            
+                Route::get('/editar/{num_registro}', [DiagnosticoAtualController::class, 'editar'])->name('diagnostico_atual.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'atualizar'])->name('diagnostico_atual.atualizar');
+            });
         
             Route::get('/atividades_educativas/{num_registro}', [PrimeiraConsultaController::class, 'atividades_educativas'])->name('consulta.atividades_educativas');
         
@@ -134,9 +143,13 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/pes_exame/{num_registro}', [PrimeiraConsultaController::class, 'pes_exame'])->name('consulta.pes_exame');
 
             Route::prefix('/primeiro_diagnostico')->group(function(){
-                Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('consulta.primeiro_diagnostico');
+                Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('primeiro_diagnostico.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'salvar'])->name('primeiro_diagnostico.salvar');
+            
+                Route::get('/editar/{num_registro}', [PrimeiroDiagnosticoController::class, 'editar'])->name('primeiro_diagnostico.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'atualizar'])->name('primeiro_diagnostico.atualizar');
             });
 
             Route::get('/tratamento/{num_registro}', [PrimeiraConsultaController::class, 'tratamento'])->name('consulta.tratamento');
