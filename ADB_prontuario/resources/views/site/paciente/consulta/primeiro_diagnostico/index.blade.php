@@ -9,8 +9,7 @@
         {{$dados->nome}}
     @endslot
     @slot('content_menu')
-        {{-- ALTERAR CONSULTA - ROTA --}}
-        <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>
+        <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             <h1 class="text-center">Primeiro Diagnóstico</h1>
             <div class="pagination-container">

@@ -18,6 +18,7 @@
                 <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
+            <script src="{{asset('js/form-consulta.js')}}"></script>
         </form>
     @endslot
 @endcomponent

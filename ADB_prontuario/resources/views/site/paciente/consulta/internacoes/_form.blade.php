@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <label for="validationCustomSelectDefine" class="form-label">Quantas vezes ficou internado(a) no último ano? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="frequencia_ultimo_ano" required required>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="frequencia_ultimo_ano" required required>
         <option selected disabled value="">Clique para escolher...</option>
         <option value="0" {{ isset($rows->frequencia_ultimo_ano) && $rows->frequencia_ultimo_ano == 0 ? 'selected' : '' }}>0 vezes</option>
         <option value="1" {{ isset($rows->frequencia_ultimo_ano) && $rows->frequencia_ultimo_ano == 1 ? 'selected' : '' }}>1 vez</option>

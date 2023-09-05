@@ -2,7 +2,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine" class="form-label">Você faz algum tipo de dieta? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="realiza" required>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="realiza" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->realiza) && $rows->realiza == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->realiza) && $rows->realiza == 0 ? 'selected' : '' }}>Não</option>
@@ -66,7 +66,7 @@
 
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomSelectDefineDouble" class="form-label">No último ano, teve consulta com nutricionista? <b>*</b>  </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" name="consulta_nutricionista" required>
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" name="consulta_nutricionista" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->consulta_nutricionista) && $rows->consulta_nutricionista == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->consulta_nutricionista) && $rows->consulta_nutricionista == 0 ? 'selected' : '' }}>Não</option>
@@ -127,7 +127,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Consome Produtos Dietéticos <b>*</b></label>
-    <select class="form-select" id="validationCustomSelectDefine2" name="consome_dieteticos" required>
+    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" name="consome_dieteticos" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->consome_dieteticos) && $rows->consome_dieteticos == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->consome_dieteticos) && $rows->consome_dieteticos == 0 ? 'selected' : '' }}>Não</option>

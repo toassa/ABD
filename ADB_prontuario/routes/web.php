@@ -10,6 +10,12 @@ use App\Http\Controllers\Admin\PacienteController;
 use App\Http\Controllers\Admin\PrimeiraConsultaController;
 use App\Http\Controllers\Admin\MedicamentoController;
 
+use App\Http\Controllers\Admin\Consulta\ExameFisicosController;
+use App\Http\Controllers\Admin\Consulta\PrimeiroDiagnosticoController;
+
+use App\Models\ExameFisico;
+use App\Models\PrimeiroDiagnostico;
+
 Route::redirect('/', 'login');
 
 Route::prefix('login')->group(function () {
@@ -107,7 +113,7 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/dieta/{num_registro}', [PrimeiraConsultaController::class, 'dieta'])->name('consulta.dieta');
 
-            Route::get('/exames_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exames_fisicos'])->name('consulta.exames_fisicos');
+            Route::get('/exames_fisicos/{num_registro}', [ExameFisicosController::class, 'index'])->name('consulta.exames_fisicos');
 
             Route::get('/exercicios_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exercicios_fisicos'])->name('consulta.exercicios_fisicos');
 
@@ -127,7 +133,11 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/pes_exame/{num_registro}', [PrimeiraConsultaController::class, 'pes_exame'])->name('consulta.pes_exame');
 
-            Route::get('/primeiro_diagnostico/{num_registro}', [PrimeiraConsultaController::class, 'primeiro_diagnostico'])->name('consulta.primeiro_diagnostico');
+            Route::prefix('/primeiro_diagnostico')->group(function(){
+                Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('consulta.primeiro_diagnostico');
+                
+                Route::post('/salvar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'salvar'])->name('primeiro_diagnostico.salvar');
+            });
 
             Route::get('/tratamento/{num_registro}', [PrimeiraConsultaController::class, 'tratamento'])->name('consulta.tratamento');
 

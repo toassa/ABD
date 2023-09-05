@@ -70,12 +70,6 @@ class PrimeiraConsultaController extends Controller
         return view('site.paciente.consulta.dieta.index', compact('dados'));
     }
 
-    public function exames_fisicos($num_registro)
-    {
-        $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exames_fisicos.index', compact('dados'));
-    }
-
     public function exercicios_fisicos($num_registro)
     {
         $dados = Paciente::find($num_registro);
@@ -128,12 +122,6 @@ class PrimeiraConsultaController extends Controller
     {
         $dados = Paciente::find($num_registro);
         return view('site.paciente.consulta.pes_exame.index', compact('dados'));
-    }
-
-    public function primeiro_diagnostico($num_registro)
-    {
-        $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados'));
     }
 
     public function tratamento($num_registro)

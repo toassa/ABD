@@ -8,7 +8,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Faz uso de insulina? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="uso_insulina" required required>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="uso_insulina" required required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->uso_insulina) && $rows->uso_insulina == 0 ? 'selected' : '' }}>Não</option>

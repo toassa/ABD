@@ -3,7 +3,7 @@
 {{-- MUDAR FORMA --}}
 <div class="col-md-6">
     <label for="validationCustomSelectDefineDouble" class="form-label">Já teve complicações do diabetes? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" name="complicacoes" required>
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" name="complicacoes" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->complicacoes) && $rows->complicacoes == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->complicacoes) && $rows->complicacoes == 0 ? 'selected' : '' }}>Não</option>

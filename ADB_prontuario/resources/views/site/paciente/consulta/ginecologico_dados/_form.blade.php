@@ -1,7 +1,7 @@
 {{-- MUDAR FORMA --}}
 <div class="col-md-4">
-    <label for="validationCustomMenopausa" class="form-label">Já entrou na menopausa?  <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="menopausa" required>
+    <label for="validationCustomSelectDefine" class="form-label">Já entrou na menopausa?  <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="menopausa" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->menopausa) && $rows->menopausa == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->menopausa) && $rows->menopausa == 0 ? 'selected' : '' }}>Não</option>
@@ -33,8 +33,8 @@
 
 {{-- MUDAR FORMA --}}
 <div class="col-md-4">
-    <label for="validationCustomMenstruacao" class="form-label">Já menstruou pela primeira vez? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine2" name="menstruacao" required>
+    <label for="validationCustomSelectDefine2" class="form-label">Já menstruou pela primeira vez? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" name="menstruacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->menstruacao) && $rows->menstruacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->menstruacao) && $rows->menstruacao == 0 ? 'selected' : '' }}>Não</option>
@@ -78,7 +78,7 @@
 {{-- MUDAR FORMA --}}
 <div class="col-md-6">
     <label for="validationCustomSelectDefineDouble" class="form-label">Faz o uso de métodos contraceptivos? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" name="uso_metodos_contraceptivos" required>
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" name="uso_metodos_contraceptivos" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->uso_metodos_contraceptivos) && $rows->uso_metodos_contraceptivos == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->uso_metodos_contraceptivos) && $rows->uso_metodos_contraceptivos == 0 ? 'selected' : '' }}>Não</option>
