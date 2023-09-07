@@ -23,7 +23,7 @@ class ComplicacoesController extends Controller
             'num_registro'=>$num_registro,
             'complicacoes'=>$request['complicacoes'],
             'quais_complicacoes'=>$request['quais_complicacoes'],
-            'internacao_complicacao'=>$request['internacao_complicacoes'],
+            'internacao_complicacao'=>$request['internacao_complicacao'],
             'causa_internacao'=>$request['causa_internacao'],
             'episodio_hipoglicemia'=>$request['episodio_hipoglicemia'],
             'episodio_assintomatico'=>$request['episodio_assintomatico'],
@@ -49,7 +49,7 @@ class ComplicacoesController extends Controller
             'num_registro'=>$num_registro,
             'complicacoes'=>$request['complicacoes'],
             'quais_complicacoes'=>$request['quais_complicacoes'],
-            'internacao_complicacao'=>$request['internacao_complicacoes'],
+            'internacao_complicacao'=>$request['internacao_complicacao'],
             'causa_internacao'=>$request['causa_internacao'],
             'episodio_hipoglicemia'=>$request['episodio_hipoglicemia'],
             'episodio_assintomatico'=>$request['episodio_assintomatico'],
@@ -59,6 +59,6 @@ class ComplicacoesController extends Controller
             'alimento_tratar_hipoglicemia'=>$request['alimento_tratar_hipoglicemia'],
             'num_USP' => $num_USP,
         ]);
-        return redirect()->route('pacientes.listar');
+        return redirect()->route('complicacoes.editar', compact('num_registro', 'num_USP'));
     }
 }

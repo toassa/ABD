@@ -50,7 +50,7 @@
                     Diagnóstico Atual
                 @endslot
                 @slot('route_menu')
-                    {{route('diagnostico_atual.index', $num_registro)}}
+                    {{-- {{route('diagnostico_atual.index', $num_registro)}} --}}
                 @endslot
                 @endcomponent
 
@@ -67,7 +67,7 @@
                     Complicações
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.complicacoes', $num_registro)}}
+                    {{route('complicacoes.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -84,7 +84,7 @@
                     Tratamento
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.tratamento', $num_registro)}}
+                    {{route('tratamento.index', $num_registro)}}
                 @endslot
                 @endcomponent
 

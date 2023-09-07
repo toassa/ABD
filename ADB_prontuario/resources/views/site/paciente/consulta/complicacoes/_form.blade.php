@@ -23,8 +23,8 @@
 
 {{-- MUDAR FORMA --}}
 <div class="col-md-6" id="input_show_double2">
-    <label for="validationCustomInternacaoComplicacao" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="internacao_complicacao" required>
+    <label for="validationCustomSelectDefine" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="MostraDados()" name="internacao_complicacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($rows->internacao_complicacao) && $rows->internacao_complicacao == 0 ? 'selected' : '' }}>Não</option>
@@ -34,7 +34,7 @@
     </div>
 </div>
 
-<div class="col-md-6" id="input_show">
+<div class="col-md-6" id="i4nput_show">
     <label for="validationCustomLetra" class="form-label">Descreva as complicações que desencadearam a internação <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->causa_internacao) ? $rows->causa_internacao : '' }}" name="causa_internacao" placeholder="Insira a causa da internação" required>
     <div class="invalid-feedback">

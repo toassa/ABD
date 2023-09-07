@@ -13,9 +13,8 @@ use App\Http\Controllers\Admin\MedicamentoController;
 use App\Http\Controllers\Admin\Consulta\ExameFisicosController;
 use App\Http\Controllers\Admin\Consulta\PrimeiroDiagnosticoController;
 use App\Http\Controllers\Admin\Consulta\DiagnosticoAtualController;
-
-use App\Models\ExameFisico;
-use App\Models\PrimeiroDiagnostico;
+use App\Http\Controllers\Admin\Consulta\ComplicacoesController;
+use App\Http\Controllers\Admin\Consulta\TratamentoController;
 
 Route::redirect('/', 'login');
 
@@ -116,8 +115,16 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/comorbidades/{num_registro}', [PrimeiraConsultaController::class, 'comorbidades'])->name('consulta.comorbidades');
 
-            Route::get('/complicacoes/{num_registro}', [PrimeiraConsultaController::class, 'complicacoes'])->name('consulta.complicacoes');
-
+            Route::prefix('/complicacoes')->group(function(){
+                Route::get('/{num_registro}', [ComplicacoesController::class, 'index'])->name('complicacoes.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [ComplicacoesController::class, 'salvar'])->name('complicacoes.salvar');
+            
+                Route::get('/editar/{num_registro}', [ComplicacoesController::class, 'editar'])->name('complicacoes.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [ComplicacoesController::class, 'atualizar'])->name('complicacoes.atualizar');
+            });
+            
             Route::get('/diagnostico_atual/{num_registro}', [PrimeiraConsultaController::class, 'diagnostico_atual'])->name('consulta.diagnostico_atual');
 
             Route::get('/dieta/{num_registro}', [PrimeiraConsultaController::class, 'dieta'])->name('consulta.dieta');
@@ -143,6 +150,16 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/pes_exame/{num_registro}', [PrimeiraConsultaController::class, 'pes_exame'])->name('consulta.pes_exame');
 
             Route::prefix('/primeiro_diagnostico')->group(function(){
+                Route::get('/{num_registro}', [TratamentoController::class, 'index'])->name('tratamento.index');
+                
+                Route::post('/salvar/{num_registro}/{num_USP}', [TratamentoController::class, 'salvar'])->name('tratamento.salvar');
+            
+                Route::get('/editar/{num_registro}', [TratamentoController::class, 'editar'])->name('tratamento.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [TratamentoController::class, 'atualizar'])->name('tratamento.atualizar');
+            });
+
+            Route::prefix('/tratamento')->group(function(){
                 Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('primeiro_diagnostico.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'salvar'])->name('primeiro_diagnostico.salvar');
@@ -151,9 +168,6 @@ Route::group(['middleware' => 'auth'], function(){
     
                 Route::put('/atualizar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'atualizar'])->name('primeiro_diagnostico.atualizar');
             });
-
-            Route::get('/tratamento/{num_registro}', [PrimeiraConsultaController::class, 'tratamento'])->name('consulta.tratamento');
-
         });
 
         Route::prefix('/medicamentos')->group(function(){
@@ -186,10 +200,10 @@ Route::get('/404', function(){
 
 // ARRUMAR:
 // > Usuários
-// - Permitir que itens sejam vistos paenas por administradores
 // - Dialog do list-excluir
 // - Visual do editar usuários
 // - Se excluir o próprio usuário, fazer logout
 // - Não deixar desativar todos os usuários (ao menos um ativo)
 // - Aceitar acentos 
 // - Apresentar o nome do usuário, não o número USP
+// Acertar o coiso do guilerme para inatvios tamber, não apenas para adm
