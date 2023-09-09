@@ -8,7 +8,7 @@ function mostraDados(){
     let input_multiple5 = document.getElementById('input_show_multiple5');
     let input_multiple6 = document.getElementById('input_show_multiple6');
     let input_multiple7 = document.getElementById('input_show_multiple7');
-    let input_multiple8 = document.getElementById('input_show_multiple7');
+    let input_multiple8 = document.getElementById('input_show_multiple8');
     
     select.addEventListener('change', function() {
         if (select.value == '0') {

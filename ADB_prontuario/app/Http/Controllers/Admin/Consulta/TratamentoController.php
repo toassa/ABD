@@ -18,7 +18,7 @@ class TratamentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-
+        // dd($num_USP);
         Tratamento::create([
             'num_registro'=>$num_registro,
             'medicamento_diabetes'=>$request['medicamento_diabetes'],
@@ -33,7 +33,7 @@ class TratamentoController extends Controller
             'reuso_seringas_insulina'=>$request['reuso_seringas_insulina'],
             'quantia_reuso_seringas'=>$request['quantia_reuso_seringas'],
             'aderencia'=>$request['aderencia'],
-            'num_USP' => $num_USP,
+            'num_USP'=>$num_USP,
         ]);
 
         return redirect()->route('tratamento.editar', compact('num_registro', 'num_USP'));

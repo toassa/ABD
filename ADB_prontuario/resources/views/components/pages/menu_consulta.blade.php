@@ -50,7 +50,7 @@
                     Diagnóstico Atual
                 @endslot
                 @slot('route_menu')
-                    {{-- {{route('diagnostico_atual.index', $num_registro)}} --}}
+                    {{-- {{route('diagnostico_atual.index', [$num_registro])}} --}}
                 @endslot
                 @endcomponent
 
@@ -101,7 +101,7 @@
                     Automonitorização
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.automonitorizacao', $num_registro)}}
+                    {{route('automonitorizacao.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -118,7 +118,7 @@
                     Nascimento
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.nascimento', $num_registro)}}
+                    {{route('nascimento.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -135,7 +135,7 @@
                     Dados ginecológicos
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.ginecologico_dados', $num_registro)}}
+                    {{route('ginecologico_dados.index', $num_registro)}}
                 @endslot
                 @endcomponent
                 
@@ -152,7 +152,7 @@
                     Frequência de acompanhamento
                 @endslot
                 @slot('route_menu')
-                {{route('consulta.frequencia_acompanhamento', $num_registro)}}
+                    {{route('frequencia_acompanhamento.index', $num_registro)}}
                 @endslot
                 @endcomponent
 

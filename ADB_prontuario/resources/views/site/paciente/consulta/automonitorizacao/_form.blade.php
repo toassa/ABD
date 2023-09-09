@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="col-md-6 input-translate" id="input_show_multiple4">
+<div class="col-md-6 input-translate" id="input_show">
     <label for="validationCustomLetra" class="form-label">Quantas medições são feitas diariamente? <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
     <div class="invalid-feedback">
@@ -22,31 +22,31 @@
     </div>
 </div>
 
-<div class="col-md-12" id="input_show_multiple3">
+<div class="col-md-12" id="input_show_multiple">
     <label for="validationCustomLetra" class="form-label">Como obtém as fitas para monitorização? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="hospital" name="origem_fitas[]" value="hospital">
+            <input class="form-check-input" type="checkbox" id="hospital" name="origem_fitas" value="hospital">
             <label class="form-check-label label_check" for="hospital">Recebe grátis no hospital</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="farmacia_sus" name="origem_fitas[]" value="farmacia_sus">
+            <input class="form-check-input" type="checkbox" id="farmacia_sus" name="origem_fitas" value="farmacia_sus">
             <label class="form-check-label label_check" for="farmacia_sus">Recebe grátis na farmácia do SUS</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="farmacia_popular" name="origem_fitas[]" value="farmacia_popular">
+            <input class="form-check-input" type="checkbox" id="farmacia_popular" name="origem_fitas" value="farmacia_popular">
             <label class="form-check-label label_check" for="farmacia_popular">Compra na farmácia popular</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="farmacia_comum" name="origem_fitas[]" value="farmacia_comum">
+            <input class="form-check-input" type="checkbox" id="farmacia_comum" name="origem_fitas" value="farmacia_comum">
             <label class="form-check-label label_check" for="farmacia_comum">Compra em farmácia comum</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="mandato_judicial" name="origem_fitas[]" value="mandato_judicial">
+            <input class="form-check-input" type="checkbox" id="mandato_judicial" name="origem_fitas" value="mandato_judicial">
             <label class="form-check-label label_check" for="mandato_judicial">Recebe grátis após mandato judicial</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="outros" name="origem_fitas[]" value="outros">
+            <input class="form-check-input" type="checkbox" id="outros" name="origem_fitas" value="outros">
             <label class="form-check-label label_check" for="outros">Outros…</label>
         </div>
         <div class="invalid-feedback">

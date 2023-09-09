@@ -9,7 +9,7 @@
         {{$dados->nome}}
     @endslot
     @slot('content_menu')
-        <form action="{{route('complicacoes.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        <form action="{{route('tratamento.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             <h1 class="text-center">Tratamento</h1>
             @include('site.paciente.consulta.tratamento._form')
