@@ -169,7 +169,7 @@
                     Internações
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.internacoes', $num_registro)}}
+                    {{route('internacoes.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -186,7 +186,7 @@
                     Dados Cardiovasculares
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.cardiovascular_dados', $num_registro)}}
+                    {{route('cardiovascular_dados.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -204,7 +204,7 @@
                     Comorbidade
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.comorbidades', $num_registro)}}
+                    {{route('comorbidades.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -222,7 +222,7 @@
                     Histórico familiar
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.familiar_historico', $num_registro)}}
+                    {{route('familiar_historico.index', $num_registro)}}
                 @endslot
                 @endcomponent
 

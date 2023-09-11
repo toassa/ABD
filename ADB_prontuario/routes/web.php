@@ -19,6 +19,10 @@ use App\Http\Controllers\Admin\Consulta\TratamentoController;
 use App\Http\Controllers\Admin\Consulta\NascimentoController;
 use App\Http\Controllers\Admin\Consulta\GinecologicosDadosController;
 use App\Http\Controllers\Admin\Consulta\FrequenciaAcompanhamentoController;
+use App\Http\Controllers\Admin\Consulta\InternacoesController;
+use App\Http\Controllers\Admin\Consulta\CardiovascularDadosController;
+use App\Http\Controllers\Admin\Consulta\ComorbidadesController;
+use App\Http\Controllers\Admin\Consulta\FamiliarHistoricoController;
 
 Route::redirect('/', 'login');
 
@@ -123,9 +127,25 @@ Route::group(['middleware' => 'auth'], function(){
                 Route::put('/atualizar/{num_registro}/{num_USP}', [AutomonitorizacaoController::class, 'atualizar'])->name('automonitorizacao.atualizar');
             });
 
-            Route::get('/cardiovascular_dados/{num_registro}', [PrimeiraConsultaController::class, 'cardiovascular_dados'])->name('consulta.cardiovascular_dados');
+            Route::prefix('/cardiovascular_dados')->group(function(){
+                Route::get('/{num_registro}', [CardiovascularDadosController::class, 'index'])->name('cardiovascular_dados.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [CardiovascularDadosController::class, 'salvar'])->name('cardiovascular_dados.salvar');
+            
+                Route::get('/editar/{num_registro}', [CardiovascularDadosController::class, 'editar'])->name('cardiovascular_dados.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [CardiovascularDadosController::class, 'atualizar'])->name('cardiovascular_dados.atualizar');
+            });
 
-            Route::get('/comorbidades/{num_registro}', [PrimeiraConsultaController::class, 'comorbidades'])->name('consulta.comorbidades');
+            Route::prefix('/comorbidades')->group(function(){
+                Route::get('/{num_registro}', [ComorbidadesController::class, 'index'])->name('comorbidades.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [ComorbidadesController::class, 'salvar'])->name('comorbidades.salvar');
+            
+                Route::get('/editar/{num_registro}', [ComorbidadesController::class, 'editar'])->name('comorbidades.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [ComorbidadesController::class, 'atualizar'])->name('comorbidades.atualizar');
+            });
 
             Route::prefix('/complicacoes')->group(function(){
                 Route::get('/{num_registro}', [ComplicacoesController::class, 'index'])->name('complicacoes.index');
@@ -145,7 +165,15 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/exercicios_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exercicios_fisicos'])->name('consulta.exercicios_fisicos');
 
-            Route::get('/familiar_historico/{num_registro}', [PrimeiraConsultaController::class, 'familiar_historico'])->name('consulta.familiar_historico');
+            Route::prefix('/familiar_historico')->group(function(){
+                Route::get('/{num_registro}', [FamiliarHistoricoController::class, 'index'])->name('familiar_historico.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [FamiliarHistoricoController::class, 'salvar'])->name('familiar_historico.salvar');
+            
+                Route::get('/editar/{num_registro}', [FamiliarHistoricoController::class, 'editar'])->name('familiar_historico.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [FamiliarHistoricoController::class, 'atualizar'])->name('familiar_historico.atualizar');
+            });
 
             Route::prefix('/frequencia_acompanhamento')->group(function(){
                 Route::get('/{num_registro}', [FrequenciaAcompanhamentoController::class, 'index'])->name('frequencia_acompanhamento.index');
@@ -169,7 +197,15 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/habitos_vida/{num_registro}', [PrimeiraConsultaController::class, 'habitos_vida'])->name('consulta.habitos_vida');
 
-            Route::get('/internacoes/{num_registro}', [PrimeiraConsultaController::class, 'internacoes'])->name('consulta.internacoes');
+            Route::prefix('/internacoes')->group(function(){
+                Route::get('/{num_registro}', [InternacoesController::class, 'index'])->name('internacoes.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [InternacoesController::class, 'salvar'])->name('internacoes.salvar');
+            
+                Route::get('/editar/{num_registro}', [InternacoesController::class, 'editar'])->name('internacoes.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [InternacoesController::class, 'atualizar'])->name('internacoes.atualizar');
+            });
 
             Route::prefix('/nascimento')->group(function(){
                 Route::get('/{num_registro}', [NascimentoController::class, 'index'])->name('nascimento.index');
