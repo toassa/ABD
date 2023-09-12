@@ -2,7 +2,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomLetra" class="form-label">Qual o aspecto geral?  <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->apecto_geral) ? $rows->apecto_geral : '' }}" name="apecto_geral" placeholder="Insira o Aspecto Geral" required>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->aspecto_geral) ? $rows->aspecto_geral : '' }}" name="aspecto_geral" placeholder="Insira o Aspecto Geral" required>
     <div class="invalid-feedback">
         Insira o Aspecto Geral
     </div>

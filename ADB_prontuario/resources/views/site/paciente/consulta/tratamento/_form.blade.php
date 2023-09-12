@@ -23,37 +23,37 @@
     <div class="row align-content">
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaUltraLenta" name="tipos_insulinas[]" value="Insulina de ação ultralenta (deglutega ou glargina U300)">
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaUltraLenta" name="tipos_insulinas" value="Insulina de ação ultralenta (deglutega ou glargina U300)">
                 <label class="form-check-label label_check" for="checkboxInsulinaUltraLenta">Insulina de ação ultralenta (deglutega ou glargina U300)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaLenta" name="tipos_insulinas[]" value="Insulina de ação lenta (detemir ou glargina U100)">
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaLenta" name="tipos_insulinas" value="Insulina de ação lenta (detemir ou glargina U100)">
                 <label class="form-check-label label_check" for="checkboxInsulinaLenta">Insulina de ação lenta (detemir ou glargina U100)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaIntermediaria" name="tipos_insulinas[]" value="Insulina de ação intermediária (NPH)">
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaIntermediaria" name="tipos_insulinas" value="Insulina de ação intermediária (NPH)">
                 <label class="form-check-label label_check" for="checkboxInsulinaIntermediaria">Insulina de ação intermediária (NPH)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaRapida" name="tipos_insulinas[]" value="Insulina de ação rápida (regular)">
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaRapida" name="tipos_insulinas" value="Insulina de ação rápida (regular)">
                 <label class="form-check-label label_check" for="checkboxInsulinaRapida">Insulina de ação rápida (regular)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxAnalogosRapidos" name="tipos_insulinas[]" value="Análogos de ação rápida (glulisina, lispro e asparte)">
+                <input type="checkbox" class="form-check-input" id="checkboxAnalogosRapidos" name="tipos_insulinas" value="Análogos de ação rápida (glulisina, lispro e asparte)">
                 <label class="form-check-label label_check" for="checkboxAnalogosRapidos">Análogos de ação rápida (glulisina, lispro e asparte)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxAnalogosUltraRapidos" name="tipos_insulinas[]" value="Análogos de ação ultrarrápida (asparte ultrarrápida)">
+                <input type="checkbox" class="form-check-input" id="checkboxAnalogosUltraRapidos" name="tipos_insulinas" value="Análogos de ação ultrarrápida (asparte ultrarrápida)">
                 <label class="form-check-label label_check" for="checkboxAnalogosUltraRapidos">Análogos de ação ultrarrápida (asparte ultrarrápida)</label>
             </div>
         </div>
@@ -111,27 +111,27 @@
     <label for="validationCustomOrigemUtensilio" class="form-label">Onde consegue cada tipo de insulina? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxHospital" name="origem_utensilho[]" value="Recebe grátis no hospital" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis no hospital', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxHospital" name="origem_utensilho" value="Recebe grátis no hospital" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis no hospital', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxHospital">Recebe grátis no hospital</label>
         </div>
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxSUS" name="origem_utensilho[]" value="Recebe grátis na farmácia do SUS" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis na farmácia do SUS', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxSUS" name="origem_utensilho" value="Recebe grátis na farmácia do SUS" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis na farmácia do SUS', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxSUS">Recebe grátis na farmácia do SUS</label>
         </div>
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaPopular" name="origem_utensilho[]" value="Compra na farmácia popular" {{ isset($rows->origem_utensilho) && in_array('Compra na farmácia popular', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaPopular" name="origem_utensilho" value="Compra na farmácia popular" {{ isset($rows->origem_utensilho) && in_array('Compra na farmácia popular', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxFarmaciaPopular">Compra na farmácia popular</label>
         </div>
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaComum" name="origem_utensilho[]" value="Compra em farmácia comum" {{ isset($rows->origem_utensilho) && in_array('Compra em farmácia comum', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaComum" name="origem_utensilho" value="Compra em farmácia comum" {{ isset($rows->origem_utensilho) && in_array('Compra em farmácia comum', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxFarmaciaComum">Compra em farmácia comum</label>
         </div>
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxJudicial" name="origem_utensilho[]" value="Recebe grátis após mandato judicial" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis após mandato judicial', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxJudicial" name="origem_utensilho" value="Recebe grátis após mandato judicial" {{ isset($rows->origem_utensilho) && in_array('Recebe grátis após mandato judicial', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxJudicial">Recebe grátis após mandato judicial</label>
         </div>
         <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxOutros" name="origem_utensilho[]" value="Outros" {{ isset($rows->origem_utensilho) && in_array('Outros', $rows->origem_utensilho) ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxOutros" name="origem_utensilho" value="Outros" {{ isset($rows->origem_utensilho) && in_array('Outros', $rows->origem_utensilho) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxOutros">Outros</label>
         </div>
     </div>

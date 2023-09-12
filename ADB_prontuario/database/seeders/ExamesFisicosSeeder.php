@@ -18,7 +18,7 @@ class ExamesFisicosSeeder extends Seeder
             'pressao_arterial' => 120,
             'pulso_arterial' => 'Regular',
             'frequencia_cardiaca' => 75,
-            'apecto_geral' => 'Saudável',
+            'aspecto_geral' => 'Saudável',
             'cabeca_pescoco' => 'Normal',
             'circunferencia_quadril' => 95.2,
             'circunferencia_pescoco' => 35.5,

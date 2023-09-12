@@ -26,14 +26,14 @@ class ExameFisico extends Model
         'frequencia_cardiaca',
         'aspecto_geral',
         'cabeca_pescoco',
-        'cincurferencia_quadril',
+        'circunferencia_quadril',
         'circunferencia_pescoco',
         'circunferencia_abdominal',
         'sistema_venoso',
         'sistema_digestivo',
         'sistema_respiratorio',
         'sistema_cardiovascular',
-        'cosidereacoes_outros_sistemas',
+        'consideracoes_outros_sistemas',
         'num_USP',
     ];
 

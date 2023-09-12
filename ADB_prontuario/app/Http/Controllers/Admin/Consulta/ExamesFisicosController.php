@@ -18,7 +18,7 @@ class ExamesFisicosController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-        // dd($request['apecto_geral']);
+        // dd($request);
         ExameFisico::create([
             'num_registro'=>$num_registro,
             'peso' => $request['peso'],
@@ -26,7 +26,7 @@ class ExamesFisicosController extends Controller
             'pressao_arterial' => $request['pressao_arterial'],
             'pulso_arterial' => $request['pulso_arterial'],
             'frequencia_cardiaca' => $request['frequencia_cardiaca'],
-            'apecto_geral' => $request['apecto_geral'],
+            'aspecto_geral' => $request['aspecto_geral'],
             'cabeca_pescoco' => $request['cabeca_pescoco'],
             'circunferencia_quadril' => $request['circunferencia_quadril'],
             'circunferencia_pescoco' => $request['circunferencia_pescoco'],
@@ -57,7 +57,7 @@ class ExamesFisicosController extends Controller
             'pressao_arterial' => $request['pressao_arterial'],
             'pulso_arterial' => $request['pulso_arterial'],
             'frequencia_cardiaca' => $request['frequencia_cardiaca'],
-            'apecto_geral' => $request['apecto_geral'],
+            'aspecto_geral' => $request['aspecto_geral'],
             'cabeca_pescoco' => $request['cabeca_pescoco'],
             'circunferencia_quadril' => $request['circunferencia_quadril'],
             'circunferencia_pescoco' => $request['circunferencia_pescoco'],

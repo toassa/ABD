@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('pressao_arterial');
             $table->string('pulso_arterial');
             $table->integer('frequencia_cardiaca');
-            $table->string('apecto_geral');
+            $table->string('aspecto_geral');
             $table->string('cabeca_pescoco');
             $table->double('circunferencia_quadril');
             $table->double('circunferencia_pescoco');

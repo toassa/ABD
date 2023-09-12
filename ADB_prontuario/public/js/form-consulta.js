@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const alimento_tratar_hipoglicemia = document.getElementById('validationCustomalimento_tratar_hipoglicemia');//text
     const frequencia_nutricionista = document.getElementById('validationCustomfrequencia_nutricionista');//number
     const segue_dieta = document.getElementById('validationCustomSegueDieta');//number(de 0 a 10)(N*)
-    const aspecto_geral = document.getElementById('validationCustomapecto_geral');//text
+    const aspecto_geral = document.getElementById('validationCustomaspecto_geral');//text
     const peso = document.getElementById('validationCustompeso');//number com verificação especial
     const altura = document.getElementById('validationCustomAltura');//number com verificação especial
     const circunferencia_abdominal = document.getElementById('validationCustomcircunferencia_abdominal');//number com verificação especial
