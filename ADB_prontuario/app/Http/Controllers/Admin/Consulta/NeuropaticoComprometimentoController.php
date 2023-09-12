@@ -18,7 +18,7 @@ class NeuropaticoComprometimentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-
+        // dd($num_USP);
         NeuropaticoComprometimento::create([
             'num_registro'=>$num_registro,
             'reflexo_aquileu_direito' => $request['reflexo_aquileu_direito'],

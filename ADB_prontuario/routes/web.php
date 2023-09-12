@@ -10,7 +10,6 @@ use App\Http\Controllers\Admin\PacienteController;
 use App\Http\Controllers\Admin\PrimeiraConsultaController;
 use App\Http\Controllers\Admin\MedicamentoController;
 
-use App\Http\Controllers\Admin\Consulta\ExameFisicosController;
 use App\Http\Controllers\Admin\Consulta\PrimeiroDiagnosticoController;
 use App\Http\Controllers\Admin\Consulta\DiagnosticoAtualController;
 use App\Http\Controllers\Admin\Consulta\ComplicacoesController;
@@ -30,7 +29,6 @@ use App\Http\Controllers\Admin\Consulta\AtividadesEducativasController;
 use App\Http\Controllers\Admin\Consulta\ExamesFisicosController;
 use App\Http\Controllers\Admin\Consulta\PesExameController;
 use App\Http\Controllers\Admin\Consulta\NeuropaticoComprometimentoController;
-
 
 Route::redirect('/', 'login');
 
@@ -173,7 +171,15 @@ Route::group(['middleware' => 'auth'], function(){
                 Route::put('/atualizar/{num_registro}/{num_USP}', [ComplicacoesController::class, 'atualizar'])->name('complicacoes.atualizar');
             });
             
-            Route::get('/diagnostico_atual/{num_registro}', [PrimeiraConsultaController::class, 'diagnostico_atual'])->name('consulta.diagnostico_atual');
+            Route::prefix('/diagnostico_atual')->group(function(){
+                Route::get('/{num_registro}', [DiagnosticoAtualController::class, 'index'])->name('diagnostico_atual.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'salvar'])->name('diagnostico_atual.salvar');
+            
+                Route::get('/editar/{num_registro}', [DiagnosticoAtualController::class, 'editar'])->name('diagnostico_atual.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'atualizar'])->name('diagnostico_atual.atualizar');
+            });
 
             Route::prefix('/dieta')->group(function(){
                 Route::get('/{num_registro}', [DietaController::class, 'index'])->name('dieta.index');

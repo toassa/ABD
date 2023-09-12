@@ -18,7 +18,6 @@ class PrimeiroDiagnosticoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-
         PrimeiroDiagnostico::create([
             'num_registro'=>$num_registro,
             'ano'=>$request['ano'],

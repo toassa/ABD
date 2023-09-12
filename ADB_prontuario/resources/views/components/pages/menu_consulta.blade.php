@@ -50,7 +50,7 @@
                     Diagnóstico Atual
                 @endslot
                 @slot('route_menu')
-                    {{-- {{route('diagnostico_atual.index', [$num_registro])}} --}}
+                    {{route('diagnostico_atual.index', $num_registro)}}
                 @endslot
                 @endcomponent
 

@@ -18,7 +18,7 @@ class ExamesFisicosController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-        dd($request['apecto_geral']);
+        // dd($request['apecto_geral']);
         ExameFisico::create([
             'num_registro'=>$num_registro,
             'peso' => $request['peso'],

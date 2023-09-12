@@ -17,43 +17,43 @@
         <div class="row align-content">
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_d" name="regioes_ulceras[]" value="regiao_plantar_pe_d">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_d" name="regioes_ulceras" value="regiao_plantar_pe_d">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_plantar_pe_d">Região plantar no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_e" name="regioes_ulceras[]" value="regiao_plantar_pe_e">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_e" name="regioes_ulceras" value="regiao_plantar_pe_e">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_plantar_pe_e">Região plantar no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_d" name="regioes_ulceras[]" value="regiao_lateral_pe_d">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_d" name="regioes_ulceras" value="regiao_lateral_pe_d">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_lateral_pe_d">Região lateral no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_e" name="regioes_ulceras[]" value="regiao_lateral_pe_e">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_e" name="regioes_ulceras" value="regiao_lateral_pe_e">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_lateral_pe_e">Região lateral no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_d" name="regioes_ulceras[]" value="regiao_dedos_pe_d">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_d" name="regioes_ulceras" value="regiao_dedos_pe_d">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_dedos_pe_d">Região dos dedos no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_e" name="regioes_ulceras[]" value="regiao_dedos_pe_e">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_e" name="regioes_ulceras" value="regiao_dedos_pe_e">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_dedos_pe_e">Região dos dedos no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_outros" name="regioes_ulceras[]" value="regiao_outros">
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_outros" name="regioes_ulceras" value="regiao_outros">
                     <label class="col-md-4-label form-check-label label_check" for="regiao_outros">Outros...</label>
                 </div>
             </div>
@@ -70,31 +70,31 @@
         <div class="row align-content">
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="margens_irregulares_pe_d" name="caracteristicas_ulceras[]" value="margens_irregulares_pe_d">
+                    <input type="checkbox" class="form-check-input" id="margens_irregulares_pe_d" name="caracteristicas_ulceras" value="margens_irregulares_pe_d">
                     <label class="form-check-label label_check" for="margens_irregulares_pe_d">Suas margens são irregulares no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="margens_irregulares_pe_e" name="caracteristicas_ulceras[]" value="margens_irregulares_pe_e">
+                    <input type="checkbox" class="form-check-input" id="margens_irregulares_pe_e" name="caracteristicas_ulceras" value="margens_irregulares_pe_e">
                     <label class="form-check-label label_check" for="margens_irregulares_pe_e">Suas margens são irregulares no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="dolorosas_pe_d" name="caracteristicas_ulceras[]" value="dolorosas_pe_d">
+                    <input type="checkbox" class="form-check-input" id="dolorosas_pe_d" name="caracteristicas_ulceras" value="dolorosas_pe_d">
                     <label class="form-check-label label_check" for="dolorosas_pe_d">São dolorosas no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="dolorosas_pe_e" name="caracteristicas_ulceras[]" value="dolorosas_pe_e">
+                    <input type="checkbox" class="form-check-input" id="dolorosas_pe_e" name="caracteristicas_ulceras" value="dolorosas_pe_e">
                     <label class="form-check-label label_check" for="dolorosas_pe_e">São dolorosas no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="caracteristicas_outros" name="caracteristicas_ulceras[]" value="caracteristicas_outros">
+                    <input type="checkbox" class="form-check-input" id="caracteristicas_outros" name="caracteristicas_ulceras" value="caracteristicas_outros">
                     <label class="form-check-label label_check" for="caracteristicas_outros">Outros...</label>
                 </div>
             </div>
@@ -321,43 +321,43 @@
         <label class="form-label">Acerca das seguintes deformidades, assinale aquelas que estão presentes em cada pé</label>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="amputacao_pe_d" name="deformidades[]" value="amputacao_pe_d">
+                <input type="checkbox" class="form-check-input" id="amputacao_pe_d" name="deformidades" value="amputacao_pe_d">
                 <label class="form-check-label" for="amputacao_pe_d">Amputação no pé D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="dedos_garra_pe_d" name="deformidades[]" value="dedos_garra_pe_d">
+                <input type="checkbox" class="form-check-input" id="dedos_garra_pe_d" name="deformidades" value="dedos_garra_pe_d">
                 <label class="form-check-label" for="dedos_garra_pe_d">Dedos em garra no pé D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="dedos_martelo_pe_d" name="deformidades[]" value="dedos_martelo_pe_d">
+                <input type="checkbox" class="form-check-input" id="dedos_martelo_pe_d" name="deformidades" value="dedos_martelo_pe_d">
                 <label class="form-check-label" for="dedos_martelo_pe_d">Dedos em martelo no pé D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="hallux_valgus_pe_d" name="deformidades[]" value="hallux_valgus_pe_d">
+                <input type="checkbox" class="form-check-input" id="hallux_valgus_pe_d" name="deformidades" value="hallux_valgus_pe_d">
                 <label class="form-check-label" for="hallux_valgus_pe_d">Hallux valgus (joanete) no pé D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="acento_arco_plantar_pe_d" name="deformidades[]" value="acento_arco_plantar_pe_d">
+                <input type="checkbox" class="form-check-input" id="acento_arco_plantar_pe_d" name="deformidades" value="acento_arco_plantar_pe_d">
                 <label class="form-check-label" for="acento_arco_plantar_pe_d">Acentuação de arco plantar/pé cavo D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="desabamento_antepé_pe_d" name="deformidades[]" value="desabamento_antepé_pe_d">
+                <input type="checkbox" class="form-check-input" id="desabamento_antepé_pe_d" name="deformidades" value="desabamento_antepé_pe_d">
                 <label class="form-check-label" for="desabamento_antepé_pe_d">Desabamento de antepé/pé plano D</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="charcot_pe_d" name="deformidades[]" value="charcot_pe_d">
+                <input type="checkbox" class="form-check-input" id="charcot_pe_d" name="deformidades" value="charcot_pe_d">
                 <label class="form-check-label" for="charcot_pe_d">Charcot no pé D</label>
             </div>
         </div>
@@ -373,25 +373,25 @@
             <label class="form-label">Assinale os pulsos que estão presentes à palpação</label>
             <div class="col-md-4">        
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="pedioso_direito" name="pulsos[]" value="pedioso_direito">
+                <input type="checkbox" class="form-check-input" id="pedioso_direito" name="pulsos" value="pedioso_direito">
                 <label class="form-check-label" for="pedioso_direito">Pedioso direito</label>
             </div>
             </div>
             <div class="col-md-4">        
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="pedioso_esquerdo" name="pulsos[]" value="pedioso_esquerdo">
+                <input type="checkbox" class="form-check-input" id="pedioso_esquerdo" name="pulsos" value="pedioso_esquerdo">
                 <label class="form-check-label" for="pedioso_esquerdo">Pedioso esquerdo</label>
             </div>
             </div>
             <div class="col-md-4">        
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="tibial_direito" name="pulsos[]" value="tibial_direito">
+                <input type="checkbox" class="form-check-input" id="tibial_direito" name="pulsos" value="tibial_direito">
                 <label class="form-check-label" for="tibial_direito">Tibial direito</label>
             </div>
             </div>
             <div class="col-md-4">        
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="tibial_esquerdo" name="pulsos[]" value="tibial_esquerdo">
+                <input type="checkbox" class="form-check-input" id="tibial_esquerdo" name="pulsos" value="tibial_esquerdo">
                 <label class="form-check-label" for="tibial_esquerdo">Tibial esquerdo</label>
             </div>
             </div>
@@ -408,67 +408,67 @@
             <label class="form-label">Assinale a presença de alterações neuropáticas</label>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_LSP_pe_d" name="alteracoes_neuropaticas[]" value="perda_LSP_pe_d">
+                <input type="checkbox" class="form-check-input" id="perda_LSP_pe_d" name="alteracoes_neuropaticas" value="perda_LSP_pe_d">
                 <label class="form-check-label" for="perda_LSP_pe_d">Perda de LSP (teste monofilamento) no pé D</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_LSP_pe_e" name="alteracoes_neuropaticas[]" value="perda_LSP_pe_e">
+                <input type="checkbox" class="form-check-input" id="perda_LSP_pe_e" name="alteracoes_neuropaticas" value="perda_LSP_pe_e">
                 <label class="form-check-label" for="perda_LSP_pe_e">Perda de LPS (teste monofilamento) no pé E</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_vibratoria_pe_d" name="alteracoes_neuropaticas[]" value="perda_vibratoria_pe_d">
+                <input type="checkbox" class="form-check-input" id="perda_vibratoria_pe_d" name="alteracoes_neuropaticas" value="perda_vibratoria_pe_d">
                 <label class="form-check-label" for="perda_vibratoria_pe_d">Perda de sensibilidade vibratória (teste diapasão) no pé D</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_vibratoria_pe_e" name="alteracoes_neuropaticas[]" value="perda_vibratoria_pe_e">
+                <input type="checkbox" class="form-check-input" id="perda_vibratoria_pe_e" name="alteracoes_neuropaticas" value="perda_vibratoria_pe_e">
                 <label class="form-check-label" for="perda_vibratoria_pe_e">Perda de sensibilidade vibratória (teste diapasão) no pé E</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_dolorosa_pe_d" name="alteracoes_neuropaticas[]" value="perda_dolorosa_pe_d">
+                <input type="checkbox" class="form-check-input" id="perda_dolorosa_pe_d" name="alteracoes_neuropaticas" value="perda_dolorosa_pe_d">
                 <label class="form-check-label" for="perda_dolorosa_pe_d">Perda de sensibilidade dolorosa (teste do palito) no pé D</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_dolorosa_pe_e" name="alteracoes_neuropaticas[]" value="perda_dolorosa_pe_e">
+                <input type="checkbox" class="form-check-input" id="perda_dolorosa_pe_e" name="alteracoes_neuropaticas" value="perda_dolorosa_pe_e">
                 <label class="form-check-label" for="perda_dolorosa_pe_e">Perda de sensibilidade dolorosa (teste do palito) no pé E</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_termica_pe_d" name="alteracoes_neuropaticas[]" value="perda_termica_pe_d">
+                <input type="checkbox" class="form-check-input" id="perda_termica_pe_d" name="alteracoes_neuropaticas" value="perda_termica_pe_d">
                 <label class="form-check-label" for="perda_termica_pe_d">Perda de sensibilidade térmica (teste quente/frio) no pé D</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="perda_termica_pe_e" name="alteracoes_neuropaticas[]" value="perda_termica_pe_e">
+                <input type="checkbox" class="form-check-input" id="perda_termica_pe_e" name="alteracoes_neuropaticas" value="perda_termica_pe_e">
                 <label class="form-check-label" for="perda_termica_pe_e">Perda de sensibilidade térmica (teste quente/frio) no pé E</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="alteracao_reflexos_pe_d" name="alteracoes_neuropaticas[]" value="alteracao_reflexos_pe_d">
+                <input type="checkbox" class="form-check-input" id="alteracao_reflexos_pe_d" name="alteracoes_neuropaticas" value="alteracao_reflexos_pe_d">
                 <label class="form-check-label" for="alteracao_reflexos_pe_d">Alteração dos reflexos no pé D</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="alteracao_reflexos_pe_e" name="alteracoes_neuropaticas[]" value="alteracao_reflexos_pe_e">
+                <input type="checkbox" class="form-check-input" id="alteracao_reflexos_pe_e" name="alteracoes_neuropaticas" value="alteracao_reflexos_pe_e">
                 <label class="form-check-label" for="alteracao_reflexos_pe_e">Alteração dos reflexos no pé E</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="outros_neuropaticas" name="alteracoes_neuropaticas[]" value="outros_neuropaticas">
+                <input type="checkbox" class="form-check-input" id="outros_neuropaticas" name="alteracoes_neuropaticas" value="outros_neuropaticas">
                 <label class="form-check-label" for="outros_neuropaticas">Outros…</label>
             </div>
             </div>
@@ -485,49 +485,49 @@
         <label class="form-label">Assinale as demais alterações que estiverem presentes</label>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="limitacao_mobilidade_articular" name="demais_alteracoes[]" value="limitacao_mobilidade_articular">
+            <input type="checkbox" class="form-check-input" id="limitacao_mobilidade_articular" name="demais_alteracoes" value="limitacao_mobilidade_articular">
             <label class="form-check-label" for="limitacao_mobilidade_articular">Limitação de mobilidade articular (sinal da prece)</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="higiene_pobre_pes" name="demais_alteracoes[]" value="higiene_pobre_pes">
+            <input type="checkbox" class="form-check-input" id="higiene_pobre_pes" name="demais_alteracoes" value="higiene_pobre_pes">
             <label class="form-check-label" for="higiene_pobre_pes">Higiene pobre dos pés</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="calcados_inadequados" name="demais_alteracoes[]" value="calcados_inadequados">
+            <input type="checkbox" class="form-check-input" id="calcados_inadequados" name="demais_alteracoes" value="calcados_inadequados">
             <label class="form-check-label" for="calcados_inadequados">Uso de calçados inadequados</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="alteracao_propriocepcao_pe_d" name="demais_alteracoes[]" value="alteracao_propriocepcao_pe_d">
+            <input type="checkbox" class="form-check-input" id="alteracao_propriocepcao_pe_d" name="demais_alteracoes" value="alteracao_propriocepcao_pe_d">
             <label class="form-check-label" for="alteracao_propriocepcao_pe_d">Alteração propriocepção pé D</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="alteracao_propriocepcao_pe_e" name="demais_alteracoes[]" value="alteracao_propriocepcao_pe_e">
+            <input type="checkbox" class="form-check-input" id="alteracao_propriocepcao_pe_e" name="demais_alteracoes" value="alteracao_propriocepcao_pe_e">
             <label class="form-check-label" for="alteracao_propriocepcao_pe_e">Alteração propriocepção pé E</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="alteracao_caminhada_calcanhares" name="demais_alteracoes[]" value="alteracao_caminhada_calcanhares">
+            <input type="checkbox" class="form-check-input" id="alteracao_caminhada_calcanhares" name="demais_alteracoes" value="alteracao_caminhada_calcanhares">
             <label class="form-check-label" for="alteracao_caminhada_calcanhares">Alteração na caminhada com calcanhares</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="alteracao_caminhada_ponta_pes" name="demais_alteracoes[]" value="alteracao_caminhada_ponta_pes">
+            <input type="checkbox" class="form-check-input" id="alteracao_caminhada_ponta_pes" name="demais_alteracoes" value="alteracao_caminhada_ponta_pes">
             <label class="form-check-label" for="alteracao_caminhada_ponta_pes">Alteração na caminhada na ponta dos pés</label>
         </div>
         </div>
         <div class="col-md-4">
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="outros_demais_alteracoes" name="demais_alteracoes[]" value="outros_demais_alteracoes">
+            <input type="checkbox" class="form-check-input" id="outros_demais_alteracoes" name="demais_alteracoes" value="outros_demais_alteracoes">
             <label class="form-check-label" for="outros_demais_alteracoes">Outros…</label>
         </div>
         </div>
