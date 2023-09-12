@@ -239,7 +239,7 @@
                     Hábitos de vida
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.habitos_vida', $num_registro)}}
+                    {{route('habitos_vida.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -256,7 +256,7 @@
                     Exercícios físicos
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.exercicios_fisicos', $num_registro)}}
+                    {{route('exercicios_fisicos.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -273,7 +273,7 @@
                     Dieta
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.dieta', $num_registro)}}
+                    {{route('dieta.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -290,7 +290,7 @@
                     Atividades Educativas
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.atividades_educativas', $num_registro)}}
+                    {{route('atividades_educativas.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -307,7 +307,7 @@
                     Exames físicos
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.exames_fisicos', $num_registro)}}
+                    {{route('exames_fisicos.index', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -324,10 +324,9 @@
                     Exame dos pés
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.pes_exame', $num_registro)}}
+                    {{route('pes_exame.index', $num_registro)}}
                 @endslot
                 @endcomponent
-
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
@@ -342,27 +341,9 @@
                     Comprometimento Neuropático
                 @endslot
                 @slot('route_menu')
-                    {{route('consulta.neuropatico_comprometimento', $num_registro)}}
+                    {{route('neuropatico_comprometimento.index', $num_registro)}}
                 @endslot
                 @endcomponent
-
-                {{-- @component('components.items.menu-section')
-                @slot('id_menu')
-                    section_molestia
-                @endslot
-                @slot('icon_menu')
-                    <span class="material-symbols-outlined">
-                        history_edu
-                    </span>
-                @endslot
-                @slot('text_menu')
-                    Atividades Educativas
-                @endslot
-                @slot('route_menu')
-                    {{route('consulta.atividades_educativas', $num_registro)}}
-                @endslot
-                @endcomponent --}}
-
             </div>
         </div>
         <div class="content-consulta">

@@ -13,7 +13,7 @@ class FamiliarHistoricoController extends Controller
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.comorbidades.index', compact('dados'));
+        return view('site.paciente.consulta.familiar_historico.index', compact('dados'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -36,12 +36,12 @@ class FamiliarHistoricoController extends Controller
             'num_USP'=>$num_USP,
         ]);
 
-        return redirect()->route('comorbidades.editar', compact('num_registro', 'num_USP'));
+        return redirect()->route('familiar_historico.editar', compact('num_registro', 'num_USP'));
     }
 
     public function editar($num_registro){
         $dados = FamiliarHistorico::find($num_registro);
-        return view('site.paciente.consulta.comorbidades.index', compact('dados'));
+        return view('site.paciente.consulta.familiar_historico.index', compact('dados'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
@@ -63,6 +63,6 @@ class FamiliarHistoricoController extends Controller
             'doenca_celiaca'=>$request['doenca_celiaca'],
             'num_USP'=>$num_USP,
         ]);
-        return redirect()->route('comorbidades.editar', compact('num_registro', 'num_USP'));
+        return redirect()->route('familiar_historico.editar', compact('num_registro', 'num_USP'));
     }
 }

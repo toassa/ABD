@@ -1,12 +1,12 @@
 {{-- exame físico --}}
 
-<div class="col-md-6">
+{{-- <div class="col-md-6">
     <label for="validationCustomLetra" class="form-label">Qual o aspecto geral?  <b>*</b></label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->aspecto_geral) ? $rows->aspecto_geral : '' }}" name="apecto_geral" placeholder="Insira o Aspecto Geral" required>
     <div class="invalid-feedback">
         Insira o Aspecto Geral
     </div>
-</div>
+</div> --}}
 
 <div class="col-md-3">
     <label for="validationCustomValor" class="form-label">Qual o peso?  <b>*</b></label>

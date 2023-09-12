@@ -15,8 +15,8 @@
     <label for="validationCustomLetra" class="form-label">Período e Quantidade de bebida que ingeria <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->periodo_quantia_etilismo) ? $dados->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
     <div class="invalid-feedback">
-        Insira o período e a quantidade de bebiue 
-  ingeria  </div>
+        Insira o período e a quantidade de bebida que ingeria  
+    </div>
 </div>
 
 <div class="col-md-4">
@@ -47,13 +47,27 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quantidade de Tabaanos-maço(Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.)*</b> </label>
+    <label for="validationCustomLetra" class="form-label">Quantos anos-maço fuma/fumou?
+            <b>*</b>         
+            <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
+                <span class="material-symbols-outlined show-dialog">
+                    info
+                </span>
+            </a>
+            <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
+                <div class="p-dialog">
+                    (Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.)
+                </div>
+                <div class="row buttons-dialog">
+                    dfddfsf
+                </div>
+            </dialog> 
+        </label>
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quantia_tabagismo) ? $dados->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
         Insira a quantidade de tabaanos-maço  </div>
 </div>
 
-{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomSobreDrogasIlicitas" class="form-label">Sobre Drogas Ilícitas <b>*</b> </label>
     <select class="form-select" id="validationCustomSobreDrogasIlicitas" name="sobre_drogas_ilicitas" required>

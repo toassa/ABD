@@ -9,9 +9,6 @@ use App\Models\ExameFisico;
 
 class ExamesFisicosSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         ExameFisico::create([

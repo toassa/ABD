@@ -20,20 +20,20 @@
         <label for="validationCustomLetra" class="form-label">Qual foi a finalidade da consulta com enfermagem? <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas">
                 <label class="form-check-label label_check" for="validationFormCheck1">Receber fitas de glicosímetro ou insulina</label>
             </div>
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas">
                 <label class="form-check-label label_check" for="validationFormCheck1">Receber instrução/ educação sobre diabetes</label>
         
             </div>
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas">
                 <label class="form-check-label label_check" for="validationFormCheck1">Ambas</label>
             </div>
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas" required>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta" value="ambas">
                 <label class="form-check-label label_check" for="validationFormCheck1">Outros</label>
             </div>
             <div class="invalid-feedback">
@@ -100,8 +100,8 @@
     </div>
 
     <div class="col-md-12">
-        <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">O paciente sabe qual o valor ideal máximo de HbA1c para pacientes com diabetes? <b>*</b></label>
-        <select class="form-select" id="validationCustomConheceValorUltimaHbA1c" name="valor_maximo_hba1c" required>
+        <label for="validationCustomSelectDefine2" class="form-label">O paciente sabe qual o valor ideal máximo de HbA1c para pacientes com diabetes? <b>*</b></label>
+        <select class="form-select" id="validationCustomSelectDefine2" name="valor_maximo_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($rows->valor_maximo_hba1c) && $rows->valor_maximo_hba1c == 1 ? 'selected' : '' }}>1</option>
             <option value="2" {{ isset($rows->valor_maximo_hba1c) && $rows->valor_maximo_hba1c == 2 ? 'selected' : '' }}>2</option>
@@ -120,8 +120,8 @@
     </div>
 
     <div class="col-md-6">
-        <label for="validationCustomConheceValorUltimaHbA1c" class="form-label">Qual o valor da última HbA1c do paciente? <b>*</b></label>
-        <select class="form-select" id="validationCustomSelectDefine" name="conhece_valor_ultima_hba1c" required>
+        <label for="validationCustomSelectDefine2" class="form-label">Qual o valor da última HbA1c do paciente? <b>*</b></label>
+        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados2()" name="conhece_valor_ultima_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($rows->conhece_valor_ultima_hba1c) && $rows->conhece_valor_ultima_hba1c == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($rows->conhece_valor_ultima_hba1c) && $rows->conhece_valor_ultima_hba1c == 0 ? 'selected' : '' }}>Não</option>
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="col-md-6" id="input_show">
+    <div class="col-md-6" id="inputn_show2">
         <label for="validationCustomNum" class="form-label">Valor da última HbA1c do paciente <b>*</b></label>
         <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($rows->valor_ultima_hba1c) ? $rows->valor_ultima_hba1c : '' }}" name="valor_ultima_hba1c" placeholder="Digite o valor da última HbA1c" required>
         <div class="invalid-feedback">

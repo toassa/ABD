@@ -23,6 +23,14 @@ use App\Http\Controllers\Admin\Consulta\InternacoesController;
 use App\Http\Controllers\Admin\Consulta\CardiovascularDadosController;
 use App\Http\Controllers\Admin\Consulta\ComorbidadesController;
 use App\Http\Controllers\Admin\Consulta\FamiliarHistoricoController;
+use App\Http\Controllers\Admin\Consulta\HabitosVidaController;
+use App\Http\Controllers\Admin\Consulta\ExerciciosFisicosController;
+use App\Http\Controllers\Admin\Consulta\DietaController;
+use App\Http\Controllers\Admin\Consulta\AtividadesEducativasController;
+use App\Http\Controllers\Admin\Consulta\ExamesFisicosController;
+use App\Http\Controllers\Admin\Consulta\PesExameController;
+use App\Http\Controllers\Admin\Consulta\NeuropaticoComprometimentoController;
+
 
 Route::redirect('/', 'login');
 
@@ -115,8 +123,16 @@ Route::group(['middleware' => 'auth'], function(){
                 Route::put('/atualizar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'atualizar'])->name('diagnostico_atual.atualizar');
             });
         
-            Route::get('/atividades_educativas/{num_registro}', [PrimeiraConsultaController::class, 'atividades_educativas'])->name('consulta.atividades_educativas');
-        
+            Route::prefix('/atividades_educativas')->group(function(){
+                Route::get('/{num_registro}', [AtividadesEducativasController::class, 'index'])->name('atividades_educativas.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [AtividadesEducativasController::class, 'salvar'])->name('atividades_educativas.salvar');
+            
+                Route::get('/editar/{num_registro}', [AtividadesEducativasController::class, 'editar'])->name('atividades_educativas.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [AtividadesEducativasController::class, 'atualizar'])->name('atividades_educativas.atualizar');
+            });
+
             Route::prefix('/automonitorizacao')->group(function(){
                 Route::get('/{num_registro}', [AutomonitorizacaoController::class, 'index'])->name('automonitorizacao.index');
             
@@ -159,11 +175,35 @@ Route::group(['middleware' => 'auth'], function(){
             
             Route::get('/diagnostico_atual/{num_registro}', [PrimeiraConsultaController::class, 'diagnostico_atual'])->name('consulta.diagnostico_atual');
 
-            Route::get('/dieta/{num_registro}', [PrimeiraConsultaController::class, 'dieta'])->name('consulta.dieta');
+            Route::prefix('/dieta')->group(function(){
+                Route::get('/{num_registro}', [DietaController::class, 'index'])->name('dieta.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [DietaController::class, 'salvar'])->name('dieta.salvar');
+            
+                Route::get('/editar/{num_registro}', [DietaController::class, 'editar'])->name('dieta.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [DietaController::class, 'atualizar'])->name('dieta.atualizar');
+            });
 
-            Route::get('/exames_fisicos/{num_registro}', [ExameFisicosController::class, 'index'])->name('consulta.exames_fisicos');
+            Route::prefix('/exames_fisicos')->group(function(){
+                Route::get('/{num_registro}', [ExamesFisicosController::class, 'index'])->name('exames_fisicos.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [ExamesFisicosController::class, 'salvar'])->name('exames_fisicos.salvar');
+            
+                Route::get('/editar/{num_registro}', [ExamesFisicosController::class, 'editar'])->name('exames_fisicos.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [ExamesFisicosController::class, 'atualizar'])->name('exames_fisicos.atualizar');
+            });
 
-            Route::get('/exercicios_fisicos/{num_registro}', [PrimeiraConsultaController::class, 'exercicios_fisicos'])->name('consulta.exercicios_fisicos');
+            Route::prefix('/exercicios_fisicos')->group(function(){
+                Route::get('/{num_registro}', [ExerciciosFisicosController::class, 'index'])->name('exercicios_fisicos.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [ExerciciosFisicosController::class, 'salvar'])->name('exercicios_fisicos.salvar');
+            
+                Route::get('/editar/{num_registro}', [ExerciciosFisicosController::class, 'editar'])->name('exercicios_fisicos.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [ExerciciosFisicosController::class, 'atualizar'])->name('exercicios_fisicos.atualizar');
+            });
 
             Route::prefix('/familiar_historico')->group(function(){
                 Route::get('/{num_registro}', [FamiliarHistoricoController::class, 'index'])->name('familiar_historico.index');
@@ -195,7 +235,15 @@ Route::group(['middleware' => 'auth'], function(){
                 Route::put('/atualizar/{num_registro}/{num_USP}', [GinecologicosDadosController::class, 'atualizar'])->name('ginecologico_dados.atualizar');
             });
 
-            Route::get('/habitos_vida/{num_registro}', [PrimeiraConsultaController::class, 'habitos_vida'])->name('consulta.habitos_vida');
+            Route::prefix('/habitos_vida')->group(function(){
+                Route::get('/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
+            
+                Route::post('/salvar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'salvar'])->name('habitos_vida.salvar');
+            
+                Route::get('/editar/{num_registro}', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'atualizar'])->name('habitos_vida.atualizar');
+            });
 
             Route::prefix('/internacoes')->group(function(){
                 Route::get('/{num_registro}', [InternacoesController::class, 'index'])->name('internacoes.index');
@@ -217,9 +265,25 @@ Route::group(['middleware' => 'auth'], function(){
                 Route::put('/atualizar/{num_registro}/{num_USP}', [NascimentoController::class, 'atualizar'])->name('nascimento.atualizar');
             });
 
-            Route::get('/neuropatico_comprometimento/{num_registro}', [PrimeiraConsultaController::class, 'neuropatico_comprometimento'])->name('consulta.neuropatico_comprometimento');
-
-            Route::get('/pes_exame/{num_registro}', [PrimeiraConsultaController::class, 'pes_exame'])->name('consulta.pes_exame');
+            Route::prefix('/neuropatico_comprometimento')->group(function(){
+                Route::get('/{num_registro}', [NeuropaticoComprometimentoController::class, 'index'])->name('neuropatico_comprometimento.index');
+                
+                Route::post('/salvar/{num_registro}/{num_USP}', [NeuropaticoComprometimentoController::class, 'salvar'])->name('neuropatico_comprometimento.salvar');
+            
+                Route::get('/editar/{num_registro}', [NeuropaticoComprometimentoController::class, 'editar'])->name('neuropatico_comprometimento.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [NeuropaticoComprometimentoController::class, 'atualizar'])->name('neuropatico_comprometimento.atualizar');
+            });
+            
+            Route::prefix('/pes_exame')->group(function(){
+                Route::get('/{num_registro}', [PesExameController::class, 'index'])->name('pes_exame.index');
+                
+                Route::post('/salvar/{num_registro}/{num_USP}', [PesExameController::class, 'salvar'])->name('pes_exame.salvar');
+            
+                Route::get('/editar/{num_registro}', [PesExameController::class, 'editar'])->name('pes_exame.editar');
+    
+                Route::put('/atualizar/{num_registro}/{num_USP}', [PesExameController::class, 'atualizar'])->name('pes_exame.atualizar');
+            });
 
             Route::prefix('/primeiro_diagnostico')->group(function(){
                 Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('primeiro_diagnostico.index');
