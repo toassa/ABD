@@ -33,7 +33,7 @@
                     Primeiro Diagnóstico
                 @endslot
                 @slot('route_menu')
-                    {{route('primeiro_diagnostico.index', $num_registro)}}
+                    {{route('primeiro_diagnostico.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 

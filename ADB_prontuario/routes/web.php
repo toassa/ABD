@@ -292,6 +292,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/primeiro_diagnostico')->group(function(){
+                Route::get('/op/{num_registro}', [PrimeiroDiagnosticoController::class, 'opcao'])->name('primeiro_diagnostico.opcao');
+
                 Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('primeiro_diagnostico.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'salvar'])->name('primeiro_diagnostico.salvar');

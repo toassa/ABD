@@ -5,11 +5,24 @@ namespace App\Http\Controllers\Admin\Consulta;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Auth;
+
 use App\Models\Paciente;
 use App\Models\PrimeiroDiagnostico;
 
 class PrimeiroDiagnosticoController extends Controller
 {
+    public function opcao($num_registro){
+
+        $dados = Paciente::find($num_registro); 
+        $num_USP = Auth::User()->num_USP;
+        if($dados['num_registro'] == $num_registro){
+            return redirect()->route('primeiro_diagnostico.editar', compact('num_registro', 'num_USP'));
+        }else{
+            return redirect()->route('primeiro_diagnostico.index', compact('dados'));
+        }
+    }
+
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
