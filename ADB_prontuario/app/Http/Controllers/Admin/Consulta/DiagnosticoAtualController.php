@@ -8,8 +8,22 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\Diagnostico;
 
+use Illuminate\Support\Facades\Auth;
+
 class DiagnosticoAtualController extends Controller
 {
+    public function opcao($num_registro){
+
+        $dados = Paciente::find($num_registro); 
+        $primas = Diagnostico::find($num_registro);
+        $num_USP = Auth::User()->num_USP;
+        if($primas == null){
+            return redirect()->route('diagnostico_atual.index', compact('num_registro'));
+        }else{
+            return redirect()->route('diagnostico_atual.editar', compact('num_registro', 'num_USP'));
+        }
+    }
+    
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);

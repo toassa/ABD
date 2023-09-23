@@ -8,8 +8,23 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\Comorbidade;
 
+use Illuminate\Support\Facades\Auth;
+
 class ComorbidadesController extends Controller
 {
+    public function opcao($num_registro){
+
+        $dados = Paciente::find($num_registro); 
+        $primas = Comorbidade::find($num_registro);
+        $num_USP = Auth::User()->num_USP;
+        if($primas == null){
+            return redirect()->route('comorbidades.index', compact('num_registro'));
+        }else{
+            return redirect()->route('comorbidades.editar', compact('num_registro', 'num_USP'));
+        }
+        //aqui use Illuminate\Support\Facades\Auth;
+    }
+
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);

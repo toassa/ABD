@@ -29,6 +29,11 @@ use App\Http\Controllers\Admin\Consulta\AtividadesEducativasController;
 use App\Http\Controllers\Admin\Consulta\ExamesFisicosController;
 use App\Http\Controllers\Admin\Consulta\PesExameController;
 use App\Http\Controllers\Admin\Consulta\NeuropaticoComprometimentoController;
+use App\Models\AutomonitorizacaoGlicemia;
+use App\Models\CardiovascularDado;
+use App\Models\Diagnostico;
+use App\Models\FrequenciaAcompanhamento;
+use Database\Seeders\ExamesFisicosSeeder;
 
 Route::redirect('/', 'login');
 
@@ -112,6 +117,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/menu_atendimento/{num_registro}', [PrimeiraConsultaController::class, 'menu_atendimento'])->name('consulta.menu_atendimento');
             
             Route::prefix('/diagnostico_atual')->group(function(){
+                Route::get('/op/{num_registro}', [DiagnosticoAtualController::class, 'opcao'])->name('diagnostico_atual.opcao');
+
                 Route::get('/{num_registro}', [DiagnosticoAtualController::class, 'index'])->name('diagnostico_atual.index');
 
                 Route::post('/salvar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'salvar'])->name('diagnostico_atual.salvar');
@@ -122,6 +129,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
         
             Route::prefix('/atividades_educativas')->group(function(){
+                Route::get('/op/{num_registro}', [AtividadesEducativasController::class, 'opcao'])->name('atividades_educativas.opcao');
+
                 Route::get('/{num_registro}', [AtividadesEducativasController::class, 'index'])->name('atividades_educativas.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [AtividadesEducativasController::class, 'salvar'])->name('atividades_educativas.salvar');
@@ -132,6 +141,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/automonitorizacao')->group(function(){
+                Route::get('/op/{num_registro}', [AutomonitorizacaoController::class, 'opcao'])->name('automonitorizacao.opcao');
+
                 Route::get('/{num_registro}', [AutomonitorizacaoController::class, 'index'])->name('automonitorizacao.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [AutomonitorizacaoController::class, 'salvar'])->name('automonitorizacao.salvar');
@@ -142,6 +153,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/cardiovascular_dados')->group(function(){
+                Route::get('/op/{num_registro}', [CardiovascularDadosController::class, 'opcao'])->name('cardiovascular_dados.opcao');
+
                 Route::get('/{num_registro}', [CardiovascularDadosController::class, 'index'])->name('cardiovascular_dados.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [CardiovascularDadosController::class, 'salvar'])->name('cardiovascular_dados.salvar');
@@ -152,6 +165,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/comorbidades')->group(function(){
+                Route::get('/op/{num_registro}', [ComorbidadesController::class, 'opcao'])->name('comorbidades.opcao');
+
                 Route::get('/{num_registro}', [ComorbidadesController::class, 'index'])->name('comorbidades.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [ComorbidadesController::class, 'salvar'])->name('comorbidades.salvar');
@@ -162,6 +177,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/complicacoes')->group(function(){
+                Route::get('/op/{num_registro}', [ComplicacoesController::class, 'opcao'])->name('complicacoes.opcao');
+
                 Route::get('/{num_registro}', [ComplicacoesController::class, 'index'])->name('complicacoes.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [ComplicacoesController::class, 'salvar'])->name('complicacoes.salvar');
@@ -172,6 +189,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
             
             Route::prefix('/diagnostico_atual')->group(function(){
+                Route::get('/op/{num_registro}', [DiagnosticoAtualController::class, 'opcao'])->name('diagnostico_atual.opcao');
+
                 Route::get('/{num_registro}', [DiagnosticoAtualController::class, 'index'])->name('diagnostico_atual.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [DiagnosticoAtualController::class, 'salvar'])->name('diagnostico_atual.salvar');
@@ -182,6 +201,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/dieta')->group(function(){
+                Route::get('/op/{num_registro}', [DietaController::class, 'opcao'])->name('dieta.opcao');
+
                 Route::get('/{num_registro}', [DietaController::class, 'index'])->name('dieta.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [DietaController::class, 'salvar'])->name('dieta.salvar');
@@ -192,6 +213,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/exames_fisicos')->group(function(){
+                Route::get('/op/{num_registro}', [ExamesFisicosController::class, 'opcao'])->name('exames_fisicos.opcao');
+
                 Route::get('/{num_registro}', [ExamesFisicosController::class, 'index'])->name('exames_fisicos.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [ExamesFisicosController::class, 'salvar'])->name('exames_fisicos.salvar');
@@ -202,6 +225,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/exercicios_fisicos')->group(function(){
+                Route::get('/op/{num_registro}', [ExerciciosFisicosController::class, 'opcao'])->name('exercicios_fisicos.opcao');
+
                 Route::get('/{num_registro}', [ExerciciosFisicosController::class, 'index'])->name('exercicios_fisicos.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [ExerciciosFisicosController::class, 'salvar'])->name('exercicios_fisicos.salvar');
@@ -212,6 +237,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/familiar_historico')->group(function(){
+                Route::get('/op/{num_registro}', [FamiliarHistoricoController::class, 'opcao'])->name('familiar_historico.opcao');
+
                 Route::get('/{num_registro}', [FamiliarHistoricoController::class, 'index'])->name('familiar_historico.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [FamiliarHistoricoController::class, 'salvar'])->name('familiar_historico.salvar');
@@ -222,6 +249,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/frequencia_acompanhamento')->group(function(){
+                Route::get('/op/{num_registro}', [FrequenciaAcompanhamentoController::class, 'opcao'])->name('frequencia_acompanhamento.opcao');
+
                 Route::get('/{num_registro}', [FrequenciaAcompanhamentoController::class, 'index'])->name('frequencia_acompanhamento.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [FrequenciaAcompanhamentoController::class, 'salvar'])->name('frequencia_acompanhamento.salvar');
@@ -232,6 +261,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/ginecologico_dados')->group(function(){
+                Route::get('/op/{num_registro}', [GinecologicosDadosController::class, 'opcao'])->name('ginecologico_dados.opcao');
+
                 Route::get('/{num_registro}', [GinecologicosDadosController::class, 'index'])->name('ginecologico_dados.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [GinecologicosDadosController::class, 'salvar'])->name('ginecologico_dados.salvar');
@@ -242,6 +273,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/habitos_vida')->group(function(){
+                Route::get('/op/{num_registro}', [HabitosVidaController::class, 'opcao'])->name('habitos_vida.opcao');
+
                 Route::get('/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'salvar'])->name('habitos_vida.salvar');
@@ -252,6 +285,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/internacoes')->group(function(){
+                Route::get('/op/{num_registro}', [InternacoesController::class, 'opcao'])->name('internacoes.opcao');
+
                 Route::get('/{num_registro}', [InternacoesController::class, 'index'])->name('internacoes.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [InternacoesController::class, 'salvar'])->name('internacoes.salvar');
@@ -262,6 +297,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/nascimento')->group(function(){
+                Route::get('/op/{num_registro}', [NascimentoController::class, 'opcao'])->name('nascimento.opcao');
+
                 Route::get('/{num_registro}', [NascimentoController::class, 'index'])->name('nascimento.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [NascimentoController::class, 'salvar'])->name('nascimento.salvar');
@@ -272,6 +309,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/neuropatico_comprometimento')->group(function(){
+                Route::get('/op/{num_registro}', [NeuropaticoComprometimentoController::class, 'opcao'])->name('neuropatico_comprometimento.opcao');
+
                 Route::get('/{num_registro}', [NeuropaticoComprometimentoController::class, 'index'])->name('neuropatico_comprometimento.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [NeuropaticoComprometimentoController::class, 'salvar'])->name('neuropatico_comprometimento.salvar');
@@ -282,6 +321,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
             
             Route::prefix('/pes_exame')->group(function(){
+                Route::get('/op/{num_registro}', [PesExameController::class, 'opcao'])->name('pes_exame.opcao');
+
                 Route::get('/{num_registro}', [PesExameController::class, 'index'])->name('pes_exame.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [PesExameController::class, 'salvar'])->name('pes_exame.salvar');
@@ -294,6 +335,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::prefix('/primeiro_diagnostico')->group(function(){
                 Route::get('/op/{num_registro}', [PrimeiroDiagnosticoController::class, 'opcao'])->name('primeiro_diagnostico.opcao');
 
+                Route::get('/op/{num_registro}', [PrimeiroDiagnosticoController::class, 'opcao'])->name('primeiro_diagnostico.opcao');
+
                 Route::get('/{num_registro}', [PrimeiroDiagnosticoController::class, 'index'])->name('primeiro_diagnostico.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [PrimeiroDiagnosticoController::class, 'salvar'])->name('primeiro_diagnostico.salvar');
@@ -304,6 +347,8 @@ Route::group(['middleware' => 'auth'], function(){
             });
 
             Route::prefix('/tratamento')->group(function(){
+                Route::get('/op/{num_registro}', [TratamentoController::class, 'opcao'])->name('tratamento.opcao');
+
                 Route::get('/{num_registro}', [TratamentoController::class, 'index'])->name('tratamento.index');
                 
                 Route::post('/salvar/{num_registro}/{num_USP}', [TratamentoController::class, 'salvar'])->name('tratamento.salvar');

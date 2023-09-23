@@ -8,8 +8,23 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\GinecologicoDado;
 
+use Illuminate\Support\Facades\Auth;
+
 class GinecologicosDadosController extends Controller
 {
+    public function opcao($num_registro){
+
+        $dados = Paciente::find($num_registro); 
+        $primas = GinecologicoDado::find($num_registro);
+        $num_USP = Auth::User()->num_USP;
+        if($primas == null){
+            return redirect()->route('ginecologico_dados.index', compact('num_registro'));
+        }else{
+            return redirect()->route('ginecologico_dados.editar', compact('num_registro', 'num_USP'));
+        }
+        //aqui use Illuminate\Support\Facades\Auth;
+    }
+
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);

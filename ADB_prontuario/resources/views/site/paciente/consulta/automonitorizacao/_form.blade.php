@@ -6,8 +6,8 @@
     <label for="validationCustomSelectDefine" class="form-label">Faz auto-monitorização da glicemia em casa no momento? <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="realiza_automonitorizacao" required>
         <option selected disabled value="">Clique para escolher...</option>
-        <option value="1" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 1 ? 'selected' : '' }}>Sim</option>
-        <option value="0" {{ isset($rows->realiza_automonitorizacao) && $rows->realiza_automonitorizacao == 0 ? 'selected' : '' }}>Não</option>
+        <option value="1" {{ isset($dados->realiza_automonitorizacao) && $dados->realiza_automonitorizacao == 1 ? 'selected' : '' }}>Sim</option>
+        <option value="0" {{ isset($dados->realiza_automonitorizacao) && $dados->realiza_automonitorizacao == 0 ? 'selected' : '' }}>Não</option>
     </select>
     <div class="invalid-feedback">
         Selecione se realiza automonitorização
@@ -16,7 +16,7 @@
 
 <div class="col-md-6 input-translate" id="input_show">
     <label for="validationCustomLetra" class="form-label">Quantas medições são feitas diariamente? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->frequencia_medicoes) ? $rows->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->frequencia_medicoes) ? $dados->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
     <div class="invalid-feedback">
         Insira a frequência de medições diárias
     </div>
@@ -75,9 +75,9 @@
     </label>
     <select class="form-select" id="validationCustomContagemCarboidratos" name="contagem_carboidratos" required>
          <option selected disabled value="">Clique para escolher...</option>
-        <option value="Sim" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Sim' ? 'selected' : '' }}>Sim</option>
-        <option value="Não" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Não' ? 'selected' : '' }}>Não</option>
-        <option value="Não sabe" {{ isset($rows->contagem_carboidratos) && $rows->contagem_carboidratos === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
+        <option value="Sim" {{ isset($dados->contagem_carboidratos) && $dados->contagem_carboidratos === 'Sim' ? 'selected' : '' }}>Sim</option>
+        <option value="Não" {{ isset($dados->contagem_carboidratos) && $dados->contagem_carboidratos === 'Não' ? 'selected' : '' }}>Não</option>
+        <option value="Não sabe" {{ isset($dados->contagem_carboidratos) && $dados->contagem_carboidratos === 'Não sabe' ? 'selected' : '' }}>Não sabe</option>
     </select>
     <div class="invalid-feedback">
         Selecione a contagem de carboidratos

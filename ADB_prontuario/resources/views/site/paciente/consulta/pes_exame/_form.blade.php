@@ -4,8 +4,8 @@
         <label for="validationCustomSelectDefine" class="form-label">Casos de Úlceras? <b>*</b> </label>
         <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="casos_ulceras" required>
             <option selected disabled value="">Clique para escolher...</option>
-            <option value="1" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
-            <option value="0" {{ isset($rows->casos_ulceras) && $rows->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>
+            <option value="1" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
+            <option value="0" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>
         </select>
         <div class="invalid-feedback">
             Selecione se há casos de úlceras
@@ -540,7 +540,7 @@
     
     <div class="col-md-4">
         <label for="validationCustomObservacoes" class="form-label">Observações <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomObservacoes" value="{{ isset($rows->observacoes) ? $rows->observacoes : '' }}" name="observacoes" required>
+        <input type="text" class="form-control" id="validationCustomObservacoes" value="{{ isset($dados->observacoes) ? $dados->observacoes : '' }}" name="observacoes" required>
         <div class="invalid-feedback">
             Insira observações
         </div>

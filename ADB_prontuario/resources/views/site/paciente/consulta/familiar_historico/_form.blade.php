@@ -1,25 +1,11 @@
-<style>
-    #stuff {
-    opacity: 0.0;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-#hover {
-    width:80px;
-    height:20px;
-    background-color:green;
-    margin-bottom:15px;
-}
-#hover:hover + #stuff {
-    opacity: 1.0;
-}
-</style>
-
-<div id="hover">Hover</div>
-<div id="stuff">stuff</div>
+<div class="info-content">
+    <div class="hover">
+        <span class="material-symbols-outlined">
+        info
+        </span>
+    </div>
+    <div class="stuff">stuff</div>
+</div>
 
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-6 input-border">
@@ -67,8 +53,8 @@
             </label>
             <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" name="possui_dm1" required>
                 <option selected disabled value="">Clique para escolher...</option>
-                <option value="1" {{ isset($rows->possui_dm1) && $rows->possui_dm1 == 1 ? 'selected' : '' }}>Sim</option>
-                <option value="0" {{ isset($rows->possui_dm1) && $rows->possui_dm1 == 0 ? 'selected' : '' }}>Não</option>
+                <option value="1" {{ isset($dados->possui_dm1) && $dados->possui_dm1 == 1 ? 'selected' : '' }}>Sim</option>
+                <option value="0" {{ isset($dados->possui_dm1) && $dados->possui_dm1 == 0 ? 'selected' : '' }}>Não</option>
             </select>
             <div class="invalid-feedback">
                 Selecione se possui DM1
@@ -77,7 +63,7 @@
         <br>
         <div class="col-md-12" id="input_show2">
             <label for="validationCustomLetra" class="form-label">Descreva a DM Tipo 1 (se sim) <b>*</b> </label>
-            <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($rows->dm1) ? $rows->dm1 : '' }}" name="dm1" placeholder="Insira informações sobre DM Tipo 1" required>
+            <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->dm1) ? $dados->dm1 : '' }}" name="dm1" placeholder="Insira informações sobre DM Tipo 1" required>
             <div class="invalid-feedback">
                 Insira informações sobre DM Tipo 1
             </div>

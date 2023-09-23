@@ -50,7 +50,7 @@
                     Diagnóstico Atual
                 @endslot
                 @slot('route_menu')
-                    {{route('diagnostico_atual.index', $num_registro)}}
+                    {{route('diagnostico_atual.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -67,7 +67,7 @@
                     Complicações
                 @endslot
                 @slot('route_menu')
-                    {{route('complicacoes.index', $num_registro)}}
+                    {{route('complicacoes.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -84,7 +84,7 @@
                     Tratamento
                 @endslot
                 @slot('route_menu')
-                    {{route('tratamento.index', $num_registro)}}
+                    {{route('tratamento.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -101,7 +101,7 @@
                     Automonitorização
                 @endslot
                 @slot('route_menu')
-                    {{route('automonitorizacao.index', $num_registro)}}
+                    {{route('automonitorizacao.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -118,7 +118,7 @@
                     Nascimento
                 @endslot
                 @slot('route_menu')
-                    {{route('nascimento.index', $num_registro)}}
+                    {{route('nascimento.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -135,7 +135,7 @@
                     Dados ginecológicos
                 @endslot
                 @slot('route_menu')
-                    {{route('ginecologico_dados.index', $num_registro)}}
+                    {{route('ginecologico_dados.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
                 
@@ -152,7 +152,7 @@
                     Frequência de acompanhamento
                 @endslot
                 @slot('route_menu')
-                    {{route('frequencia_acompanhamento.index', $num_registro)}}
+                    {{route('frequencia_acompanhamento.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -169,7 +169,7 @@
                     Internações
                 @endslot
                 @slot('route_menu')
-                    {{route('internacoes.index', $num_registro)}}
+                    {{route('internacoes.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -186,7 +186,7 @@
                     Dados Cardiovasculares
                 @endslot
                 @slot('route_menu')
-                    {{route('cardiovascular_dados.index', $num_registro)}}
+                    {{route('cardiovascular_dados.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -204,7 +204,7 @@
                     Comorbidade
                 @endslot
                 @slot('route_menu')
-                    {{route('comorbidades.index', $num_registro)}}
+                    {{route('comorbidades.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -222,7 +222,7 @@
                     Histórico familiar
                 @endslot
                 @slot('route_menu')
-                    {{route('familiar_historico.index', $num_registro)}}
+                    {{route('familiar_historico.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -239,7 +239,7 @@
                     Hábitos de vida
                 @endslot
                 @slot('route_menu')
-                    {{route('habitos_vida.index', $num_registro)}}
+                    {{route('habitos_vida.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -256,7 +256,7 @@
                     Exercícios físicos
                 @endslot
                 @slot('route_menu')
-                    {{route('exercicios_fisicos.index', $num_registro)}}
+                    {{route('exercicios_fisicos.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -273,7 +273,7 @@
                     Dieta
                 @endslot
                 @slot('route_menu')
-                    {{route('dieta.index', $num_registro)}}
+                    {{route('dieta.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -290,7 +290,7 @@
                     Atividades Educativas
                 @endslot
                 @slot('route_menu')
-                    {{route('atividades_educativas.index', $num_registro)}}
+                    {{route('atividades_educativas.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -307,7 +307,7 @@
                     Exames físicos
                 @endslot
                 @slot('route_menu')
-                    {{route('exames_fisicos.index', $num_registro)}}
+                    {{route('exames_fisicos.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
 
@@ -324,7 +324,7 @@
                     Exame dos pés
                 @endslot
                 @slot('route_menu')
-                    {{route('pes_exame.index', $num_registro)}}
+                    {{route('pes_exame.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
                 
@@ -341,7 +341,7 @@
                     Comprometimento Neuropático
                 @endslot
                 @slot('route_menu')
-                    {{route('neuropatico_comprometimento.index', $num_registro)}}
+                    {{route('neuropatico_comprometimento.opcao', $num_registro)}}
                 @endslot
                 @endcomponent
             </div>

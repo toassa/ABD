@@ -61,10 +61,10 @@
     <label for="validationCustomLibidoAlterado" class="form-label">Libido (vontade de ter relações sexuais) está alterada? <b>*</b> </label>
     <select class="form-select" id="validationCustomLibidoAlterado" name="libido_alterado" required>
         <option selected disabled value="">Clique para escolher...</option>
-        <option value="Sim" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Sim' ? 'selected' : '' }}>Sim</option>
-        <option value="Não" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não' ? 'selected' : '' }}>Não</option>
-        <option value="Não sabe ou não quis responder" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não sabe ou não quis responder' ? 'selected' : '' }}>Não sabe ou não quis responder</option>
-        <option value="Não se aplica" {{ isset($rows->libido_alterado) && $rows->libido_alterado === 'Não se aplica' ? 'selected' : '' }}>Não se aplica (para crianças)</option>
+        <option value="Sim" {{ isset($dados->libido_alterado) && $dados->libido_alterado === 'Sim' ? 'selected' : '' }}>Sim</option>
+        <option value="Não" {{ isset($dados->libido_alterado) && $dados->libido_alterado === 'Não' ? 'selected' : '' }}>Não</option>
+        <option value="Não sabe ou não quis responder" {{ isset($dados->libido_alterado) && $dados->libido_alterado === 'Não sabe ou não quis responder' ? 'selected' : '' }}>Não sabe ou não quis responder</option>
+        <option value="Não se aplica" {{ isset($dados->libido_alterado) && $dados->libido_alterado === 'Não se aplica' ? 'selected' : '' }}>Não se aplica (para crianças)</option>
     </select>
     <div class="invalid-feedback">
         Selecione se houve alteração na libido

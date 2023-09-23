@@ -189,6 +189,37 @@ b{
     font-size: 25px !important;
 }
 
+/* Botão de informações extras */
+.info-content{
+    position: relative;
+}
+
+.stuff {
+    /* opacity: 0.0; */
+    display: none;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    background-image: url('../images/icons/message_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding: 10px;
+    border-radius: 5px;
+}
+.hover{
+    margin-bottom: -33%;
+}
+.hover:hover + .stuff {
+    /* opacity: 1.0; */
+    display: block;
+}
+
 /* Login ------------------------------------------------------------------------------------- */
 
 .square-content--login{

@@ -8,8 +8,23 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\FrequenciaAcompanhamento;
 
+use Illuminate\Support\Facades\Auth;
+
 class FrequenciaAcompanhamentoController extends Controller
 {
+    public function opcao($num_registro){
+
+        $dados = Paciente::find($num_registro); 
+        $primas = FrequenciaAcompanhamento::find($num_registro);
+        $num_USP = Auth::User()->num_USP;
+        if($primas == null){
+            return redirect()->route('frequencia_acompanhamento.index', compact('num_registro'));
+        }else{
+            return redirect()->route('frequencia_acompanhamento.editar', compact('num_registro', 'num_USP'));
+        }
+        //aqui use Illuminate\Support\Facades\Auth;
+    }
+
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);

@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina', 'Erro 404')
+@section('titulo-pagina', 'Erro 419')
 
 @section('content')
     @component('components.items.error')
@@ -11,7 +11,7 @@
             {{'Erro 419'}}
         @endslot
         @slot('text_erro')
-            {{'Ops! Não conseguimos encontrar essa página!'}}
+            {{'Ops! Parece que essa página expirou!'}}
         @endslot
     @endcomponent
 @endsection
