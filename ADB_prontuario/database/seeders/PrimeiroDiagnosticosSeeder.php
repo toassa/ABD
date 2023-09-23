@@ -14,7 +14,7 @@ class PrimeiroDiagnosticosSeeder extends Seeder
         PrimeiroDiagnostico::create([
             'num_registro'=>'11111',
             'ano'=>2000,
-            'idade'=>30,
+            'idade_diagnostico'=>30,
             'sintomas'=>'Tosse',
             'como_foi_feito'=>'Internação sem cetoacidose diabética',
             'infeccoes_seis_meses'=>false,

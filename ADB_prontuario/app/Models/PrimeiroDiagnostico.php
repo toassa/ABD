@@ -20,7 +20,7 @@ class PrimeiroDiagnostico extends Model
     protected $fillable = [
         'num_registro',
         'ano',
-        'idade',
+        'idade_diagnostico',
         'sintomas',
         'como_foi_feito',
         'infeccoes_seis_meses',

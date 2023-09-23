@@ -9,9 +9,9 @@
 
     <div class="col-md-3">
         <label for="validationCustomNum" class="form-label">Idade ao diagnóstico <b>*</b> </label>
-        <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->idade) ? $dados->idade : '' }}" name="idade" placeholder="Idade que foi diagnosticado com diabetes" required>
+        <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->idade_diagnostico) ? $dados->idade_diagnostico : '' }}" name="idade_diagnostico" placeholder="Idade que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
-            Insira a idade ao diagnóstico
+            Insira a idade_diagnostico ao diagnóstico
         </div>
     </div>
 

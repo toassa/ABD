@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin\Consulta;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use Auth;
+// use Auth;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Paciente;
 use App\Models\PrimeiroDiagnostico;
@@ -15,11 +16,12 @@ class PrimeiroDiagnosticoController extends Controller
     public function opcao($num_registro){
 
         $dados = Paciente::find($num_registro); 
+        $primas = PrimeiroDiagnostico::find($num_registro);
         $num_USP = Auth::User()->num_USP;
-        if($dados['num_registro'] == $num_registro){
-            return redirect()->route('primeiro_diagnostico.editar', compact('num_registro', 'num_USP'));
+        if($primas == null){
+            return redirect()->route('primeiro_diagnostico.index', compact('num_registro'));
         }else{
-            return redirect()->route('primeiro_diagnostico.index', compact('dados'));
+            return redirect()->route('primeiro_diagnostico.editar', compact('num_registro', 'num_USP'));
         }
     }
 
@@ -34,7 +36,7 @@ class PrimeiroDiagnosticoController extends Controller
         PrimeiroDiagnostico::create([
             'num_registro'=>$num_registro,
             'ano'=>$request['ano'],
-            'idade'=>$request['idade'],
+            'idade_diagnostico'=>$request['idade_diagnostico'],
             'sintomas'=>$request['sintomas'],
             'como_foi_feito'=>$request['como_foi_feito'],
             'infeccoes_seis_meses'=>$request['infeccoes_seis_meses'],
@@ -59,7 +61,7 @@ class PrimeiroDiagnosticoController extends Controller
         PrimeiroDiagnostico::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
             'ano'=>$request['ano'],
-            'idade'=>$request['idade'],
+            'idade_diagnostico'=>$request['idade_diagnostico_diagnostico'],
             'sintomas'=>$request['sintomas'],
             'como_foi_feito'=>$request['como_foi_feito'],
             'infeccoes_seis_meses'=>$request['infeccoes_seis_meses'],
