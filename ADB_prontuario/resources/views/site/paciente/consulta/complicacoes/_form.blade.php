@@ -1,13 +1,13 @@
 <!-- complicacoes -->
 
-<div class="info-content">
+{{-- <div class="info-content">
     <div class="hover">
         <span class="material-symbols-outlined">
         info
         </span>
     </div>
     <div class="stuff">stuff</div>
-</div>
+</div> --}}
 
 {{-- MUDAR FORMA --}}
 <div class="col-md-6">
@@ -65,22 +65,39 @@
 </div>
 
 <div class="col-md-4">
-    <div class="info-content">
-        <div class="hover">
-            <span class="material-symbols-outlined">
-            info
-            </span>
+    <div class="align-content">
+        <div class="col-md-8">
+            <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático?</label>
         </div>
-        <div class="stuff">stuff</div>
+        <div class="col-md-2">
+            <b>*</b>
+            {{-- <div class="hover">
+                <span class="material-symbols-outlined">
+                info
+                </span>
+            </div>
+            <div class="stuff">stuff</div> --}}
+        </div>
+        <div class="col-md-2">
+            <div class="col-md-6 hover">
+                <span class="material-symbols-outlined" style="font-size: 20px !important; margin: 0 !important">
+                    info
+                </span>
+            </div>
+            <div class="col-md-6 stuff">
+                oioioi
+            </div>
+        </div>
     </div>
-    <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático? <b>*</b></label>
-    <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico" required>
-         <option selected disabled value="">Clique para escolher...</option>
-        <option value="1" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 1 ? 'selected' : '' }}>Sim</option>
-        <option value="0" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 0 ? 'selected' : '' }}>Não</option>
-    </select>
-    <div class="invalid-feedback">
-        Selecione se o episódio foi assintomático
+    <div class="col-md-12">
+        <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico" required>
+             <option selected disabled value="">Clique para escolher...</option>
+            <option value="1" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 1 ? 'selected' : '' }}>Sim</option>
+            <option value="0" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 0 ? 'selected' : '' }}>Não</option>
+        </select>
+        <div class="invalid-feedback">
+            Selecione se o episódio foi assintomático
+        </div>
     </div>
 </div>
 
