@@ -2,7 +2,7 @@
 
 <div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui alguma doença crônica? <b>*</b></label>
-    <div class="row align-content">
+    <div class="row">
         <div class="col-md-4 form-check mb-3">
             <input class="form-check-input" type="checkbox" id="has" name="doenca_cronica" value="HAS">
             <label class="form-check-label label_check" for="has">HAS</label>
@@ -59,7 +59,7 @@
 
 <div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui alguma patologia ocular ou já realizou algum procedimento? <b>*</b></label>
-    <div class="row align-content">
+    <div class="row">
         <div class="col-md-4 form-check mb-3">
             <input class="form-check-input" type="checkbox" id="retinopatia_diabetica_proliferativa" name="ocular" value="Retinopatia diabética proliferativa">
             <label class="form-check-label label_check" for="retinopatia_diabetica_proliferativa">Retinopatia diabética proliferativa</label>
@@ -101,7 +101,7 @@
 
 <div class="col-md-12">
     <label for="validationCustomLetra" class="form-label">Possui algum tipo de neuropatia diabética? <b>*</b></label>
-    <div class="row align-content">
+    <div class="row">
         <div class="col-md-4 form-check mb-3">
             <input class="form-check-input" type="checkbox" id="nao_neuropatia_clinica" name="neuropatia" value="Não tem neuropatia clínica">
             <label class="form-check-label label_check" for="nao_neuropatia_clinica">Não tem neuropatia clínica</label>

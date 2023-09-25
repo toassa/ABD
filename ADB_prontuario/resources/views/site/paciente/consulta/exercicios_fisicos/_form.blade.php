@@ -2,7 +2,7 @@
 
 <div class="col-md-12">
     <label for="validationCustomSelectDefine" class="form-label">Pratica exercício físico de rotina? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="exercicios_rotineiros" required>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="exercicios_rotineiros" required>
         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->exercicios_rotineiros) && $dados->exercicios_rotineiros == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->exercicios_rotineiros) && $dados->exercicios_rotineiros == 0 ? 'selected' : '' }}>Não</option>

@@ -22,7 +22,6 @@ class PesExameController extends Controller
         }else{
             return redirect()->route('pes_exame.editar', compact('num_registro', 'num_USP'));
         }
-        //aqui use Illuminate\Support\Facades\Auth;
     }
 
     public function index($num_registro)

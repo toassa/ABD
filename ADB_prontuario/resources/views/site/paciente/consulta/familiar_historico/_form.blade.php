@@ -51,7 +51,7 @@
             <label for="validationCustomSelectDefine2" class="form-label">Algum desses parentes possui Diabetes Mellitus Tipo 1 (DM1)? 
                 <b>*</b> 
             </label>
-            <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" name="possui_dm1" required>
+            <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="possui_dm1" required>
                 <option selected disabled value="">Clique para escolher...</option>
                 <option value="1" {{ isset($dados->possui_dm1) && $dados->possui_dm1 == 1 ? 'selected' : '' }}>Sim</option>
                 <option value="0" {{ isset($dados->possui_dm1) && $dados->possui_dm1 == 0 ? 'selected' : '' }}>Não</option>

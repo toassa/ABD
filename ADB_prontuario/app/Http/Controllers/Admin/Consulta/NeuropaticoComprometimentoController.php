@@ -22,7 +22,6 @@ class NeuropaticoComprometimentoController extends Controller
         }else{
             return redirect()->route('neuropatico_comprometimento.editar', compact('num_registro', 'num_USP'));
         }
-        //aqui use Illuminate\Support\Facades\Auth;
     }
 
     public function index($num_registro)

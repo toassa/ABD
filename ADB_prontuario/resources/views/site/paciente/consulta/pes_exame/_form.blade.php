@@ -2,7 +2,7 @@
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-6">
         <label for="validationCustomSelectDefine" class="form-label">Casos de Úlceras? <b>*</b> </label>
-        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="casos_ulceras" required>
+        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="casos_ulceras" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>

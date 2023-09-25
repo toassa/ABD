@@ -4,7 +4,7 @@
 {{-- MUDAR FORMA --}}
 <div class="col-md-6">
     <label for="validationCustomSelectDefine" class="form-label">Faz auto-monitorização da glicemia em casa no momento? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="realiza_automonitorizacao" required>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="realiza_automonitorizacao" required>
         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->realiza_automonitorizacao) && $dados->realiza_automonitorizacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->realiza_automonitorizacao) && $dados->realiza_automonitorizacao == 0 ? 'selected' : '' }}>Não</option>

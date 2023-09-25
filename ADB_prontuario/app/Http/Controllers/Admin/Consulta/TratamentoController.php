@@ -22,7 +22,6 @@ class TratamentoController extends Controller
         }else{
             return redirect()->route('tratamento.editar', compact('num_registro', 'num_USP'));
         }
-        //aqui use Illuminate\Support\Facades\Auth;
     }
 
     public function index($num_registro)
@@ -33,7 +32,6 @@ class TratamentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-        // dd($num_USP);
         Tratamento::create([
             'num_registro'=>$num_registro,
             'medicamento_diabetes'=>$request['medicamento_diabetes'],

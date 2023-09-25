@@ -22,7 +22,6 @@ class CardiovascularDadosController extends Controller
         }else{
             return redirect()->route('cardiovascular_dados.editar', compact('num_registro', 'num_USP'));
         }
-        //aqui use Illuminate\Support\Facades\Auth;
     }
 
     public function index($num_registro)

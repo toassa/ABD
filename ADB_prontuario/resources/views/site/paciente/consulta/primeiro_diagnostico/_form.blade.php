@@ -33,7 +33,7 @@
 
     <div class="col-md-6">
         <label for="validationCustomSelectDefine" class="form-label">O paciente acredita que fatores emocionais\psicológicos contribuiram para início da doença? <b>*</b> </label>
-        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" name="fator_emocional" required >
+        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="fator_emocional" required >
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->fator_emocional) && $dados->fator_emocional == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->fator_emocional) && $dados->fator_emocional == 0 ? 'selected' : '' }}>Não</option>
@@ -46,7 +46,7 @@
     {{-- MUDAR FORMA --}}
     <div class="col-md-6">
         <label for="validationCustomSelectDefine2" class="form-label">O paciente apresentou alguma infecção nos últimos seis meses? <b>*</b> </label>
-        <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" name="infeccoes_seis_meses" required >
+        <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="infeccoes_seis_meses" required >
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->infeccoes_seis_meses) && $dados->infeccoes_seis_meses == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->infeccoes_seis_meses) && $dados->infeccoes_seis_meses == 0 ? 'selected' : '' }}>Não</option>

@@ -22,7 +22,6 @@ class ExamesFisicosController extends Controller
         }else{
             return redirect()->route('exames_fisicos.editar', compact('num_registro', 'num_USP'));
         }
-        //aqui use Illuminate\Support\Facades\Auth;
     }
 
     public function index($num_registro)

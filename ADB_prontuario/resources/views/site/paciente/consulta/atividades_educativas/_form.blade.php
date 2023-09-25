@@ -121,7 +121,7 @@
 
     <div class="col-md-6">
         <label for="validationCustomSelectDefine2" class="form-label">Qual o valor da última HbA1c do paciente? <b>*</b></label>
-        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados2()" name="conhece_valor_ultima_hba1c" required>
+        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="conhece_valor_ultima_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->conhece_valor_ultima_hba1c) && $dados->conhece_valor_ultima_hba1c == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->conhece_valor_ultima_hba1c) && $dados->conhece_valor_ultima_hba1c == 0 ? 'selected' : '' }}>Não</option>
