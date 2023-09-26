@@ -13,9 +13,9 @@ class ComorbidadesSeeder extends Seeder
     {
         Comorbidade::create([
             'num_registro'=>'11111',
-            'ocular'=>'Catarata',
-            'neuropatia'=>'Mononeuropatia',
-            'doenca_cronica'=>'HAS',
+            'ocular' => json_encode(['Glaucoma', 'Catarata']),
+            'neuropatia'=>json_encode(['Mononeuropatia', 'Polineuropatia sensitivo-motora simétrico distal']),
+            'doenca_cronica'=>json_encode(['HAS', 'Dislipidemia']),
             'num_USP' => '11111',
         ]);
     }
