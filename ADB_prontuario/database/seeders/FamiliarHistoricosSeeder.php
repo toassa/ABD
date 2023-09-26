@@ -13,18 +13,18 @@ class FamiliarHistoricosSeeder extends Seeder
     {
         FamiliarHistorico::create([
             'num_registro' => '11111',
-            'dm' => 'Pai',
+            'dm' =>json_encode(['Pai', 'Mãe']),
             'possui_dm1' => false,
             'dm1' => null,
-            'obesidade' => 'Mãe',
-            'vitiligo' => 'Irmão(a)(s)',
-            'doenca_tireoideana' => 'Não há histórico familiar',
-            'displidemia' => 'Não sabe',
-            'alopecia' => 'Avós ou Tios ou Primos',
-            'artrite_reumatoide' => 'Filho(a)(s)',
-            'doenca_coronariana' => 'Não sabe',
-            'has' => 'Não há histórico familiar',
-            'doenca_celiaca' => 'Pai',
+            'obesidade' => json_encode(['Pai', 'Mãe']),
+            'vitiligo' => json_encode(['Pai', 'Mãe']),
+            'doenca_tireoideana' => json_encode(['Pai', 'Mãe']),
+            'displidemia' => json_encode(['Pai', 'Mãe']),
+            'alopecia' => json_encode(['Pai', 'Mãe']),
+            'artrite_reumatoide' => json_encode(['Pai', 'Mãe']),
+            'doenca_coronariana' => json_encode(['Pai', 'Mãe']),
+            'has' => json_encode(['Pai', 'Mãe']),
+            'doenca_celiaca' => json_encode(['Pai', 'Mãe']),
             'num_USP' => '11111',
         ]);
     }

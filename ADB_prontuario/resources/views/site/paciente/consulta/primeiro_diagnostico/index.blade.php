@@ -22,6 +22,28 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+
+        <script>
+            const ano = document.getElementById('validationCustomano');//number
+            const idade = document.getElementById('validationCustomidade')//number
+            const qual_fator_emocional = document.getElementById('validationCustomqual_fator_emocional')//text que não deve aceitar numeros
+            const quais_infeccoes =document.getElementById('validationCustomquais_infeccoes');//text que não deve aceitar numeros
+            const periodo_sintomas_diagnostico =document.getElementById('validationCustomperiodo_sintomas_diagnostico');//number
+
+            ano.addEventListener('input', function(){
+                let value = ano.value;
+                value = value.replace(/(\d{4})\d+?$/, '$1');//mudar o max lenght do campo
+                ano.value=value;
+            });
+
+            idade.addEventListener('input', function(){
+                let value = idade.value;
+                value = value.replace(/(\d{3})\d+?$/, '$1');//mudar o max lenght do campo
+                idade.value=value;
+            });
+
+        </script>
+        
         <div class="align-content">
             <button class="prev-btn btn btn-secondary">
                 <span class="material-symbols-outlined">

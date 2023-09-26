@@ -12,8 +12,8 @@
 </div>
 
 <div class="col-md-4 input-translate-less" id="input_show">
-    <label for="validationCustomNum" class="form-label">Qual a idade que entrou na menopausa? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomNum" value="{{ isset($dados->idade_menopausa) ? $dados->idade_menopausa : '' }}" name="idade_menopausa" placeholder="Insira a idade na menopausa" required>
+    <label for="validationCustomidade_menopausa" class="form-label">Qual a idade que entrou na menopausa? <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomidade_menopausa" value="{{ isset($dados->idade_menopausa) ? $dados->idade_menopausa : '' }}" name="idade_menopausa" placeholder="Insira a idade na menopausa" required>
     <div class="invalid-feedback">
         Insira a idade na menopausa
     </div>
@@ -45,8 +45,8 @@
 </div>
 
 <div class="col-md-4 input-translate-less" id="input_show2">
-    <label for="validationCustomNum" class="form-label">Qual foi a idade na primeira menstruação <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomNum" value="{{ isset($dados->idade_menstruacao) ? $dados->idade_menstruacao : '' }}" name="idade_menstruacao" placeholder="Insira a idade na menstruação" required>
+    <label for="validationCustomidade_menstruacao" class="form-label">Qual foi a idade na primeira menstruação <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomidade_menstruacao" value="{{ isset($dados->idade_menstruacao) ? $dados->idade_menstruacao : '' }}" name="idade_menstruacao" placeholder="Insira a idade na menstruação" required>
     <div class="invalid-feedback">
         Insira a idade na menstruação
     </div>
@@ -69,7 +69,7 @@
             </div>
         </dialog> 
     </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->historico_obstetrico) ? $dados->historico_obstetrico : '' }}" name="historico_obstetrico" placeholder="Insira o histórico obstétrico" required>
+    <input type="text" class="form-control" id="validationCustomhistorico_obstetrico" value="{{ isset($dados->historico_obstetrico) ? $dados->historico_obstetrico : '' }}" name="historico_obstetrico" placeholder="Insira o histórico obstétrico" required>
     <div class="invalid-feedback">
         Insira o histórico obstétrico
     </div>
@@ -89,8 +89,8 @@
 </div>
 
 <div class="col-md-6" id="input_show_double">
-    <label for="validationCustomLetra" class="form-label">Quais métodos contraceptivos são utilizados? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->metodos_contraceptivos) ? $dados->metodos_contraceptivos : '' }}" name="metodos_contraceptivos" placeholder="Insira os métodos contraceptivos" required>
+    <label for="validationCustommetodos_contraceptivos" class="form-label">Quais métodos contraceptivos são utilizados? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustommetodos_contraceptivos" value="{{ isset($dados->metodos_contraceptivos) ? $dados->metodos_contraceptivos : '' }}" name="metodos_contraceptivos" placeholder="Insira os métodos contraceptivos" required>
     <div class="invalid-feedback">
         Insira os métodos contraceptivos utilizados
     </div>
@@ -121,8 +121,8 @@
 </div>
 
 <div class="col-md-6">
-    <label for="validationCustomLetra" class="form-label">Qual a frequência que passa por consulta ginecológica? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->frequencia_ginecologica) ? $dados->frequencia_ginecologica : '' }}" name="frequencia_ginecologica" placeholder="Insira a frequência ginecológica" required>
+    <label for="validationCustomfrequencia_ginecologica" class="form-label">Qual a frequência que passa por consulta ginecológica? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomfrequencia_ginecologica" value="{{ isset($dados->frequencia_ginecologica) ? $dados->frequencia_ginecologica : '' }}" name="frequencia_ginecologica" placeholder="Insira a frequência ginecológica" required>
     <div class="invalid-feedback">
         Insira a frequência de consulta ginecológica
     </div>

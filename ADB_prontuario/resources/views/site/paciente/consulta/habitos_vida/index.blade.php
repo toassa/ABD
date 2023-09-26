@@ -19,5 +19,10 @@
             </div>
             <script src="{{asset('js/form-consulta.js')}}"></script>
         </form>
+        <script>
+            const periodo_quantia_etilismo = document.getElementById('validationCustomperiodo_quantia_etilismo');//text que aceita numeros
+            const quantia_tabagismo = document.getElementById('validationCustomquantia_tabagismo');//text que aceita numeros
+            const quais_periodo_drogas = document.getElementById('validationCustomquais_periodo_drogas');//text que aceita numeros
+        </script>
     @endslot
 @endcomponent

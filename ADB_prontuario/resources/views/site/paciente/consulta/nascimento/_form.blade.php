@@ -63,8 +63,8 @@
 </div>
 
 <div class="col-md-6" id="input_show">
-    <label for="validationCustomLetra" class="form-label">Por quanto tempo teve amamentação exclusiva com leite materno? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->tempo_amamentacao_exclusiva) ? $dados->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
+    <label for="validationCustomtempo_amamentacao_exclusiva" class="form-label">Por quanto tempo teve amamentação exclusiva com leite materno? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomtempo_amamentacao_exclusiva" value="{{ isset($dados->tempo_amamentacao_exclusiva) ? $dados->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
     <div class="invalid-feedback">
         Insira o tempo de amamentação exclusiva
     </div>

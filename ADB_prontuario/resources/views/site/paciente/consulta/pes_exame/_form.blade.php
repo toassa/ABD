@@ -539,8 +539,8 @@
     
     
     <div class="col-md-4">
-        <label for="validationCustomObservacoes" class="form-label">Observações <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomObservacoes" value="{{ isset($dados->observacoes) ? $dados->observacoes : '' }}" name="observacoes" required>
+        <label for="validationCustomObservacoes1" class="form-label">Observações <b>*</b> </label>
+        <input type="text" class="form-control" id="validationCustomObservacoes1" value="{{ isset($dados->observacoes) ? $dados->observacoes : '' }}" name="observacoes" required>
         <div class="invalid-feedback">
             Insira observações
         </div>

@@ -18,5 +18,8 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const observacoes_neuropatico = document.getElementById('validationCustomobservacoes');
+        </script>
     @endslot
 @endcomponent

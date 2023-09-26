@@ -18,5 +18,8 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const amamentacao_exclusiva = document.getElementById('validationCustomtempo_amamentacao_exclusiva');//text que aceita numeros
+        </script>
     @endslot
 @endcomponent

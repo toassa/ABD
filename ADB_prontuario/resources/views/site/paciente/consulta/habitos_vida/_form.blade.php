@@ -12,8 +12,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Período e Quantidade de bebida que ingeria <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->periodo_quantia_etilismo) ? $dados->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
+    <label for="validationCustomperiodo_quantia_etilismo" class="form-label">Período e Quantidade de bebida que ingeria <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomperiodo_quantia_etilismo" value="{{ isset($dados->periodo_quantia_etilismo) ? $dados->periodo_quantia_etilismo : '' }}" name="periodo_quantia_etilismo" placeholder="Insira o período e a quantidade de etilismo" required>
     <div class="invalid-feedback">
         Insira o período e a quantidade de bebida que ingeria  
     </div>
@@ -47,7 +47,7 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Quantos anos-maço fuma/fumou?
+    <label for="validationCustomquantia_tabagismo" class="form-label">Quantos anos-maço fuma/fumou?
             <b>*</b>         
             <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
                 <span class="material-symbols-outlined show-dialog">
@@ -63,7 +63,7 @@
                 </div>
             </dialog> 
         </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quantia_tabagismo) ? $dados->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
+    <input type="text" class="form-control" id="validationCustomquantia_tabagismo" value="{{ isset($dados->quantia_tabagismo) ? $dados->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
         Insira a quantidade de tabaanos-maço  </div>
 </div>
@@ -83,8 +83,8 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label textinho">Quais Drogas e Período <b>*</b> </label>
-    <input type="text" class="form-control text-center" id="validationCustomLetra" value="{{ isset($dados->quais_periodo_drogas) ? $dados->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required  maxlength="10">
+    <label for="validationCustomquais_periodo_drogas" class="form-label textinho">Quais Drogas e Período <b>*</b> </label>
+    <input type="text" class="form-control text-center" id="validationCustomquais_periodo_drogas" value="{{ isset($dados->quais_periodo_drogas) ? $dados->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required  maxlength="10">
     <div class="invalid-feedback">
         Insira quais drogas e período de uso
     </div>

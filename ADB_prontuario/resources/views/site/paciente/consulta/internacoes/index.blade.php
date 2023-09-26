@@ -18,5 +18,9 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const motivo = document.getElementById('validationCustommotivo');//text que não deve aceitar numeros
+            const quantidade_dias = document.getElementById('validationCustomquantidade_dias');//number
+        </script>
     @endslot
 @endcomponent

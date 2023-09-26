@@ -15,16 +15,16 @@
 </div>
 
 <div class="col-md-6" id="input_show">
-    <label for="validationCustomLetra" class="form-label">Por qual motivo ficou internado(a)? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->motivo) ? $dados->motivo : '' }}" name="motivo" placeholder="Insira o motivo da internação" required>
+    <label for="validationCustommotivo" class="form-label">Por qual motivo ficou internado(a)? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustommotivo" value="{{ isset($dados->motivo) ? $dados->motivo : '' }}" name="motivo" placeholder="Insira o motivo da internação" required>
     <div class="invalid-feedback">
         Insira o motivo da internação
     </div>
 </div>
 
 <div class="col-md-6" id="input_show_multiple">
-    <label for="validationCustomNum" class="form-label">Quantos dias ficou internado(a)? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomNum" value="{{ isset($dados->quantidade_dias) ? $dados->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado" required>
+    <label for="validationCustomquantidade_dias" class="form-label">Quantos dias ficou internado(a)? <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomquantidade_dias" value="{{ isset($dados->quantidade_dias) ? $dados->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado" required>
     <div class="invalid-feedback">
         Insira a quantidade de dias internado
     </div>

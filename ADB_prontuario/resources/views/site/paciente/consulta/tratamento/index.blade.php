@@ -18,5 +18,16 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+
+        <script>
+            const medicamentos_diabetes = document.getElementById('validationCustommedicamento_diabetes');//text que não deve aceitar numeros
+            const nome_insulina = document.getElementById('validationCustomnome_insulina');//text que não aceita numero
+            const frequencia_insulina = document.getElementById('validationCustomfrequencia_insulina');//text que aceita numeros
+            const dose_insulina = document.getElementById('validationCustomdose_insulina');//text que aceita numeros
+            const origem_insulina = document.getElementById('validationCustomorigem_insulinas');//text que não deve aceitar numeros
+            const quantia_reuso_seringas = document.getElementById('validationCustomquantia_reuso_seringas');//number
+        </script>
+
+        
     @endslot
 @endcomponent

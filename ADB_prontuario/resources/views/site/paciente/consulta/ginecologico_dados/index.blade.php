@@ -18,5 +18,30 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const idade_menopausa = document.getElementById('validationCustomidade_menopausa');//number 
+            const idade_menstruacao = document.getElementById('validationCustomidade_menstruacao');//number 
+            const historico_obstetrico = document.getElementById('validationCustomhistorico_obstetrico');//text que aceita numeros
+            const metodos_contraceptivos = document.getElementById('validationCustommetodos_contraceptivos');//text que não deve aceitar numeros
+            const frequencia_ginecologica = document.getElementById('validationCustomfrequencia_ginecologica');//text que aceita numeros
+
+            idade_menopausa.addEventListener('input', function(){
+                let value = idade_menopausa.value;
+                value = value.replace(/(\d{3})\d+?$/, '$1');
+                idade_menopausa.value=value;
+            });
+
+            idade_menstruacao.addEventListener('input', function(){
+                let value = idade_menstruacao.value;
+                value = value.replace(/(\d{3})\d+?$/, '$1');
+                idade_menstruacao.value=value;
+            });
+
+            metodos_contraceptivos.addEventListener('input', function() {
+                let value = metodos_contraceptivos.value;
+                value = value.replace(/[0-9]/g, ''); // Remove todos os números
+                metodos_contraceptivos.value = value;
+            });
+        </script>
     @endslot
 @endcomponent

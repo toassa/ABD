@@ -18,14 +18,14 @@ return new class extends Migration
             $table->boolean('realiza');
             $table->enum('tipo_dieta', ['Restringe apenas açúcar e doce','Dieta de calorias','Contagem de carboidratos','Índice glicêmico','Outros'])->nullable();
             $table->integer('segue_dieta')->nullable();
-            $table->string('dificuldade_dieta')->nullable();
-            $table->string('orientador')->nullable();
+            $table->json('dificuldade_dieta')->nullable();
+            $table->json('orientador')->nullable();
 
             $table->boolean('consulta_nutricionista');
             $table->integer('frequencia_nutricionista')->nullable();
             
             $table->boolean('consome_dieteticos');
-            $table->string('produtos_dieteticos')->nullable();
+            $table->json('produtos_dieteticos')->nullable();
 
             $table->string('num_USP');
 

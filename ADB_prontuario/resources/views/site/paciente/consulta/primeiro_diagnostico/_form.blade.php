@@ -1,15 +1,15 @@
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-3">
-        <label for="validationCustomNum" class="form-label">Ano ao diagnóstico <b>*</b> </label>
-        <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->ano) ? $dados->ano : '' }}" name="ano" placeholder="Ano que foi diagnosticado com diabetes" required>
+        <label for="validationCustomano" class="form-label">Ano ao diagnóstico <b>*</b> </label>
+        <input type="number" class="form-control" id="validationCustomano" value="{{ isset($dados->ano) ? $dados->ano : '' }}" name="ano" placeholder="Ano que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
             Insira o ano do diagnóstico
         </div>
     </div>
 
     <div class="col-md-3">
-        <label for="validationCustomNum" class="form-label">Idade ao diagnóstico <b>*</b> </label>
-        <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->idade_diagnostico) ? $dados->idade_diagnostico : '' }}" name="idade_diagnostico" placeholder="Idade que foi diagnosticado com diabetes" required>
+        <label for="validationCustomidade" class="form-label">Idade ao diagnóstico <b>*</b> </label>
+        <input type="number" class="form-control" id="validationCustomidade" value="{{ isset($dados->idade_diagnostico) ? $dados->idade_diagnostico : '' }}" name="idade_diagnostico" placeholder="Idade que foi diagnosticado com diabetes" required>
         <div class="invalid-feedback">
             Insira a idade_diagnostico ao diagnóstico
         </div>
@@ -58,8 +58,8 @@
  
        {{-- MUDAR INPUT SHOW --}}
     <div class="col-md-6 input-translate" id="input_show">
-        <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional">
+        <label for="validationCustomqual_fator_emocional" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
+        <input type="text" class="form-control" id="validationCustomqual_fator_emocional" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional">
         <div class="invalid-feedback">
             Insira qual foi o fator emocional 
         </div>
@@ -67,16 +67,16 @@
 
 
     <div class="col-md-6 input-translate" id="input_show2">
-        <label for="validationCustomLetra" class="form-label">Quais Infecções? <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quais_infeccoes) ? $dados->quais_infeccoes : '' }}" name="quais_infeccoes">
+        <label for="validationCustomquais_infeccoes" class="form-label">Quais Infecções? <b>*</b> </label>
+        <input type="text" class="form-control" id="validationCustomquais_infeccoes" value="{{ isset($dados->quais_infeccoes) ? $dados->quais_infeccoes : '' }}" name="quais_infeccoes">
         <div class="invalid-feedback">
             Insira quais infecções teve 
         </div>
     </div>
 
     <div class="col-md-6">
-        <label for="validationCustomNum" class="form-label">Quantos meses decorridos entre o início dos sintomas e o diagnóstico? <b>*</b> </label>
-        <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->periodo_sintomas_diagnostico) ? $dados->periodo_sintomas_diagnostico : '' }}" name="periodo_sintomas_diagnostico" placeholder="Digite o período em meses" required>
+        <label for="validationCustomperiodo_sintomas_diagnostico" class="form-label">Quantos meses decorridos entre o início dos sintomas e o diagnóstico? <b>*</b> </label>
+        <input type="number" class="form-control" id="validationCustomperiodo_sintomas_diagnostico" value="{{ isset($dados->periodo_sintomas_diagnostico) ? $dados->periodo_sintomas_diagnostico : '' }}" name="periodo_sintomas_diagnostico" placeholder="Digite o período em meses" required>
         <div class="invalid-feedback">
             Insira o período entre sintomas e diagnóstico
         </div>

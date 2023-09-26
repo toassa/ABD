@@ -22,6 +22,11 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+
+        <script>
+            const observacoes_pes_exame = document.getElementById('validationCustomObservacoes1')
+        </script>
+
         <div class="align-content">
             <button class="prev-btn btn btn-secondary">
                 <span class="material-symbols-outlined">

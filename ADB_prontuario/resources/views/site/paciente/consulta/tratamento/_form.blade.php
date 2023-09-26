@@ -1,6 +1,6 @@
 <div class="col-md-6" style="margin: 0 auto;">
-    <label for="validationCustomLetra" class="form-label">Quais medicamentos para diabetes são utilizados, posologia e onde consegue cada um? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->medicamento_diabetes) ? $dados->medicamento_diabetes : '' }}" name="medicamento_diabetes" required>
+    <label for="validationCustommedicamento_diabetes" class="form-label">Quais medicamentos para diabetes são utilizados, posologia e onde consegue cada um? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustommedicamento_diabetes" value="{{ isset($dados->medicamento_diabetes) ? $dados->medicamento_diabetes : '' }}" name="medicamento_diabetes" required>
     <div class="invalid-feedback">
         Quais medicamentos para diabetes são utilizados, posologia e onde consegue cada um?
     </div>
@@ -73,32 +73,32 @@
 <!-- MUDAR FORM -->
 
 <div class="col-md-6" id="input_show_multiple">
-    <label for="validationCustomLetra" class="form-label">Qual o nome das insulinas utilizadas? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->nome_insulina) ? $dados->nome_insulina : '' }}" name="nome_insulina" required>
+    <label for="validationCustomnome_insulina" class="form-label">Qual o nome das insulinas utilizadas? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomnome_insulina" value="{{ isset($dados->nome_insulina) ? $dados->nome_insulina : '' }}" name="nome_insulina" required>
     <div class="invalid-feedback">
         Insira o nome da insulina 
     </div>
 </div>
 
 <div class="col-md-6" id="input_show_multiple2">
-    <label for="validationCustomLetra" class="form-label">Qual a frequência das insulinas utilizadas? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->frequencia_insulina) ? $dados->frequencia_insulina : '' }}" name="frequencia_insulina" required>
+    <label for="validationCustomfrequencia_insulina" class="form-label">Qual a frequência das insulinas utilizadas? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomfrequencia_insulina" value="{{ isset($dados->frequencia_insulina) ? $dados->frequencia_insulina : '' }}" name="frequencia_insulina" required>
     <div class="invalid-feedback">
         Insira a frequência de insulina 
     </div>
 </div>
 
 <div class="col-md-6" id="input_show_multiple3">
-    <label for="validationCustomLetra" class="form-label">Qual a dose dose das insulinas utilizadas? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->dose_insulina) ? $dados->dose_insulina : '' }}" name="dose_insulina" required>
+    <label for="validationCustomdose_insulina" class="form-label">Qual a dose dose das insulinas utilizadas? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomdose_insulina" value="{{ isset($dados->dose_insulina) ? $dados->dose_insulina : '' }}" name="dose_insulina" required>
     <div class="invalid-feedback">
         Insira a dose de insulina 
     </div>
 </div>
 
 <div class="col-md-6" id="input_show_multiple4">
-    <label for="validationCustomLetra" class="form-label">Onde consegue cada tipo de insulina? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->origem_insulinas) ? $dados->origem_insulinas : '' }}" name="origem_insulinas" required>
+    <label for="validationCustomorigem_insulinas" class="form-label">Onde consegue cada tipo de insulina? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomorigem_insulinas" value="{{ isset($dados->origem_insulinas) ? $dados->origem_insulinas : '' }}" name="origem_insulinas" required>
     <div class="invalid-feedback">
         Insira a origem das insulinas 
     </div>
@@ -162,8 +162,8 @@
 </div>
 
 <div class="col-md-6" id="input_show2">
-    <label for="validationCustomNum" class="form-label">Quantidade de Reuso de Seringas <b>*</b> </label>
-    <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->quantia_reuso_seringas) ? $dados->quantia_reuso_seringas : '' }}" name="quantia_reuso_seringas" required>
+    <label for="validationCustomquantia_reuso_seringas" class="form-label">Quantidade de Reuso de Seringas <b>*</b> </label>
+    <input type="number" class="form-control" id="validationCustomquantia_reuso_seringas" value="{{ isset($dados->quantia_reuso_seringas) ? $dados->quantia_reuso_seringas : '' }}" name="quantia_reuso_seringas" required>
     <div class="invalid-feedback">
         Insira a quantidade de reuso de seringas 
     </div>

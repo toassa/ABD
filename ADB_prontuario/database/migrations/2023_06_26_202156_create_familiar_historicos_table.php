@@ -12,18 +12,18 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('dm');
+            $table->json('dm');
             $table->boolean('possui_dm1');
             $table->string('dm1')->nullable();
-            $table->string('obesidade');
-            $table->string('vitiligo');
-            $table->string('doenca_tireoideana');
-            $table->string('displidemia');
-            $table->string('alopecia');
-            $table->string('artrite_reumatoide');
-            $table->string('doenca_coronariana');
-            $table->string('has');
-            $table->string('doenca_celiaca');
+            $table->json('obesidade');
+            $table->json('vitiligo');
+            $table->json('doenca_tireoideana');
+            $table->json('displidemia');
+            $table->json('alopecia');
+            $table->json('artrite_reumatoide');
+            $table->json('doenca_coronariana');
+            $table->json('has');
+            $table->json('doenca_celiaca');
             $table->string('num_USP');
 
             $table->timestamps();
