@@ -22,6 +22,16 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const hba1c = document.getElementById('validationCustomhba1c');//number
+             
+            hba1c.addEventListener('input', function() {
+                let value = hba1c.value;
+                value = value.replace(/\D/g, ''); // Remove todos os caracteres que não sejam dígitos
+                value = value.replace(/(\d{50})\d+?$/, '$1');
+                hba1c.value = value;
+            });
+        </script>
         <div class="align-content">
             <button class="prev-btn btn btn-secondary">
                 <span class="material-symbols-outlined">

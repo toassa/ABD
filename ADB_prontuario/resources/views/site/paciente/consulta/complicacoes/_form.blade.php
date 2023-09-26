@@ -23,8 +23,8 @@
 </div>
 
 <div class="col-md-6" id="input_show_double">
-    <label for="validationCustomLetra" class="form-label">Descreva as complicações <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quais_complicacoes) ? $dados->quais_complicacoes : '' }}" name="quais_complicacoes" placeholder="Insira quais complicações">
+    <label for="validationCustomquaiscomplicacoes" class="form-label">Descreva as complicações <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomquaiscomplicacoes" value="{{ isset($dados->quais_complicacoes) ? $dados->quais_complicacoes : '' }}" name="quais_complicacoes" placeholder="Insira quais complicações">
     <div class="invalid-feedback">
         Insira quais complicações 
     </div>
@@ -44,8 +44,8 @@
 </div>
 
 <div class="col-md-6" id="i4nput_show">
-    <label for="validationCustomLetra" class="form-label">Descreva as complicações que desencadearam a internação <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->causa_internacao) ? $dados->causa_internacao : '' }}" name="causa_internacao" placeholder="Insira a causa da internação" required>
+    <label for="validationCustomcausainternacao" class="form-label">Descreva as complicações que desencadearam a internação <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomcausainternacao" value="{{ isset($dados->causa_internacao) ? $dados->causa_internacao : '' }}" name="causa_internacao" placeholder="Insira a causa da internação" required>
     <div class="invalid-feedback">
         Insira a causa da internação 
     </div>
@@ -128,16 +128,16 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomNum" class="form-label">Episódios no Último Mês <b>*</b> </label>
-    <input type="number" class="form-control" id="validationCustomNum" value="{{ isset($dados->episodios_ultimo_mes) ? $dados->episodios_ultimo_mes : '' }}" name="episodios_ultimo_mes" placeholder="Insira a quantidade de episódios no último mês" required>
+    <label for="validationCustomepisodiosultimomes" class="form-label">Episódios no Último Mês <b>*</b> </label>
+    <input type="number" class="form-control" id="validationCustomepisodiosultimomes" value="{{ isset($dados->episodios_ultimo_mes) ? $dados->episodios_ultimo_mes : '' }}" name="episodios_ultimo_mes" placeholder="Insira a quantidade de episódios no último mês" required>
     <div class="invalid-feedback">
         Insira a quantidade de episódios no último mês
     </div>
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomLetra" class="form-label">Alimento para Tratar Hipoglicemia <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->alimento_tratar_hipoglicemia) ? $dados->alimento_tratar_hipoglicemia : '' }}" name="alimento_tratar_hipoglicemia" placeholder="Insira o alimento utilizado para tratar hipoglicemia" required>
+    <label for="validationCustomalimento_tratar_hipoglicemia" class="form-label">Alimento para Tratar Hipoglicemia <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomalimento_tratar_hipoglicemia" value="{{ isset($dados->alimento_tratar_hipoglicemia) ? $dados->alimento_tratar_hipoglicemia : '' }}" name="alimento_tratar_hipoglicemia" placeholder="Insira o alimento utilizado para tratar hipoglicemia" required>
     <div class="invalid-feedback">
         Insira o alimento utilizado para tratar hipoglicemia
     </div>

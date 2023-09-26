@@ -17,7 +17,7 @@ return new class extends Migration
 
             $table->double('peso');
             $table->double('altura');
-            $table->integer('pressao_arterial');
+            $table->string('pressao_arterial');
             $table->string('pulso_arterial');
             $table->integer('frequencia_cardiaca');
             $table->string('aspecto_geral');

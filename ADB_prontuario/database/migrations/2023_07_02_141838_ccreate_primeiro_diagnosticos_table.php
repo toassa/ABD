@@ -14,7 +14,7 @@ return new class extends Migration
 
             $table->integer('ano');
             $table->integer('idade_diagnostico');
-            $table->string('sintomas');
+            $table->json('sintomas');
             $table->enum('como_foi_feito', ['Internação com cetoacidose diabética', 'Internação sem cetoacidose diabética', 'Glicemia de jejum', 'Curva glicêmica', 'Glicemia ao acaso', 'Outros']);
             $table->boolean('infeccoes_seis_meses');
             $table->string('quais_infeccoes')->nullable();

@@ -15,7 +15,7 @@ class PrimeiroDiagnosticosSeeder extends Seeder
             'num_registro'=>'11111',
             'ano'=>2000,
             'idade_diagnostico'=>30,
-            'sintomas'=>'Tosse',
+            'sintomas'=>json_encode(['Receber fitas de glicosímetro ou insulina', 'Polidipsia']),
             'como_foi_feito'=>'Internação sem cetoacidose diabética',
             'infeccoes_seis_meses'=>false,
             'quais_infeccoes'=>null,

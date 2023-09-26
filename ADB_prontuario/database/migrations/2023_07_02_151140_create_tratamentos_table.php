@@ -14,16 +14,16 @@ return new class extends Migration
 
             $table->string('medicamento_diabetes')->nullable();
             $table->boolean('uso_insulina');
-            $table->string('tipos_insulinas')->nullable();
+            $table->json('tipos_insulinas')->nullable();
             $table->string('nome_insulina')->nullable();
             $table->string('frequencia_insulina')->nullable();
             $table->string('dose_insulina')->nullable();
             $table->string('origem_insulinas')->nullable();
             $table->enum('utensilho', ['Caneta', 'Seringa'])->nullable();
-            $table->string('origem_utensilho')->nullable();
+            $table->json('origem_utensilho')->nullable();
             $table->boolean('reuso_seringas_insulina')->nullable();
             $table->integer('quantia_reuso_seringas')->nullable();
-            $table->string('aderencia')->nullable();
+            $table->json('aderencia')->nullable();
             $table->string('num_USP');
 
             $table->timestamps();

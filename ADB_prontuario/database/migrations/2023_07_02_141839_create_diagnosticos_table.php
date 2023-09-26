@@ -12,7 +12,7 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('sintomas');
+            $table->json('sintomas');
             $table->enum('libido_alterado', ['Sim', 'Não', 'Não sabe ou não quis responder', 'Não se aplica']);
             $table->string('num_USP');
 

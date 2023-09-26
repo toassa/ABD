@@ -12,9 +12,9 @@ return new class extends Migration
             $table->string('num_registro')->primary();
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->string('saude_cardiaca');
-            $table->string('dor_peito');
-            $table->string('exames_doenca_coronariana');
+            $table->json('saude_cardiaca');
+            $table->json('dor_peito');
+            $table->json('exames_doenca_coronariana');
             $table->string('num_USP');
 
             $table->timestamps();

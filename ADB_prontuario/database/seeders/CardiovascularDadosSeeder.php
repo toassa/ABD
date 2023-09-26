@@ -13,9 +13,9 @@ class CardiovascularDadosSeeder extends Seeder
     {
         CardiovascularDado::create([
             'num_registro'=>'11111',
-            'saude_cardiaca'=>'Arritimia cardíaca',
-            'dor_peito'=>'Sente dor no peito',
-            'exames_doenca_coronariana'=>'Nunca fez',
+            'saude_cardiaca'=>json_encode(['Doença coronariana', 'Angina']),
+            'dor_peito'=>json_encode(['Não sente dor no peito', 'Piora com esforço']),
+            'exames_doenca_coronariana'=>json_encode(['ECG de repouso', 'Teste ergométrico']),
             'num_USP' => '11111',
         ]);
     }

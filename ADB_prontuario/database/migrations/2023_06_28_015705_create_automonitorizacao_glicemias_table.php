@@ -14,7 +14,7 @@ return new class extends Migration
 
             $table->boolean('realiza_automonitorizacao');
             $table->string('frequencia_medicoes')->nullable();
-            $table->string('origem_fitas')->nullable();
+            $table->json('origem_fitas')->nullable();
             $table->enum('contagem_carboidratos', ['Sim', 'Não', 'Não sabe'])->nullable();
             $table->string('num_USP');
 

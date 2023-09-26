@@ -62,8 +62,8 @@
         </div>
         <br>
         <div class="col-md-12" id="input_show2">
-            <label for="validationCustomLetra" class="form-label">Descreva a DM Tipo 1 (se sim) <b>*</b> </label>
-            <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->dm1) ? $dados->dm1 : '' }}" name="dm1" placeholder="Insira informações sobre DM Tipo 1" required>
+            <label for="validationCustomdm1" class="form-label">Descreva a DM Tipo 1 (se sim) <b>*</b> </label>
+            <input type="text" class="form-control" id="validationCustomdm1" value="{{ isset($dados->dm1) ? $dados->dm1 : '' }}" name="dm1" placeholder="Insira informações sobre DM Tipo 1" required>
             <div class="invalid-feedback">
                 Insira informações sobre DM Tipo 1
             </div>

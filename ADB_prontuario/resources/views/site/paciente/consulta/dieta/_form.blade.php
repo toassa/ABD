@@ -77,15 +77,15 @@
 </div>
 
 <div class="col-md-6 input-translate-less" id="input_show_double">
-    <label for="validationCustomNum" class="form-label">Quantas vezes foi à consulta com o nutricionista no último ano? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomFreqConsulta" value="{{ isset($dados->frequencia_nutricionista) ? $dados->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
+    <label for="validationCustomfrequencia_nutricionista" class="form-label">Quantas vezes foi à consulta com o nutricionista no último ano? <b>*</b> </label>
+    <input type="number" class="text-center form-control" id="validationCustomfrequencia_nutricionista" value="{{ isset($dados->frequencia_nutricionista) ? $dados->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
     <div class="invalid-feedback">
         Insira a frequência da consulta com nutricionista
     </div>
 </div>
 
 <div class="col-md-6" id="input_show_multiple3">
-    <label for="validationCustomLetra" class="form-label">De 0 a 10, quando você segue a dieta? <b>*</b> </label>
+    <label for="validationCustomSegueDieta" class="form-label">De 0 a 10, quando você segue a dieta? <b>*</b> </label>
     <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($dados->segue_dieta) ? $dados->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue">
     <div class="invalid-feedback">
         Insira a dieta que segue

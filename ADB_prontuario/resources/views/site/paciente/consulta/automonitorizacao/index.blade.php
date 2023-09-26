@@ -19,5 +19,8 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const frequenciamedicoes = document.getElementById('validationCustomfrequenciamedicoes');//number
+        </script>
     @endslot
 @endcomponent

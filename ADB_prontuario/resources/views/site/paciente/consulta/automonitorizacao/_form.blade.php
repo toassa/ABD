@@ -15,8 +15,8 @@
 </div>
 
 <div class="col-md-6 input-translate" id="input_show">
-    <label for="validationCustomLetra" class="form-label">Quantas medições são feitas diariamente? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->frequencia_medicoes) ? $dados->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
+    <label for="validationCustomfrequenciamedicoes" class="form-label">Quantas medições são feitas diariamente? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomfrequenciamedicoes" value="{{ isset($dados->frequencia_medicoes) ? $dados->frequencia_medicoes : '' }}" name="frequencia_medicoes" placeholder="Digite a frequência de medições" required>
     <div class="invalid-feedback">
         Insira a frequência de medições diárias
     </div>

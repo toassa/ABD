@@ -75,8 +75,8 @@
 
 <div class="row g-3 needs-validation page page2">
     <div class="col-md-5">
-        <label for="validationCustomConheceHbA1c" class="form-label">O paciente sabe o que significa HbA1c? <b>*</b></label>
-        <select class="form-select" id="validationCustomConheceHbA1c" name="conhece_hba1c" required>
+        <label for="validationCustomhba1c" class="form-label">O paciente sabe o que significa HbA1c? <b>*</b></label>
+        <select class="form-select" id="validationCustomhba1c" name="conhece_hba1c" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->conhece_hba1c) && $dados->conhece_hba1c == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->conhece_hba1c) && $dados->conhece_hba1c == 0 ? 'selected' : '' }}>Não</option>

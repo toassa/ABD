@@ -32,7 +32,7 @@ class ComorbidadesController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-
+        // dd($request);
         Comorbidade::create([
             'num_registro'=>$num_registro,
             'ocular'=>$request['ocular'],

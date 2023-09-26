@@ -1,22 +1,22 @@
 <div class="col-md-6">
-    <label for="ValidationCustomLetra" class="form-label">Qual a frequência com que passa por consulta cardiológica? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->cardiologista) ? $dados->cardiologista : '' }}" name="cardiologista" placeholder="Insira informações sobre a frequência com o cardiologista" required>
+    <label for="validationCustomcardiologista" class="form-label">Qual a frequência com que passa por consulta cardiológica? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomcardiologista" value="{{ isset($dados->cardiologista) ? $dados->cardiologista : '' }}" name="cardiologista" placeholder="Insira informações sobre a frequência com o cardiologista" required>
     <div class="invalid-feedback">
         Insira informações sobre a frequência com o cardiologista
     </div>
 </div>
 
 <div class="col-md-6">
-    <label for="validationCustomLetra" class="form-label">Qual a frequência com que passa por consulta oftalmológica? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->oftalmologista) ? $dados->oftalmologista : '' }}" name="oftalmologista" placeholder="Insira informações sobre a frequência com o oftalmologista" required>
+    <label for="validationCustomoftalmologista" class="form-label">Qual a frequência com que passa por consulta oftalmológica? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomoftalmologista" value="{{ isset($dados->oftalmologista) ? $dados->oftalmologista : '' }}" name="oftalmologista" placeholder="Insira informações sobre a frequência com o oftalmologista" required>
     <div class="invalid-feedback">
         Insira informações sobre a frequência com o oftalmologista
     </div>
 </div>
 
 <div class="col-md-6">
-    <label for="validationCustomLetra" class="form-label">Qual a frequência com que passa por consulta urológica? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->urologista) ? $dados->urologista : '' }}" name="urologista" placeholder="Insira informações sobre a frequência com o urologista" required>
+    <label for="validationCustomurologista" class="form-label">Qual a frequência com que passa por consulta urológica? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomurologista" value="{{ isset($dados->urologista) ? $dados->urologista : '' }}" name="urologista" placeholder="Insira informações sobre a frequência com o urologista" required>
     <div class="invalid-feedback">
         Insira informações sobre a frequência com o urologista
     </div>
@@ -35,8 +35,8 @@
 </div>
 
 <div class="col-md-6">
-    <label for="validationCustomLetra" class="form-label">Qual a frequência com que examina dentes e gengiva no dentista? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->dentista) ? $dados->dentista : '' }}" name="dentista" placeholder="Insira informações sobre a frequência com o dentista" required>
+    <label for="validationCustomdentista" class="form-label">Qual a frequência com que examina dentes e gengiva no dentista? <b>*</b> </label>
+    <input type="text" class="form-control" id="validationCustomdentista" value="{{ isset($dados->dentista) ? $dados->dentista : '' }}" name="dentista" placeholder="Insira informações sobre a frequência com o dentista" required>
     <div class="invalid-feedback">
         Insira informações sobre a frequência com o dentista
     </div>

@@ -15,7 +15,7 @@ class ExamesFisicosSeeder extends Seeder
             'num_registro' => '11111',
             'peso' => 70.2,
             'altura' => 170.5,
-            'pressao_arterial' => 120,
+            'pressao_arterial' => '120x8',
             'pulso_arterial' => 'Regular',
             'frequencia_cardiaca' => 75,
             'aspecto_geral' => 'Saudável',

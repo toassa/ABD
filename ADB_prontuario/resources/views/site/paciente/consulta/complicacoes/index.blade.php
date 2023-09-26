@@ -18,6 +18,20 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const quaiscomplicacoes = document.getElementById('validationCustomquaiscomplicacoes');//text que não deve aceitar numeros?
+            const causainternacao = document.getElementById('validationCustomcausainternacao');//text que não deve aceitar numeros?
+            const episodiosultimomes = document.getElementById('validationCustomepisodiosultimomes');//number
+            const alimento_tratar_hipoglicemia = document.getElementById('validationCustomalimento_tratar_hipoglicemia');//text que nao deve aceitar numeros
+
+            alimento_tratar_hipoglicemia.addEventListener('input', function() {
+                let value = alimento_tratar_hipoglicemia.value;
+                value = value.replace(/[0-9]/g, ''); // Remove todos os números
+                alimento_tratar_hipoglicemia.value = value;
+            });
+
+            
+        </script>
     @endslot
     <script src="{{asset('js/dialog-info.js')}}"></script>
 @endcomponent

@@ -22,7 +22,9 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
-
+        <script>
+            const dm1 = document.getElementById('validationCustomdm1');//text que não deve aceitar numeros
+        </script>
         <div class="align-content">
             <button class="prev-btn btn btn-secondary">
                 <span class="material-symbols-outlined">

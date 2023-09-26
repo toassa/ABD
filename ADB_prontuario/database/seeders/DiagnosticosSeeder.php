@@ -13,7 +13,7 @@ class DiagnosticosSeeder extends Seeder
     {
         Diagnostico::create([
             'num_registro'=>'11111',
-            'sintomas'=>'Nenhum',
+            'sintomas'=>json_encode(['Polaciúria', 'Outros']),
             'libido_alterado'=>'Não se aplica',
             'num_USP' => '11111',
         ]);

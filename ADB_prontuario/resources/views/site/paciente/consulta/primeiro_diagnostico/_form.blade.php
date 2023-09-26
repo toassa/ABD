@@ -59,7 +59,7 @@
        {{-- MUDAR INPUT SHOW --}}
     <div class="col-md-6 input-translate" id="input_show">
         <label for="validationCustomLetra" class="form-label">Descreva o(s) fator(es) emocional(is) <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional" required>
+        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->qual_fator_emocional) ? $dados->qual_fator_emocional : '' }}" name="qual_fator_emocional">
         <div class="invalid-feedback">
             Insira qual foi o fator emocional 
         </div>
@@ -68,7 +68,7 @@
 
     <div class="col-md-6 input-translate" id="input_show2">
         <label for="validationCustomLetra" class="form-label">Quais Infecções? <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quais_infeccoes) ? $dados->quais_infeccoes : '' }}" name="quais_infeccoes" required>
+        <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($dados->quais_infeccoes) ? $dados->quais_infeccoes : '' }}" name="quais_infeccoes">
         <div class="invalid-feedback">
             Insira quais infecções teve 
         </div>
@@ -89,63 +89,63 @@
         <label for="validationCustomLetra" class="form-label">Selecione os sintomas ao diagnóstico <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="sintomas" value="receber fitas de glicosimetro ou insulina" required>
+                <input class="form-check-input" type="checkbox" id="validationFormCheck1" name="sintomas" value="Receber fitas de glicosímetro ou insulina" {{ isset($dados->sintomas) && in_array('Receber fitas de glicosímetro ou insulina', json_decode($dados->sintomas)) ? 'checked' : '' }} required>
                 <label class="form-check-label label_check" for="validationFormCheck1">Receber fitas de glicosímetro ou insulina</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox1" name="sintomas" value="Poliúria">
+                <input class="form-check-input" type="checkbox" id="checkbox1" name="sintomas" value="Poliúria" {{ isset($dados->sintomas) && in_array('Poliúria', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox1">Poliúria</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox2" name="sintomas" value="Polidipsia">
+                <input class="form-check-input" type="checkbox" id="checkbox2" name="sintomas" value="Polidipsia" {{ isset($dados->sintomas) && in_array('Polidipsia', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox2">Polidipsia</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox3" name="sintomas" value="Polifagia">
+                <input class="form-check-input" type="checkbox" id="checkbox3" name="sintomas" value="Polifagia" {{ isset($dados->sintomas) && in_array('Polifagia', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox3">Polifagia</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox4" name="sintomas" value="Perda de peso involuntária">
+                <input class="form-check-input" type="checkbox" id="checkbox4" name="sintomas" value="Perda de peso involuntária" {{ isset($dados->sintomas) && in_array('Perda de peso involuntária', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox4">Perda de peso involuntária</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox5" name="sintomas" value="Infecções de repetição">
+                <input class="form-check-input" type="checkbox" id="checkbox5" name="sintomas" value="Infecções de repetição" {{ isset($dados->sintomas) && in_array('Infecções de repetição', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox5">Infecções de repetição</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox6" name="sintomas" value="Enurese noturna/urinar na cama">
+                <input class="form-check-input" type="checkbox" id="checkbox6" name="sintomas" value="Enurese noturna/urinar na cama" {{ isset($dados->sintomas) && in_array('Enurese noturna/urinar na cama', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox6">Enurese noturna/urinar na cama</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox7" name="sintomas" value="Parestesia/formigamento">
+                <input class="form-check-input" type="checkbox" id="checkbox7" name="sintomas" value="Parestesia/formigamento" {{ isset($dados->sintomas) && in_array('Parestesia/formigamento', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox7">Parestesia/formigamento</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox8" name="sintomas" value="Prurido/coceira">
+                <input class="form-check-input" type="checkbox" id="checkbox8" name="sintomas" value="Prurido/coceira" {{ isset($dados->sintomas) && in_array('Prurido/coceira', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox8">Prurido/coceira</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox9" name="sintomas" value="Falta de apetite">
+                <input class="form-check-input" type="checkbox" id="checkbox9" name="sintomas" value="Falta de apetite" {{ isset($dados->sintomas) && in_array('Falta de apetite', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox9">Falta de apetite</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox10" name="sintomas" value="Dificuldade de enxergar/baixa acuidade visual">
+                <input class="form-check-input" type="checkbox" id="checkbox10" name="sintomas" value="Dificuldade de enxergar/baixa acuidade visual" {{ isset($dados->sintomas) && in_array('Dificuldade de enxergar/baixa acuidade visual', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox10">Dificuldade de enxergar/baixa acuidade visual</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox11" name="sintomas" value="Anorexia/falta de apetite">
+                <input class="form-check-input" type="checkbox" id="checkbox11" name="sintomas" value="Anorexia/falta de apetite" {{ isset($dados->sintomas) && in_array('Anorexia/falta de apetite', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox11">Anorexia/falta de apetite</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox12" name="sintomas" value="Astenia/cansaço">
+                <input class="form-check-input" type="checkbox" id="checkbox12" name="sintomas" value="Astenia/cansaço" {{ isset($dados->sintomas) && in_array('Astenia/cansaço', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox12">Astenia/cansaço</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox13" name="sintomas" value="Sonolência">
+                <input class="form-check-input" type="checkbox" id="checkbox13" name="sintomas" value="Sonolência" {{ isset($dados->sintomas) && in_array('Sonolência', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox13">Sonolência</label>
             </div>
             <div class="col-md-4 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkbox14" name="sintomas" value="Outros">
+                <input class="form-check-input" type="checkbox" id="checkbox14" name="sintomas" value="Outros" {{ isset($dados->sintomas) && in_array('Outros', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkbox14">Outros</label>
             </div>
         </div>

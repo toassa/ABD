@@ -18,5 +18,11 @@
                 <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
+        <script>
+            const cardiologista = document.getElementById('validationCustomcardiologista');//text que aceita numeros
+            const oftalmologista = document.getElementById('validationCustomoftalmologista');//text que aceita numeros
+            const urologista = document.getElementById('validationCustomurologista');//text que aceita numeros
+            const dentista = document.getElementById('validationCustomdentista');//text que aceita numeros
+        </script>
     @endslot
 @endcomponent

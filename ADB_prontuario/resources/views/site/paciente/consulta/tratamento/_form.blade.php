@@ -114,7 +114,7 @@
 </div>
 
 <div class="col-md-12" id="input_show_multiple6">
-    <label for="validationCustomOrigemUtensilio" class="form-label">Onde consegue cada tipo de insulina? <b>*</b></label>
+    <label for="validationCustomOrigemUtensilio" class="form-label">Como obtém as seringas/canetas para aplicação? <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-4">
             <input type="checkbox" class="form-check-input" id="checkboxHospital" name="origem_utensilho" value="Recebe grátis no hospital" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Recebe grátis no hospital' ? 'checked' : '' }}>

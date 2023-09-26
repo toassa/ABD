@@ -16,7 +16,7 @@ class AutomonitorizacaoGlicemiasSeeder extends Seeder
             'num_registro'=>'11111',
             'realiza_automonitorizacao'=>true,
             'frequencia_medicoes'=>'3 vezes ao dia',
-            'origem_fitas'=>'Compra em farmácia comum',
+            'origem_fitas'=>json_encode(['Recebe grátis no hospital', 'Recebe grátis na farmácia do SUS']),
             'contagem_carboidratos'=>'Não',
             'num_USP' => '11111',
         ]);
