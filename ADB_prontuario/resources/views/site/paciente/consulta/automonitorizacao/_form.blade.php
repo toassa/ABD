@@ -59,19 +59,12 @@
 <div class="col-md-5" id="input_show_multiple2">
     <label for="validationCustomContagemCarboidratos" class="form-label">Faz contagem de carboidratos? 
         <b>*</b>
-        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
-            <span class="material-symbols-outlined show-dialog">
+        <div class="popup" onclick="open_popup()">
+            <span class="material-symbols-outlined popup-icon">
                 info
             </span>
-        </a>
-        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
-            <div class="p-dialog">
-                aadasd
-            </div>
-            <div class="row buttons-dialog">
-                dfddfsf
-            </div>
-        </dialog>
+            <span class="popuptext" id="label_popup">Método pelo qual a dosagem de insulina bolus a ser aplicada é determinada por: aferição da glicemia capilar e estimativa de calorias ingeridas por refeição.</span>
+        </div>
     </label>
     <select class="form-select" id="validationCustomContagemCarboidratos" name="contagem_carboidratos" required>
          <option selected disabled value="">Clique para escolher...</option>

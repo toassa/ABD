@@ -53,21 +53,14 @@
 </div>
 
 <div class="col-md-12">
-    <label for="validationCustomLetra" class="form-label">Histórico Obstétrico(gestações, paridade, abortos, sexo dos filhos) 
+    <label for="validationCustomLetra" class="form-label text-center">Histórico Obstétrico(gestações, paridade, abortos, sexo dos filhos) 
         <b>*</b>
-        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
-            <span class="material-symbols-outlined show-dialog">
+        <div class="popup" onclick="open_popup()">
+            <span class="material-symbols-outlined popup-icon">
                 info
             </span>
-        </a>
-        <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
-            <div class="p-dialog">
-                aadasd
-            </div>
-            <div class="row buttons-dialog">
-                dfddfsf
-            </div>
-        </dialog> 
+            <span class="popuptext" id="label_popup">Ex. "G3P2A1: 1F e 1M", "G0P0A0: 0F 0M"</span>
+        </div>
     </label>
     <input type="text" class="form-control" id="validationCustomhistorico_obstetrico" value="{{ isset($dados->historico_obstetrico) ? $dados->historico_obstetrico : '' }}" name="historico_obstetrico" placeholder="Insira o histórico obstétrico" required>
     <div class="invalid-feedback">

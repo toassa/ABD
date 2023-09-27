@@ -36,7 +36,7 @@ class UserController extends Controller
     }
 
     public function buscar(Request $req){
-        $rows = User::where('name', 'LIKE', '%' . $req['name'] . '%')->get();
+        $rows = User::where('name', 'ILIKE', '%' . $req['name'] . '%')->get();
         return view('site.usuario.listar', compact('rows'));
     }
 

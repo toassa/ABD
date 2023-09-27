@@ -112,7 +112,7 @@ class PacienteController extends Controller
     }
 
     public function pesquisar(Request $req){
-        $dados = Paciente::where('nome', 'LIKE', '%' . $req['name'] . '%')->get();
+        $dados = Paciente::where('nome', 'ILIKE', '%' . $req['name'] . '%')->get();
         return view('site.paciente.pesquisar', compact('dados'));
     }
 }

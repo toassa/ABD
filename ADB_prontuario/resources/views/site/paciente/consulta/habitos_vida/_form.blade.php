@@ -48,21 +48,15 @@
 
 <div class="col-md-4">
     <label for="validationCustomquantia_tabagismo" class="form-label">Quantos anos-maço fuma/fumou?
-            <b>*</b>         
-            <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
-                <span class="material-symbols-outlined show-dialog">
-                    info
-                </span>
-            </a>
-            <dialog class="square-content square-content--confirma-excluir"  id="dialog_info">
-                <div class="p-dialog">
-                    (Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.)
-                </div>
-                <div class="row buttons-dialog">
-                    dfddfsf
-                </div>
-            </dialog> 
-        </label>
+        <b>*</b>         
+        <div class="popup" onclick="open_popup()">
+            <span class="material-symbols-outlined popup-icon">
+                info
+            </span>
+            <span class="popuptext" id="label_popup">HOMENS - Leve: 2 latas cerveja/dia ou 2 taças de vinho/dia ou 1 dose de destilado/dia-> Total: 21U/semana. Moderado: 2-4 latas de cerveja/dia ou 2-6 taças de vinho/dia ou 1-3 doses de destilado/dia-> Total: 22-50 U/semana. Grave: > 4 latas de cerveja/dia ou > 6 taças de vinho/dia ou > 3 doses de destilado/dia -> Total: > 51 U/semana                                                                                                        MULHERES - Leve: 1 lata de cerveja/dia ou 1 taça de vinho/dia ou1/2 dose de destilado/dia -> Total: 14U/semana. Moderado: 1-3 latas de cerveja/dia ou 1-5 taças de vinho/dia ou1/2 a 21/2 doses de destilado/dia. Total: 15-35 U/semana. Grave: > 3 latas de cerveja/dia ou> 5 taças de vinho/dia ou> 21/2 doses de destilado/dia -> Total: > 36 U/semana                                                                                                        OMS: 1 Unidade (U) álcool = 10 g -> Cerveja 350 ml ou Vinho 90 ml ou Destilado 50 ml	
+            </span>
+        </div>
+    </label>
     <input type="text" class="form-control" id="validationCustomquantia_tabagismo" value="{{ isset($dados->quantia_tabagismo) ? $dados->quantia_tabagismo : '' }}" name="quantia_tabagismo" placeholder="Insira a quantidade de tabagismo" required>
     <div class="invalid-feedback">
         Insira a quantidade de tabaanos-maço  </div>

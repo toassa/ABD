@@ -1,12 +1,3 @@
-<div class="info-content">
-    <div class="hover">
-        <span class="material-symbols-outlined">
-        info
-        </span>
-    </div>
-    <div class="stuff">stuff</div>
-</div>
-
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-6 input-border">
         <label for="validationCustomLetra" class="form-label">Possui algum parente com diagnóstico de DM? <b>*</b> </label>
