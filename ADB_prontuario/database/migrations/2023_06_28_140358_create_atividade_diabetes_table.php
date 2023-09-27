@@ -13,7 +13,7 @@ return new class extends Migration
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('quantia_consultas_enfermagem');
-            $table->string('finalidade_consulta')->nullable();
+            $table->json('finalidade_consulta')->nullable();
             $table->integer('reunioes_diabeticos');
             $table->integer('programas_educacao_diabeticos');
             $table->boolean('conhece_hba1c');

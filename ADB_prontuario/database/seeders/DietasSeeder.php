@@ -19,7 +19,7 @@ class DietasSeeder extends Seeder
             'realiza' => true,
             'tipo_dieta' => 'Restringe apenas açúcar e doce',
             'segue_dieta' => 2,
-            'dificuldade_dieta' => json_encode(['Deixar de comer doces', 'Comer verduras, legumes e frutas']),json_encode(['Nutricionista', 'Médico']),
+            'dificuldade_dieta' => json_encode(['Deixar de comer doces', 'Comer verduras, legumes e frutas']),
             'orientador' => json_encode(['Nutricionista', 'Médico']),
             'consulta_nutricionista' => true,
             'frequencia_nutricionista' => 3,

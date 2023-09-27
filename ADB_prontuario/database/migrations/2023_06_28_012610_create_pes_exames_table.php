@@ -13,14 +13,14 @@ return new class extends Migration
             $table->foreign('num_registro')->references('num_registro')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
 
             $table->boolean('casos_ulceras');
-            $table->string('regioes_ulceras')->nullable();
-            $table->string('caracteristicas_ulceras')->nullable();
-            $table->string('alteracoes')->nullable();
-            $table->string('deformidades')->nullable();
-            $table->string('pulsos')->nullable();
-            $table->string('alteracoes_neuropaticas')->nullable();
-            $table->string('demais_alteracoes')->nullable();
-            $table->string('observacoes')->nullable();
+            $table->json('regioes_ulceras')->nullable();
+            $table->json('caracteristicas_ulceras')->nullable();
+            $table->json('alteracoes')->nullable();
+            $table->json('deformidades')->nullable();
+            $table->json('pulsos')->nullable();
+            $table->json('alteracoes_neuropaticas')->nullable();
+            $table->json('demais_alteracoes')->nullable();
+            $table->json('observacoes')->nullable();
             $table->string('num_USP');
 
             $table->timestamps();
