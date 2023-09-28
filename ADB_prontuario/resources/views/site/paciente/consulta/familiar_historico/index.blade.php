@@ -3,7 +3,7 @@
         {{route('consulta.menu_atendimento', $dados->num_registro)}}
     @endslot
     @slot('num_registro')
-        {{$dados->num_registro}}
+        {{$dados_paciente->num_registro}}
     @endslot
     @slot('nome')
         {{$dados->nome}}

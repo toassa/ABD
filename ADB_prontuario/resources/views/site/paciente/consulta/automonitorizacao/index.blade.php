@@ -6,7 +6,7 @@
         {{$dados->num_registro}}
     @endslot
     @slot('nome')
-        {{$dados->nome}}
+        {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
         {{-- ALTERAR CONSULTA - ROTA --}}

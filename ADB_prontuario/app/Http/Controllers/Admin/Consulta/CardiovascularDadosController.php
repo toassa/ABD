@@ -27,7 +27,8 @@ class CardiovascularDadosController extends Controller
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.cardiovascular_dados.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.cardiovascular_dados.index', compact('dados','dados_paciente'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -46,7 +47,8 @@ class CardiovascularDadosController extends Controller
 
     public function editar($num_registro){
         $dados = CardiovascularDado::find($num_registro);
-        return view('site.paciente.consulta.cardiovascular_dados.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.cardiovascular_dados.index', compact('dados','dados_paciente'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

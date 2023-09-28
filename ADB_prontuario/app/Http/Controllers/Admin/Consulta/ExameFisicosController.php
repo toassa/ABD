@@ -17,7 +17,8 @@ class ExameFisicosController extends Controller
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exames_fisicos.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.exames_fisicos.index', compact('dados','dados_paciente'));
     }
 
     

@@ -27,16 +27,21 @@ class PrimeiroDiagnosticoController extends Controller
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
+        $jsonData = $req->input('sintomas');
+        $sintomas = json_encode($jsonData);
+        // dd($sintomas);
+
         $request = $req->all();
         PrimeiroDiagnostico::create([
             'num_registro'=>$num_registro,
             'ano'=>$request['ano'],
             'idade_diagnostico'=>$request['idade_diagnostico'],
-            'sintomas'=>$request['sintomas'],
+            'sintomas' => $sintomas,
             'como_foi_feito'=>$request['como_foi_feito'],
             'infeccoes_seis_meses'=>$request['infeccoes_seis_meses'],
             'quais_infeccoes'=>$request['quais_infeccoes'],
@@ -51,7 +56,8 @@ class PrimeiroDiagnosticoController extends Controller
 
     public function editar($num_registro){
         $dados = PrimeiroDiagnostico::find($num_registro);
-        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

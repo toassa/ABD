@@ -27,7 +27,8 @@ class NeuropaticoComprometimentoController extends Controller
     public function index($num_registro)
     {
         $dados = Paciente::find($num_registro);
-        return view('site.paciente.consulta.neuropatico_comprometimento.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.neuropatico_comprometimento.index', compact('dados','dados_paciente'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -54,7 +55,8 @@ class NeuropaticoComprometimentoController extends Controller
 
     public function editar($num_registro){
         $dados = NeuropaticoComprometimento::find($num_registro);
-        return view('site.paciente.consulta.neuropatico_comprometimento.index', compact('dados'));
+        $dados_paciente = Paciente::find($num_registro);
+        return view('site.paciente.consulta.neuropatico_comprometimento.index', compact('dados','dados_paciente'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

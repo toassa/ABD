@@ -6,7 +6,7 @@
         {{$dados->num_registro}}
     @endslot
     @slot('nome')
-        {{$dados->nome}}
+        {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
         <form action="{{route('atividades_educativas.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
