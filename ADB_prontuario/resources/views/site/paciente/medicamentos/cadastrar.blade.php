@@ -4,10 +4,10 @@
 
 @section('content')
     @component('components.items.back')@endcomponent
-    <div class="usuario">
+    <div class="usuario" style="    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;">
         <p>{{$dados->nome}}</p>
         <span class="material-symbols-outlined">
-          person_search
+          person_search 
         </span>
       </div>
     <section class="square-content square-content--medicamentos">
