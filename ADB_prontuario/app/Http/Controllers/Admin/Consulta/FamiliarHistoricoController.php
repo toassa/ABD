@@ -34,20 +34,53 @@ class FamiliarHistoricoController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
 
+        $jsonData = $req->input('dm');
+        $dm = json_encode($jsonData);
+
+        $jsonData = $req->input('obesidade');
+        $obesidade = json_encode($jsonData);
+
+        $jsonData = $req->input('vitiligo');
+        $vitiligo = json_encode($jsonData);
+
+        $jsonData = $req->input('doenca_tireoideana');
+        $doenca_tireoideana = json_encode($jsonData);
+
+        $jsonData = $req->input('displidemia');
+        $displidemia = json_encode($jsonData);
+
+        $jsonData = $req->input('alopecia');
+        $alopecia = json_encode($jsonData);
+
+        $jsonData = $req->input('alopecia');
+        $alopecia = json_encode($jsonData);
+
+        $jsonData = $req->input('artrite_reumatoide');
+        $artrite_reumatoide = json_encode($jsonData);
+
+        $jsonData = $req->input('doenca_coronariana');
+        $doenca_coronariana = json_encode($jsonData);
+
+        $jsonData = $req->input('has');
+        $has = json_encode($jsonData);
+
+        $jsonData = $req->input('doenca_celiaca');
+        $doenca_celiaca = json_encode($jsonData);
+
         FamiliarHistorico::create([
             'num_registro'=>$num_registro,
-            'dm'=>$request['dm'],
+            'dm'=>$dm,
             'possui_dm1'=>$request['possui_dm1'],
             'dm1'=>$request['dm1'],
-            'obesidade'=>$request['obesidade'],
-            'vitiligo'=>$request['vitiligo'],
-            'doenca_tireoideana'=>$request['doenca_tireoideana'],
-            'displidemia'=>$request['displidemia'],
-            'alopecia'=>$request['alopecia'],
-            'artrite_reumatoide'=>$request['artrite_reumatoide'],
-            'doenca_coronariana'=>$request['doenca_coronariana'],
-            'has'=>$request['has'],
-            'doenca_celiaca'=>$request['doenca_celiaca'],
+            'obesidade'=>$obesidade,
+            'vitiligo'=>$vitiligo,
+            'doenca_tireoideana'=>$doenca_tireoideana,
+            'displidemia'=>$displidemia,
+            'alopecia'=>$alopecia,
+            'artrite_reumatoide'=>$artrite_reumatoide,
+            'doenca_coronariana'=>$doenca_coronariana,
+            'has'=>$has,
+            'doenca_celiaca'=>$doenca_celiaca,
             'num_USP'=>$num_USP,
         ]);
 

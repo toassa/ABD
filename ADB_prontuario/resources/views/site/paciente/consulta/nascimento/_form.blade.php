@@ -64,7 +64,7 @@
 
 <div class="col-md-6" id="input_show">
     <label for="validationCustomtempo_amamentacao_exclusiva" class="form-label">Por quanto tempo teve amamentação exclusiva com leite materno? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomtempo_amamentacao_exclusiva" value="{{ isset($dados->tempo_amamentacao_exclusiva) ? $dados->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva" required>
+    <input type="text" class="form-control" id="validationCustomtempo_amamentacao_exclusiva" value="{{ isset($dados->tempo_amamentacao_exclusiva) ? $dados->tempo_amamentacao_exclusiva : '' }}" name="tempo_amamentacao_exclusiva" placeholder="Insira o tempo de amamentação exclusiva">
     <div class="invalid-feedback">
         Insira o tempo de amamentação exclusiva
     </div>
@@ -73,19 +73,14 @@
 <div class="col-md-6">
     <label for="validationCustomVacinacao" class="form-label">O paciente completou esquema de vacinação do Ministério da Saúde?
          <b>*</b>
-        <a href="#" id="btn_aparece" class="span-dialog" onclick="show_dialog_info()">
-            <span class="material-symbols-outlined show-dialog">
+         <div class="popup" onclick="open_popup()">
+            <span class="material-symbols-outlined popup-icon">
                 info
             </span>
-        </a>
-        <dialog class="square-content square-content--confirma-excluir" id="dialog_info">
-            <div class="p-dialog">
-                aadasd
-            </div>
-            <div class="row buttons-dialog">
-                dfddfsf
-            </div>
-        </dialog>
+            <span class="popuptext" id="label_popup">
+                Se for criança e estiver com vacinação atualizada, preencher "sim"	
+            </span>
+        </div>
     </label>
     <select class="form-select" id="validationCustomVacinacao" name="vacinacao" required>
          <option selected disabled value="">Clique para escolher...</option>

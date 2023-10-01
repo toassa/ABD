@@ -34,17 +34,26 @@ class DietaController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
 
+        $jsonData = $req->input('orientador');
+        $orientador = json_encode($jsonData);
+
+        $jsonData = $req->input('dificuldade_dieta');
+        $dificuldade_dieta = json_encode($jsonData);
+
+        $jsonData = $req->input('produtos_dieteticos');
+        $produtos_dieteticos = json_encode($jsonData);
+
         Dieta::create([
             'num_registro'=>$num_registro,
             'realiza'=>$request['realiza'],
             'tipo_dieta'=>$request['tipo_dieta'],
             'segue_dieta'=>$request['segue_dieta'],
-            'dificuldade_dieta'=>$request['dificuldade_dieta'],
-            'orientador'=>$request['orientador'],
+            'dificuldade_dieta'=>$dificuldade_dieta,
+            'orientador'=>$orientador,
             'consulta_nutricionista'=>$request['consulta_nutricionista'],
             'frequencia_nutricionista'=>$request['frequencia_nutricionista'],
             'consome_dieteticos'=>$request['consome_dieteticos'],
-            'produtos_dieteticos'=>$request['produtos_dieteticos'],
+            'produtos_dieteticos'=>$produtos_dieteticos,
             'num_USP'=>$num_USP,
         ]);
 

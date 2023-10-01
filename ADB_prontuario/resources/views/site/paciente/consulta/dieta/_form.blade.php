@@ -66,7 +66,7 @@
 
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomSelectDefineDouble" class="form-label">No último ano, teve consulta com nutricionista? <b>*</b>  </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="consulta_nutricionista" required>
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="consulta_nutricionista">
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->consulta_nutricionista) && $dados->consulta_nutricionista == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->consulta_nutricionista) && $dados->consulta_nutricionista == 0 ? 'selected' : '' }}>Não</option>

@@ -33,7 +33,10 @@ class PesExameController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-        // dd($request);
+        
+        $jsonData = $req->input('aderencia');
+        $aderencia = json_encode($jsonData);
+        
         PesExame::create([
             'num_registro'=>$num_registro,
             'casos_ulceras' => $request['casos_ulceras'],

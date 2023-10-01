@@ -36,7 +36,6 @@ class DiagnosticoAtualController extends Controller
         
         $jsonData = $req->input('sintomas');
         $sintomas = json_encode($jsonData);
-
         
         Diagnostico::create([
             'num_registro'=>$num_registro,

@@ -34,11 +34,20 @@ class CardiovascularDadosController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
 
+        $jsonData = $req->input('saude_cardiaca');
+        $saude_cardiaca = json_encode($jsonData);
+
+        $jsonData = $req->input('dor_peito');
+        $dor_peito = json_encode($jsonData);
+
+        $jsonData = $req->input('exames_doenca_coronariana');
+        $exames_doenca_coronariana = json_encode($jsonData);
+
         CardiovascularDado::create([
             'num_registro'=>$num_registro,
-            'saude_cardiaca'=>$request['saude_cardiaca'],
-            'dor_peito'=>$request['dor_peito'],
-            'exames_doenca_coronariana'=>$request['exames_doenca_coronariana'],
+            'saude_cardiaca'=>$saude_cardiaca,
+            'dor_peito'=>$dor_peito,
+            'exames_doenca_coronariana'=>$exames_doenca_coronariana,
             'num_USP'=>$num_USP,
         ]);
 

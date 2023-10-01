@@ -33,12 +33,21 @@ class ComorbidadesController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-        // dd($request);
+
+        $jsonData = $req->input('ocular');
+        $ocular = json_encode($jsonData);
+
+        $jsonData = $req->input('neuropatia');
+        $neuropatia = json_encode($jsonData);
+
+        $jsonData = $req->input('doenca_cronica');
+        $doenca_cronica = json_encode($jsonData);
+        
         Comorbidade::create([
             'num_registro'=>$num_registro,
-            'ocular'=>$request['ocular'],
-            'neuropatia'=>$request['neuropatia'],
-            'doenca_cronica'=>$request['doenca_cronica'],
+            'ocular'=>$ocular,
+            'neuropatia'=>$neuropatia,
+            'doenca_cronica'=>$doenca_cronica,
             'num_USP' => $num_USP,
         ]);
 

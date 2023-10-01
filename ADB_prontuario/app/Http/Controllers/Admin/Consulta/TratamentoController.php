@@ -33,20 +33,30 @@ class TratamentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
+        
+        $jsonData = $req->input('tipos_insulinas');
+        $tipos_insulinas = json_encode($jsonData);
+        
+        $jsonData = $req->input('origem_utensilho');
+        $origem_utensilho = json_encode($jsonData);
+        
+        $jsonData = $req->input('aderencia');
+        $aderencia = json_encode($jsonData);
+
         Tratamento::create([
             'num_registro'=>$num_registro,
             'medicamento_diabetes'=>$request['medicamento_diabetes'],
             'uso_insulina'=>$request['uso_insulina'],
-            'tipos_insulinas'=>$request['tipos_insulinas'],
+            'tipos_insulinas'=>$tipos_insulinas,
             'nome_insulina'=>$request['nome_insulina'],
             'frequencia_insulina'=>$request['frequencia_insulina'],
             'dose_insulina'=>$request['dose_insulina'],
             'origem_insulinas'=>$request['origem_insulinas'],
             'utensilho'=>$request['utensilho'],
-            'origem_utensilho'=>$request['origem_utensilho'],
+            'origem_utensilho'=>$origem_utensilho,
             'reuso_seringas_insulina'=>$request['reuso_seringas_insulina'],
             'quantia_reuso_seringas'=>$request['quantia_reuso_seringas'],
-            'aderencia'=>$request['aderencia'],
+            'aderencia'=>$aderencia,
             'num_USP'=>$num_USP,
         ]);
 

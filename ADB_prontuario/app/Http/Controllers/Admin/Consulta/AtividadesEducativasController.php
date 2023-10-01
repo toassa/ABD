@@ -34,10 +34,13 @@ class AtividadesEducativasController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
 
+        $jsonData = $req->input('finalidade_consulta');
+        $finalidade_consulta = json_encode($jsonData);
+
         AtividadeDiabete::create([
             'num_registro'=>$num_registro,
             'quantia_consultas_enfermagem'=>$request['quantia_consultas_enfermagem'],
-            'finalidade_consulta'=>$request['finalidade_consulta'],
+            'finalidade_consulta'=>$finalidade_consulta,
             'reunioes_diabeticos'=>$request['reunioes_diabeticos'],
             'programas_educacao_diabeticos'=>$request['programas_educacao_diabeticos'],
             'conhece_hba1c'=>$request['conhece_hba1c'],
