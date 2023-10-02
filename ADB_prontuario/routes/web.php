@@ -387,6 +387,10 @@ Route::get('/404', function(){
     return view('errors/404');
 })->name('404error');
 
+Route::post('/email_senha', [EmailController::class, 'gerarCodigo'])->name('gerar_codigo');
+
+Route::post('/confirmar_email_senha', [EmailController::class, 'mudarSenha'])->name('confirmar_email_senha');
+
 // ARRUMAR:
 // > Usuários
 // - Dialog do list-excluir
@@ -395,4 +399,7 @@ Route::get('/404', function(){
 // - Não deixar desativar todos os usuários (ao menos um ativo)
 // - Aceitar acentos 
 // - Apresentar o nome do usuário, não o número USP
-// Acertar o coiso do guilerme para inatvios tamber, não apenas para adm
+// - Acertar o coiso do guilerme para inatvios tamber, não apenas para adm
+// - Editar paciente: não aparece as cidades
+// - Colocar pop-up ao digitar errado num_USP ou senha
+// - Colocar pop-up ao inserir mesma chave primaria paciente/usuario

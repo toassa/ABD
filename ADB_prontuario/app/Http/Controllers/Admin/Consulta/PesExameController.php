@@ -34,19 +34,37 @@ class PesExameController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
         
-        $jsonData = $req->input('aderencia');
-        $aderencia = json_encode($jsonData);
+        $jsonData = $req->input('regioes_ulceras');
+        $regioes_ulceras = json_encode($jsonData);
+        
+        $jsonData = $req->input('caracteristicas_ulceras');
+        $caracteristicas_ulceras = json_encode($jsonData);
+        
+        $jsonData = $req->input('alteracoes');
+        $alteracoes = json_encode($jsonData);
+        
+        $jsonData = $req->input('deformidades');
+        $deformidades = json_encode($jsonData);
+        
+        $jsonData = $req->input('pulsos');
+        $pulsos = json_encode($jsonData);
+        
+        $jsonData = $req->input('alteracoes_neuropaticas');
+        $alteracoes_neuropaticas = json_encode($jsonData);
+        
+        $jsonData = $req->input('demais_alteracoes');
+        $demais_alteracoes = json_encode($jsonData);
         
         PesExame::create([
             'num_registro'=>$num_registro,
             'casos_ulceras' => $request['casos_ulceras'],
-            'regioes_ulceras' => $request['regioes_ulceras'],
-            'caracteristicas_ulceras' => $request['caracteristicas_ulceras'],
-            'alteracoes' => $request['alteracoes'],
-            'deformidades' => $request['deformidades'],
-            'pulsos' => $request['pulsos'],
-            'alteracoes_neuropaticas' => $request['alteracoes_neuropaticas'],
-            'demais_alteracoes' => $request['demais_alteracoes'],
+            'regioes_ulceras' => $regioes_ulceras,
+            'caracteristicas_ulceras' => $caracteristicas_ulceras,
+            'alteracoes' => $alteracoes,
+            'deformidades' => $deformidades,
+            'pulsos' => $pulsos,
+            'alteracoes_neuropaticas' => $alteracoes_neuropaticas,
+            'demais_alteracoes' => $demais_alteracoes,
             'observacoes' => $request['observacoes'],
             'num_USP' => $num_USP,
         ]);

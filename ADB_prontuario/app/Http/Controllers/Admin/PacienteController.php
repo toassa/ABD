@@ -70,6 +70,18 @@ class PacienteController extends Controller
     }
 
     public function salvar(Request $req, $num_USP){
+        $num_existente = false;
+        $num_registro = $req['num_registro'];
+
+        $pacienteExistente = Paciente::where('num_registro', $num_registro)->first();
+
+        if ($pacienteExistente) {
+            $num_existente = true;
+            // return back()->with('error', 'O número de registro já está em uso. Por favor, escolha outro número.');
+            // return response()->json(['exists' => $pacienteExistente]);
+            return view('site.paciente.cadastrar', compact('num_existente'));
+        }
+
         $tudos = Paciente::all();
         $dados = $req->all();
 

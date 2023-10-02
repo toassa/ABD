@@ -1,0 +1,1 @@
+Esse é seu código de autenticação para conseguir mudar de senha: {{$info->codigo}}
