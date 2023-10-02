@@ -119,6 +119,7 @@ body{
 
 
 /* Forms ------------------------------------------------------------------------------------- */
+
 .form-check-input[type=checkbox] {
     border: 1px solid #bdc1c5 !important;
 }

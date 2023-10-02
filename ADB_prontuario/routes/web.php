@@ -95,6 +95,8 @@ Route::group(['middleware' => 'auth'], function(){
     
         Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
 
+        Route::get('/configuracoes/{num_registro}', [PacienteController::class, 'configuracoes'])->name('paciente.configuracoes');
+
         Route::prefix('/form')->group(function(){
             Route::get('/cadastrar', [PacienteController::class, 'cadastrar'])->name('paciente.cadastrar');
     
@@ -105,10 +107,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/editar/{num_registro}', [PacienteController::class, 'editar'])->name('paciente.editar');
     
             Route::put('/atualizar/{num_registro}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
-    
-            Route::get('/list-excluir', [PacienteController::class, 'list_excluir'])->name('paciente.list-excluir');
-            
-            Route::get('/excluir/{num_registro}', [PacienteController::class, 'excluir'])->name('paciente.excluir');
+
+            Route::get('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
 
         Route::prefix('/consulta')->group(function(){

@@ -66,7 +66,8 @@ class PacienteController extends Controller
     }
 
     public function cadastrar(){
-        return view('site.paciente.cadastrar');
+        $num_existente = false;
+        return view('site.paciente.cadastrar', compact('num_existente'));
     }
 
     public function salvar(Request $req, $num_USP){
@@ -77,8 +78,6 @@ class PacienteController extends Controller
 
         if ($pacienteExistente) {
             $num_existente = true;
-            // return back()->with('error', 'O número de registro já está em uso. Por favor, escolha outro número.');
-            // return response()->json(['exists' => $pacienteExistente]);
             return view('site.paciente.cadastrar', compact('num_existente'));
         }
 
@@ -126,5 +125,26 @@ class PacienteController extends Controller
     public function pesquisar(Request $req){
         $dados = Paciente::where('nome', 'ILIKE', '%' . $req['name'] . '%')->get();
         return view('site.paciente.pesquisar', compact('dados'));
+    }
+
+    public function configuracoes($num_registro){
+        $dados = Paciente::find($num_registro);
+        return view('site.paciente.configuracoes', compact('dados'));
+    }
+
+    public function desativar($num_registro, $num_USP){
+        $rows = Paciente::find($num_registro);
+        if($rows['ativo']==true){
+            Paciente::where('num_registro',$num_registro)->update([
+                'ativo'=>false,
+                'num_USP' => $num_USP
+            ]);
+        }else{
+            Paciente::where('num_registro',$num_registro)->update([
+                'ativo'=>true,
+                'num_USP' => $num_USP
+            ]);
+        }
+        return redirect()->route('paciente.pesquisar');
     }
 }

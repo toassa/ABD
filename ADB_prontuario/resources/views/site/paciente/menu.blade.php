@@ -115,12 +115,28 @@
               #
             @endslot
           @endcomponent
+          @component('components.items.paciente-item')
+            @slot('coluna')
+              col-md-auto
+            @endslot
+            @slot('icon')
+              <span class="material-symbols-outlined">
+                manage_accounts
+              </span>
+            @endslot
+            @slot('button')
+                Gerenciar perfil
+            @endslot
+            @slot('href')
+            {{route('paciente.configuracoes', $dados->num_registro)}}
+            @endslot
+          @endcomponent
         </div>
       </div>
-      <div class="row buttons-dialog align-content btn_paciente">
+      {{-- <div class="row buttons-dialog align-content btn_paciente">
         <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.excluir', $dados->num_registro)}}">Excluir</a>
         <a class="col-4-md a-row-list btn btn-primary" href="{{route('paciente.editar', $dados->num_registro)}}">Editar</a>
-      </div>
+      </div> --}}
     </div>
   </section>
 @endsection

@@ -38,8 +38,27 @@
 
       @slot('grid_content')
         @foreach ($dados as $dado)
-        <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('consulta.menu', $dado->num_registro)}}">
-            <div class="row row-text">
+        @if($dado->ativo == true)
+          <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('consulta.menu', $dado->num_registro)}}">
+        @else
+        <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
+          <div class="p-dialog">
+              <p class="text-center">
+              <span class="material-symbols-outlined">
+                  warning
+              </span>
+              </p>
+              <p class="text-center">O(A) paciente <strong>{{$dado->nome}}</strong> está inativo no sistema. Para gerenciar seus dados é necessário ativá-lo?</p>
+              <p class="text-center">Deseja ativar o(a) paciente?</p>
+          </div>
+          <div class="row buttons-dialog">
+              <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
+              <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.desativar', ['num_registro' => $dado->num_registro, 'num_USP' => Auth::user()->num_USP])}}">Ativar</a>
+          </div>
+        </dialog>
+        <a class="row row-text row-hover row-inactivated" style="text-decoration: none" onclick="show_dialog_excluir()">
+        @endif
+          <div class="row row-text">
               <div class="col col-text">{{$dado->nome}}</div>
               <div class="col col-mail">{{$dado->num_registro}}</div>
               <div class="col col-mail">{{$dado->telefone}}</div>
@@ -66,4 +85,5 @@
         Cadastrar paciente
       @endslot
   @endcomponent
+  <script src="{{asset('js/excluir.js')}}"></script>
 @endsection

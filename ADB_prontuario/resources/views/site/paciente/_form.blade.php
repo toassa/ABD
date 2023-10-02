@@ -262,8 +262,8 @@
   <!-- Complemento -->
   <div class="col-md-4">
     <label for="validationCustomComplemento" class="form-label textinho">Complemento</label>
-    <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento">
-    <div class="invalid-feedback">
+    <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento" required>
+    <div class="invalid-feedback" id="customComplementoError">
         Insira um complemento válido
     </div>
   </div>
@@ -318,7 +318,6 @@
   </div>
 
 </div>
-
 
 
 {{-- <option selected disabled value="">Choose...</option> --}}
