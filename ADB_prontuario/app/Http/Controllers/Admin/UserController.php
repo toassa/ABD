@@ -14,20 +14,23 @@ class UserController extends Controller
     }
 
     public function cadastrar(){
-        return view('site.usuario.cadastrar');
+        $num_existente = false;
+        return view('site.usuario.cadastrar', compact('num_existente'));
     }
 
     public function salvar(Request $req){
         $dados = $req->all();
         
+        $num_USP = $dados['num_USP'];
+        $usuarioExistente = User::where('num_USP', $num_USP)->first();
+
+        if ($usuarioExistente) {
+            $num_existente = true;
+            return view('site.usuario.cadastrar', compact('num_existente'));
+        }
+        
         User::create($dados);
         return redirect()->route('users.listar');
-        // if($req['num_USP'] == $dados['num_USP']  || $req['email'] == $dados['email'] || $req['CPF'] == $dados['CPF']){
-        //     return view('site.usuario.index');
-        // }else{
-        //     User::create($dados);
-        //     return redirect()->route('users.listar');
-        // }
     }
 
     public function listar(){

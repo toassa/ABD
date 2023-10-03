@@ -39,8 +39,8 @@
       @slot('grid_content')
         @foreach ($dados as $dado)
         @if($dado->ativo == true)
-          <a class="row row-text row-hover" style="text-decoration: none;" href="{{route('consulta.menu', $dado->num_registro)}}">
-        @else
+          <a class="row row-text row-activated" style="text-decoration: none;" href="{{route('consulta.menu', $dado->num_registro)}}">
+        @elseif($dado->ativo == false)
         <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
           <div class="p-dialog">
               <p class="text-center">
@@ -48,7 +48,7 @@
                   warning
               </span>
               </p>
-              <p class="text-center">O(A) paciente <strong>{{$dado->nome}}</strong> está inativo no sistema. Para gerenciar seus dados é necessário ativá-lo?</p>
+              <p class="text-center">O(A) paciente <strong>{{$dado->nome}}</strong> está inativo no sistema. Para gerenciar seus dados é necessário ativá-lo.</p>
               <p class="text-center">Deseja ativar o(a) paciente?</p>
           </div>
           <div class="row buttons-dialog">
@@ -56,23 +56,21 @@
               <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.desativar', ['num_registro' => $dado->num_registro, 'num_USP' => Auth::user()->num_USP])}}">Ativar</a>
           </div>
         </dialog>
-        <a class="row row-text row-hover" style="text-decoration: none" onclick="show_dialog_excluir()">
+        <a class="row row-text row-inactivated" style="text-decoration: none" onclick="show_dialog_excluir()">
         @endif
-          <div class="row row-text">
-              <div class="col col-text">{{$dado->nome}}</div>
-              <div class="col col-mail">{{$dado->num_registro}}</div>
-              <div class="col col-mail">{{$dado->telefone}}</div>
-              <div class="col col-text">{{$dado->idade}}</div>
-              <div class="col col-text">{{$dado->sexo}}</div>
-              <div class="col col-text">{{$dado->profissao}}</div>
-              <div class="col col-text">
-                @if ($dado->num_USP == null)
-                  Usuário excluído
-                @else
-                {{$dado->num_USP}}
-                @endif
-              </div>
-            </div>
+            <p class="col col-text">{{$dado->nome}}</p>
+            <p class="col col-mail">{{$dado->num_registro}}</p>
+            <p class="col col-mail">{{$dado->telefone}}</p>
+            <p class="col col-text">{{$dado->idade}}</p>
+            <p class="col col-text">{{$dado->sexo}}</p>
+            <p class="col col-text">{{$dado->profissao}}</p>
+            <p class="col col-text">
+              @if ($dado->num_USP == null)
+                Usuário excluído
+              @else
+              {{$dado->num_USP}}
+              @endif
+            </p>
           </a>
         @endforeach
       @endslot

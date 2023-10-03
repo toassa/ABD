@@ -21,7 +21,7 @@
       <div class="container text-center">
         <div class="row buttons-dialog align-content btn_paciente">
             {{-- <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.excluir', $dados->num_registro)}}">Excluir</a> --}}
-            <a class="col-4-md a-row-list btn btn-danger" onclick="show_dialog_excluir()"> Excluir</a>
+            <a class="col-4-md a-row-list btn btn-danger" onclick="show_dialog_excluir()">Desativar</a>
             <a class="col-4-md a-row-list btn btn-primary" href="{{route('paciente.editar', $dados->num_registro)}}">Editar</a>
         </div>
         <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">

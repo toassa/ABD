@@ -93,7 +93,7 @@ Route::group(['middleware' => 'auth'], function(){
     
         Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
     
-        Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
+        Route::get('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
 
         Route::get('/configuracoes/{num_registro}', [PacienteController::class, 'configuracoes'])->name('paciente.configuracoes');
 
@@ -108,7 +108,7 @@ Route::group(['middleware' => 'auth'], function(){
     
             Route::put('/atualizar/{num_registro}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
 
-            Route::post('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
+            Route::get('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
 
         Route::prefix('/consulta')->group(function(){
@@ -275,11 +275,11 @@ Route::group(['middleware' => 'auth'], function(){
             Route::prefix('/habitos_vida')->group(function(){
                 Route::get('/op/{num_registro}', [HabitosVidaController::class, 'opcao'])->name('habitos_vida.opcao');
 
-                Route::get('/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
+                Route::get('/{tipo}/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
             
                 Route::post('/salvar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'salvar'])->name('habitos_vida.salvar');
             
-                Route::get('/editar/{num_registro}', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
+                Route::get('/{tipo}/{num_registro}/', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
     
                 Route::put('/atualizar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'atualizar'])->name('habitos_vida.atualizar');
             });

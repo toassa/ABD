@@ -89,6 +89,7 @@ class PacienteController extends Controller
                 return view('site.usuario.cadastrar');
             }
         }
+        
         Paciente::create([
             'num_registro' => $dados['num_registro'],
             'nome' => $dados['nome'],

@@ -15,7 +15,13 @@
             @include('site.paciente.consulta.habitos_vida._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-giga btn-primary" type="submit">
+                    @if ($tipo == 'cadastrar')
+                        Cadastrar
+                    @else
+                        Editar
+                    @endif
+                </button>
             </div>
             <script src="{{asset('js/form-consulta.js')}}"></script>
         </form>
