@@ -108,7 +108,7 @@ Route::group(['middleware' => 'auth'], function(){
     
             Route::put('/atualizar/{num_registro}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
 
-            Route::get('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
+            Route::post('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
         });
 
         Route::prefix('/consulta')->group(function(){

@@ -39,7 +39,7 @@
       @slot('grid_content')
         @foreach ($dados as $dado)
         @if($dado->ativo == true)
-          <a class="row row-text row-hover row-activated" style="text-decoration: none" href="{{route('consulta.menu', $dado->num_registro)}}">
+          <a class="row row-text row-hover" style="text-decoration: none;" href="{{route('consulta.menu', $dado->num_registro)}}">
         @else
         <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
           <div class="p-dialog">
@@ -56,7 +56,7 @@
               <a class="col-4-md a-row-list btn btn-danger" href="{{route('paciente.desativar', ['num_registro' => $dado->num_registro, 'num_USP' => Auth::user()->num_USP])}}">Ativar</a>
           </div>
         </dialog>
-        <a class="row row-text row-hover row-inactivated" style="text-decoration: none" onclick="show_dialog_excluir()">
+        <a class="row row-text row-hover" style="text-decoration: none" onclick="show_dialog_excluir()">
         @endif
           <div class="row row-text">
               <div class="col col-text">{{$dado->nome}}</div>
