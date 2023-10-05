@@ -3,8 +3,16 @@
 @section('titulo-pagina', 'Redefinição de senha')
 
 @section('content')
+    {{-- ADB_prontuario\public\images\pack\medico-aponta.png --}}
     
-    <img src="{{asset('images/pack/medico-aponta.png')}}" alt="Médico apontando para baixo" class="img_resetpassword">
+    <div class="leave">
+        <span class="material-symbols-outlined">
+            arrow_back_ios
+        </span>
+        <input type="button" value="Voltar" onClick="history.go(-1)"> 
+    </div>
+    <div style="position: relative;">
+    <img src="{{asset('images\pack\medico-aponta.png')}}" alt="Médico apontando para baixo" class="img_resetpassword">
     <nav class="square-content square-content--password">
       <div class="title-resetpassword-text">
         <h1>Redefinir senha</h1>
@@ -25,13 +33,7 @@
             <button class="btn btn-primary-darker-resetar">Confirmar</button>   
         </form>
         </div>  
-    
-        <div class="leave">
-            <span class="material-symbols-outlined">
-                arrow_back_ios
-            </span>
-            <input type="button" value="Voltar" onClick="history.go(-1)"> 
-        </div>
     {{-- <a class="btn btn-primary" href="{{route('admin.login')}}">VOLTAR À PÁGINA INICIAL</a> --}}
 </nav>
+</div>
 @endsection

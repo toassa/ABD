@@ -20,7 +20,7 @@
             </div>
             <button type="submit" class="btn btn-primary btn-giga">Entrar</button>
             <div class="login-link align-content">
-                <a href="#" class="login-link login-link text-center">Esqueceu a senha?</a>
+                <a href="{{route('enviar_email')}}" class="login-link login-link text-center">Esqueceu a senha?</a>
             </div>
         </form>
     </section>
