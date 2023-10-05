@@ -7,7 +7,7 @@
     <section class="square-content square-content--cadastro">
         <h1 class="text-center">Cadastro de Pacientes</h1>
             @if($num_existente == true)
-                <script type="text/javascript">alert("Já existe um paciente cadastrado com esse número de registro. Pof favor, insira outro valor para o campo.");</script>
+                <script type="text/javascript">alert("Já existe um paciente cadastrado com esse número de registro. Por favor, insira outro valor para o campo.");</script>
             @endif
         <form action="{{route('paciente.salvar', Auth::user()->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}

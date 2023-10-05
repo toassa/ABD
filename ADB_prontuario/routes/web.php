@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PacienteController;
 use App\Http\Controllers\Admin\PrimeiraConsultaController;
 use App\Http\Controllers\Admin\MedicamentoController;
+use App\Http\Controllers\Admin\EmailController;
+
 
 use App\Http\Controllers\Admin\Consulta\PrimeiroDiagnosticoController;
 use App\Http\Controllers\Admin\Consulta\DiagnosticoAtualController;
@@ -387,7 +389,13 @@ Route::get('/404', function(){
     return view('errors/404');
 })->name('404error');
 
+Route::get('/enviar_email', function(){
+    return view('senha.enviar_email');
+})->name('enviar_email');
+
 Route::post('/email_senha', [EmailController::class, 'gerarCodigo'])->name('gerar_codigo');
+
+// Route::post('/email_senha', [EmailController::class, 'gerarCodigo'])->name('gerar_codigo');
 
 Route::post('/confirmar_email_senha', [EmailController::class, 'mudarSenha'])->name('confirmar_email_senha');
 

@@ -27,6 +27,7 @@ class UserController extends Controller
         if ($usuarioExistente) {
             $num_existente = true;
             return view('site.usuario.cadastrar', compact('num_existente'));
+            
         }
         
         User::create($dados);

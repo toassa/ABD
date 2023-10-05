@@ -18,43 +18,43 @@
         <div class="row align-content">
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_d" name="regioes_ulceras" value="regiao_plantar_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_plantar_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_d" name="regioes_ulceras[]" value="regiao_plantar_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_plantar_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_plantar_pe_d">Região plantar no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_e" name="regioes_ulceras" value="regiao_plantar_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_plantar_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_plantar_pe_e" name="regioes_ulceras[]" value="regiao_plantar_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_plantar_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_plantar_pe_e">Região plantar no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_d" name="regioes_ulceras" value="regiao_lateral_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_lateral_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_d" name="regioes_ulceras[]" value="regiao_lateral_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_lateral_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_lateral_pe_d">Região lateral no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_e" name="regioes_ulceras" value="regiao_lateral_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_lateral_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_lateral_pe_e" name="regioes_ulceras[]" value="regiao_lateral_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_lateral_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_lateral_pe_e">Região lateral no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_d" name="regioes_ulceras" value="regiao_dedos_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_dedos_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_d" name="regioes_ulceras[]" value="regiao_dedos_pe_d" {{ isset($dados->regioes_ulceras) && in_array('regiao_dedos_pe_d', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_dedos_pe_d">Região dos dedos no pé D</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_e" name="regioes_ulceras" value="regiao_dedos_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_dedos_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_dedos_pe_e" name="regioes_ulceras[]" value="regiao_dedos_pe_e" {{ isset($dados->regioes_ulceras) && in_array('regiao_dedos_pe_e', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_dedos_pe_e">Região dos dedos no pé E</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_outros" name="regioes_ulceras" value="regiao_outros" {{ isset($dados->regioes_ulceras) && in_array('regiao_outros', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
+                    <input type="checkbox" class="col-md-4-input form-check-input" id="regiao_outros" name="regioes_ulceras[]" value="regiao_outros" {{ isset($dados->regioes_ulceras) && in_array('regiao_outros', json_decode($dados->regioes_ulceras)) ? 'checked' : '' }}>
                     <label class="col-md-4-label form-check-label label_check" for="regiao_outros">Outros...</label>
                 </div>
             </div>
