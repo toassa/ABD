@@ -3,7 +3,6 @@ const pages = content.children(".page");
 const prevBtn = $(".prev-btn");
 const nextBtn = $(".next-btn");
 
-
 const cadastrarBtn = document.getElementById('cadastra_paciente');
 
 document.addEventListener('DOMContentLoaded', function() {

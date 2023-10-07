@@ -72,13 +72,23 @@ class UserController extends Controller
     }
 
     public function list_excluir(){
+        $user_avaiable = true;
         $rows = User::all();
-        return view('site.usuario.list-excluir', compact('rows'));
+        return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
     }
 
     public function excluir($num_USP){
-        User::where('num_USP',$num_USP)->delete();
-        return redirect() -> route('users.listar');
+        $user_avaiable = true;
+        $rows = User::all();
+        $count = $rows->count(); 
+        if($count > 1){
+            User::where('num_USP',$num_USP)->delete();
+            return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
+            // return redirect() -> route('users.listar');
+        }else{
+            $user_avaiable = false;
+            return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
+        }
     }
 
     public function list_desativar(){

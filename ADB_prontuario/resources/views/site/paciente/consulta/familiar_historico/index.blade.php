@@ -12,7 +12,7 @@
         <form action="{{route('familiar_historico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             <h1 class="text-center">Histórico Familiar</h1>
-            <div class="pagination-container">
+            <div class="pagination-container"> 
                 <div class="pagination-content">
                     @include('site.paciente.consulta.familiar_historico._form')
                 </div>
