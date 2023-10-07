@@ -9,10 +9,10 @@
     @endslot
   @endcomponent
   <div class="usuario">
-      <a class="btn-user-name align-content" style="text-decoration: none">
+      {{-- <a class="btn-user-name align-content" style="text-decoration: none">
         <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line"/>
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line"/>
         </svg>
         <span class="text-usuario" style="display: flex">
           <span class="material-symbols-outlined">
@@ -20,13 +20,13 @@
           </span>
           <p>{{$primeiraPalavra = explode(' ', $dados->nome)[0]}}</p>
         </span>
-      </a>
-    {{-- <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="align-content" style="text-decoration: none">
+      </a> --}}
+    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="align-content" style="text-decoration: none">
       <p>{{$dados->nome}}</p>
       <span class="material-symbols-outlined" style="color: #000 !important;">
         person_search
       </span>
-    </a> --}}
+    </a>
   </div>
   <section class="user-index">
     <h1 class="text-center">Menu de paciente</h1>

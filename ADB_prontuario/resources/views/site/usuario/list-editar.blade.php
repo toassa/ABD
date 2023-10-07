@@ -31,8 +31,8 @@
                     @endif
                         <p class="col text-center col-text">{{Str::limit($row->name, )}}</p>
                         <p class="col text-center col-mail">{{$row->num_USP}}</p>
-                        <p class="col text-center col-mail">{{$row->mesa}}</p>
-                        <p class="col text-center col-text">{{$row->CPF}}</p>
+                        <p class="col text-center col-mail">{{$row->email}}</p>
+                        <p class="col text-center col-text">{{$row->mesa}}</p>
                         <p class="col text-center col-text">{{$row->cargo}}</p>
                         <p class="col text-center col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
                         <p class="col text-center col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>

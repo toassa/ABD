@@ -7,8 +7,13 @@
     /* Font colors */
     --background-color: #fff;
     --background-almost-white: #ebecf4;
-    --background-primary: #2424ff;
-    --background-primary-darker: #063f96;
+    --background-greener: #78a82a;
+    --background-green: #85bb2e;
+    /* --background-primary2: #428ae9; */
+    --background-primary: #0092df;
+    --background-primarier: #017ec2;
+    --background-error: #ff0000;
+    --background-errorer: #d60101;
     --background-most-primary:#131399f;
     --text-color: #000;
     --text-shadow-color: #808080;
@@ -130,11 +135,27 @@ body{
 }
 
 b{
-    color: #ff0000;
+    color: var(--background-error);
+}
+
+.btn-primary-confirm{
+    background-color: var(--background-green);
+    color: var(--background-color);
+}
+
+.btn-primary-confirm:hover{
+    background-color: var(--background-greener);
+    color: var(--background-color);
+    cursor: pointer;
 }
 
 .btn-primary-darker, .btn-primary-darker:hover{
     background-color: var(--background-primary-darker);
+    color: var(--background-color);
+}
+
+.btn-primary-error{
+    background-color: var(--background-error);
     color: var(--background-color);
 }
 
@@ -518,6 +539,7 @@ a.login-link{
     align-items: center;
     align-content: center;
     border: 0 !important;
+    z-index: 1000;
 }
 
 #modal_excluir{
@@ -538,17 +560,29 @@ dialog::backdrop{
     margin: 20px auto;
 }
 
-.square-content--confirma-excluir a{
-    background-color: #ff0000;
+.square-content--confirma-excluir #btn_execute{
+    background-color: var(--background-error);
+}
+
+.square-content--confirma-excluir #btn_execute:hover{
+    background-color: var(--background-errorer);
 }
 
 .square-content--confirma-excluir .material-symbols-outlined{
-    color: #ff0000 !important;
+    color: var(--background-error) !important;
     font-size: 2.5rem !important;
 }
 
-.square-content--confirma-excluir button{
+.square-content--confirma-excluir #btn_cancelar{
+    text-decoration: none;
+    cursor: pointer;
     background-color: var(--background-primary);
+}
+
+.square-content--confirma-excluir #btn_cancelar:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--background-primarier);
 }
 
 .buttons-dialog{
@@ -625,7 +659,7 @@ svg {
 
 .btn-user-name:hover {
   transition: 1s ease-in-out;
-  background: #4F95DA;
+  background: var(--background-primarier);
 }
 
 .btn-user-name:hover svg {
@@ -817,24 +851,24 @@ textarea{
 .button-white-blue-resetar{
     color: var(--background-primary);
     background-color: var(--background-color);
-    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
-    border: 1px solid var(--box-shadow-color);
+    /* box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    border: 1px solid var(--box-shadow-color); */
     border-radius: 8px;
     text-decoration: none;
     /* -ms-transform: translateY(-50%); */
-    transform: translateY( 70%);
+    /* transform: translateY( 70%); */
     /* display: block; */
 }
 
 .btn-primary-darker-resetar, .btn-primary-darker:hover{
-    background-color: #106cf7;
+    background-color: var(--background-primary);
     color: var(--background-color);
-    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
-    border: 1px solid var(--box-shadow-color);
-    border-radius: 8px;
+    /* box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    border: 1px solid var(--box-shadow-color); */
+    /* border-radius: 8px; */
     text-decoration: none;
     /* -ms-transform: translateY(-50%); */
-    transform: translateY( 70%);
+    /* transform: translateY( 70%); */
 }
 
 

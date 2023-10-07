@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <label for="validationCustomNumUSP" class="form-label textinho">Número USP <b>*</b></label>
-    <input type="text" class="text-center form-control" id="validationCustom01" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" maxlength="8" name="num_USP" placeholder="Digite o número USP" required>
+    <input type="text" class="text-center form-control" id="validationCustomNumUSP" value="{{isset($rows->num_USP) ? $rows->num_USP : ''}}" maxlength="8" name="num_USP" placeholder="Digite o número USP" required>
     <div class="invalid-feedback">
         Número USP inválido
     </div>
@@ -41,7 +41,7 @@
 </div>
 <div class="col-md-4">
     <label for="validationCustomUserMesa" class="form-label textinho">Mesa <b>*</b></label>
-    <input type="number" class="form-control text-center" id="validationCustomIdade" value="{{isset($rows->mesa) ? $rows->mesa : ''}}" name="mesa" maxlength="2" placeholder="Digite o número da mesa" required>
+    <input type="number" class="form-control text-center" id="validationCustomUserMesa" maxlength="2" value="{{isset($rows->mesa) ? $rows->mesa : ''}}" name="mesa" maxlength="2" placeholder="Digite o número da mesa" required>
     <div class="invalid-feedback">
         Mesa inválida
     </div>

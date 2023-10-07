@@ -23,11 +23,26 @@ class UserController extends Controller
         
         $num_USP = $dados['num_USP'];
         $usuarioExistente = User::where('num_USP', $num_USP)->first();
+        
+        $cpf = $dados['CPF'];
+        $cpfExistente = User::where('CPF', $cpf)->first();
+        
+        $email = $dados['email'];
+        $emailExistente = User::where('email', $email)->first();
 
         if ($usuarioExistente) {
-            $num_existente = true;
+            $num_existente = 'número USP';
             return view('site.usuario.cadastrar', compact('num_existente'));
-            
+        }
+
+        if ($cpfExistente) {
+            $num_existente = 'CPF';
+            return view('site.usuario.cadastrar', compact('num_existente'));
+        }
+
+        if ($emailExistente) {
+            $num_existente = 'e-mail';
+            return view('site.usuario.cadastrar', compact('num_existente'));
         }
         
         User::create($dados);
