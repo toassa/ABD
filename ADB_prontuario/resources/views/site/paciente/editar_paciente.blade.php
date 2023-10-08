@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-btn-form">
-                    <button class="btn btn-giga btn-primary">Atualizar</button>
+                    <button class="btn btn-giga btn-primary-confirm">Atualizar</button>
                 </div>
             </form>
             <div class="align-content">

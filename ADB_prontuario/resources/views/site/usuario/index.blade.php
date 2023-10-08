@@ -79,7 +79,7 @@
             @endslot
             @slot('icon')
               <span class="material-symbols-outlined">
-                block
+                person_off
               </span>
             @endslot
             @slot('title')

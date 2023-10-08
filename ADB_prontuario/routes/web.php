@@ -400,7 +400,6 @@ Route::post('/email_senha', [EmailController::class, 'gerarCodigo'])->name('gera
 Route::post('/confirmar_email_senha', [EmailController::class, 'mudarSenha'])->name('confirmar_email_senha');
 
 // ARRUMAR:
-// > Usuários
 // - Dialog do list-excluir
 // - Visual do editar usuários
 // - Se excluir o próprio usuário, fazer logout

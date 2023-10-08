@@ -66,7 +66,7 @@
   <div class="col-md-4">
     <label for="validationFormDesempregado" class="form-label textinho">Desempregado/Aposentado pela diabetes? <b>*</b></label>
     <select class="form-select" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" required>
-        <option disabled value="">Clique para escolher...</option>
+        <option disabled selected value="">Clique para escolher...</option>
         <option  value="true" {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'true' ? 'selected' : '' }} >Sim</option>
         <option  value="false"{{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'false' ? 'selected' : '' }} >Não</option>
     </select>
@@ -128,7 +128,7 @@
   <div class="col-md-3">
     <label for="validationFormPlanoSaude" class="form-label textinho">Possui plano de saúde? <b>*</b></label>
     <select class="form-select" id="validationFormPlanoSaude" name="plano_saude" required>
-      <option disabled value="">Clique para escolher...</option>
+      <option disabled selected value="">Clique para escolher...</option>
       <option value="TRUE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'TRUE' ? 'selected' : '' }} >Sim</option>
       <option value="FALSE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'FALSE' ? 'selected' : '' }} >Não</option>
     </select>
@@ -162,7 +162,7 @@
   <!-- Estado -->
   <div class="col-md-5">
     <label for="validationCustomEstadoNascimento" class="form-label textinho">Estado de Nascimento<b>*</b></label>
-    <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" required>
+    <select class="form-select" id="validationCustomEstadoNascimento" name="estado_nascimento" onchange="buscaCidadesNascimento(this.value)" onclick="selecionaCidades(this.value)" required>
       <option value="">Clique para escolher...</option>
       <option {{ isset($dados->estado) && $dados->estado === 'AC' ? 'selected' : '' }} value="AC">Acre</option>
       <option {{ isset($dados->estado) && $dados->estado === 'AL' ? 'selected' : '' }} value="AL">Alagoas</option>
@@ -200,7 +200,7 @@
   <!-- Cidade -->
   <div class="col-md-7 align-content">
     <div class="col-md-6">
-      <label for="validationCustomCidadeNascimento" class="form-label textinho">Cidade de Nascimento<b>*</b></label>
+      <label for="validationCustomCidadeNascimento" class="form-label textinho" onchange="buscaCidades($dados->estado)">Cidade de Nascimento<b>*</b></label>
       <select class="form-select" id="validationCustomCidadeNascimento" name="cidade_nascimento" required>
         <option selected disabled value="">Clique para escolher...</option>
       </select>

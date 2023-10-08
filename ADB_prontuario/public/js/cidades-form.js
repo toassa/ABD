@@ -5812,3 +5812,20 @@ var json_cidades = {
      document.querySelector("#validationCustomCidadeNascimento").innerHTML = '';
   }
 }  
+
+function selecionaCidades(e){
+    // Suponha que você tenha o valor do estado vindo do banco de dados em uma variável chamada 'estadoSelecionado'
+  var estadoSelecionado = e; // Substitua isso pelo valor real vindo do banco de dados
+
+  // Defina o valor do campo de estado
+  var estadoSelect = document.querySelector("#validationCustomEstado");
+  estadoSelect.value = estadoSelecionado;
+
+  // Chame a função buscaCidades manualmente para preencher a lista de cidades
+  buscaCidades(estadoSelecionado);
+
+  // Após preencher as cidades, defina o valor da cidade também, supondo que você tenha o valor da cidade do banco de dados em uma variável chamada 'cidadeSelecionada'
+  var cidadeSelecionada = "Rio Branco"; // Substitua isso pelo valor real vindo do banco de dados
+  var cidadeSelect = document.querySelector("#validationCustomCidade");
+  cidadeSelect.value = cidadeSelecionada;
+}

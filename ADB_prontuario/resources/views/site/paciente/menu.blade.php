@@ -8,37 +8,16 @@
         {{route('paciente.listar')}}
     @endslot
   @endcomponent
-  <div class="usuario">
-      {{-- <a class="btn-user-name align-content" style="text-decoration: none">
-        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line"/>
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line"/>
-        </svg>
-        <span class="text-usuario" style="display: flex">
-          <span class="material-symbols-outlined">
-            settings
-          </span>
-          <p>{{$primeiraPalavra = explode(' ', $dados->nome)[0]}}</p>
-        </span>
-      </a> --}}
-    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="align-content" style="text-decoration: none">
-      <p>{{$dados->nome}}</p>
-      <span class="material-symbols-outlined" style="color: #000 !important;">
-        person_search
-      </span>
-    </a>
-  </div>
+  <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="usuario" >
+    <p>{{$dados->nome}}</p>
+    <span class="material-symbols-outlined">
+      settings
+    </span>
+  </a>
   <section class="user-index">
     <h1 class="text-center">Menu de paciente</h1>
     <div class="square-content square-content--menu align-content">
       <div class="container text-center menucontainer">
-        {{-- <div class="config-paciente">
-          <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="align-content" style="text-decoration: none">
-            <span class="material-symbols-outlined" style="color: #000 !important;">
-              person_search
-            </span>
-          </a>
-        </div> --}}
         <div class="row justify-content-md-center">
           @component('components.items.paciente-item')
             @slot('coluna')

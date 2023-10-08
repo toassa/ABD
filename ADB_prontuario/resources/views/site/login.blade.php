@@ -5,6 +5,9 @@
 @section('content')
     <section class="square-content square-content--login">
         <img src="{{asset('images/logo_ADB.png')}}" alt="Logo da ADB" class="login-logo">
+        @if($auth == false)
+            <script type="text/javascript">alert("Número USP ou senha inválidos. Digite novamente.");</script>
+        @endif
         <form action="{{route('login.entrar')}}" method="post">
             {{ csrf_field() }}
             <div class="mb-3">

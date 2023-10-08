@@ -315,6 +315,12 @@ a.login-link{
     top: 0;
     left: 0;
     padding: 10px;
+    margin: 4px;
+    border-radius: 12px;
+}
+
+.leave:hover{
+    background-color: var(--background-primarier) !important;
 }
 
 .leave a{
@@ -418,7 +424,15 @@ a.login-link{
     position: absolute;
     right: 0;
     top: 0;
-    margin: 4px 25px;
+    margin: 4px;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px;
+    border-radius: 12px;
+}
+
+.usuario:hover{
+    background-color: var(--background-primarier) !important;
 }
 
 .usuario p{
@@ -431,7 +445,6 @@ a.login-link{
     font-size: 1.9rem !important;
     margin-left: 10px;
     margin-top: 13px !important;
-    margin-right: 20px;
 }
 
 /* Index ----------------------- */
@@ -863,12 +876,12 @@ textarea{
 .btn-primary-darker-resetar, .btn-primary-darker:hover{
     background-color: var(--background-primary);
     color: var(--background-color);
-    /* box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
-    border: 1px solid var(--box-shadow-color); */
-    /* border-radius: 8px; */
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    border: 1px solid var(--box-shadow-color);
+    border-radius: 8px;
     text-decoration: none;
-    /* -ms-transform: translateY(-50%); */
-    /* transform: translateY( 70%); */
+    -ms-transform: translateY(-50%);
+    transform: translateY( 70%);
 }
 
 

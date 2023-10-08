@@ -11,10 +11,12 @@ use stdClass;
 class LoginController extends Controller
 {
     public function login(){
-        return view('site.login');
+        $auth = true;
+        return view('site.login', compact('auth'));
     }
     
     public function entrar(Request $req){
+        $auth = true;
         $dados = $req->all();
         if(Auth::attempt(['num_USP'=>$dados['num_USP'],'password'=>$dados['password']])){
             $user =new stdClass();
@@ -23,14 +25,16 @@ class LoginController extends Controller
             
             \Illuminate\Support\Facades\Mail::send(new \App\Mail\EnviarEmail($user));
             return redirect()->route('admin.opcoes');
-        } else {
-            return redirect()->route('admin.login');
+        }else{
+            $auth = false;
+            return view('site.login', compact('auth'));
         }
     }
     
     public function sair(){
         Auth::logout();
-        return view('site.login');
+        $auth = true;
+        return view('site.login', compact('auth'));
     }
 
 }
