@@ -11,11 +11,7 @@
             </div>
         </div>
     </form>
-    <div class="grid">
-        {{$grid_titles}}
-    </div>
-    <div class="grid grid-list">
-        {{$grid_content}}
-    </div>
+    {{$grid_titles}}
+    {{$grid_content}}
     <a href="{{$route_btn}}" class="btn btn-primary  btn-giga btn-list-editar">{{$text_btn}}</a>
 </section>

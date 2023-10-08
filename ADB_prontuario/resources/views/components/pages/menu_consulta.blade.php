@@ -9,10 +9,12 @@
         @endslot
     @endcomponent
     <div class="usuario">
-      <p>{{$nome}}</p>
-      <span class="material-symbols-outlined">
-        person_search
-      </span>
+        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+            <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+            <span class="material-symbols-outlined">
+              settings
+            </span>
+        </a>
     </div>
     <section class="square-content square-content--cadastro-consulta">
         <div class="menu_consulta">

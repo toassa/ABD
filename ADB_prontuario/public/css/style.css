@@ -193,7 +193,7 @@ b{
 }
 
 /* Sumir os campos */
-#input_show, #input_show2, #input_show_double, #input_show_double2, #input_show_multiple,  #input_show_multiple2, #input_show_multiple3, #input_show_multiple4, #input_show_multiple5, #input_show_multiple6, #input_show_multiple7, #input_show_multiple8{
+#input_show, #input_show2, #input_show_double, #input_show_double2, #input_show_multiple,  #input_show_multiple2, #input_show_multiple3, #input_show_multiple4, #input_show_multiple5, #input_show_multiple6, #input_show_multiple7, #input_show_multiple8, #input_show3, #input_show_multiple3, #input_show_multiple23, #input_show_multiple33, #input_show_multiple43{
     display: none;
 }
 
@@ -308,22 +308,29 @@ a.login-link{
     text-align: center !important;
 }
 
-/* Logout ---------------------------------------------------------------------------------  */
+/* Ícones superiores: Logout e User ---------------------------------------------------------------------------------  */
 
-.leave{
+.leave, .usuario{
     position: absolute;
     top: 0;
-    left: 0;
     padding: 10px;
     margin: 4px;
     border-radius: 12px;
 }
 
-.leave:hover{
+.leave{
+    left: 0;
+}
+
+.usuario{
+    right: 0;
+}
+
+.leave:hover, .usuario:hover{
     background-color: var(--background-primarier) !important;
 }
 
-.leave a{
+.leave a, .usuario a{
     color: #FFF;
     font-size: 1.2rem;
     text-decoration: none;
@@ -333,6 +340,12 @@ a.login-link{
     width: 28px !important;
 }
 
+.usuario img{
+    width: 28px !important;
+    transform: scaleX(-1);
+    margin-left: 10px;
+}
+
 .leave input{
     background-color: transparent;
     border: none;
@@ -340,7 +353,7 @@ a.login-link{
     font-size: 1.2rem
 }
 
-.leave .material-symbols-outlined{
+.leave .material-symbols-outlined, .usuario .material-symbols-outlined{
     color: #fff !important;
     font-size: 15px !important;
 }
@@ -417,36 +430,6 @@ a.login-link{
 
 
 /* Users --------------------------------------------------------------------------- */
-
-/* Identificação --------------- */
-.usuario{
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 4px;
-    text-decoration: none;
-    text-align: center;
-    padding: 2px;
-    border-radius: 12px;
-}
-
-.usuario:hover{
-    background-color: var(--background-primarier) !important;
-}
-
-.usuario p{
-    color: #fff;
-    margin-top: 13px;
-}
-
-.usuario .material-symbols-outlined{
-    color: #fff !important;
-    font-size: 1.9rem !important;
-    margin-left: 10px;
-    margin-top: 13px !important;
-}
-
 /* Index ----------------------- */
 .hide{
     display: none;
@@ -945,16 +928,6 @@ textarea{
     margin: 35px !important;
 }
 
-.img_resetpassword2{
-    max-width: 100%;
-    width: 300px !important;
-    position: absolute;
-    /* margin: 0 auto; */
-    /* display: block; */
-    top: 145px;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
 .text-muted-password {
     height: 83;
     margin: 0 auto;

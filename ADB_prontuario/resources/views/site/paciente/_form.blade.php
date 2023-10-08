@@ -8,7 +8,7 @@
   </div>
   <div class="col-md-6">
     <label for="validationCustomNome" class="form-label textinho">Nome <b>*</b></label>
-    <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}"  name="nome"  maxlength="200" required>
+    <input type="text" class="form-control text-center" id="validationCustomNome" value="{{isset($dados->nome) ? $dados->nome : ''}}"  name="nome"  maxlength="200">
     <div class="invalid-feedback">
       Insira o nome completo do paciente
     </div>

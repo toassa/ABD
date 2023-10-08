@@ -96,7 +96,7 @@ Route::middleware(['active.check'])->group(function () {
         
             Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
         
-            Route::get('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
+            Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
 
             Route::get('/configuracoes/{num_registro}', [PacienteController::class, 'configuracoes'])->name('paciente.configuracoes');
 

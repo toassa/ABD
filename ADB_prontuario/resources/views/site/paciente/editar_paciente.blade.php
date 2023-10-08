@@ -16,12 +16,12 @@
                     </div>
                 </div>
                 <div class="align-content">
-                    <a class="prev-btn btn btn-secondary">
+                    <a class="prev-btn btn btn-secondary" id="pagination-icon">
                         <span class="material-symbols-outlined">
                             arrow_back
                         </span>
                     </a>
-                    <a class="next-btn btn btn-secondary">
+                    <a class="next-btn btn btn-secondary" id="pagination-icon">
                         <span class="material-symbols-outlined">
                             arrow_forward
                         </span>

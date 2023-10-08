@@ -1,6 +1,6 @@
 <div class="usuario">
-    <p>{{Auth::user()->name}}</p>
-    <span class="material-symbols-outlined">
-        account_circle
-    </span>
+    <a href="{{route('login.sair')}}">
+        <a href="{{route('login.sair')}}">{{$primeiroNome = explode(' ', Auth::user()->name)[0]}}</a>
+        <img src="{{asset('images/icons/out-icon.svg')}}" alt="Ícone de log-out">
+    </a>
 </div>

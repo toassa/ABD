@@ -87,13 +87,8 @@ class EmailController extends Controller
         }        
         else 
         {   
+            // return view('senha.confirmar_email_senha', compact('info'));
             return redirect()->back()->with('error', 'Os dados não correspondem.');
-            // $error = 'Os dados não correspondem.';
-            // return view('admin.login', compact('error'));
-            // echo '<script>alert("Os dados não correspondem.");</script>';
-            // return redirect()->route('confirmar_email_senha');
-            // dd('erro');
-            // return redirect()->route('admin.login');
         }
     }
 }

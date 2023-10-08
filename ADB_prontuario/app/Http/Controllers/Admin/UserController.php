@@ -14,8 +14,9 @@ class UserController extends Controller
     }
 
     public function cadastrar(){
+        $page = 'cadastrar';
         $num_existente = false;
-        return view('site.usuario.cadastrar', compact('num_existente'));
+        return view('site.usuario.cadastrar', compact('num_existente', 'page'));
     }
 
     public function salvar(Request $req){
@@ -65,8 +66,9 @@ class UserController extends Controller
     }
 
     public function editar($num_USP){
+        $page = 'editar';
         $rows = User::find($num_USP);
-        return view('site.usuario.editar', compact('rows'));
+        return view('site.usuario.editar', compact('rows', 'page'));
     }
 
     public function atualizar(Request $req, $num_USP)

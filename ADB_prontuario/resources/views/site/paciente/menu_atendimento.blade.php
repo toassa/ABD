@@ -8,12 +8,14 @@
         {{route('consulta.menu', $dados->num_registro)}}
     @endslot
   @endcomponent
-  <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" class="usuario" >
-    <p>{{$dados->nome}}</p>
-    <span class="material-symbols-outlined">
-      settings
-    </span>
-  </a>
+  <div class="usuario">
+    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+        <span class="material-symbols-outlined">
+          settings
+        </span>
+    </a>
+  </div>
   <section class="user-index">
     <h1 class="text-center">Atendimento</h1>
     <div class="square-content square-content--menu">

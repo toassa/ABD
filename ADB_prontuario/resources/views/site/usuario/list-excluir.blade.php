@@ -62,7 +62,7 @@
                     </div>
                     <div class="row buttons-dialog">
                         <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
-                        <a class="col-4-md a-row-list" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
+                        <a class="col-4-md a-row-list btn-primary-error" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
                     </div>
                 </dialog>
             @endforeach

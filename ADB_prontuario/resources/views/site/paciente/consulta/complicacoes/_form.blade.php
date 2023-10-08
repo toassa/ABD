@@ -1,18 +1,8 @@
 <!-- complicacoes -->
 
-{{-- <div class="info-content">
-    <div class="hover">
-        <span class="material-symbols-outlined">
-        info
-        </span>
-    </div>
-    <div class="stuff">stuff</div>
-</div> --}}
-
-{{-- MUDAR FORMA --}}
 <div class="col-md-6">
-    <label for="validationCustomSelectDefineDouble" class="form-label">Já teve complicações do diabetes? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="complicacoes" required>
+    <label for="validationCustomSelectDefine" class="form-label">Já teve complicações do diabetes? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine" onchange="mostraDados()" onfocus="mostraDados()" name="complicacoes" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->complicacoes) && $dados->complicacoes == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->complicacoes) && $dados->complicacoes == 0 ? 'selected' : '' }}>Não</option>
@@ -22,7 +12,7 @@
     </div>
 </div>
 
-<div class="col-md-6" id="input_show_double">
+<div class="col-md-6" id="input_show">
     <label for="validationCustomquaiscomplicacoes" class="form-label">Descreva as complicações <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomquaiscomplicacoes" value="{{ isset($dados->quais_complicacoes) ? $dados->quais_complicacoes : '' }}" name="quais_complicacoes" placeholder="Insira quais complicações">
     <div class="invalid-feedback">
@@ -31,9 +21,9 @@
 </div>
 
 {{-- MUDAR FORMA --}}
-<div class="col-md-6" id="input_show_double2">
-    <label for="validationCustomSelectDefine" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" onclick="MostraDados()" name="internacao_complicacao" required>
+<div class="col-md-6" id="input_show_multiple">
+    <label for="validationCustomSelectDefineDouble" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="internacao_complicacao" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->internacao_complicacao) && $dados->internacao_complicacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->internacao_complicacao) && $dados->internacao_complicacao == 0 ? 'selected' : '' }}>Não</option>
@@ -43,7 +33,7 @@
     </div>
 </div>
 
-<div class="col-md-6" id="i4nput_show">
+<div class="col-md-6" id="input_show_double">
     <label for="validationCustomcausainternacao" class="form-label">Descreva as complicações que desencadearam a internação <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomcausainternacao" value="{{ isset($dados->causa_internacao) ? $dados->causa_internacao : '' }}" name="causa_internacao" placeholder="Insira a causa da internação" required>
     <div class="invalid-feedback">
@@ -52,9 +42,9 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomEpisodioHipoglicemia" class="form-label">Já teve episódio(s) de hipoglicemia? <b>*</b> </label>
-    <select class="form-select" id="validationCustomEpisodioHipoglicemia" name="episodio_hipoglicemia" required>
-         <option selected disabled value="">Clique para escolher...</option>
+    <label for="validationCustomSelectDefine3" class="form-label">Já teve episódio(s) de hipoglicemia? <b>*</b> </label>
+    <select class="form-select" id="validationCustomSelectDefine3" onclick="mostraDados3()" onchange="mostraDados3()" onfocus="mostraDados3()" name="episodio_hipoglicemia" required>
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($dados->episodio_hipoglicemia) && $dados->episodio_hipoglicemia === 'Sim' ? 'selected' : '' }}>Sim</option>
         <option value="Não" {{ isset($dados->episodio_hipoglicemia) && $dados->episodio_hipoglicemia === 'Não' ? 'selected' : '' }}>Não</option>
         <option value="Não lembra" {{ isset($dados->episodio_hipoglicemia) && $dados->episodio_hipoglicemia === 'Não lembra' ? 'selected' : '' }}>Não lembra</option>
@@ -64,7 +54,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4" id="input_show3">
     <label for="validationCustomEpisodioAssintomatico" class="form-label">Episódio Assintomático?
         <b>*</b>
         <div class="popup" onclick="open_popup()">
@@ -84,7 +74,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4" id="input_show_multiple3">
     <label for="validationCustomNivelEpisodio" class="form-label">Nível do Episódio <b>*</b> </label>
     <select class="form-select" id="validationCustomNivelEpisodio" name="nivel_episodio" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -96,7 +86,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4" id="input_show_multiple23">
     <label for="validationCustomPeriodoFrequenteHipoglicemia" class="form-label">Período Frequente de Hipoglicemia <b>*</b> </label>
     <select class="form-select" id="validationCustomPeriodoFrequenteHipoglicemia" name="periodo_frequente_hipoglocemia" required>
          <option selected disabled value="">Clique para escolher...</option>
@@ -110,7 +100,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4" id="input_show_multiple33">
     <label for="validationCustomepisodiosultimomes" class="form-label">Episódios no Último Mês <b>*</b> </label>
     <input type="number" class="form-control" id="validationCustomepisodiosultimomes" value="{{ isset($dados->episodios_ultimo_mes) ? $dados->episodios_ultimo_mes : '' }}" name="episodios_ultimo_mes" placeholder="Insira a quantidade de episódios no último mês" required>
     <div class="invalid-feedback">
@@ -118,7 +108,7 @@
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4" id="input_show_multiple43">
     <label for="validationCustomalimento_tratar_hipoglicemia" class="form-label">Alimento para Tratar Hipoglicemia <b>*</b> </label>
     <input type="text" class="form-control" id="validationCustomalimento_tratar_hipoglicemia" value="{{ isset($dados->alimento_tratar_hipoglicemia) ? $dados->alimento_tratar_hipoglicemia : '' }}" name="alimento_tratar_hipoglicemia" placeholder="Insira o alimento utilizado para tratar hipoglicemia" required>
     <div class="invalid-feedback">

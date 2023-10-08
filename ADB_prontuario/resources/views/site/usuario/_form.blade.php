@@ -19,7 +19,13 @@
         CPF inválido
     </div>
 </div>
-<div class="col-md-4">
+
+
+@if ($page != 'editar')
+    <div class="col-md-4">
+@else
+    <div class="col-md-8">
+@endif
     <label for="validationCustomUserMail" class="form-label textinho">E-mail<b>*</b></label>
     <div class="input-group has-validation">
     <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -29,16 +35,20 @@
     </div>
     </div>
 </div>
-<div class="col-md-4 password-container">
-    <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b>*</b></label>
-    <input type="password" class="text-center form-control" id="validationCustomPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
-    <span class="material-symbols-outlined show-password" id="olhinho" onclick="togglePasswordVisibility()">
-        visibility_off
-    </span>
-    <div class="invalid-feedback">
-        Senha inválida
+
+@if ($page != 'editar')
+    <div class="col-md-4 password-container">
+        <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b>*</b></label>
+        <input type="password" class="text-center form-control" id="validationCustomPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
+        <span class="material-symbols-outlined show-password" id="olhinho" onclick="togglePasswordVisibility()">
+            visibility_off
+        </span>
+        <div class="invalid-feedback">
+            Senha inválida
+        </div>
     </div>
-</div>
+@endif
+
 <div class="col-md-4">
     <label for="validationCustomUserMesa" class="form-label textinho">Mesa <b>*</b></label>
     <input type="number" class="form-control text-center" id="validationCustomUserMesa" maxlength="2" value="{{isset($rows->mesa) ? $rows->mesa : ''}}" name="mesa" maxlength="2" placeholder="Digite o número da mesa" required>
@@ -81,7 +91,8 @@
         Função inválida
     </div>
 </div>
-<div class="col-md-3" style="padding-top: 3%">
+
+<div class="col-md-4 align-content" style="padding-top: 3%">
     <div class="form-check">
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
@@ -90,12 +101,15 @@
     </label>
     </div>
 </div>
-<div class="col-md-2" style="padding-top: 3%">
-    <div class="form-check">
-    <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
-    <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
-    <label class="form-check-label textinho" for="invalidCheck">
-        Ativo?<b>*</b>
-    </label>
+
+@if ($page == 'matheus')
+    <div class="col-md-2" style="padding-top: 3%">
+        <div class="form-check">
+        <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+        <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+        <label class="form-check-label textinho" for="invalidCheck">
+            Ativo?<b>*</b>
+        </label>
+        </div>
     </div>
-</div>
+@endif

@@ -26,13 +26,18 @@
 
         @if ($rows=='[]')
             @slot('grid_titles')
-                n tem
+            <div class="text-center">
+                Não encontramos nenhum resultado para sua busca
+            </div>
             @endslot
             @slot('grid_content')
-                burro
+            <div class="text-center">
+                Clique no botão de busca para mostrar todos os usuários
+            </div>
             @endslot
         @else
             @slot('grid_titles')
+            <div class="grid">
                 <div class="row row-title">
                     <div class="col text-center col-title">Nome</div>
                     <div class="col text-center col-title">Num. USP</div>
@@ -42,9 +47,11 @@
                     <div class="col text-center col-title">Permissão</div>
                     <div class="col text-center col-title">Situação</div>
                 </div>
+            </div>
             @endslot
 
             @slot('grid_content')
+            <div class="grid grid-list">
                 @foreach ($rows as $row)
                 @if($row->ativo == true)
                     <div class="row row-text row-hover row-activated">
@@ -62,6 +69,7 @@
                         <p class="col text-center col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
                     </div>
                 @endforeach
+            </div>
             @endslot
         @endif
 

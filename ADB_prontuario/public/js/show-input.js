@@ -64,3 +64,28 @@ function mostraDadosMultiple(){
         }
     });
 }
+
+function mostraDados3(){
+    let select = document.getElementById('validationCustomSelectDefine3');
+    let input = document.getElementById('input_show3');
+    let input_multiple = document.getElementById('input_show_multiple3');
+    let input_multiple2 = document.getElementById('input_show_multiple23');
+    let input_multiple3 = document.getElementById('input_show_multiple33');
+    let input_multiple4 = document.getElementById('input_show_multiple43');
+    
+    select.addEventListener('change', function() {
+        if(select.value == 'Sim') {
+            input.style.display = 'block';
+            input_multiple.style.display = 'block';
+            input_multiple2.style.display = 'block';
+            input_multiple3.style.display = 'block';
+            input_multiple4.style.display = 'block';
+        }else {
+            input.style.display = 'none';
+            input_multiple.style.display = 'none';
+            input_multiple2.style.display = 'none';
+            input_multiple3.style.display = 'none';
+            input_multiple4.style.display = 'none';
+        }
+    });
+}
