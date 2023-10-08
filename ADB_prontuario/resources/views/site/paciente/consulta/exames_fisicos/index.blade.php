@@ -15,8 +15,8 @@
             <p>Atenção, seguir o roteiro físico para guiar o exame. Adicionar aqui as alterações observadas em cada aparelho. Caso não se observe alterações, anotar NDN (nada digno de nota), especificando no roteiro físico os achados.</p>
             @include('site.paciente.consulta.exames_fisicos._form')
             <div class="col-12 col-btn-form">
-                <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
+                <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
             </div>
         </form>
         <script>

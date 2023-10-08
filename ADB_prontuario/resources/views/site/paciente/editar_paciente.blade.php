@@ -15,22 +15,22 @@
                         @include('site.paciente._form')
                     </div>
                 </div>
+                <div class="align-content">
+                    <a class="prev-btn btn btn-secondary">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
+                    </a>
+                    <a class="next-btn btn btn-secondary">
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </a>
+                </div>
                 <div class="col-12 col-btn-form">
                     <button class="btn btn-giga btn-primary-confirm">Atualizar</button>
                 </div>
             </form>
-            <div class="align-content">
-                <button class="prev-btn btn btn-secondary">
-                    <span class="material-symbols-outlined">
-                        arrow_back
-                    </span>
-                </button>
-                <button class="next-btn btn btn-secondary">
-                    <span class="material-symbols-outlined">
-                        arrow_forward
-                    </span>
-                </button>
-            </div>
         </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('js/slide.js')}}"></script>

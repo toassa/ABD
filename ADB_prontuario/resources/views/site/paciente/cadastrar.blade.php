@@ -16,25 +16,23 @@
                     @include('site.paciente._form')
                 </div>
             </div>
-            
+            <div class="align-content">
+                <a class="prev-btn btn btn-secondary" id="pagination-icon">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </a>
+                <a class="next-btn btn btn-secondary" id="pagination-icon">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </a>
+            </div>
             <div class="col-12 col-btn-form">
                 <button class="btn btn-primary-darker btn-giga" type="reset">Limpar</button>
                 <button class="btn btn-primary btn-giga" type="submit">Cadastrar</button>
             </div>
         </form>
-        
-    <div class="align-content">
-        <button class="prev-btn btn btn-secondary">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </button>
-        <button class="next-btn btn btn-secondary">
-            <span class="material-symbols-outlined">
-                arrow_forward
-            </span>
-        </button>
-    </div>
 
     </section>
     

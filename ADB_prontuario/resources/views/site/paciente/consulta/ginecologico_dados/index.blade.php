@@ -14,8 +14,8 @@
             <h1 class="text-center">Dados ginecológicos</h1>
             @include('site.paciente.consulta.ginecologico_dados._form')
             <div class="col-12 col-btn-form">
-                <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
+                <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
             </div>
         </form>
         <script>

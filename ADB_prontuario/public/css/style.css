@@ -67,7 +67,7 @@ body{
     font-size: var(--size-h1);
     color: var(--text-color);
     text-shadow: 1px 0.5px 2px var(--text-shadow-color);
-    margin: 15px auto 30px auto;
+    margin: 15px auto 10px auto;
 }
 
 .square-content--cadastro{
@@ -636,10 +636,19 @@ dialog::backdrop{
 .prev-btn, .next-btn{
     cursor: pointer;
     border: none !important;
-    margin: 20px !important;
+    margin-right: 20px !important;
+    width: 100px;
+    margin-top: 0 !important;
+    height: 30px;
+    line-height: 1.9 !important;
+    padding: 0;
 }
 
-.btn:disabled{
+#pagination-icon .material-symbols-outlined{
+    font-size: var(--size-grid) !important;
+}
+
+.a:disabled{
     border: none !important;
 }
   
@@ -769,7 +778,7 @@ textarea{
 }
 
 .menu-sections a{
-    background-color: var(--background-primary);
+    background-color: var(--background-primarier);
     color: black;
     display: flex;
     padding: 7px 0;

@@ -19,11 +19,11 @@
                     <a href="{{route('opcao.users')}}" class="button-white-blue button-white-blue--opcoes">Organização</a>
                 @endif
             </nav>
-            @else
-                <nav class="square-content square-content--opcoes">
-                    <h2>Ops... Parece que você não está ativo no nosso sistema</h2>
-                    <p>Tente entrar em contato com os administradores da plataforma para resolver o problema</p>
-                </nav>
-            @endif
+        @else
+            <nav class="square-content square-content--opcoes">
+                <h2>Ops... Parece que você não está ativo no nosso sistema</h2>
+                <p>Tente entrar em contato com os administradores da plataforma para resolver o problema</p>
+            </nav>
+        @endif
     </section>
 @endsection
