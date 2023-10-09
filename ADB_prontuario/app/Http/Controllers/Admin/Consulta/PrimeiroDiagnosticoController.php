@@ -57,6 +57,7 @@ class PrimeiroDiagnosticoController extends Controller
     public function editar($num_registro){
         $dados = PrimeiroDiagnostico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
+        // dd($dados);
         return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente'));
     }
 

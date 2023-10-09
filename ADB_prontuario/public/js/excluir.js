@@ -4,6 +4,7 @@ const btn_aparece = document.getElementById('btn_aparece');
 
 function show_dialog_excluir(){
     // document.getElementById('excluir').close();
+    var ID = $(this).data('num_USP')
     modal.style.display = "block";
 }
 

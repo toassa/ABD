@@ -36,6 +36,7 @@
                     @if($row->ativo == false)
                         <div class="row row-text row-hover row-inactivated">
                     @endif
+                            {{$ID = $row->$num_USP;}}
                             <p class="col text-center col-text">{{$row->name}}</p>
                             <p class="col text-center col-mail">{{$row->num_USP}}</p>
                             <p class="col text-center col-mail">{{$row->email}}</p>
@@ -50,22 +51,22 @@
                             </p>
                         </div>
                     </button>
-                <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
-                    <div class="p-dialog">
-                        <p class="text-center">
-                        <span class="material-symbols-outlined">
-                            warning
-                        </span>
-                        </p>
-                        <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
-                        <p>Aviso: essa ação <strong>não</strong> poderá ser desfeita!</p>
-                    </div>
-                    <div class="row buttons-dialog">
-                        <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
-                        <a class="col-4-md a-row-list btn-primary-error" href="{{route('users.excluir', $row->num_USP)}}">Excluir</a>
-                    </div>
-                </dialog>
             @endforeach
+            <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
+                <div class="p-dialog">
+                    <p class="text-center">
+                    <span class="material-symbols-outlined">
+                        warning
+                    </span>
+                    </p>
+                    <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
+                    <p>Aviso: essa ação <strong>não</strong> poderá ser desfeita!</p>
+                </div>
+                <div class="row buttons-dialog">
+                    <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
+                    <a class="col-4-md a-row-list btn-primary-error" href="{{route('users.excluir', $row->num_USP   )}}">Excluir</a>
+                </div>
+            </dialog>
             <script src="{{asset('js/excluir.js')}}"></script>
         </div>
     </section>

@@ -336,7 +336,6 @@ Route::middleware(['active.check'])->group(function () {
                 });
 
                 Route::prefix('/primeiro_diagnostico')->group(function(){
-                    Route::get('/op/{num_registro}', [PrimeiroDiagnosticoController::class, 'opcao'])->name('primeiro_diagnostico.opcao');
 
                     Route::get('/op/{num_registro}', [PrimeiroDiagnosticoController::class, 'opcao'])->name('primeiro_diagnostico.opcao');
 

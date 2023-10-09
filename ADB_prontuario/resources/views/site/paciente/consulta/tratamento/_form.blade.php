@@ -9,7 +9,7 @@
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Faz uso de insulina? <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="uso_insulina">
-         <option selected disabled value="">Clique para escolher...</option>
+         <option selected value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->uso_insulina) && $dados->uso_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->uso_insulina) && $dados->uso_insulina == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -107,7 +107,7 @@
 <div class="col-md-6" id="input_show_multiple5">
     <label for="validationCustomUtensilho" class="form-label">Qual o utensilho para aplicação de insulina? <b>*</b></label>
     <select class="form-select" id="validationCustomUtensilho" name="utensilho">
-      <option selected disabled value="">Clique para escolher...</option>
+      <option selected value="">Clique para escolher...</option>
       <option {{ isset($dados->utensilho) && $dados->utensilho === 'Caneta' ? 'selected' : '' }} value="Caneta">Caneta</option>
       <option {{ isset($dados->utensilho) && $dados->utensilho === 'Seringa' ? 'selected' : '' }} value="Seringa">Seringa</option>
     </select>
@@ -152,7 +152,7 @@
 <div class="col-md-6" id="input_show_multiple7">
     <label for="validationCustomSelectDefine2" class="form-label">Reuso de Seringas para Insulina <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine2" name="reuso_seringas_insulina" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()">
-         <option selected disabled value="">Clique para escolher...</option>
+         <option selected value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->reuso_seringas_insulina) && $dados->reuso_seringas_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->reuso_seringas_insulina) && $dados->reuso_seringas_insulina == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -170,10 +170,11 @@
 </div>
 
 <div class="col-md-12" id="input_show_multiple8">
-    <label for="validationCustomAderencia" class="form-label">Aderência ao Tratamento <b>*</b></label>
+    <label for="validationCustomaderencia" class="form-label">Aderência ao Tratamento <b>*</b></label>
     <div class="row align-content">
         <div class="col-md-12 form-check mb-3">
             <input type="checkbox" class="form-check-input" id="checkboxEsqueceu" name="aderencia[]" value="Alguma vez se esqueceu de aplicar insulina" {{ isset($dados->aderencia) && in_array('Alguma vez se esqueceu de aplicar insulina', json_decode($dados->aderencia)) ? 'checked' : '' }}>
+            <input type="hidden" name="aderencia[]" value="Alguma vez se esqueceu de aplicar insulina" {{ isset($dados->aderencia) && in_array('Alguma vez se esqueceu de aplicar insulina', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxEsqueceu">Alguma vez se esqueceu de aplicar insulina</label>
         </div>
         
@@ -183,17 +184,17 @@
         </div>
         
         <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxDeixaBem" name="aderencia" value="Deixa de aplicar insulina alguma vez quando se sente bem" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente bem' ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxDeixaBem" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente bem" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente bem' ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxDeixaBem">Deixa de aplicar insulina alguma vez quando se sente bem</label>
         </div>
         
         <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxDeixaMal" name="aderencia" value="Deixa de aplicar insulina alguma vez quando se sente mal" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente mal' ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxDeixaMal" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente mal" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente mal' ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxDeixaMal">Deixa de aplicar insulina alguma vez quando se sente mal</label>
         </div>
         
         <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxNuncaEsqueci" name="aderencia" value="Nunca esqueci de aplicar" {{ isset($dados->aderencia) && $dados->aderencia === 'Nunca esqueci de aplicar' ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="checkboxNuncaEsqueci" name="aderencia[]" value="Nunca esqueci de aplicar" {{ isset($dados->aderencia) && $dados->aderencia === 'Nunca esqueci de aplicar' ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxNuncaEsqueci">Nunca esqueci de aplicar</label>
         </div>
         

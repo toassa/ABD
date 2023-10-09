@@ -9,8 +9,8 @@
         @endslot
     @endcomponent
     <div class="usuario">
-        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
-            <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+        <a href="{{route('paciente.configuracoes', $num_registro)}}">
+            <a href="{{route('paciente.configuracoes', $num_registro)}}">{{$nome}}</a>
             <span class="material-symbols-outlined">
               settings
             </span>
