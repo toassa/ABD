@@ -85,7 +85,7 @@ Route::middleware(['active.check'])->group(function () {
                     Route::get('/list-desativar', [UserController::class, 'list_desativar'])->name('users.list-desativar');
 
                     Route::get('/desativar/{num_USP}', [UserController::class, 'desativar'])->name('users.desativar');
-                });
+                }); 
             });
         });
     });

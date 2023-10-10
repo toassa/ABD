@@ -28,7 +28,7 @@
         </div>
         <div class="grid grid-list">
             @foreach ($rows as $row)
-                <button id="btn_aparece" class="a-row-list" onclick="show_dialog_excluir()">
+                <button id="btn_aparece" class="a-row-list btnexcluir" onclick="show_dialog_excluir({{$row->num_USP}},'{{$row->name}}')">
                     @if($row->ativo == true)
                         <div class="row row-text row-hover row-activated">
                     @endif
@@ -36,7 +36,7 @@
                     @if($row->ativo == false)
                         <div class="row row-text row-hover row-inactivated">
                     @endif
-                            {{$ID = $row->$num_USP;}}
+       
                             <p class="col text-center col-text">{{$row->name}}</p>
                             <p class="col text-center col-mail">{{$row->num_USP}}</p>
                             <p class="col text-center col-mail">{{$row->email}}</p>
@@ -59,12 +59,12 @@
                         warning
                     </span>
                     </p>
-                    <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong>{{$row->name}}</strong> ?</p>
+                    <p class="text-center">Você tem certeza que deseja excluir <strong>permanentemente</strong> o usuário <strong> <span id ="userexcluir"></span> </strong> ?</p>
                     <p>Aviso: essa ação <strong>não</strong> poderá ser desfeita!</p>
                 </div>
                 <div class="row buttons-dialog">
                     <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
-                    <a class="col-4-md a-row-list btn-primary-error" href="{{route('users.excluir', $row->num_USP   )}}">Excluir</a>
+                    <a class="col-4-md a-row-list btn-primary-error btn-excluir">Excluir</a>
                 </div>
             </dialog>
             <script src="{{asset('js/excluir.js')}}"></script>
