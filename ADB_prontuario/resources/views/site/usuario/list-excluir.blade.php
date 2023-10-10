@@ -64,10 +64,10 @@
                 </div>
                 <div class="row buttons-dialog">
                     <button class="col-4-md" onclick="hide_dialog_excluir()" id="btn_cancelar">Cancelar</button>
-                    <a class="col-4-md a-row-list btn-primary-error btn-excluir">Excluir</a>
+                    <a class="col-4-md a-row-list btn-primary-error btn-excluir" href="#">Excluir</a>
                 </div>
             </dialog>
-            <script src="{{asset('js/excluir.js')}}"></script>
+            <script src="{{asset('js/excluirgustavo.js')}}"></script>
         </div>
     </section>
     

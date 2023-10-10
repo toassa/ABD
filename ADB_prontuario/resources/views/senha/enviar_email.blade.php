@@ -8,6 +8,7 @@
             arrow_back_ios
         </span>
         <input type="button" value="Voltar" onClick="history.go(-1)"> 
+        <!-- <a class="btn btn-primary" href="{{route('admin.opcoes')}}">VOLTAR À PÁGINA INICIAL</a> -->
     </div>
     <div style="position: relative;">
     <img src="{{asset('images\pack\medico-aponta.png')}}" alt="Médico apontando para baixo" class="img_resetpassword">

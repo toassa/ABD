@@ -6,14 +6,14 @@
     </div>
 </div>
 <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label textinho">Nome<b>*</b></label>
+    <label for="validationCustomUsername" class="form-label textinho">Nome<b> *</b></label>
     <input type="text" class="text-center form-control" id="validationCustomUsername" value="{{isset($rows->name) ? $rows->name : ''}}" name="name" maxlength="200" placeholder="Digite o nome completo" required>
     <div class="invalid-feedback">
         Nome inválido
     </div>
 </div>
 <div class="col-md-4">
-    <label for="validationCustomUserCPF" class="form-label textinho">CPF<b>*</b></label>
+    <label for="validationCustomUserCPF" class="form-label textinho">CPF<b> *</b></label>
     <input type="text" class="text-center form-control" id="validationCustomUserCPF" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" onInput="mascara(this)" name="CPF" maxlength="11" placeholder="Digite o CPF (ex: 000.000.000.00)" required>
     <div class="invalid-feedback">
         CPF inválido
@@ -26,7 +26,7 @@
 @else
     <div class="col-md-8">
 @endif
-    <label for="validationCustomUserMail" class="form-label textinho">E-mail<b>*</b></label>
+    <label for="validationCustomUserMail" class="form-label textinho">E-mail<b> *</b></label>
     <div class="input-group has-validation">
     <span class="input-group-text" id="inputGroupPrepend">@</span>
     <input type="email" class="text-center form-control" id="validationCustomMail" aria-describedby="inputGroupPrepend" value="{{isset($rows->email) ? $rows->email : ''}}" name="email" placeholder="Digite o e-mail (ex: usuario@usp.br)" required>
@@ -38,7 +38,7 @@
 
 @if ($page != 'editar')
     <div class="col-md-4 password-container">
-        <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b>*</b></label>
+        <label for="validationCustomUserPass" id="labelValidationCustomUserPass" class="form-label textinho">Senha<b> *</b></label>
         <input type="password" class="text-center form-control" id="validationCustomPass" value="{{isset($rows->password) ? $rows->password : ''}}" name="password" placeholder="Digite a senha" required>
         <span class="material-symbols-outlined show-password" id="olhinho" onclick="togglePasswordVisibility()">
             visibility_off
@@ -57,7 +57,7 @@
     </div>
   </div>
 <div class="col-md-3">
-    <label for="validationCustomUserCargo" class="form-label textinho">Cargo<b>*</b></label>
+    <label for="validationCustomUserCargo" class="form-label textinho">Cargo<b> *</b></label>
     <select class="form-select" id="validationCustomUserCargo" name="cargo" required>
         <option disabled selected value="">Clique para escolher...</option>
         <option {{ isset($rows->cargo) && $rows->cargo === 'medico' ? 'selected' : '' }} value="medico">Médico</option>
@@ -69,7 +69,7 @@
     </div>
 </div>
 <div class="col-md-4">
-    <label for="validationCustomUserFuncao" class="form-label textinho">Função<b>*</b></label>
+    <label for="validationCustomUserFuncao" class="form-label textinho">Função<b> *</b></label>
     <select class="form-select" id="validationCustomUserFuncao" name="funcao" required>
         <option disabled selected value="">Clique para escolher...</option>
         <option {{ isset($rows->cargo) && $rows->funcao === 'nutricao' ? 'selected' : '' }} value="nutricao">Nutrição</option>
@@ -97,7 +97,7 @@
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <label class="form-check-label textinho" for="invalidCheck">
-        Administrador?<b>*</b>
+        Administrador?<b> *</b>
     </label>
     </div>
 </div>
