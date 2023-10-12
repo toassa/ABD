@@ -18,7 +18,7 @@ class ComplicacaosSeeder extends Seeder
             'internacao_complicacao'=>true,
             'causa_internacao'=>'Nível muito alto de hipoglicemia',
             'episodio_hipoglicemia'=>'Não lembra',
-            'episodio_assintomatico'=>1,
+            'episodio_assintomatico'=>true,
             'nivel_episodio'=>'Grave',
             'periodo_frequente_hipoglocemia'=>'Noite',
             'episodios_ultimo_mes'=>1,
