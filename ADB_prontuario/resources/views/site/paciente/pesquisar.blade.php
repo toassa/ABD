@@ -44,7 +44,9 @@
         @endslot
         @slot('grid_content')
         <div class="text-center">
-            Clique no botão de busca para mostrar todos os usuários
+          <a href="{{route('paciente.null_pesquisar')}}">
+            Clique aqui para mostrar todos os usuários
+          </a>
         </div>
         @endslot
       @else

@@ -592,12 +592,25 @@ dialog::backdrop{
 /* List-desativar --------------------- */
 .row-activated p{
     color: var(--text-color);
+    cursor: pointer;
 }
 
 .row-inactivated p{
     color: var(--text-shadow-color);
+    cursor: pointer;
 }
 
+.checkbox-error {
+    outline: 0.5px solid red; /* Muda a borda para vermelho */
+}
+
+.label-error{
+    color: red !important;
+}
+
+.label-confirm{
+    color: green !important;
+}
 
 /* Pacientes ---------------------------------------------------------------------------- */
 

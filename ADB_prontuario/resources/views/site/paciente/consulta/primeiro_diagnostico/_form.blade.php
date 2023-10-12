@@ -33,7 +33,7 @@
 
     <div class="col-md-6">
         <label for="validationCustomSelectDefine" class="form-label">O paciente acredita que fatores emocionais\psicológicos contribuiram para início da doença? <b>*</b> </label>
-        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="fator_emocional" >
+        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="fator_emocional" required>
             <option selected disabled value="">Clique para escolher...</option>
             <option value="1" {{ isset($dados->fator_emocional) && $dados->fator_emocional == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->fator_emocional) && $dados->fator_emocional == 0 ? 'selected' : '' }}>Não</option>
@@ -84,12 +84,11 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-    {{-- MUDAR VALIDACAO --}}
     <div class="col-md-12">
         <label for="validationCustomLetra" class="form-label">Selecione os sintomas ao diagnóstico <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-4 form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="validationFormCheck1" name="sintomas[]" value="Receber fitas de glicosímetro ou insulina" {{ isset($dados->sintomas) && in_array('Receber fitas de glicosímetro ou insulina', json_decode($dados->sintomas)) ? 'checked' : '' }} required>
+                <input class="form-check-input" type="checkbox" id="validationFormCheck1" name="sintomas[]" value="Receber fitas de glicosímetro ou insulina" {{ isset($dados->sintomas) && in_array('Receber fitas de glicosímetro ou insulina', json_decode($dados->sintomas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="validationFormCheck1">Receber fitas de glicosímetro ou insulina</label>
             </div>
             <div class="col-md-4 form-check mb-3">

@@ -11,10 +11,10 @@ class UsersSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'num_USP'=>'11111',
-            'name'=> 'Matheus',
+            'num_USP'=>'2157022',
+            'name'=> 'Raissa Toassa Martinelli',
             'CPF'=>'78878787878',
-            'email'=>'matheus.oliveira@unesp.br',
+            'email'=>'raissa.toassa@unesp.br',
             'password'=>bcrypt('123456'),
             'cargo'=>'coordenador',
             'funcao'=>'nutricao',

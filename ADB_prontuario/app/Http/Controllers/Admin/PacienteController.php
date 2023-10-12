@@ -146,6 +146,12 @@ class PacienteController extends Controller
                 'num_USP' => $num_USP
             ]);
         }
-        return redirect()->route('paciente.pesquisar'); //return view, se nao carregar na hora usa o JS patrão!
+        $dados = Paciente::all();
+        return view('site.paciente.pesquisar', compact('dados'));//return view, se nao carregar na hora usa o JS patrão!
+    }
+
+    public function null_pesquisar(){
+        $dados = Paciente::all();
+        return view('site.paciente.pesquisar', compact('dados'));//return view, se nao carregar na hora usa o JS patrão!
     }
 }

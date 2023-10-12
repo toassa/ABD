@@ -33,7 +33,7 @@ class ComplicacoesController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
-
+        // dd($request);
         Complicacao::create([
             'num_registro'=>$num_registro,
             'complicacoes'=>$request['complicacoes'],

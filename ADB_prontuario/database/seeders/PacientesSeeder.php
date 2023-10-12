@@ -15,7 +15,7 @@ class PacientesSeeder extends Seeder
     public function run(): void
     {
         Paciente::create([
-            'num_registro' => '11111',
+            'num_registro' => '22222',
             'nome' => 'Ednaldo Pereira',
             'data_nascimento' => '12/12/2000',
             'idade' => 60,  
@@ -42,7 +42,7 @@ class PacientesSeeder extends Seeder
             'estado_nascimento'=>'Sergipe',
             'cidade_nascimento'=>'Aracaju',
             'ativo' => true,
-            'num_USP' => '11111',
+            'num_USP' => '2157022',
         ]);
     }
 }

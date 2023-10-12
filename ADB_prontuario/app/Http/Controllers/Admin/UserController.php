@@ -126,4 +126,9 @@ class UserController extends Controller
         }
         return redirect() -> route('users.list-desativar');
     }
+
+    public function null_buscar(){
+        $rows = User::all();
+        return view('site.usuario.listar', compact('rows'));
+    }
 }

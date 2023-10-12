@@ -65,6 +65,8 @@ Route::middleware(['active.check'])->group(function () {
                 Route::get('/listar', [UserController::class, 'listar'])->name('users.listar');
 
                 Route::post('/buscar', [UserController::class, 'buscar'])->name('users.buscar');
+
+                Route::get('/all_buscar', [UserController::class, 'null_buscar'])->name('users.null_buscar');
             
                 Route::prefix('/form')->group(function(){
                     
@@ -97,6 +99,8 @@ Route::middleware(['active.check'])->group(function () {
             Route::get('/listar', [PacienteController::class, 'listar'])->name('paciente.listar');
         
             Route::post('/pesquisar', [PacienteController::class, 'pesquisar'])->name('paciente.pesquisar');
+
+            Route::get('/all_pesquisar', [PacienteController::class, 'null_pesquisar'])->name('paciente.null_pesquisar');
 
             Route::get('/configuracoes/{num_registro}', [PacienteController::class, 'configuracoes'])->name('paciente.configuracoes');
 

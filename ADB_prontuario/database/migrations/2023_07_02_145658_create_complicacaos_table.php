@@ -14,14 +14,14 @@ return new class extends Migration
 
             $table->boolean('complicacoes');
             $table->string('quais_complicacoes')->nullable();
-            $table->boolean('internacao_complicacao');
+            $table->enum('internacao_complicacao', [1, 0])->nullable();
             $table->string('causa_internacao')->nullable();
             $table->enum('episodio_hipoglicemia', ['Sim', 'Não', 'Não lembra']);
-            $table->boolean('episodio_assintomatico');
+            $table->enum('episodio_assintomatico', [1, 0, NULL])->nullable();
             $table->enum('nivel_episodio', ['Leve/moderado', 'Grave'])->nullable();
-            $table->enum('periodo_frequente_hipoglocemia', ['Manhã', 'Tarde', 'Noite', 'Não sabe']);
-            $table->integer('episodios_ultimo_mes');
-            $table->string('alimento_tratar_hipoglicemia');
+            $table->enum('periodo_frequente_hipoglocemia', ['Manhã', 'Tarde', 'Noite', 'Não sabe'])->nullable();
+            $table->integer('episodios_ultimo_mes')->nullable();
+            $table->string('alimento_tratar_hipoglicemia')->nullable();
             $table->string('num_USP');
 
             $table->timestamps();
