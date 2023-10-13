@@ -21,6 +21,7 @@ class UserController extends Controller
 
     public function salvar(Request $req){
         $dados = $req->all();
+        $page = 'cadastrar';
         
         $num_USP = $dados['num_USP'];
         $usuarioExistente = User::where('num_USP', $num_USP)->first();
@@ -33,21 +34,23 @@ class UserController extends Controller
 
         if ($usuarioExistente) {
             $num_existente = 'número USP';
-            return view('site.usuario.cadastrar', compact('num_existente'));
+            return view('site.usuario.cadastrar', compact('num_existente', 'page'));
         }
 
         if ($cpfExistente) {
             $num_existente = 'CPF';
-            return view('site.usuario.cadastrar', compact('num_existente'));
+            return view('site.usuario.cadastrar', compact('num_existente', 'page'));
         }
 
         if ($emailExistente) {
             $num_existente = 'e-mail';
-            return view('site.usuario.cadastrar', compact('num_existente'));
+            return view('site.usuario.cadastrar', compact('num_existente', 'page'));
         }
         
         User::create($dados);
-        return redirect()->route('users.listar');
+
+        $rows = User::all();
+        return view('site.usuario.listar', compact('rows'));
     }
 
     public function listar(){
@@ -97,34 +100,51 @@ class UserController extends Controller
     public function excluir($num_USP){
         $user_avaiable = true;
         $rows = User::all();
-        $count = $rows->count(); 
-        if($count > 1){
-            User::where('num_USP',$num_USP)->delete();
+
+        $adminUsers = User::where('administrador', 1)->where('ativo', 1)->get();
+
+        if ($adminUsers->count() > 1) {
+            $user_avaiable = true;
+            User::where('num_USP', $num_USP)->delete();
             return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
-            // return redirect() -> route('users.listar');
-        }else{
+        } else {
             $user_avaiable = false;
             return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
         }
     }
 
     public function list_desativar(){
+        $user_avaiable = true;
         $rows = User::all()->sortBy('nome');
-        return view('site.usuario.list-desativar', compact('rows'));
+        return view('site.usuario.list-desativar', compact('rows', 'user_avaiable'));
     }
 
     public function desativar($num_USP){
-        $rows = User::find($num_USP);
-        if($rows['ativo']==true){
-            User::where('num_USP',$num_USP)->update([
-                'ativo'=>false,
-            ]);
+        $user_avaiable = true;
+        $rows = User::all()->sortBy('nome');
+
+        $adminUsers = User::where('administrador', 1)->where('ativo', 1)->count();
+        
+        $linha = User::find($num_USP);
+        if($linha['ativo']==true){
+            if ($adminUsers > 1) {
+                $user_avaiable = true;
+                User::where('num_USP',$num_USP)->update([
+                    'ativo'=>false,
+                ]);
+                return view('site.usuario.list-desativar', compact('rows',  'user_avaiable'));
+            } else {
+                $user_avaiable = false;
+                return view('site.usuario.list-desativar', compact('rows',  'user_avaiable'));
+            }
         }else{
+            // $user_avaiable = true;
             User::where('num_USP',$num_USP)->update([
                 'ativo'=>true,
             ]);
+            return redirect()->route('users.list-desativar');
+            // return view('site.usuario.list-desativar', compact('rows',  'user_avaiable'));
         }
-        return redirect() -> route('users.list-desativar');
     }
 
     public function null_buscar(){

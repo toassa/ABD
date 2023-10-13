@@ -102,14 +102,19 @@
     </div>
 </div>
 
-@if ($page == 'matheus')
-    <div class="col-md-2" style="padding-top: 3%">
-        <div class="form-check">
-        <input class="form-check-input" type="hidden" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+<div class="col-md-2" style="padding-top: 3%; display: none;">
+    <div class="form-check">
+    @if ($page == 'editar')
+        @if ($rows->ativo == true)
         <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
-        <label class="form-check-label textinho" for="invalidCheck">
-            Ativo?<b>*</b>
-        </label>
-        </div>
+        @else
+        <input class="form-check-input" type="checkbox" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+        @endif
+    @elseif($page == 'cadastrar')
+    <input class="form-check-input" type="hidden" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+    @endif
+    <label class="form-check-label textinho" for="invalidCheck">
+        Ativo?<b>*</b>
+    </label>
     </div>
-@endif
+</div>

@@ -11,6 +11,8 @@
     @component('components.items.user_name')@endcomponent
     @if ($user_avaiable == false)
         <script type="text/javascript">alert("É impossível excluir esse usuário");</script>
+    @elseif ($user_avaiable == false)
+    <script type="text/javascript">alert("Usuário excluído com sucesso!");</script>
     @endif
     <section class="square-content square-content--listar content-list-excluir">
         <h1 class="text-center">Excluir Usuários</h1>
