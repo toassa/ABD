@@ -15,7 +15,7 @@ class ComplicacaosSeeder extends Seeder
             'num_registro'=>'11111',
             'complicacoes'=>false,
             'quais_complicacoes'=>null,
-            'internacao_complicacao'=>true,
+            'internacao_complicacao'=>null,
             'causa_internacao'=>'Nível muito alto de hipoglicemia',
             'episodio_hipoglicemia'=>'Não lembra',
             'episodio_assintomatico'=>true,

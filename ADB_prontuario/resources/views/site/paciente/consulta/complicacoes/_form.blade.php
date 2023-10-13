@@ -26,7 +26,7 @@
     {{-- <select class="form-select" id="validationCustomSelectDefineDouble" name=""> --}}
     <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="internacao_complicacao">
         <option selected disabled value="">Clique para escolher...</option>
-        <option selected hidden value="null"></option>
+        <option selected hidden value="null">Clique para escolher...</option>
         <option value="1" {{ isset($dados->internacao_complicacao) && $dados->internacao_complicacao == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->internacao_complicacao) && $dados->internacao_complicacao == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -68,7 +68,7 @@
     </label>
     <select class="form-select" id="validationCustomEpisodioAssintomatico" name="episodio_assintomatico">
         <option selected disabled value="">Clique para escolher...</option>
-        <option selected hidden value="null"></option>
+        <option selected hidden value="null">Clique para escolher...</option>
         <option value="1" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->episodio_assintomatico) && $dados->episodio_assintomatico == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -81,7 +81,7 @@
     <label for="validationCustomNivelEpisodio" class="form-label">Nível do Episódio <b>*</b> </label>
     <select class="form-select" id="validationCustomNivelEpisodio" name="nivel_episodio">
         <option selected disabled value="">Clique para escolher...</option>
-        <option selected hidden value="null"></option>
+        <option selected hidden value="null">Clique para escolher...</option>
         <option value="Leve/moderado" {{ isset($dados->nivel_episodio) && $dados->nivel_episodio === 'Leve/moderado' ? 'selected' : '' }}>Leve/moderado</option>
         <option value="Grave" {{ isset($dados->nivel_episodio) && $dados->nivel_episodio === 'Grave' ? 'selected' : '' }}>Grave</option>
     </select>
@@ -94,7 +94,7 @@
     <label for="validationCustomPeriodoFrequenteHipoglicemia" class="form-label">Período Frequente de Hipoglicemia <b>*</b> </label>
     <select class="form-select" id="validationCustomPeriodoFrequenteHipoglicemia" name="periodo_frequente_hipoglocemia">
         <option selected disabled value="">Clique para escolher...</option>
-        <option selected hidden value="null"></option>
+        <option selected hidden value="null">Clique para escolher...</option>
         <option value="Manhã" {{ isset($dados->periodo_frequente_hipoglocemia) && $dados->periodo_frequente_hipoglocemia === 'Manhã' ? 'selected' : '' }}>Manhã</option>
         <option value="Tarde" {{ isset($dados->periodo_frequente_hipoglocemia) && $dados->periodo_frequente_hipoglocemia === 'Tarde' ? 'selected' : '' }}>Tarde</option>
         <option value="Noite" {{ isset($dados->periodo_frequente_hipoglocemia) && $dados->periodo_frequente_hipoglocemia === 'Noite' ? 'selected' : '' }}>Noite</option>

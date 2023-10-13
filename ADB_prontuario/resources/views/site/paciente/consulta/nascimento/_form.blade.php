@@ -52,7 +52,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine" class="form-label">Teve amamentação exclusiva com leite materno? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" name="amamentacao_exclusiva" onclick="mostraDados()" required required>
+    <select class="form-select" id="validationCustomSelectDefine" name="amamentacao_exclusiva" onclick="mostraDados()" onfocus="mostraDados()" onchange="mostraDados()" required required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->amamentacao_exclusiva) && $dados->amamentacao_exclusiva == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->amamentacao_exclusiva) && $dados->amamentacao_exclusiva == 0 ? 'selected' : '' }}>Não</option>

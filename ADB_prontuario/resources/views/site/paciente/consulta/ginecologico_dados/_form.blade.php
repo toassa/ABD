@@ -22,7 +22,8 @@
 <div class="col-md-4" id="input_show_multiple">
     <label for="validationCustomMenopausaCirurgica" class="form-label">A menopausa foi cirúrgica? <b>*</b> </label>
     <select class="form-select" id="validationCustomMenopausaCirurgica" name="menopausa_cirurgica">
-         <option selected disabled value="">Clique para escolher...</option>
+        <option selected disabled value="">Clique para escolher...</option>
+        <option selected hidden value="null">Clique para escolher...</option>
         <option value="1" {{ isset($dados->menopausa_cirurgica) && $dados->menopausa_cirurgica == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->menopausa_cirurgica) && $dados->menopausa_cirurgica == 0 ? 'selected' : '' }}>Não</option>
     </select>

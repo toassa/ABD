@@ -23,46 +23,45 @@
     <div class="row align-content">
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaUltraLenta" name="tipos_insulinas" value="Insulina de ação ultralenta (deglutega ou glargina U300)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Insulina de ação ultralenta (deglutega ou glargina U300)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaUltraLenta" name="tipos_insulinas[]" value="Insulina de ação ultralenta (deglutega ou glargina U300)" {{ isset($dados->tipos_insulinas) && in_array('Insulina de ação ultralenta (deglutega ou glargina U300)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxInsulinaUltraLenta">Insulina de ação ultralenta (deglutega ou glargina U300)</label>
             </div>
         </div>
         
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaLenta" name="tipos_insulinas" value="Insulina de ação lenta (detemir ou glargina U100)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Insulina de ação lenta (detemir ou glargina U100)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaLenta" name="tipos_insulinas[]" value="Insulina de ação lenta (detemir ou glargina U100)" {{ isset($dados->tipos_insulinas) && in_array('Insulina de ação lenta (detemir ou glargina U100)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxInsulinaLenta">Insulina de ação lenta (detemir ou glargina U100)</label>
             </div>
         </div>
         
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaIntermediaria" name="tipos_insulinas" value="Insulina de ação intermediária (NPH)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Insulina de ação intermediária (NPH)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaIntermediaria" name="tipos_insulinas[]" value="Insulina de ação intermediária (NPH)" {{ isset($dados->tipos_insulinas) && in_array('Insulina de ação intermediária (NPH)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxInsulinaIntermediaria">Insulina de ação intermediária (NPH)</label>
             </div>
         </div>
         
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxInsulinaRapida" name="tipos_insulinas" value="Insulina de ação rápida (regular)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Insulina de ação rápida (regular)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxInsulinaRapida" name="tipos_insulinas[]" value="Insulina de ação rápida (regular)" {{ isset($dados->tipos_insulinas) && in_array('Insulina de ação rápida (regular)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxInsulinaRapida">Insulina de ação rápida (regular)</label>
             </div>
         </div>
         
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxAnalogosRapidos" name="tipos_insulinas" value="Análogos de ação rápida (glulisina, lispro e asparte)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Análogos de ação rápida (glulisina, lispro e asparte)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxAnalogosRapidos" name="tipos_insulinas[]" value="Análogos de ação rápida (glulisina, lispro e asparte)" {{ isset($dados->tipos_insulinas) && in_array('Análogos de ação rápida (glulisina, lispro e asparte)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxAnalogosRapidos">Análogos de ação rápida (glulisina, lispro e asparte)</label>
             </div>
         </div>
         
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxAnalogosUltraRapidos" name="tipos_insulinas" value="Análogos de ação ultrarrápida (asparte ultrarrápida)" {{ isset($dados->tipos_insulinas) && $dados->tipos_insulinas === 'Análogos de ação ultrarrápida (asparte ultrarrápida)' ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="checkboxAnalogosUltraRapidos" name="tipos_insulinas[]" value="Análogos de ação ultrarrápida (asparte ultrarrápida)" {{ isset($dados->tipos_insulinas) && in_array('Análogos de ação ultrarrápida (asparte ultrarrápida)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxAnalogosUltraRapidos">Análogos de ação ultrarrápida (asparte ultrarrápida)</label>
             </div>
         </div>
-        
     </div>
     <div class="invalid-feedback">
         Selecione pelo menos um tipo de insulina
@@ -116,32 +115,33 @@
 <div class="col-md-12" id="input_show_multiple6">
     <label for="validationCustomOrigemUtensilio" class="form-label">Como obtém as seringas/canetas para aplicação? <b>*</b></label>
     <div class="row align-content">
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxHospital" name="origem_utensilho" value="Recebe grátis no hospital" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Recebe grátis no hospital' ? 'checked' : '' }}>
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxHospital" name="origem_utensilho[]" value="Recebe grátis no hospital" {{ isset($dados->origem_utensilho) && in_array('Recebe grátis no hospital', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxHospital">Recebe grátis no hospital</label>
         </div>
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxSUS" name="origem_utensilho" value="Recebe grátis na farmácia do SUS" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Recebe grátis na farmácia do SUS' ? 'checked' : '' }}>
+        
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxSUS" name="origem_utensilho[]" value="Recebe grátis na farmácia do SUS" {{ isset($dados->origem_utensilho) && in_array('Recebe grátis na farmácia do SUS', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxSUS">Recebe grátis na farmácia do SUS</label>
         </div>
         
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaPopular" name="origem_utensilho" value="Compra na farmácia popular" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Compra na farmácia popular' ? 'checked' : '' }}>
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaPopular" name="origem_utensilho[]" value="Compra na farmácia popular" {{ isset($dados->origem_utensilho) && in_array('Compra na farmácia popular', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxFarmaciaPopular">Compra na farmácia popular</label>
         </div>
         
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaComum" name="origem_utensilho" value="Compra em farmácia comum" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Compra em farmácia comum' ? 'checked' : '' }}>
-            <label class="form-check-label label_check" for="checkboxFarmaciaComum">Compra em farmácia comum</label>
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxFarmaciaComum" name="origem_utensilho[]" value="Compra em farmácia comum" {{ isset($dados->origem_utensilho) && in_array('Compra em farmácia comum', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
+            <label class="form-check-label label_check" for "checkboxFarmaciaComum">Compra em farmácia comum</label>
         </div>
         
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxJudicial" name="origem_utensilho" value="Recebe grátis após mandato judicial" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Recebe grátis após mandato judicial' ? 'checked' : '' }}>
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxJudicial" name="origem_utensilho[]" value="Recebe grátis após mandato judicial" {{ isset($dados->origem_utensilho) && in_array('Recebe grátis após mandato judicial', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxJudicial">Recebe grátis após mandato judicial</label>
         </div>
         
-        <div class="col-md-4">
-            <input type="checkbox" class="form-check-input" id="checkboxOutros" name="origem_utensilho" value="Outros" {{ isset($dados->origem_utensilho) && $dados->origem_utensilho === 'Outros' ? 'checked' : '' }}>
+        <div class="col-md-4 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxOutros" name="origem_utensilho[]" value="Outros" {{ isset($dados->origem_utensilho) && in_array('Outros', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxOutros">Outros</label>
         </div>
         
@@ -182,19 +182,18 @@
             <input type="checkbox" class="form-check-input" id="checkboxDescuidado" name="aderencia[]" value="Às vezes é descuidado quanto aos horários de aplicar insulina" {{ isset($dados->aderencia) && in_array('Às vezes é descuidado quanto aos horários de aplicar insulina', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxDescuidado">Às vezes é descuidado quanto aos horários de aplicar insulina</label>
         </div>
-        
-        <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxDeixaBem" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente bem" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente bem' ? 'checked' : '' }}>
+        <div class="col-md-12 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxDeixaBem" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente bem" {{ isset($dados->aderencia) && in_array('Deixa de aplicar insulina alguma vez quando se sente bem', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxDeixaBem">Deixa de aplicar insulina alguma vez quando se sente bem</label>
         </div>
         
-        <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxDeixaMal" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente mal" {{ isset($dados->aderencia) && $dados->aderencia === 'Deixa de aplicar insulina alguma vez quando se sente mal' ? 'checked' : '' }}>
+        <div class="col-md-12 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxDeixaMal" name="aderencia[]" value="Deixa de aplicar insulina alguma vez quando se sente mal" {{ isset($dados->aderencia) && in_array('Deixa de aplicar insulina alguma vez quando se sente mal', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxDeixaMal">Deixa de aplicar insulina alguma vez quando se sente mal</label>
         </div>
         
-        <div class="col-md-12">
-            <input type="checkbox" class="form-check-input" id="checkboxNuncaEsqueci" name="aderencia[]" value="Nunca esqueci de aplicar" {{ isset($dados->aderencia) && $dados->aderencia === 'Nunca esqueci de aplicar' ? 'checked' : '' }}>
+        <div class="col-md-12 form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="checkboxNuncaEsqueci" name="aderencia[]" value="Nunca esqueci de aplicar" {{ isset($dados->aderencia) && in_array('Nunca esqueci de aplicar', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxNuncaEsqueci">Nunca esqueci de aplicar</label>
         </div>
         

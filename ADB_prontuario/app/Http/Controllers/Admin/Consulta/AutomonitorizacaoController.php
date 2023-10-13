@@ -34,11 +34,14 @@ class AutomonitorizacaoController extends Controller
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
 
+        $jsonData = $req->input('origem_fitas');
+        $origem_fitas = json_encode($jsonData);
+
         AutomonitorizacaoGlicemia::create([
             'num_registro'=>$num_registro,
             'realiza_automonitorizacao'=>$request['realiza_automonitorizacao'],
             'frequencia_medicoes'=>$request['frequencia_medicoes'],
-            'origem_fitas'=>$request['origem_fitas'],
+            'origem_fitas'=>$origem_fitas,
             'contagem_carboidratos'=>$request['contagem_carboidratos'],
             'num_USP' => $num_USP,
         ]);
