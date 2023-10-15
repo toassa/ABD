@@ -42,6 +42,10 @@ Route::prefix('login')->group(function () {
     Route::post('/entrar', [LoginController::class, 'entrar'])->name('login.entrar');
 });
 
+Route::get('/cookies', function(){
+    return view('site.cookies');
+})->name('cookies');
+
 Route::get('/enviar_email', function(){
     return view('senha.enviar_email');
 })->name('enviar_email');

@@ -17,6 +17,10 @@
     --background-most-primary:#131399f;
     --text-color: #000;
     --text-shadow-color: #808080;
+    --box-shadow-color: #00000033;
+    --color-gray : #555;
+    --color-yellow: #FFE500;
+    --color-lightblue: #91C9FF;
 
     /* Font sizes */
     --size-title: 2rem;
@@ -52,6 +56,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    color: var(--text-color);
 }
 
 /* Square-content ---------------- */
@@ -60,7 +65,7 @@ body{
     background-color: var(--background-color);
     border-radius: 20px;
     height: auto;
-    box-shadow: 2px 2px 2px 1px #00000033;
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
 }
 
 .square-content h1{
@@ -73,6 +78,99 @@ body{
 .square-content--cadastro{
     width: 70%;
     margin: 11vh;
+}
+
+/* Cookies ---------------------- */
+.cookies{
+    width: 80%;
+    background-color: var(--background-almost-white);
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15px;
+    display: none;
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+}
+
+.cookies.cookies-show{
+    display: block;
+}
+
+.cookies .cookies-content{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+}
+
+.cookies .cookies-btn{
+    margin-left: 40px !important;
+}
+
+.cookies .cookies-img{
+    width: 80px;
+    margin-right: 40px;
+}
+
+.cookies .cookies-btn button{
+    background-color: var(--background-green);
+    color: var(--background-color);
+    font-weight: 500;
+    font-size: var(--size-label-form);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 0;
+    border-radius: 10px;
+}
+
+.cookies .cookies-btn button:hover{
+    transform: scale(0.95);
+    background-color: var(--background-greener);
+}
+
+.cookies-txt{
+    display: block;
+    color: var(--text-color);
+}
+
+.cookies-txt h3{
+    font-size: var(--size-h2);
+}
+
+.cookies-txt p{
+    font-size: var(--size-grid);
+}
+
+.square-content--termos{
+    width: 80%;
+    position: absolute;
+}
+
+/* Tema escuro ----------------- */
+.dark{
+    background-image: url('../images/fundo_dark.png') !important;
+    /* Font colors */
+    --background-color: #282838;
+    --background-almost-white: #141414;
+    --background-greener: #78a82a;
+    --background-green: #85bb2e;
+    /* --background-primary2: #428ae9; */
+    --background-primary: #0092df;
+    --background-primarier: #017ec2;
+    --background-error: #ff0000;
+    --background-errorer: #d60101;
+    --background-most-primary: #131399;
+    --text-color: #fff;
+    --text-shadow-color: #808080;
+    --box-shadow-color: #60606033;
+    --color-gray : #d1d1d1;
+}
+
+.check-theme input[type="checkbox"]{
+    display: none;
+    cursor: pointer;
 }
 
 /* Listar ---------------------- */
@@ -126,12 +224,12 @@ body{
 /* Forms ------------------------------------------------------------------------------------- */
 
 .form-check-input[type=checkbox] {
-    border: 1px solid #bdc1c5 !important;
+    border: 1px solid var(--color-gray) !important;
 }
 
 .form-check-input:checked {
-    background-color: #0d6efd !important;
-    border-color: #0d6efd;
+    background-color: var(--background-primarier) !important;
+    border-color: var(--background-primarier);
 }
 
 b{
@@ -202,6 +300,10 @@ b{
     position: relative;
 }
 
+.password-container .material-symbols-outlined span{
+    color: var(--text-color) !important;
+}
+
 .show-password {
     position: absolute;
     top: 62%;
@@ -225,8 +327,8 @@ b{
 .popup .popuptext {
     visibility: hidden;
     width: 160px;
-    background-color: #555;
-    color: #fff;
+    background-color: var(--color-gray);
+    color: var(--background-color);
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -246,7 +348,7 @@ b{
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: var(--color-gray) transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
@@ -269,7 +371,7 @@ visibility: visible;
 
 .popup-icon{
     font-size: var(--size-h2) !important;
-    color: #555;
+    color: var(--color-gray);
     margin-top: -20px;
 }
 
@@ -291,7 +393,7 @@ img.login-logo{
 }
 
 a.login-link{
-    color: #000;
+    color: var(--text-color);
     text-decoration: underline;
     margin: 8vh auto;
 }
@@ -331,7 +433,7 @@ a.login-link{
 }
 
 .leave a, .usuario a{
-    color: #FFF;
+    color: var(--background-color);;
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -349,12 +451,12 @@ a.login-link{
 .leave input{
     background-color: transparent;
     border: none;
-    color: #FFF;
+    color: var(--background-color);;
     font-size: 1.2rem
 }
 
 .leave .material-symbols-outlined, .usuario .material-symbols-outlined{
-    color: #fff !important;
+    color: var(--background-color) !important;
     font-size: 15px !important;
 }
 
@@ -399,7 +501,7 @@ a.login-link{
 
 .item-circle{
     border-radius: 50%;
-    background-color: #FFE500;
+    background-color: var(--color-yellow);
     text-align: center;
 }
 
@@ -543,12 +645,12 @@ a.login-link{
 }
 
 dialog::backdrop{
-    background-color: #35353559;
+    background-color: var(--color-gray);
 }
 
 .square-content--confirma-excluir button, .square-content--confirma-excluir a{
     border: none;
-    color: #fff;
+    color: var(--background-color);;
     border-radius: 5px;
     width: 110px;
     text-align: center;
@@ -659,7 +761,7 @@ dialog::backdrop{
   height: 60px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #91C9FF;
+  border: 1px solid var(--color-lightblue);
   outline: none;
   transition: 1s ease-in-out;
 }
@@ -669,7 +771,7 @@ svg {
   left: 0;
   top: 0;
   fill: none;
-  stroke: #fff;
+  stroke: var(--background-color);;
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
@@ -685,7 +787,7 @@ svg {
 }
 
 .btn-user-name span {
-  color: white;
+  color: var(--background-color);;
   font-size: 18px;
   font-weight: 100;
 }
@@ -796,12 +898,12 @@ textarea{
 }
 
 .menu-sections a:hover {
-    background-color: #ccc;
+    background-color: var(--background-almost-white);
 }
 
 .menu-sections a.active {
     background-color: var(--background-most-primary);
-    color: white;
+    color: var(--background-color);;
 }
 
 .menu-sections::-webkit-scrollbar {
@@ -809,15 +911,15 @@ textarea{
 }
 
 .menu-sections::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--background-almost-white);
 }
 
 .menu-sections::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--background-almost-white);
 }
 
 .menu-sections::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--color-gray);
 }
 
 /* Conteúdo */
@@ -950,20 +1052,20 @@ textarea{
 
 .p-password{
     margin-top: -25px;
-    color:rgb(53, 52, 52)
+    color:var(--color-gray)
 }
 
 .label-resetar{
-    color: #474747;
+    color: var(--color-gray);
     float: left; /* Faz o rótulo flutuar à esquerda */
-  margin-right: 10px; /* Define uma margem direita para criar espaço entre o rótulo e o campo de entrada */
-  line-height: 34px; /* Ajusta a altura de linha para alinhar verticalmente com o campo de entrada */
+    margin-right: 10px; /* Define uma margem direita para criar espaço entre o rótulo e o campo de entrada */
+    line-height: 34px; /* Ajusta a altura de linha para alinhar verticalmente com o campo de entrada */
 }
 .input-text-resetar{
-    color: #555;
+    color: var(--color-gray);
     float: left; /* Faz o rótulo flutuar à esquerda */
-  margin-right: 10px; /* Define uma margem direita para criar espaço entre o rótulo e o campo de entrada */
-  line-height: 34px; /* Ajusta a altura de linha para alinhar verticalmente com o campo de entrada */
+    margin-right: 10px; /* Define uma margem direita para criar espaço entre o rótulo e o campo de entrada */
+    line-height: 34px; /* Ajusta a altura de linha para alinhar verticalmente com o campo de entrada */
 }
 
 /* GUSTAVO */

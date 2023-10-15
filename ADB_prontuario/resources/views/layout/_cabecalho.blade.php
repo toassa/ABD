@@ -16,5 +16,16 @@
     <title>@yield('titulo-pagina')</title>
 </head>
 <body onLoad="hide_password();">
-    <main class="content align-content">
+    <main class="content align-content" id="content">
+        <div class="check-theme">
+            <input type="checkbox" name="change-theme" id="change-theme">
+            <label for="change-theme">
+                <span class="material-symbols-outlined">
+                    light_mode
+                </span>
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </label>
+        </div>
         
