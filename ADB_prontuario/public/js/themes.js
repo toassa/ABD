@@ -1,13 +1,17 @@
 var checkTheme = document.getElementById('change-theme');
 var content = document.getElementById('content');
+var icon = document.getElementById('icon-theme');
+
 
 function changeDarkMode() {
     if (checkTheme.checked) {
+        icon.innerHTML = "dark_mode";
         content.classList.add('dark');
-        localStorage.setItem('dark', '1'); // Armazene a preferência do usuário
+        localStorage.setItem('dark', '1');
     } else {
+        icon.innerHTML = "light_mode";
         content.classList.remove('dark');
-        localStorage.removeItem('dark'); // Remova a preferência do usuário
+        localStorage.removeItem('dark');
     }
 }
 

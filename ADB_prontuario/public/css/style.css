@@ -10,7 +10,7 @@
     --background-greener: #78a82a;
     --background-green: #85bb2e;
     /* --background-primary2: #428ae9; */
-    --background-primary: #0092df;
+    --background-primary: #3c7be3;
     --background-primarier: #017ec2;
     --background-error: #ff0000;
     --background-errorer: #d60101;
@@ -153,12 +153,12 @@ body{
     background-image: url('../images/fundo_dark.png') !important;
     /* Font colors */
     --background-color: #282838;
-    --background-almost-white: #141414;
-    --background-greener: #78a82a;
-    --background-green: #85bb2e;
+    --background-almost-white: #15151d;
+    --background-greener: #577a1e;
+    --background-green: #66941c;
     /* --background-primary2: #428ae9; */
-    --background-primary: #0092df;
-    --background-primarier: #017ec2;
+    --background-primary: #002595;
+    --background-primarier: #1761ef;
     --background-error: #ff0000;
     --background-errorer: #d60101;
     --background-most-primary: #131399;
@@ -168,9 +168,23 @@ body{
     --color-gray : #d1d1d1;
 }
 
+.check-theme{
+    position: absolute;
+    top: 0;
+}
+
+span#icon-theme{
+    color: #fff !important;
+}
+
+
 .check-theme input[type="checkbox"]{
     display: none;
     cursor: pointer;
+}
+
+.show-password.material-symbols-outlined {
+    color: #282838 !important;
 }
 
 /* Listar ---------------------- */
@@ -192,7 +206,7 @@ body{
 }
 
 .button-white-blue{
-    color: var(--background-primary);
+    color: var(--background-primarier);
     background-color: var(--background-color);
     box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
     border: 1px solid var(--box-shadow-color);
@@ -433,7 +447,7 @@ a.login-link{
 }
 
 .leave a, .usuario a{
-    color: var(--background-color);;
+    color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -456,7 +470,7 @@ a.login-link{
 }
 
 .leave .material-symbols-outlined, .usuario .material-symbols-outlined{
-    color: var(--background-color) !important;
+    color: #fff !important;
     font-size: 15px !important;
 }
 
@@ -547,7 +561,7 @@ a.login-link{
 }
 
 .user-index h1{
-    color: var(--background-color);
+    color: #fff;
     margin: 10vh 0;
 }
 
