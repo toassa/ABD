@@ -188,7 +188,7 @@
       <option {{ isset($dados->estado) && $dados->estado === 'RO' ? 'selected' : '' }} value="RO">Rondônia</option>
       <option {{ isset($dados->estado) && $dados->estado === 'RR' ? 'selected' : '' }} value="RR">Roraima</option>
       <option {{ isset($dados->estado) && $dados->estado === 'SC' ? 'selected' : '' }} value="SC">Santa Catarina</option>
-      <option {{ isset($dados->estado) && $dados->estado === 'SP' ? 'selected' : '' }} value="SP">São Paulo</option>
+      <option {{ isset($dados->estado) && $dados->estado === 'SP' ? funcionar() : '' }} value="SP">São Paulo</option>
       <option {{ isset($dados->estado) && $dados->estado === 'SE' ? 'selected' : '' }} value="SE">Sergipe</option>
       <option {{ isset($dados->estado) && $dados->estado === 'TO' ? 'selected' : '' }} value="TO">Tocantins</option>
     </select>

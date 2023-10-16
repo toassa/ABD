@@ -38,4 +38,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="{{asset('js/form-cadastro-paciente.js')}}"></script>
     <script src="{{asset('js/functions.js')}}"></script>
+    <script src="{{asset('js/cidades-form.js')}}"></script>
+
 @endsection

@@ -42,16 +42,47 @@
             const quais_infeccoes =document.getElementById('validationCustomquais_infeccoes');//text que não deve aceitar numeros
             const periodo_sintomas_diagnostico =document.getElementById('validationCustomperiodo_sintomas_diagnostico');//number
 
-            ano.addEventListener('input', function(){
+            ano.addEventListener('input', function() {
                 let value = ano.value;
-                value = value.replace(/(\d{4})\d+?$/, '$1');//mudar o max lenght do campo
-                ano.value=value;
+                value = value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+                value = value.replace(/(\d{4})\d+?$/, '$1');
+                const currentYear = new Date().getFullYear(); // Obtém o ano atual
+                if(value>1000)
+                if (value < 1903 || value > currentYear) {
+                    alert("O ano deve estar entre 1903 e o ano atual.");
+                    value = '';
+                    ano.value=value;
+                    return;
+                } else {
+                    ano.value=value;
+                }
             });
+
 
             idade.addEventListener('input', function(){
                 let value = idade.value;
                 value = value.replace(/(\d{3})\d+?$/, '$1');//mudar o max lenght do campo
+                if(value>130 || value<0)
+                {
+                    alert("A idade deve ser positiva e menor que 130");
+                    value = '';
+                    idade.value=value;
+                    return;
+                }
                 idade.value=value;
+            });
+
+            periodo_sintomas_diagnostico.addEventListener('input', function(){
+                let value = periodo_sintomas_diagnostico.value;
+                value = value.replace(/(\d{3})\d+?$/, '$1');//mudar o max lenght do campo
+                if(value<0)
+                {
+                    alert("A quantidade de meses deve ser postiva");
+                    value = '';
+                    periodo_sintomas_diagnostico.value=value;
+                    return;
+                }
+                periodo_sintomas_diagnostico.value=value;
             });
 
         </script>

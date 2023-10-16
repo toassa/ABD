@@ -5829,3 +5829,8 @@ function selecionaCidades(e){
   var cidadeSelect = document.querySelector("#validationCustomCidade");
   cidadeSelect.value = cidadeSelecionada;
 }
+
+function funcionar()
+{
+  alert('a');
+}
