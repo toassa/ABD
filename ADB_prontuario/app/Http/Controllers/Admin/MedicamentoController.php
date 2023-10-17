@@ -32,6 +32,10 @@ class MedicamentoController extends Controller
             'tipo'=>$dados['tipo'],
             'posologia'=>$dados['posologia'],
             'origem'=>$dados['origem'],
+            'consulta'=>$dados['consulta'],
+            'dose'=>$dados['dose'],
+            'periodo'=>$dados['periodo'],
+            'observacao'=>$dados['observacao'],
             'aderencia'=>$dados['aderencia'],
             'num_USP'=>$num_USP,
         ]);

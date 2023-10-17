@@ -6,7 +6,7 @@
         <option disabled selected value="">Clique para escolher...</option>
         @foreach ($medicamentos as $medicamento)
             @php
-                $selected = isset($dados->medicamento) && $dados->medicamento === $medicamento->valor ? 'selected' : '';
+                $selected = isset($dados->medicamento) && $dados->medicamento === $medicamento->nome ? 'selected' : '';
             @endphp
             <option value="{{ $medicamento->nome }}" {{ $selected }}>{{ $medicamento->nome }}</option>
         @endforeach
@@ -46,6 +46,38 @@
     <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->origem) ? $tratamento_medicamentos->origem : '' }}" name="origem" required>
     <div class="invalid-feedback">
         Insira a origem do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomLetra" class="form-label">Data da consulta <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->consulta) ? $tratamento_medicamentos->consulta : '' }}" name="consulta" required>
+    <div class="invalid-feedback">
+        Insira a consulta do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomLetra" class="form-label">Dose <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->dose) ? $tratamento_medicamentos->dose : '' }}" name="dose" required>
+    <div class="invalid-feedback">
+        Insira a dose do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomLetra" class="form-label">Período de uso <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->periodo) ? $tratamento_medicamentos->periodo : '' }}" name="periodo" required>
+    <div class="invalid-feedback">
+        Insira o período de uso do medicamento
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="validationCustomLetra" class="form-label">Observações <b>*</b></label>
+    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->observacao) ? $tratamento_medicamentos->observacao : '' }}" name="observacao" required>
+    <div class="invalid-feedback">
+        Insira observações do medicamento
     </div>
 </div>
 

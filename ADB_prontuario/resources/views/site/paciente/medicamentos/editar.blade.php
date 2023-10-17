@@ -17,8 +17,8 @@
             <input type="hidden" name="_method" value="put">
             @include('site.paciente.medicamentos.tratamento_medicamentos._form')
             <div class="col-12 col-btn-form">
-                <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary" type="submit">Salvar</button>
+                <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
+                <button class="btn btn-giga btn-primary-confirm" type="submit">Atualizar</button>
             </div>
         </form>
     </section>

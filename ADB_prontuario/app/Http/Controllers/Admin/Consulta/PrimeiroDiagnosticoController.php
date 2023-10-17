@@ -13,7 +13,6 @@ use App\Models\PrimeiroDiagnostico;
 class PrimeiroDiagnosticoController extends Controller
 {
     public function opcao($num_registro){
-
         $dados = Paciente::find($num_registro); 
         $primas = PrimeiroDiagnostico::find($num_registro);
         $num_USP = Auth::User()->num_USP;
@@ -26,15 +25,15 @@ class PrimeiroDiagnosticoController extends Controller
 
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente'));
+        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $jsonData = $req->input('sintomas');
         $sintomas = json_encode($jsonData);
-        // dd($sintomas);
 
         $request = $req->all();
         PrimeiroDiagnostico::create([
@@ -55,10 +54,10 @@ class PrimeiroDiagnosticoController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = PrimeiroDiagnostico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        // dd($dados);
-        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente'));
+        return view('site.paciente.consulta.primeiro_diagnostico.index', compact('dados', 'dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

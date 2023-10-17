@@ -9,8 +9,12 @@
         {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
-        <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="_POST" class="row g-3 needs-validation" novalidate>
-            {{ csrf_field() }}
+        @if ()
+            <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="_POST" class="row g-3 needs-validation" novalidate>
+        @else
+            <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="_POST" class="row g-3 needs-validation" novalidate>
+        @endif
+           {{ csrf_field() }}
             <h1 class="text-center">Primeiro Diagnóstico</h1>
             <div class="pagination-container">
                 <div class="pagination-content">
@@ -31,7 +35,11 @@
             </div>
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
+                @if ($page == 'cadastrar')
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
+                @else
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Atualizar</button>
+                @endif
             </div>
         </form>
 
