@@ -5834,3 +5834,12 @@ function funcionar()
 {
   alert('a');
 }
+
+window.onload = function()
+{
+  $estado=document.getElementById('validationCustomEstadoNascimento').value
+  buscaCidadesNascimento($estado);
+
+  $estado2=document.getElementById('validationCustomEstado').value
+  buscaCidades($estado2);
+}

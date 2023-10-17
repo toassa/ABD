@@ -117,7 +117,7 @@ Route::middleware(['active.check'])->group(function () {
         
                 Route::get('/editar/{num_registro}', [PacienteController::class, 'editar'])->name('paciente.editar');
         
-                Route::put('/atualizar/{num_registro}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
+                Route::put('/atualizar/{num_registro}/{num_USP}', [PacienteController::class, 'atualizar'])->name('paciente.atualizar');
 
                 Route::get('/desativar/{num_registro}/{num_USP}', [PacienteController::class, 'desativar'])->name('paciente.desativar');
             });

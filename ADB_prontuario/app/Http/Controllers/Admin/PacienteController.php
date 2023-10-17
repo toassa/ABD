@@ -26,12 +26,14 @@ class PacienteController extends Controller
 
     public function editar($num_registro){
         $dados = Paciente::find($num_registro);
+        $teste=$dados->desempregado_aposentado_diabetes;
         return view('site.paciente.editar_paciente', compact('dados'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $dados = $req->except('_token');
+        
         Paciente::where('num_registro',$num_registro)->update([
             'num_registro' => $dados['num_registro'],
             'nome' => $dados['nome'],
@@ -62,7 +64,7 @@ class PacienteController extends Controller
             'ativo' => $dados['ativo'],
             'num_USP' => $num_USP,
         ]);
-        return redirect()->route('Pacientes.listar');
+        return redirect()->route('paciente.listar');
     }
 
     public function cadastrar(){

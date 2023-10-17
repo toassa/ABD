@@ -67,11 +67,13 @@
     <label for="validationFormDesempregado" class="form-label textinho">Desempregado/Aposentado pela diabetes? <b>*</b></label>
     <select class="form-select" id="validationFormDesempregado" name="desempregado_aposentado_diabetes" required>
         <option disabled selected value="">Clique para escolher...</option>
-        <option  value="true" {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'true' ? 'selected' : '' }} >Sim</option>
-        <option  value="false"{{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === 'false' ? 'selected' : '' }} >Não</option>
+        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === TRUE ? 'selected' : '' }} value="TRUE">Sim</option>
+        <option {{ isset($dados->desempregado_aposentado_diabetes) && $dados->desempregado_aposentado_diabetes === FALSE ? 'selected' : '' }} value="FALSE">Não</option>
+
+        
     </select>
   </div>
-
+$
 
   <div class="col-md-4">
     <label for="validationCustomRendaMensal" class="form-label textinho">Renda mensal <b>*</b></label>
@@ -129,8 +131,9 @@
     <label for="validationFormPlanoSaude" class="form-label textinho">Possui plano de saúde? <b>*</b></label>
     <select class="form-select" id="validationFormPlanoSaude" name="plano_saude" required>
       <option disabled selected value="">Clique para escolher...</option>
-      <option value="TRUE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'TRUE' ? 'selected' : '' }} >Sim</option>
-      <option value="FALSE"{{ isset($dados->plano_saude) && $dados->plano_saude === 'FALSE' ? 'selected' : '' }} >Não</option>
+      
+      <option value="TRUE"{{ isset($dados->plano_saude) && $dados->plano_saude === TRUE ? 'selected' : '' }} >Sim</option>
+      <option value="FALSE"{{ isset($dados->plano_saude) && $dados->plano_saude === FALSE ? 'selected' : '' }} >Não</option>
     </select>
   </div>
 
@@ -188,7 +191,7 @@
       <option {{ isset($dados->estado) && $dados->estado === 'RO' ? 'selected' : '' }} value="RO">Rondônia</option>
       <option {{ isset($dados->estado) && $dados->estado === 'RR' ? 'selected' : '' }} value="RR">Roraima</option>
       <option {{ isset($dados->estado) && $dados->estado === 'SC' ? 'selected' : '' }} value="SC">Santa Catarina</option>
-      <option {{ isset($dados->estado) && $dados->estado === 'SP' ? funcionar() : '' }} value="SP">São Paulo</option>
+      <option {{ isset($dados->estado) && $dados->estado === 'SP' ? 'selected' : '' }} value="SP">São Paulo</option>
       <option {{ isset($dados->estado) && $dados->estado === 'SE' ? 'selected' : '' }} value="SE">Sergipe</option>
       <option {{ isset($dados->estado) && $dados->estado === 'TO' ? 'selected' : '' }} value="TO">Tocantins</option>
     </select>

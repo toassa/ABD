@@ -7,7 +7,7 @@
     @endcomponent
         <section class="square-content square-content--cadastro">
             <h1 class="text-center">Editar Pacientes</h1>
-            <form action="{{route('paciente.atualizar', $dados->num_registro, Auth::user()->num_USP)}}" method="post" class="row g-3 needs-validation" novalidate>
+            <form action="{{route('paciente.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="put">
                 <div class="pagination-container">
