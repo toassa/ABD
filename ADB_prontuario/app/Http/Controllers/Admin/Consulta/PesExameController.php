@@ -26,9 +26,10 @@ class PesExameController extends Controller
 
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.pes_exame.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.pes_exame.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -73,24 +74,40 @@ class PesExameController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = PesExame::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.pes_exame.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.pes_exame.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+        
+        $regioes_ulceras = json_encode($request['regioes_ulceras']);
+        
+        $caracteristicas_ulceras = json_encode($request['caracteristicas_ulceras']);
+        
+        $alteracoes = json_encode($request['alteracoes']);
+        
+        $deformidades = json_encode($request['deformidades']);
+        
+        $pulsos = json_encode($request['pulsos']);
+        
+        $alteracoes_neuropaticas = json_encode($request['alteracoes_neuropaticas']);
+        
+        $demais_alteracoes = json_encode($request['demais_alteracoes']);
+
         PesExame::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
             'casos_ulceras' => $request['casos_ulceras'],
-            'regioes_ulceras' => $request['regioes_ulceras'],
-            'caracteristicas_ulceras' => $request['caracteristicas_ulceras'],
-            'alteracoes' => $request['alteracoes'],
-            'deformidades' => $request['deformidades'],
-            'pulsos' => $request['pulsos'],
-            'alteracoes_neuropaticas' => $request['alteracoes_neuropaticas'],
-            'demais_alteracoes' => $request['demais_alteracoes'],
+            'regioes_ulceras' => $regioes_ulceras,
+            'caracteristicas_ulceras' => $caracteristicas_ulceras,
+            'alteracoes' => $alteracoes,
+            'deformidades' => $deformidades,
+            'pulsos' => $pulsos,
+            'alteracoes_neuropaticas' => $alteracoes_neuropaticas,
+            'demais_alteracoes' => $demais_alteracoes,
             'observacoes' => $request['observacoes'],
             'num_USP' => $num_USP,
         ]);

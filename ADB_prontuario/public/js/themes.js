@@ -1,16 +1,16 @@
 var checkTheme = document.getElementById('change-theme');
-var content = document.getElementById('content');
-var icon = document.getElementById('icon-theme');
+var contentTheme = document.getElementById('content');
+var iconTheme = document.getElementById('icon-theme');
 
 
 function changeDarkMode() {
     if (checkTheme.checked) {
-        icon.innerHTML = "dark_mode";
-        content.classList.add('dark');
+        iconTheme.innerHTML = "dark_mode";
+        contentTheme.classList.add('dark');
         localStorage.setItem('dark', '1');
     } else {
-        icon.innerHTML = "light_mode";
-        content.classList.remove('dark');
+        iconTheme.innerHTML = "light_mode";
+        contentTheme.classList.remove('dark');
         localStorage.removeItem('dark');
     }
 }

@@ -4,51 +4,51 @@
     <label for="validationCustomLetra" class="form-label">Possui alguma doença crônica? <b>*</b></label>
     <div class="row">
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="has" name="doenca_cronica[][]" value="HAS" {{ isset($dados->doenca_cronica) && in_array('HAS', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="has" name="doenca_cronica[]" value="HAS" {{ isset($dados->doenca_cronica) && in_array('HAS', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="has">HAS</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="dislipidemia" name="doenca_cronica[][]" value="Dislipidemia" {{ isset($dados->doenca_cronica) && in_array('Dislipidemia', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="dislipidemia" name="doenca_cronica[]" value="Dislipidemia" {{ isset($dados->doenca_cronica) && in_array('Dislipidemia', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="dislipidemia">Dislipidemia</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="hipertireoidismo" name="doenca_cronica[][]" value="Hipertireoidismo" {{ isset($dados->doenca_cronica) && in_array('Hipertireoidismo', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="hipertireoidismo" name="doenca_cronica[]" value="Hipertireoidismo" {{ isset($dados->doenca_cronica) && in_array('Hipertireoidismo', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="hipertireoidismo">Hipertireoidismo</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="hipotireoidismo" name="doenca_cronica[][]" value="Hipotireoidismo" {{ isset($dados->doenca_cronica) && in_array('Hipotireoidismo', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="hipotireoidismo" name="doenca_cronica[]" value="Hipotireoidismo" {{ isset($dados->doenca_cronica) && in_array('Hipotireoidismo', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="hipotireoidismo">Hipotireoidismo</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="nodulo_tireoide" name="doenca_cronica[][]" value="Nódulo da tireoide" {{ isset($dados->doenca_cronica) && in_array('Nódulo da tireoide', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="nodulo_tireoide" name="doenca_cronica[]" value="Nódulo da tireoide" {{ isset($dados->doenca_cronica) && in_array('Nódulo da tireoide', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="nodulo_tireoide">Nódulo da tireoide</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="dpoc_asma" name="doenca_cronica[][]" value="DPOC/asma" {{ isset($dados->doenca_cronica) && in_array('DPOC/asma', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="dpoc_asma" name="doenca_cronica[]" value="DPOC/asma" {{ isset($dados->doenca_cronica) && in_array('DPOC/asma', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="dpoc_asma">DPOC/asma</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="nefropatia_diabetica" name="doenca_cronica[][]" value="Nefropatia diabética" {{ isset($dados->doenca_cronica) && in_array('Nefropatia diabética', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="nefropatia_diabetica" name="doenca_cronica[]" value="Nefropatia diabética" {{ isset($dados->doenca_cronica) && in_array('Nefropatia diabética', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="nefropatia_diabetica">Nefropatia diabética</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="artrite_reumatoide" name="doenca_cronica[][]" value="Artrite reumatoide" {{ isset($dados->doenca_cronica) && in_array('Artrite reumatoide', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="artrite_reumatoide" name="doenca_cronica[]" value="Artrite reumatoide" {{ isset($dados->doenca_cronica) && in_array('Artrite reumatoide', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="artrite_reumatoide">Artrite reumatoide</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="outras_autoimunes" name="doenca_cronica[][]" value="Outras doenças autoimunes" {{ isset($dados->doenca_cronica) && in_array('Outras doenças autoimunes', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="outras_autoimunes" name="doenca_cronica[]" value="Outras doenças autoimunes" {{ isset($dados->doenca_cronica) && in_array('Outras doenças autoimunes', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="outras_autoimunes">Outras doenças autoimunes</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="esteatose_hepatica" name="doenca_cronica[][]" value="Esteatose hepática" {{ isset($dados->doenca_cronica) && in_array('Esteatose hepática', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="esteatose_hepatica" name="doenca_cronica[]" value="Esteatose hepática" {{ isset($dados->doenca_cronica) && in_array('Esteatose hepática', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="esteatose_hepatica">Esteatose hepática</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="doenca_periodontal" name="doenca_cronica[][]" value="Doença periodontal" {{ isset($dados->doenca_cronica) && in_array('Doença periodontal', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="doenca_periodontal" name="doenca_cronica[]" value="Doença periodontal" {{ isset($dados->doenca_cronica) && in_array('Doença periodontal', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="doenca_periodontal">Doença periodontal</label>
         </div>
         <div class="col-md-4 form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="outros_condicoes" name="doenca_cronica[][]" value="Outros" {{ isset($dados->doenca_cronica) && in_array('Outros', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
+            <input class="form-check-input" type="checkbox" id="outros_condicoes" name="doenca_cronica[]" value="Outros" {{ isset($dados->doenca_cronica) && in_array('Outros', json_decode($dados->doenca_cronica)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="outros_condicoes">Outros…</label>
         </div>
         <div class="invalid-feedback">

@@ -26,9 +26,10 @@ class AtividadesEducativasController extends Controller
 
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.atividades_educativas.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.atividades_educativas.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -55,18 +56,22 @@ class AtividadesEducativasController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = AtividadeDiabete::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.atividades_educativas.index', compact('dados', 'dados_paciente'));
+        return view('site.paciente.consulta.atividades_educativas.index', compact('dados', 'dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+
+        $finalidade_consulta = json_encode($request['finalidade_consulta']);
+
         AtividadeDiabete::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
             'quantia_consultas_enfermagem'=>$request['quantia_consultas_enfermagem'],
-            'finalidade_consulta'=>$request['finalidade_consulta'],
+            'finalidade_consulta'=>$finalidade_consulta,
             'reunioes_diabeticos'=>$request['reunioes_diabeticos'],
             'programas_educacao_diabeticos'=>$request['programas_educacao_diabeticos'],
             'conhece_hba1c'=>$request['conhece_hba1c'],

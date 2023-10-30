@@ -26,9 +26,10 @@ class FamiliarHistoricoController extends Controller
 
     public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.familiar_historico.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.familiar_historico.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -88,28 +89,51 @@ class FamiliarHistoricoController extends Controller
     }
 
     public function editar($num_registro){
+	$page = 'editar';
         $dados = FamiliarHistorico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.familiar_historico.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.familiar_historico.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+
+$jsonData = $req->input('dm');
+        $dm = json_encode($jsonData);
+
+        $obesidade = json_encode($request['obesidade']);
+
+        $vitiligo = json_encode($request['vitiligo']);
+
+        $doenca_tireoideana = json_encode($request['doenca_tireoideana']);
+
+        $displidemia = json_encode($request['displidemia ']);
+
+        $alopecia = json_encode($request['alopecia']);
+
+        $artrite_reumatoide = json_encode($request['artrite_reumatoide']);
+
+        $doenca_coronariana = json_encode($request['doenca_coronariana']);
+
+        $has = json_encode($request['has']);
+
+        $doenca_celiaca = json_encode($request['doenca_celiaca']);
+
         FamiliarHistorico::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
-            'dm'=>$request['dm'],
+            'dm'=>$dm,
             'possui_dm1'=>$request['possui_dm1'],
             'dm1'=>$request['dm1'],
-            'obesidade'=>$request['obesidade'],
-            'vitiligo'=>$request['vitiligo'],
-            'doenca_tireoideana'=>$request['doenca_tireoideana'],
-            'displidemia'=>$request['displidemia'],
-            'alopecia'=>$request['alopecia'],
-            'artrite_reumatoide'=>$request['artrite_reumatoide'],
-            'doenca_coronariana'=>$request['doenca_coronariana'],
-            'has'=>$request['has'],
-            'doenca_celiaca'=>$request['doenca_celiaca'],
+            'obesidade'=>$obesidade,
+            'vitiligo'=>$vitiligo,
+            'doenca_tireoideana'=>$doenca_tireoideana,
+            'displidemia'=>$displidemia,
+            'alopecia'=>$alopecia,
+            'artrite_reumatoide'=>$artrite_reumatoide,
+            'doenca_coronariana'=>$doenca_coronariana,
+            'has'=>$has,
+            'doenca_celiaca'=>$doenca_celiaca,
             'num_USP'=>$num_USP,
         ]);
         return redirect()->route('familiar_historico.editar', compact('num_registro', 'num_USP'));

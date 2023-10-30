@@ -26,9 +26,10 @@ class ComorbidadesController extends Controller
 
     public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.comorbidades.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.comorbidades.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -55,19 +56,27 @@ class ComorbidadesController extends Controller
     }
 
     public function editar($num_registro){
+	$page = 'editar';
         $dados = Comorbidade::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.comorbidades.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.comorbidades.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+
+        $ocular = json_encode($request['ocular']);
+
+        $neuropatia = json_encode($request['neuropatia']);
+
+        $doenca_cronica = json_encode($request['doenca_cronica']);
+        
         Comorbidade::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
-            'ocular'=>$request['ocular'],
-            'neuropatia'=>$request['neuropatia'],
-            'doenca_cronica'=>$request['doenca_cronica'],
+            'ocular'=>$ocular,
+            'neuropatia'=>$neuropatia,
+            'doenca_cronica'=>$doenca_cronica,
             'num_USP' => $num_USP,
         ]);
         return redirect()->route('comorbidades.editar', compact('num_registro', 'num_USP'));

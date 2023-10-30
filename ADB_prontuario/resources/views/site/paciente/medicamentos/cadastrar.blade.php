@@ -4,12 +4,14 @@
 
 @section('content')
     @component('components.items.back')@endcomponent
-    <div class="usuario" style="    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;">
-        <p>{{$dados->nome}}</p>
-        <span class="material-symbols-outlined">
-          person_search 
-        </span>
-      </div>
+    <div class="usuario">
+        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+            <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+            <span class="material-symbols-outlined">
+              settings
+            </span>
+        </a>
+    </div>
     <section class="square-content square-content--medicamentos">
         <h1 class="text-center">Cadastro de Medicamentos</h1>
         <form action="{{route('medicamento.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>

@@ -9,12 +9,12 @@
     @endslot
   @endcomponent
   <div class="usuario">
-    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
-        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
-        <span class="material-symbols-outlined">
-          settings
-        </span>
-    </a>
+      <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+          <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+          <span class="material-symbols-outlined">
+            settings
+          </span>
+      </a>
   </div>
   <section class="user-index">
     <h1 class="text-center">Gerenciar Perfil</h1>

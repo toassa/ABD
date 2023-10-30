@@ -26,9 +26,10 @@ class ExamesFisicosController extends Controller
 
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exames_fisicos.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.exames_fisicos.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -58,9 +59,10 @@ class ExamesFisicosController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = ExameFisico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exames_fisicos.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.exames_fisicos.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
@@ -83,7 +85,7 @@ class ExamesFisicosController extends Controller
             'sistema_respiratorio' => $request['sistema_respiratorio'],
             'sistema_cardiovascular' => $request['sistema_cardiovascular'],
             'consideracoes_outros_sistemas' => $request['consideracoes_outros_sistemas'],
-            'num_USP' => $num_USP,
+            'num_USP'=>$num_USP,
         ]);
         return redirect()->route('exames_fisicos.editar', compact('num_registro', 'num_USP'));
     }

@@ -27,6 +27,6 @@ document.querySelectorAll('.btn-excluir').forEach(function(button) {
     button.addEventListener('click', function(event) {
 
 
-        window.location.href="http://127.0.0.1:8000/user/form/excluir/"+ID;
+        window.location.href="http://projetoscti.com.br/projetoscti22/user/form/excluir/"+ID;
     });
 });

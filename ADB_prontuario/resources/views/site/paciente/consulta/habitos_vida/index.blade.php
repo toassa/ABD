@@ -9,19 +9,25 @@
         {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
-        <form action="{{route('habitos_vida.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+	@if ($page == 'cadastrar')
+            <form action="{{route('habitos_vida.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        @else
+            <form action="{{route('habitos_vida.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        @endif
             {{ csrf_field() }}
+	    @if ($page != 'cadastrar')
+                <input type="hidden" name="_method" value="put">
+            @endif
+
             <h1 class="text-center">Hábitos de vida</h1>
             @include('site.paciente.consulta.habitos_vida._form')
             <div class="col-12 col-btn-form">
-                <button class="btn btn-giga btn-primary-darker" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary" type="submit">
-                    @if ($tipo == 'cadastrar')
-                        Cadastrar
-                    @else
-                        Editar
-                    @endif
-                </button>
+                <button class="btn btn-giga btn-primary" type="reset">Limpar</button>               
+		 @if ($page == 'cadastrar')
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
+                @else
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Atualizar</button>
+                @endif
             </div>
             <script src="{{asset('js/form-consulta.js')}}"></script>
         </form>

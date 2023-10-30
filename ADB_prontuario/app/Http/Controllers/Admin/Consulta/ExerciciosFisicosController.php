@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Auth;
 class ExerciciosFisicosController extends Controller
 {
     public function opcao($num_registro){
-
         $dados = Paciente::find($num_registro); 
         $primas = ExercicioFisico::find($num_registro);
         $num_USP = Auth::User()->num_USP;
@@ -26,9 +25,10 @@ class ExerciciosFisicosController extends Controller
 
     public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exercicios_fisicos.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.exercicios_fisicos.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -46,9 +46,10 @@ class ExerciciosFisicosController extends Controller
     }
 
     public function editar($num_registro){
+	$page = 'editar';
         $dados = ExercicioFisico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.exercicios_fisicos.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.exercicios_fisicos.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
@@ -59,7 +60,7 @@ class ExerciciosFisicosController extends Controller
             'exercicios_rotineiros'=>$request['exercicios_rotineiros'],
             'tipo_atividades'=>$request['tipo_atividades'],
             'frequencia_periodo'=>$request['frequencia_periodo'],
-            'num_USP' => $num_USP,
+            'num_USP'=>$num_USP,
         ]);
         return redirect()->route('exercicios_fisicos.editar', compact('num_registro', 'num_USP'));
     }

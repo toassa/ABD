@@ -42,6 +42,9 @@ class EmailController extends Controller
     }
 
     public function gerarCodigo(Request $req){  
+		$this->validate($req, [
+              'email' => 'required|email|exists:users,email',
+                 ]);
         
         $email = $req->all();
 

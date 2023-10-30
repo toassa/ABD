@@ -286,11 +286,11 @@ Route::middleware(['active.check'])->group(function () {
                 Route::prefix('/habitos_vida')->group(function(){
                     Route::get('/op/{num_registro}', [HabitosVidaController::class, 'opcao'])->name('habitos_vida.opcao');
 
-                    Route::get('/{tipo}/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
+                    Route::get('/{num_registro}', [HabitosVidaController::class, 'index'])->name('habitos_vida.index');
                 
                     Route::post('/salvar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'salvar'])->name('habitos_vida.salvar');
                 
-                    Route::get('/{tipo}/{num_registro}/', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
+                    Route::get('/{num_registro}/', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
         
                     Route::put('/atualizar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'atualizar'])->name('habitos_vida.atualizar');
                 });

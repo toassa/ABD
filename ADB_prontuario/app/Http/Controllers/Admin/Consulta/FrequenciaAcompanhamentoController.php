@@ -26,9 +26,10 @@ class FrequenciaAcompanhamentoController extends Controller
 
     public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.frequencia_acompanhamento.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.frequencia_acompanhamento.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -48,9 +49,10 @@ class FrequenciaAcompanhamentoController extends Controller
     }
 
     public function editar($num_registro){
+	$page = 'editar';
         $dados = FrequenciaAcompanhamento::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.frequencia_acompanhamento.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.frequencia_acompanhamento.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

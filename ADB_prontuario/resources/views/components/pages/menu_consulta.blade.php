@@ -151,7 +151,7 @@
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Frequência de acompanhamento
+                    Frequência
                 @endslot
                 @slot('route_menu')
                     {{route('frequencia_acompanhamento.opcao', $num_registro)}}
@@ -340,7 +340,7 @@
                     </span>
                 @endslot
                 @slot('text_menu')
-                    Comprometimento Neuropático
+                    Neuropático
                 @endslot
                 @slot('route_menu')
                     {{route('neuropatico_comprometimento.opcao', $num_registro)}}

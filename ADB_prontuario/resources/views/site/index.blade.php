@@ -8,7 +8,13 @@
             {{route('login.sair')}}
         @endslot
     @endcomponent
-    @component('components.items.user_name')@endcomponent
+
+    @component('components.items.menu')
+        @slot('nome_user')
+            {{$primeiroNome = explode(' ', Auth::user()->name)[0]}}
+        @endslot
+    @endcomponent
+
     <section class="align-content">
         @if (Auth::user()->ativo == true)
             <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador">
@@ -26,4 +32,13 @@
             </nav>
         @endif
     </section>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 @endsection

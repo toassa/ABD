@@ -9,14 +9,25 @@
         {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
-        <form action="{{route('exames_fisicos.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        @if ($page == 'cadastrar')
+            <form action="{{route('exames_fisicos.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        @else
+            <form action="{{route('exames_fisicos.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+        @endif
             {{ csrf_field() }}
+            @if ($page != 'cadastrar')
+                <input type="hidden" name="_method" value="put">
+            @endif
             <h1 class="text-center">Exames físicos</h1>
             <p>Atenção, seguir o roteiro físico para guiar o exame. Adicionar aqui as alterações observadas em cada aparelho. Caso não se observe alterações, anotar NDN (nada digno de nota), especificando no roteiro físico os achados.</p>
             @include('site.paciente.consulta.exames_fisicos._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
-                <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
+                @if ($page == 'cadastrar')
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
+                @else
+                    <button class="btn btn-giga btn-primary-confirm" type="submit">Atualizar</button>
+                @endif
             </div>
         </form>
         <script>

@@ -9,12 +9,15 @@
         {{$dados_paciente->nome}}
     @endslot
     @slot('content_menu')
-        @if ()
-            <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="_POST" class="row g-3 needs-validation" novalidate>
+        @if ($page == 'cadastrar')
+            <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
         @else
-            <form action="{{route('primeiro_diagnostico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="_POST" class="row g-3 needs-validation" novalidate>
+            <form action="{{route('primeiro_diagnostico.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
         @endif
            {{ csrf_field() }}
+            @if ($page != 'cadastrar')
+                <input type="hidden" name="_method" value="put">
+            @endif
             <h1 class="text-center">Primeiro Diagnóstico</h1>
             <div class="pagination-container">
                 <div class="pagination-content">

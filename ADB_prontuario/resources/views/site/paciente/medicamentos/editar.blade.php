@@ -5,11 +5,13 @@
 @section('content')
     @component('components.items.back')@endcomponent
     <div class="usuario">
-        <p>{{$dados->nome}}</p>
-        <span class="material-symbols-outlined">
-          person_search
-        </span>
-      </div>
+        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+            <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
+            <span class="material-symbols-outlined">
+              settings
+            </span>
+        </a>
+    </div>
     <section class="square-content square-content--medicamentos">
         <h1 class="text-center">Edição de Medicamentos</h1>
         <form action="{{route('medicamento.atualizar', ['num_registro' => $dados->num_registro, 'nome' => $dados->nome, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>

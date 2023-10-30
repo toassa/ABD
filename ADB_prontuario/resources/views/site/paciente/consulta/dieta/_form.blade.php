@@ -127,8 +127,8 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Consome Produtos Dietéticos <b>*</b></label>
-    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="consome_dieteticos" required>
-         <option selected disabled value="">Clique para escolher...</option>
+    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="consome_dieteticos">
+        <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->consome_dieteticos) && $dados->consome_dieteticos == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->consome_dieteticos) && $dados->consome_dieteticos == 0 ? 'selected' : '' }}>Não</option>
     </select>

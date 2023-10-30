@@ -10,42 +10,38 @@ function mostraDados(){
     let input_multiple7 = document.getElementById('input_show_multiple7');
     let input_multiple8 = document.getElementById('input_show_multiple8');
     
-    select.addEventListener('change', function() {
-        if (select.value == '0') {
-            input.style.display = 'none';
-            input_multiple.style.display = 'none';
-            input_multiple2.style.display = 'none';
-            input_multiple3.style.display = 'none';
-            input_multiple4.style.display = 'none';
-            input_multiple5.style.display = 'none';
-            input_multiple6.style.display = 'none';
-            input_multiple7.style.display = 'none';
-            input_multiple8.style.display = 'none';
-        } else {
-            input.style.display = 'block';
-            input_multiple.style.display = 'block';
-            input_multiple2.style.display = 'block';
-            input_multiple3.style.display = 'block';
-            input_multiple4.style.display = 'block';
-            input_multiple5.style.display = 'block';
-            input_multiple6.style.display = 'block';
-            input_multiple7.style.display = 'block';
-            input_multiple8.style.display = 'block';
-        }
-    });
+    if (select.value == '0') {
+        input.style.display = 'none';
+        input_multiple.style.display = 'none';
+        input_multiple2.style.display = 'none';
+        input_multiple3.style.display = 'none';
+        input_multiple4.style.display = 'none';
+        input_multiple5.style.display = 'none';
+        input_multiple6.style.display = 'none';
+        input_multiple7.style.display = 'none';
+        input_multiple8.style.display = 'none';
+    } else {
+        input.style.display = 'block';
+        input_multiple.style.display = 'block';
+        input_multiple2.style.display = 'block';
+        input_multiple3.style.display = 'block';
+        input_multiple4.style.display = 'block';
+        input_multiple5.style.display = 'block';
+        input_multiple6.style.display = 'block';
+        input_multiple7.style.display = 'block';
+        input_multiple8.style.display = 'block';
+    }
 }
 
 function mostraDados2(){
     let select2 = document.getElementById('validationCustomSelectDefine2');
     let input2 = document.getElementById('input_show2');
 
-    select2.addEventListener('change', function() {
-        if (select2.value == '1') {
-            input2.style.display = 'block';
-        } else {
-            input2.style.display = 'none';
-        }
-    });
+    if (select2.value == '1') {
+        input2.style.display = 'block';
+    } else {
+        input2.style.display = 'none';
+    }
 }
 
 function mostraDadosMultiple(){
@@ -53,16 +49,13 @@ function mostraDadosMultiple(){
     let input_double = document.getElementById('input_show_double');
     let input_double2 = document.getElementById('input_show_double2');
 
-    // console.log("Selected value:", select_double.value);
-    select_double.addEventListener('change', function() {
-        if (select_double.value == '1') {
-            input_double.style.display = 'block';
-            input_double2.style.display = 'block';
-        } else {
-            input_double.style.display = 'none';
-            input_double2.style.display = 'none';
-        }
-    });
+    if (select_double.value == '1') {
+        input_double.style.display = 'block';
+        input_double2.style.display = 'block';
+    } else {
+        input_double.style.display = 'none';
+        input_double2.style.display = 'none';
+    }
 }
 
 function mostraDados3(){
@@ -73,19 +66,33 @@ function mostraDados3(){
     let input_multiple3 = document.getElementById('input_show_multiple33');
     let input_multiple4 = document.getElementById('input_show_multiple43');
     
-    select.addEventListener('change', function() {
-        if(select.value == 'Sim') {
-            input.style.display = 'block';
-            input_multiple.style.display = 'block';
-            input_multiple2.style.display = 'block';
-            input_multiple3.style.display = 'block';
-            input_multiple4.style.display = 'block';
-        }else {
-            input.style.display = 'none';
-            input_multiple.style.display = 'none';
-            input_multiple2.style.display = 'none';
-            input_multiple3.style.display = 'none';
-            input_multiple4.style.display = 'none';
-        }
-    });
+    if(select.value == 'Sim') {
+        input.style.display = 'block';
+        input_multiple.style.display = 'block';
+        input_multiple2.style.display = 'block';
+        input_multiple3.style.display = 'block';
+        input_multiple4.style.display = 'block';
+    }else {
+        input.style.display = 'none';
+        input_multiple.style.display = 'none';
+        input_multiple2.style.display = 'none';
+        input_multiple3.style.display = 'none';
+        input_multiple4.style.display = 'none';
+    }
 }
+
+function verificarSelect() {
+    mostraDados();
+    mostraDados2();
+    mostraDados3();
+    mostraDadosMultiple();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    verificarSelect(); // Chama a função para verificar o select inicial
+});
+
+
+
+
+

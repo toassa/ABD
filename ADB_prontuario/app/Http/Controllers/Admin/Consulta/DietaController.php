@@ -26,9 +26,10 @@ class DietaController extends Controller
 
     public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.dieta.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.dieta.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -61,25 +62,33 @@ class DietaController extends Controller
     }
 
     public function editar($num_registro){
+	$page = 'editar';
         $dados = Dieta::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.dieta.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.dieta.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+	
+        $orientador = json_encode($request['orientador']);
+
+        $dificuldade_dieta = json_encode($request['dificuldade_dieta']);
+
+        $produtos_dieteticos = json_encode($request['produtos_dieteticos']);
+
         Dieta::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
             'realiza'=>$request['realiza'],
             'tipo_dieta'=>$request['tipo_dieta'],
             'segue_dieta'=>$request['segue_dieta'],
-            'dificuldade_dieta'=>$request['dificuldade_dieta'],
-            'orientador'=>$request['orientador'],
+            'dificuldade_dieta'=>$dificuldade_dieta,
+            'orientador'=>$orientador,
             'consulta_nutricionista'=>$request['consulta_nutricionista'],
             'frequencia_nutricionista'=>$request['frequencia_nutricionista'],
             'consome_dieteticos'=>$request['consome_dieteticos'],
-            'produtos_dieteticos'=>$request['produtos_dieteticos'],
+            'produtos_dieteticos'=>$produtos_dieteticos,
             'num_USP'=>$num_USP,
         ]);
         return redirect()->route('dieta.editar', compact('num_registro', 'num_USP'));

@@ -26,9 +26,10 @@ class GinecologicosDadosController extends Controller
 
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.ginecologico_dados.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.ginecologico_dados.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -54,9 +55,10 @@ class GinecologicosDadosController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = GinecologicoDado::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.ginecologico_dados.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.ginecologico_dados.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

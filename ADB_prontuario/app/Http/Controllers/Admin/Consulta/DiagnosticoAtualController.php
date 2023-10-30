@@ -26,9 +26,10 @@ class DiagnosticoAtualController extends Controller
     
     public function index($num_registro)
     {
+        $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.diagnostico_atual.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.diagnostico_atual.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
@@ -48,20 +49,22 @@ class DiagnosticoAtualController extends Controller
     }
 
     public function editar($num_registro){
+        $page = 'editar';
         $dados = Diagnostico::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.diagnostico_atual.index', compact('dados','dados_paciente'));
+        return view('site.paciente.consulta.diagnostico_atual.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
-        Paciente::where('num_registro',$num_registro)->update([
+        $sintomas = json_encode($request['sintomas']);
+        Diagnostico::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
-            'sintomas'=>$request['sintomas'],
+            'sintomas'=>$sintomas,
             'libido_alterado'=>$request['libido_alterado'],
             'num_USP' => $num_USP,
         ]);
-        return redirect()->route('pacientes.listar');
+        return redirect()->route('diagnostico_atual.editar', compact('num_registro', 'num_USP'));
     }
 }

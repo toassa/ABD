@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo-pagina', 'Listar Usuários')
+@section('titulo-pagina', 'Listar Pacientes')
 
 @section('content')
 
@@ -45,7 +45,7 @@
         @slot('grid_content')
         <div class="text-center">
           <a href="{{route('paciente.null_pesquisar')}}">
-            Clique aqui para mostrar todos os usuários
+            Clique aqui para mostrar todos os pacientes
           </a>
         </div>
         @endslot

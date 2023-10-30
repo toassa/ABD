@@ -18,25 +18,23 @@ class HabitosVidaController extends Controller
         $primas = HabitosVida::find($num_registro);
         $num_USP = Auth::User()->num_USP;
         if($primas == null){
-            $tipo = 'cadastrar';
-            return redirect()->route('habitos_vida.index', compact('tipo', 'num_registro'));
+            return redirect()->route('habitos_vida.index', compact('num_registro'));
         }else{
-            $tipo = 'editar';
-            return redirect()->route('habitos_vida.editar', compact('tipo', 'num_registro', 'num_USP'));
+            return redirect()->route('habitos_vida.editar', compact('num_registro', 'num_USP'));
         }
     }
 
-    public function index($tipo, $num_registro)
+    public function index($num_registro)
     {
+	$page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.habitos_vida.index', compact('dados','dados_paciente', 'tipo'));
+        return view('site.paciente.consulta.habitos_vida.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $request = $req->all();
         $dados_paciente = Paciente::find($num_registro);
-        $tipo = 'editar';
         HabitosVida::create([
             'num_registro'=>$num_registro,
             'sobre_etilismo'=>$request['sobre_etilismo'],
@@ -50,13 +48,14 @@ class HabitosVidaController extends Controller
             'num_USP' => $num_USP,
         ]);
 
-        return redirect()->route('habitos_vida.editar', compact('dados_paciente', 'num_USP', 'tipo'));
+        return redirect()->route('habitos_vida.editar', compact('dados_paciente', 'num_USP'));
     }
 
-    public function editar($tipo, $num_registro){
+    public function editar($num_registro){
+	$page = 'editar';
         $dados = HabitosVida::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
-        return view('site.paciente.consulta.habitos_vida.index', compact('dados','dados_paciente', 'tipo'));
+        return view('site.paciente.consulta.habitos_vida.index', compact('dados','dados_paciente', 'page'));
     }
 
     public function atualizar(Request $req, $num_registro, $num_USP)

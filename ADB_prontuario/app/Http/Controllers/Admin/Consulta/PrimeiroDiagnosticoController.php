@@ -63,11 +63,14 @@ class PrimeiroDiagnosticoController extends Controller
     public function atualizar(Request $req, $num_registro, $num_USP)
     {
         $request = $req->except('_token');
+        
+        $sintomas = json_encode($request['sintomas']);
+
         PrimeiroDiagnostico::where('num_registro',$num_registro)->update([
             'num_registro'=>$num_registro,
             'ano'=>$request['ano'],
-            'idade_diagnostico'=>$request['idade_diagnostico_diagnostico'],
-            'sintomas'=>$request['sintomas'],
+            'idade_diagnostico'=>$request['idade_diagnostico'],
+            'sintomas' => $sintomas,
             'como_foi_feito'=>$request['como_foi_feito'],
             'infeccoes_seis_meses'=>$request['infeccoes_seis_meses'],
             'quais_infeccoes'=>$request['quais_infeccoes'],
@@ -76,6 +79,6 @@ class PrimeiroDiagnosticoController extends Controller
             'qual_fator_emocional'=>$request['qual_fator_emocional'],
             'num_USP' => $num_USP,
         ]);
-        return redirect()->route('pacientes.listar');
+        return redirect()->route('primeiro_diagnostico.editar', compact('num_registro', 'num_USP'));
     }
 }

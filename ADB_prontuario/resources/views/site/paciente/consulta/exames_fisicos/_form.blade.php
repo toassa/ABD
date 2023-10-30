@@ -114,7 +114,7 @@
 
 <div class="col-md-12">
     <label for="validationCustomconsideracoes_outros_sistemas" class="form-label">Quais as considerações sobre outros sistemas? <b>*</b></label>
-    <textarea class="form-control" id="validationCustomLetra" name="validationCustomconsideracoes_outros_sistemas" placeholder="Insira as Considerações sobre outros sistemas" required>{{ isset($dados->consideracoes_outros_sistemas) ? $dados->consideracoes_outros_sistemas : '' }}</textarea>
+    <textarea class="form-control" id="validationCustomLetra" name="consideracoes_outros_sistemas" placeholder="Insira as Considerações sobre outros sistemas" required>{{ isset($dados->consideracoes_outros_sistemas) ? $dados->consideracoes_outros_sistemas : '' }}</textarea>
     <div class="invalid-feedback">
         Insira as Considerações sobre Outros Sistemas
     </div>
