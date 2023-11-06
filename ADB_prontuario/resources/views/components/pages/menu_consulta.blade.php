@@ -8,14 +8,6 @@
             {{$rota_volta}}
         @endslot
     @endcomponent
-    <div class="usuario">
-        <a href="{{route('paciente.configuracoes', $num_registro)}}">
-            <a href="{{route('paciente.configuracoes', $num_registro)}}">{{$nome}}</a>
-            <span class="material-symbols-outlined">
-              settings
-            </span>
-        </a>
-    </div>
     <section class="square-content square-content--cadastro-consulta">
         <div class="menu_consulta">
             <div class="menu_img">

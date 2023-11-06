@@ -8,7 +8,6 @@
             {{route('opcao.users')}}
         @endslot
     @endcomponent
-    @component('components.items.user_name')@endcomponent
     @if ($user_avaiable == false)
         <script type="text/javascript">alert("É impossível excluir esse usuário");</script>
     @elseif ($user_avaiable == false)
@@ -54,6 +53,7 @@
                         </div>
                     </button>
             @endforeach
+            
             <dialog class="square-content square-content--confirma-excluir"  id="modal_excluir">
                 <div class="p-dialog">
                     <p class="text-center">

@@ -17,4 +17,13 @@
 </head>
 <body onLoad="hide_password();">
     <main class="content align-content" id="content">
-        
+    @if(Auth::check())
+        @component('components.items.menu')
+            @slot('rota_sair')
+            	{{route('login.sair')}}
+            @endslot
+            @slot('nome_user')
+            	{{$primeiroNome = explode(' ', Auth::user()->name)[0]}}
+            @endslot
+    	@endcomponent
+    @endif    

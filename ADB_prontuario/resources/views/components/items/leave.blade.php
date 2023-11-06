@@ -1,6 +1,8 @@
-<div class="leave">
-    <a href="{{$rota_sair}}">
-        <img src="{{asset('images/icons/out-icon.svg')}}" alt="Ícone de log-out">
-        <a href="{{$rota_sair}}">Sair</a>
-    </a>
+<div class="check-theme">
+    <input type="checkbox" name="change-theme" id="change-theme">
+    <label for="change-theme">
+        <span class="material-symbols-outlined" id="icon-theme">
+            light_mode
+        </span>
+    </label>
 </div>

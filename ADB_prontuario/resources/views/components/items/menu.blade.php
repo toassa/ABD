@@ -3,18 +3,19 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
     <p>{{$nome_user}}</p>
-    <a href="#">
-        <!-- <div class="check-theme"> -->
-            <input type="checkbox" name="change-theme" id="change-theme">
-            <label for="change-theme">
-                <span class="material-symbols-outlined" id="icon-theme">
-                    light_mode
-                </span>
-            </label>
-        <!-- </div> -->
-    </a>
     <a href="{{route('cookies')}}">Política de privacidade</a>
-    <a href="#">Contact</a>
+    <a href="{{route('cookies')}}">Precisa de ajuda?</a>
+    <a href="#">
+        <input type="checkbox" name="change-theme" id="change-theme">
+        <label for="change-theme">
+            <span class="material-symbols-outlined" id="icon-theme">
+                light_mode
+            </span>
+        </label>
+    </a>
+    <a href="{{$rota_sair}}" class="sair">
+        Sair
+    </a>
     </div>
 </div>
 
@@ -25,3 +26,13 @@
         </span>
     </span>
 </div>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>

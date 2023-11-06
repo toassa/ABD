@@ -25,6 +25,13 @@ class MedicamentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $dados = $req->all();
+        // // existis ou first
+        // $existe = TratamentoMedicamento::where('nome', $dados['nome']);
+        // if($existe == true){        
+        //     dd($existe);
+        // }else{
+        //     dd('else');
+        // }
 
         TratamentoMedicamento::create([
             'num_registro'=>$num_registro,
@@ -84,5 +91,10 @@ class MedicamentoController extends Controller
             'num_USP' => $num_USP,
         ]);
         return redirect()->route('Pacientes.listar');
+    }
+
+    public function excluir($num_registro, $nome){
+        TratamentoMedicamento::where('num_registro', $num_registro)->where('nome', $nome)->delete();
+        return redirect()->route('medicamento.index', $num_registro);
     }
 }

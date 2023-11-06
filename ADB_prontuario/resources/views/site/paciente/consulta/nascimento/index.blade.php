@@ -10,7 +10,7 @@
     @endslot
     @slot('content_menu')
     @if ($page == 'cadastrar')
-            <form action="{{route('nascimento.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+            <form action="{{route('nascimento.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
         @else
             <form action="{{route('nascimento.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
         @endif

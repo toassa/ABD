@@ -4,7 +4,6 @@
 
 @section('content')
     @component('components.items.back')@endcomponent
-    @component('components.items.user_name')@endcomponent
     <section class="square-content square-content--cadastro">
         {{-- action:route ALTERAR --}}
         @if($num_existente != false)

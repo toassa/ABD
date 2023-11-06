@@ -14,7 +14,7 @@
 
 <div class="col-md-6" id="input_show_multiple2">
     <label for="validationCustomTipoDieta" class="form-label">Qual tipo principal de dieta você faz? <b>*</b> </label>
-    <select class="form-select" id="validationCustomTipoDieta" name="tipo_dieta">
+    <select class="form-select" id="validationCustomTipoDieta" name="tipo_dieta" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Restringe apenas açúcar e doce" {{ isset($dados->tipo_dieta) && $dados->tipo_dieta === 'Restringe apenas açúcar e doce' ? 'selected' : '' }}>Restringe apenas açúcar e doce</option>
         <option value="Dieta de calorias" {{ isset($dados->tipo_dieta) && $dados->tipo_dieta === 'Dieta de calorias' ? 'selected' : '' }}>Dieta de calorias</option>
@@ -66,7 +66,7 @@
 
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomSelectDefineDouble" class="form-label">No último ano, teve consulta com nutricionista? <b>*</b>  </label>
-    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="consulta_nutricionista">
+    <select class="form-select" id="validationCustomSelectDefineDouble" onclick="mostraDadosMultiple()" onchange="mostraDadosMultiple()" onfocus="mostraDadosMultiple()" name="consulta_nutricionista" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->consulta_nutricionista) && $dados->consulta_nutricionista == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->consulta_nutricionista) && $dados->consulta_nutricionista == 0 ? 'selected' : '' }}>Não</option>
@@ -78,7 +78,7 @@
 
 <div class="col-md-6 input-translate-less" id="input_show_double">
     <label for="validationCustomfrequencia_nutricionista" class="form-label">Quantas vezes foi à consulta com o nutricionista no último ano? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomfrequencia_nutricionista" value="{{ isset($dados->frequencia_nutricionista) ? $dados->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista">
+    <input type="number" class="text-center form-control" id="validationCustomfrequencia_nutricionista" value="{{ isset($dados->frequencia_nutricionista) ? $dados->frequencia_nutricionista : '' }}" name="frequencia_nutricionista" placeholder="Insira a frequência da consulta com nutricionista" required>
     <div class="invalid-feedback">
         Insira a frequência da consulta com nutricionista
     </div>
@@ -86,7 +86,7 @@
 
 <div class="col-md-6" id="input_show_multiple3">
     <label for="validationCustomSegueDieta" class="form-label">De 0 a 10, quando você segue a dieta? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($dados->segue_dieta) ? $dados->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue">
+    <input type="number" class="text-center form-control" id="validationCustomSegueDieta" value="{{ isset($dados->segue_dieta) ? $dados->segue_dieta : '' }}" name="segue_dieta" placeholder="Insira a dieta que segue" required>
     <div class="invalid-feedback">
         Insira a dieta que segue
     </div>
@@ -127,7 +127,7 @@
 
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Consome Produtos Dietéticos <b>*</b></label>
-    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="consome_dieteticos">
+    <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="consome_dieteticos" required>
         <option selected disabled value="">Clique para escolher...</option>
         <option value="1" {{ isset($dados->consome_dieteticos) && $dados->consome_dieteticos == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->consome_dieteticos) && $dados->consome_dieteticos == 0 ? 'selected' : '' }}>Não</option>

@@ -4,7 +4,6 @@
 
 @section('content')
     @component('components.items.back')@endcomponent
-    @component('components.items.user_name')@endcomponent
     <section class="square-content square-content--listar">
         <h1 class="text-center">Editar Usuários</h1>
         <div class="grid">

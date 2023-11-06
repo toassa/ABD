@@ -47,7 +47,7 @@
                 segue_dieta.value = value;
             });
         </script>
-	{{--<script>
+	<script>
             document.addEventListener('DOMContentLoaded', function () {
                 var checkboxes = document.querySelectorAll('input[name="orientador[]"]');
                 var labels = document.querySelectorAll('label[for^="validationFormCheck"]');
@@ -151,7 +151,7 @@
         </script>
 	<script>
             document.addEventListener('DOMContentLoaded', function () {
-                var checkboxes = document.querySelectorAll('input[name="produtos_dieteticosss[]"]');
+                var checkboxes = document.querySelectorAll('input[name="produtos_dieteticos[]"]');
                 var labels = document.querySelectorAll('label[for^="validationFormCheck"]');
                 var form = document.querySelector('.needs-validation');
             
@@ -199,7 +199,7 @@
                     });
                 });
             });
-        </script>--}}
+        </script>
 
     @endslot
 @endcomponent

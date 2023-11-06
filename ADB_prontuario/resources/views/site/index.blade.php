@@ -3,17 +3,14 @@
 @section('titulo-pagina', 'Opções')
 
 @section('content')
-    @component('components.items.leave')
-        @slot('rota_sair')
+    <!-- @component('components.items.menu')
+    @slot('rota_sair')
             {{route('login.sair')}}
         @endslot
-    @endcomponent
-
-    @component('components.items.menu')
         @slot('nome_user')
             {{$primeiroNome = explode(' ', Auth::user()->name)[0]}}
         @endslot
-    @endcomponent
+    @endcomponent -->
 
     <section class="align-content">
         @if (Auth::user()->ativo == true)
@@ -32,13 +29,4 @@
             </nav>
         @endif
     </section>
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
 @endsection

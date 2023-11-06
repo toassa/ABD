@@ -24,9 +24,8 @@ class HabitosVidaController extends Controller
         }
     }
 
-    public function index($num_registro)
-    {
-	$page = 'cadastrar';
+    public function index($num_registro){
+	    $page = 'cadastrar';
         $dados = Paciente::find($num_registro);
         $dados_paciente = Paciente::find($num_registro);
         return view('site.paciente.consulta.habitos_vida.index', compact('dados','dados_paciente', 'page'));

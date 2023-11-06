@@ -8,7 +8,6 @@
         {{route('admin.opcoes')}}
     @endslot
   @endcomponent
-  @component('components.items.user_name')@endcomponent
   <section class="user-index">
     <h1 class="text-center">Bem-vindo(a)</h1>
     <div class="square-content square-content--menu">

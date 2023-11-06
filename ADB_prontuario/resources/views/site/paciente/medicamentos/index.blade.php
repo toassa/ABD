@@ -8,51 +8,74 @@
         {{route('consulta.menu', $dados->num_registro)}}
     @endslot
     @endcomponent
-    <div class="usuario">
-        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
-            <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">{{$dados->nome}}</a>
-            <span class="material-symbols-outlined">
-              settings
-            </span>
-        </a>
-    </div>
     <section class="square-content square-content--medicamentos">
         @component('components.pages.listar-med')
             @slot('title')
                 <h1 class="text-center">Medicamentos Utilizados</h1>
-                <p class="text-center">Selecione um medicamento para editá-lo</p>
+                <div class="usuario">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">Paciente: {{$dados->nome}}</a>
+                        <span class="material-symbols-outlined">
+                            settings
+                        </span>
+                    </a>
+                </div>
+                @if($tratamento_medicamentos == '[]')
+                    <p class="text-center" style="margin-bottom: 4vh">Selecione um medicamento para editá-lo</p>
+                @endif
             @endslot
 
             @slot('grid_titles')
-                <div class="row row-title">
-                    <div class="col text-center col-title">Nome</div>
-                    <div class="col text-center col-title">Tipo</div>
-                    <div class="col text-center col-title">Posologia</div>
-                    <div class="col text-center col-title">Origem</div>
-                    <div class="col text-center col-title">Aderência</div>
-                    <div class="col text-center col-title">Num USP</div>
-                </div>
+                @if ($tratamento_medicamentos == '[]')
+                    <div class="text-center">
+                        Ainda não há medicamentos cadastrados para esse paciente
+                    </div>
+                @else
+                    <div class="row row-title">
+                        <div class="col-md-2 text-center col-title">Nome</div>
+                        <div class="col-md-2 text-center col-title">Tipo</div>
+                        <div class="col-md-2 text-center col-title">Posologia</div>
+                        <div class="col-md-2 text-center col-title">Aderência</div>
+                        <div class="col-md-2 text-center col-title">Num USP</div>
+                        <div class="col-md-1 text-center col-title"></div>
+                        <div class="col-md-1 text-center col-title"></div>
+                    </div>
+                @endif
             @endslot
             @slot('grid_content')
-                @foreach ($tratamento_medicamentos as $tratamento_medicamento)
-                {{-- ARRUMA AQUI --}}
-                    @if ($tratamento_medicamento->num_registro == null)
-                        n cadastro nada burro
-                    @else
-                        @if ($tratamento_medicamento->num_registro == $dados->num_registro)
-                        <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}">
-                            <div class="row row-text row-hover">
-                                <p class="col text-center col-text">{{$tratamento_medicamento->nome}}</p>
-                                <p class="col text-center col-mail">{{$tratamento_medicamento->tipo}}</p>
-                                <p class="col text-center col-mail">{{$tratamento_medicamento->posologia}}</p>
-                                <p class="col text-center col-text">{{$tratamento_medicamento->origem}}</p>
-                                <p class="col text-center col-text">{{$tratamento_medicamento->aderencia}}</p>
-                                <p class="col text-center col-text">{{$tratamento_medicamento->num_USP}}</p>
-                            </div>
-                        </a>
-                        @endif
-                    @endif
-                @endforeach
+                @if ($tratamento_medicamentos == '[]')
+                    <div class="text-center">
+                        Cadastre-os no botão abaixo
+                    </div>
+                @else
+                    @foreach ($tratamento_medicamentos as $tratamento_medicamento)
+                            @if ($tratamento_medicamento->num_registro == $dados->num_registro)
+                                <!-- <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}"> -->
+                                    <div class="row row-text" style="cursor: none;">
+                                        <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->nome}}</p>
+                                        <p class="col-md-2 text-center col-mail">{{$tratamento_medicamento->tipo}}</p>
+                                        <p class="col-md-2 text-center col-mail">{{$tratamento_medicamento->posologia}}</p>
+                                        <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->aderencia}}</p>
+                                        <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->num_USP}}</p>
+                                        <!-- <p class="col-md-1 text-center col-text"> -->
+                                            <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}" class="col-md-1 text-center col-text row-hover">
+                                                <span class="material-symbols-outlined" style="color: red !important; font-weight: 800 !important;">
+                                                    edit
+                                                </span>
+                                            </a>
+                                        <!-- </p> -->
+                                        <!-- <p class="col-md-1 text-center col-text"> -->
+                                            <a href="{{route('medicamento.excluir', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}" class="col-md-1 text-center col-text row-hover">
+                                                <span class="material-symbols-outlined" style="color: red !important; font-weight: 800 !important;">
+                                                    close
+                                                </span>
+                                            </a>
+                                        <!-- </p> -->
+                                    </div>
+                                <!-- </a> -->
+                            @endif
+                    @endforeach
+                @endif
             @endslot
             @slot('route_btn')
             {{route('medicamento.cadastrar', $dados->num_registro)}}

@@ -51,7 +51,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomLetra" class="form-label">Data da consulta <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->consulta) ? $tratamento_medicamentos->consulta : '' }}" name="consulta" required>
+    <input type="date" class="form-control" id="validationCustomLetra" value="{{ isset($tratamento_medicamentos->consulta) ? $tratamento_medicamentos->consulta : '' }}" name="consulta" required>
     <div class="invalid-feedback">
         Insira a consulta do medicamento
     </div>

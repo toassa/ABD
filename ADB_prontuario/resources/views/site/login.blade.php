@@ -3,6 +3,14 @@
 @section('titulo-pagina', 'Login')
 
 @section('content')
+    <div class="check-theme">
+        <input type="checkbox" name="change-theme" id="change-theme">
+        <label for="change-theme">
+            <span class="material-symbols-outlined" id="icon-theme">
+                light_mode
+            </span>
+        </label>
+    </div>
     <section class="square-content square-content--login">
         <img src="{{asset('images/logo_ADB.png')}}" alt="Logo da ADB" class="login-logo">
         @if($auth == false)

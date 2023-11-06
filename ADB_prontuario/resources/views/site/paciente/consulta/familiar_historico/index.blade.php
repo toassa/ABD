@@ -206,7 +206,7 @@
         </script>
 	<script>
             document.addEventListener('DOMContentLoaded', function () {
-                var checkboxes = document.querySelectorAll('input[name="doenca_tireoidiana[]"]');
+                var checkboxes = document.querySelectorAll('input[name="doenca_tireoideana[]"]');
                 var labels = document.querySelectorAll('label[for^="validationFormCheck"]');
                 var form = document.querySelector('.needs-validation');
             

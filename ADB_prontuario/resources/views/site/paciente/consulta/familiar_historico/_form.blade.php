@@ -167,44 +167,44 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaPai" name="doenca_tireoidiana[]" value="Pai" {{ isset($dados->doenca_tireoidiana) && in_array('Pai', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaPai">Pai</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaPai" name="doenca_tireoideana[]" value="Pai" {{ isset($dados->doenca_tireoideana) && in_array('Pai', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaPai">Pai</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaMae" name="doenca_tireoidiana[]" value="Mãe" {{ isset($dados->doenca_tireoidiana) && in_array('Mãe', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaMae">Mãe</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaMae" name="doenca_tireoideana[]" value="Mãe" {{ isset($dados->doenca_tireoideana) && in_array('Mãe', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaMae">Mãe</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaIrmao" name="doenca_tireoidiana[]" value="Irmão(a)(s)" {{ isset($dados->doenca_tireoidiana) && in_array('Irmão(a)(s)', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaIrmao">Irmão(a)(s)</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaIrmao" name="doenca_tireoideana[]" value="Irmão(a)(s)" {{ isset($dados->doenca_tireoideana) && in_array('Irmão(a)(s)', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaIrmao">Irmão(a)(s)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaFilho" name="doenca_tireoidiana[]" value="Filho(a)(s)" {{ isset($dados->doenca_tireoidiana) && in_array('Filho(a)(s)', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaFilho">Filho(a)(s)</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaFilho" name="doenca_tireoideana[]" value="Filho(a)(s)" {{ isset($dados->doenca_tireoideana) && in_array('Filho(a)(s)', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaFilho">Filho(a)(s)</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaAvos" name="doenca_tireoidiana[]" value="Avós ou Tios ou Primos" {{ isset($dados->doenca_tireoidiana) && in_array('Avós ou Tios ou Primos', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaAvos">Avós ou Tios ou Primos</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaAvos" name="doenca_tireoideana[]" value="Avós ou Tios ou Primos" {{ isset($dados->doenca_tireoideana) && in_array('Avós ou Tios ou Primos', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaAvos">Avós ou Tios ou Primos</label>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxVitiligoNacheckboxdoenca_tireoidianaNaoSabeoSabe" name="doenca_tireoidiana[]" value="Não sabe" {{ isset($dados->doenca_tireoidiana) && in_array('Não sabe', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaNaoSabe">Não sabe</label>
+                <input type="checkbox" class="form-check-input" id="checkboxVitiligoNacheckboxdoenca_tireoideanaNaoSabeoSabe" name="doenca_tireoideana[]" value="Não sabe" {{ isset($dados->doenca_tireoideana) && in_array('Não sabe', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaNaoSabe">Não sabe</label>
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoidianaSemHistorico" name="doenca_tireoidiana[]" value="Não há histórico familiar" {{ isset($dados->doenca_tireoidiana) && in_array('Não há histórico familiar', json_decode($dados->doenca_tireoidiana)) ? 'checked' : '' }}>
-                <label class="form-check-label label_check" for="checkboxdoenca_tireoidianaSemHistorico">Não há histórico familiar</label>
+                <input type="checkbox" class="form-check-input" id="checkboxdoenca_tireoideanaSemHistorico" name="doenca_tireoideana[]" value="Não há histórico familiar" {{ isset($dados->doenca_tireoideana) && in_array('Não há histórico familiar', json_decode($dados->doenca_tireoideana)) ? 'checked' : '' }}>
+                <label class="form-check-label label_check" for="checkboxdoenca_tireoideanaSemHistorico">Não há histórico familiar</label>
             </div>
         </div>
     </div>

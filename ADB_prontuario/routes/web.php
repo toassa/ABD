@@ -290,7 +290,7 @@ Route::middleware(['active.check'])->group(function () {
                 
                     Route::post('/salvar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'salvar'])->name('habitos_vida.salvar');
                 
-                    Route::get('/{num_registro}/', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
+                    Route::get('/editar/{num_registro}/', [HabitosVidaController::class, 'editar'])->name('habitos_vida.editar');
         
                     Route::put('/atualizar/{num_registro}/{num_USP}', [HabitosVidaController::class, 'atualizar'])->name('habitos_vida.atualizar');
                 });
@@ -380,6 +380,8 @@ Route::middleware(['active.check'])->group(function () {
                     Route::post('/salvar/{num_registro}/{num_USP}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
 
                     Route::put('/atualizar/{num_registro}/{nome}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
+                    
+                    Route::get('/excluir/{num_registro}/{nome}', [MedicamentoController::class, 'excluir'])->name('medicamento.excluir');
                 });
             });
         });

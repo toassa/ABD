@@ -54,6 +54,8 @@
                 // Separa a parte inteira da parte decimal
                 let [parteInteira, parteDecimal] = value.split(',');
 
+                parteInteira = parteInteira.substring(0, 6);
+
                 // Remove os pontos da parte inteira
                 parteInteira = parteInteira.replace(/\./g, '');
 
@@ -127,6 +129,12 @@
                 value = value.replace(/(\d{3})\d+?$/, '$1');
                 frequencia_cardiaca.value=value;
             });
+
+            pulso_arterial.addEventListener('input', function(){
+                let value = pulso_arterial.value;
+                value = value.replace(/(\d{6})\d+?$/, '$1');
+                pulso_arterial.value = value;
+            })
 
         </script>
     @endslot

@@ -1,6 +1,6 @@
 function mostraDados(){
     let select = document.getElementById('validationCustomSelectDefine');
-    let input = document.getElementById('input_show');
+    // let input = document.getElementById('input_show');
     let input_multiple = document.getElementById('input_show_multiple');
     let input_multiple2 = document.getElementById('input_show_multiple2');
     let input_multiple3 = document.getElementById('input_show_multiple3');
@@ -11,7 +11,7 @@ function mostraDados(){
     let input_multiple8 = document.getElementById('input_show_multiple8');
     
     if (select.value == '0') {
-        input.style.display = 'none';
+        // input.style.display = 'none';
         input_multiple.style.display = 'none';
         input_multiple2.style.display = 'none';
         input_multiple3.style.display = 'none';
@@ -21,7 +21,7 @@ function mostraDados(){
         input_multiple7.style.display = 'none';
         input_multiple8.style.display = 'none';
     } else {
-        input.style.display = 'block';
+        // input.style.display = 'block';
         input_multiple.style.display = 'block';
         input_multiple2.style.display = 'block';
         input_multiple3.style.display = 'block';

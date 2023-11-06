@@ -9,8 +9,8 @@
 </div>
 
 <div class="col-md-3">
-    <label for="validationCustompeso" class="form-label">Qual o peso?  <b>*</b></label>
-    <input type="number" class="text-center form-control" id="validationCustompeso" value="{{isset($dados->peso) ? $dados->peso : ''}}" maxlength="8" name="peso" placeholder="Digite o peso em Kg" required>
+    <label for="validationCustompeso" class="form-label">Qual o peso?<b>*</b></label>
+    <input type="number" class="text-center form-control" id="validationCustompeso" value="{{isset($dados->peso) ? $dados->peso : ''}}" step="0.001" maxlength="8" name="peso" placeholder="Digite o peso em Kg" required>
     <div class="invalid-feedback">
         Insira o peso
     </div>
@@ -66,7 +66,7 @@
 
 <div class="col-md-4">
     <label for="validationCustompulso_arterial" class="form-label">Qual o valor do pulso arterial? <b>*</b></label>
-    <input type="text" class="form-control" id="validationCustompulso_arterial" value="{{ isset($dados->pulso_arterial) ? $dados->pulso_arterial : '' }}" name="pulso_arterial" placeholder="Digite o valor do pulso arterial" required>
+    <input type="text" class="form-control" id="validationCustompulso_arterial" value="{{ isset($dados->pulso_arterial) ? $dados->pulso_arterial : '' }}" name="pulso_arterial" placeholder="Digite o valor do pulso arterial em ppm" required>
     <div class="invalid-feedback">
         Insira o Pulso Arterial
     </div>

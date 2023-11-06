@@ -20,14 +20,14 @@
         <label for="validationCustomLetra" class="form-label">Qual foi a finalidade da consulta com enfermagem? <b>*</b></label>
         <div class="row align-content">
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta[]" value="ambas"
-                {{ isset($dados->finalidade_consulta) && in_array('ambas', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="finalidade_consulta[]" value="Receber fitas de glicosímetro ou insulina"
+                {{ isset($dados->finalidade_consulta) && in_array('Receber fitas de glicosímetro ou insulina', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="validationFormCheck1">Receber fitas de glicosímetro ou insulina</label>
             </div>
 
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck2" name="finalidade_consulta[]" value="ambas"
-                {{ isset($dados->finalidade_consulta) && in_array('ambas', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck2" name="finalidade_consulta[]" value="Receber instrução/educação sobre diabetes"
+                {{ isset($dados->finalidade_consulta) && in_array('Receber instrução/educação sobre diabetes', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="validationFormCheck2">Receber instrução/educação sobre diabetes</label>
             </div>
 
@@ -38,8 +38,8 @@
             </div>
 
             <div class="col-md-6 form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck4" name="finalidade_consulta[]" value="ambas"
-                {{ isset($dados->finalidade_consulta) && in_array('ambas', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
+                <input type="checkbox" class="form-check-input" id="validationFormCheck4" name="finalidade_consulta[]" value="Outros"
+                {{ isset($dados->finalidade_consulta) && in_array('Outros', json_decode($dados->finalidade_consulta)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="validationFormCheck4">Outros</label>
             </div>
             <div class="invalid-feedback">

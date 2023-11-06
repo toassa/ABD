@@ -14,7 +14,7 @@
 
 <div class="col-md-6" id="input_show">
     <label for="validationCustomtipo_atividades" class="form-label">Qual(is) atividade(s) física(s) pratica? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomtipo_atividades" value="{{ isset($dados->tipo_atividades) ? $dados->tipo_atividades : '' }}" name="tipo_atividades" placeholder="Insira o tipo de atividades"saude_cardiaca>
+    <input type="text" class="form-control" id="validationCustomtipo_atividades" value="{{ isset($dados->tipo_atividades) ? $dados->tipo_atividades : '' }}" name="tipo_atividades" placeholder="Insira o tipo de atividades"saude_cardiaca required>
     <div class="invalid-feedback">
         Insira o tipo de atividades
     </div>
@@ -22,7 +22,7 @@
 
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomfrequencia_periodo" class="form-label">Com que frequência? Quanto tempo/dia? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustomfrequencia_periodo" value="{{ isset($dados->frequencia_periodo) ? $dados->frequencia_periodo : '' }}" name="frequencia_periodo" placeholder="Insira a frequência e o período de exercícios"saude_cardiaca>
+    <input type="text" class="form-control" id="validationCustomfrequencia_periodo" value="{{ isset($dados->frequencia_periodo) ? $dados->frequencia_periodo : '' }}" name="frequencia_periodo" placeholder="Insira a frequência e o período de exercícios"saude_cardiaca required>
     <div class="invalid-feedback">
         Insira a frequência e o período de exercícios
     </div>

@@ -1,5 +1,13 @@
 <div class="col-md-4">
-    <label for="validationCustomSobreEtilismo" class="form-label">Sobre Etilismo <b>*</b> </label>
+    <label for="validationCustomSobreEtilismo" class="form-label">Sobre Etilismo <b>*</b> 
+        <div class="popup" onclick="open_popup()">
+            <span class="material-symbols-outlined popup-icon">
+                info
+            </span>
+            <span class="popuptext" id="label_popup">HOMENS - Leve: 2 latas cerveja/dia ou 2 taças de vinho/dia ou 1 dose de destilado/dia-> Total: 21U/semana. Moderado: 2-4 latas de cerveja/dia ou 2-6 taças de vinho/dia ou 1-3 doses de destilado/dia-> Total: 22-50 U/semana. Grave: > 4 latas de cerveja/dia ou > 6 taças de vinho/dia ou > 3 doses de destilado/dia -> Total: > 51 U/semana                                                                                                        MULHERES - Leve: 1 lata de cerveja/dia ou 1 taça de vinho/dia ou1/2 dose de destilado/dia -> Total: 14U/semana. Moderado: 1-3 latas de cerveja/dia ou 1-5 taças de vinho/dia ou1/2 a 21/2 doses de destilado/dia. Total: 15-35 U/semana. Grave: > 3 latas de cerveja/dia ou> 5 taças de vinho/dia ou> 21/2 doses de destilado/dia -> Total: > 36 U/semana                                                                                                        OMS: 1 Unidade (U) álcool = 10 g -> Cerveja 350 ml ou Vinho 90 ml ou Destilado 50 ml	
+            </span>
+        </div>
+</label>
     <select class="form-select" id="validationCustomSobreEtilismo" name="sobre_etilismo" required>
          <option selected disabled value="">Clique para escolher...</option>
         <option value="Etilista" {{ isset($dados->sobre_etilismo) && $dados->sobre_etilismo === 'Etilista' ? 'selected' : '' }}>Etilista</option>
@@ -49,11 +57,11 @@
 <div class="col-md-4">
     <label for="validationCustomquantia_tabagismo" class="form-label">Quantos anos-maço fuma/fumou?
         <b>*</b>         
-        <div class="popup" onclick="open_popup()">
+        <div class="popup" onclick="open_popup2()">
             <span class="material-symbols-outlined popup-icon">
                 info
             </span>
-            <span class="popuptext" id="label_popup">HOMENS - Leve: 2 latas cerveja/dia ou 2 taças de vinho/dia ou 1 dose de destilado/dia-> Total: 21U/semana. Moderado: 2-4 latas de cerveja/dia ou 2-6 taças de vinho/dia ou 1-3 doses de destilado/dia-> Total: 22-50 U/semana. Grave: > 4 latas de cerveja/dia ou > 6 taças de vinho/dia ou > 3 doses de destilado/dia -> Total: > 51 U/semana                                                                                                        MULHERES - Leve: 1 lata de cerveja/dia ou 1 taça de vinho/dia ou1/2 dose de destilado/dia -> Total: 14U/semana. Moderado: 1-3 latas de cerveja/dia ou 1-5 taças de vinho/dia ou1/2 a 21/2 doses de destilado/dia. Total: 15-35 U/semana. Grave: > 3 latas de cerveja/dia ou> 5 taças de vinho/dia ou> 21/2 doses de destilado/dia -> Total: > 36 U/semana                                                                                                        OMS: 1 Unidade (U) álcool = 10 g -> Cerveja 350 ml ou Vinho 90 ml ou Destilado 50 ml	
+            <span class="popuptext" id="label_popup2">Número de maços (20 cigarros)  x número de anos. Exemplo: O paciente fumou 30 cigarros por dia durante 15 anos - 30/20 x 15 = 22,5 anos-maço.
             </span>
         </div>
     </label>
@@ -78,7 +86,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomquais_periodo_drogas" class="form-label textinho">Quais Drogas e Período <b>*</b> </label>
-    <input type="text" class="form-control text-center" id="validationCustomquais_periodo_drogas" value="{{ isset($dados->quais_periodo_drogas) ? $dados->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required  maxlength="10">
+    <input type="text" class="form-control text-center" id="validationCustomquais_periodo_drogas" value="{{ isset($dados->quais_periodo_drogas) ? $dados->quais_periodo_drogas : '' }}" name="quais_periodo_drogas" placeholder="Insira quais drogas e período de uso" required  maxlength="200">
     <div class="invalid-feedback">
         Insira quais drogas e período de uso
     </div>
