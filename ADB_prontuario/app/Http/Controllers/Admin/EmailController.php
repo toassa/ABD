@@ -16,8 +16,6 @@ class EmailController extends Controller
         return view("admin.email.emailconfirmar",compact("user"));
     }
 
-
-
     public function confirmar(Request $req){
         // Obtém os dados da solicitação, incluindo o tempo, a resposta do usuário, a resposta correta e o email.
         $time = $req->input('time');
