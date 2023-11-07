@@ -31,6 +31,8 @@
                 <label class="label-resetar">E-mail</label>
                 <input type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="Insira seu e-mail" required>
 
+                <!-- este é um loop que percorre todos os erros contidos na variável $errors -->
+                <!-- A mensagem de erro está definida no else da funcao gerarCodigo do controlador EmailController -->
                 @if ($errors->any())
                 <ul class="error-list alert-danger">
                     @foreach($errors->all() as $error)

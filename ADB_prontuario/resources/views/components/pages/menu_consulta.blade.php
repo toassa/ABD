@@ -16,7 +16,7 @@
             <div class="menu-sections" id="menu_consulta">
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia primeiro_diagnostico
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -33,7 +33,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia diagnostico_atual
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -50,7 +50,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia complicacoes 
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -67,7 +67,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia tratamento
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -84,7 +84,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia automonitorizacao
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -101,7 +101,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia nascimento
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -118,7 +118,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia dados_ginecologicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -135,7 +135,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia frequencia
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -152,7 +152,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia internacoes
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -169,7 +169,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia dados_cardiovasculares
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -187,7 +187,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia comorbidade
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -205,7 +205,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia historico_familiar
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -222,7 +222,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia habitos_de_vida
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -239,7 +239,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia exercicios_fisicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -256,7 +256,7 @@
 
                   @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia dieta
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -273,7 +273,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia atividades_educativas
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -290,7 +290,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia exames_fisicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -307,7 +307,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia exame_dos_pes
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -324,7 +324,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia
+                    section_molestia neuropatico
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -369,4 +369,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="{{asset('js/form-cadastro-paciente.js')}}"></script>
     <script src="{{asset('js/cidades-form.js')}}"></script>
-@endsection
+<script>
+    alert('a');
+    document.getElementById("primeiro_diagnostico").style.backgroundColor="white";
+    </script>
+    @endsection

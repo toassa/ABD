@@ -27,7 +27,7 @@ class CustomerRequest extends FormRequest
         ];
     }
 
-    public function messages() //
+    public function messages() //de acordo com a rule passada a variável,uma mensagem será retornada
     {
         return [
             'email.required' => 'O campo e-mail é obrigatório',

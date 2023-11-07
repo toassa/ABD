@@ -36,7 +36,8 @@
                     <input type="hidden" class="form-control input-text-resetar" name="codigo" value="{{(string)$info->codigo}}">
                     <input type="hidden" class="form-control input-text-resetar" name="email" value="{{(string)$info->email}}">
                 <button class="btn btn-primary-darker-resetar">Confirmar</button>
-                <main>
+                <!-- executa a mensagem enviada pelo controlador, validado pelo Request -->
+                <main>  
                     @if (session('msg'))
                     <div class="alert alert-danger">
                         <p class="msg">{{session('msg')}}</p>
