@@ -18,7 +18,7 @@
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="put">
             @include('site.paciente.medicamentos.tratamento_medicamentos._form')
-            <div class="col-12 col-btn-form">
+            <div class="col-12 col-btn-form" style="margin-top: 40px !important">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
                 <button class="btn btn-giga btn-primary-confirm" type="submit">Atualizar</button>
             </div>

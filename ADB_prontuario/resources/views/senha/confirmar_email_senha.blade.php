@@ -9,6 +9,15 @@
         </span>
         <input type="button" value="Voltar" onClick="history.go(-1)"> 
     </div>
+    {{-- ícone de para alternar entre modo escuro e claro --}}
+    <div class="check-theme">
+        <input type="checkbox" name="change-theme" id="change-theme">
+        <label for="change-theme">
+            <span class="material-symbols-outlined" id="icon-theme">
+                light_mode
+            </span>
+        </label>
+    </div>
     <div style="position: relative; margin-top: 50px;">
         <img src="{{asset('images/pack/medico-aponta.png')}}" alt="Médico apontando para baixo" class="img_resetpassword">
         <nav class="square-content square-content--password">
@@ -20,7 +29,7 @@
                 {{csrf_field()}}
                 <div class="form-group col-md-8 centralizado">
                     <label class="label-resetar">Código</label>
-                    <input type="text" class="form-control input-text-resetar" name="codigoresp" placeholder="Digite o código" required>
+                    <input type="text" class="form-control input-text-resetar" name="codigoresp" placeholder="Digite o código" maxlength="5" required>
                     <label class="label-resetar">Senha</label>
                     <input type="password" class="form-control input-text-resetar" name="senhaNova" placeholder="Nova senha" required>
                     <input type="hidden" class="form-control input-text-resetar" name="time" value="{{(string)$info->time}}">

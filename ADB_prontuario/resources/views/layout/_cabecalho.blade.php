@@ -1,3 +1,4 @@
+{{-- Cabeçalho padrão a todas as páginas --}}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,11 +14,18 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    {{-- Apresenta o título de cada página de acordo com o valor fornecido por no início das páginas --}}
     <title>@yield('titulo-pagina')</title>
 </head>
-<body onLoad="hide_password();">
+{{-- Chama a função javascript --}}
+<body>
+    {{-- Classe principal, main, que engloba todas as outras --}}
     <main class="content align-content" id="content">
+    {{-- Função que verifica a condição de usuário logado ou não --}}
     @if(Auth::check())
+        {{-- Caso o usuário esteja logado, os itens do menu lateral são exibidos --}}
+
+        
         @component('components.items.menu')
             @slot('rota_sair')
             	{{route('login.sair')}}

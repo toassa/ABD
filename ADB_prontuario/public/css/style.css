@@ -244,8 +244,8 @@ body{
 .check-theme{
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 10px;
+    /* right: 0; */
+    /* padding: 10px; */
     cursor: pointer;
     margin: 4px;
 }
@@ -1136,7 +1136,7 @@ textarea{
 }
 .square-content--password{
     width: 400px;
-    margin-top: 172px;
+    margin-top: 196px;
     text-align: center;
 }
 
@@ -1157,7 +1157,7 @@ textarea{
     /* margin: 0 auto; */
     /* display: block; */
     right: 50px;
-    top: 100px;
+    top: 121px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }

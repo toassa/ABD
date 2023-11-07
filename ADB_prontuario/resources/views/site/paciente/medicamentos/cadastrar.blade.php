@@ -17,7 +17,7 @@
         <form action="{{route('medicamento.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
             @include('site.paciente.medicamentos.tratamento_medicamentos._form')
-            <div class="col-12 col-btn-form">
+            <div class="col-12 col-btn-form" style="margin-top: 40px !important">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>
                 <button class="btn btn-giga btn-primary-confirm" type="submit">Cadastrar</button>
             </div>

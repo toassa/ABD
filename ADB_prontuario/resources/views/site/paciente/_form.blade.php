@@ -319,9 +319,6 @@ $
       Insira uma cidade válida
     </div>
   </div>
-
 </div>
-
-
 {{-- <option selected disabled value="">Choose...</option> --}}
 {{-- onkeyup="escreve_tel(event)" required --}}

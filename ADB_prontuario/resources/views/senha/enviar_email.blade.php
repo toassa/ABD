@@ -10,6 +10,15 @@
         <input type="button" value="Voltar" onClick="history.go(-1)"> 
         <!-- <a class="btn btn-primary" href="{{route('admin.opcoes')}}">VOLTAR À PÁGINA INICIAL</a> -->
     </div>
+    {{-- ícone de para alternar entre modo escuro e claro --}}
+    <div class="check-theme">
+        <input type="checkbox" name="change-theme" id="change-theme">
+        <label for="change-theme">
+            <span class="material-symbols-outlined" id="icon-theme">
+                light_mode
+            </span>
+        </label>
+    </div>
     <div style="position: relative;">
     <img src="{{asset('images\pack\medico-aponta.png')}}" alt="Médico apontando para baixo" class="img_resetpassword">
     <nav class="square-content square-content--password">

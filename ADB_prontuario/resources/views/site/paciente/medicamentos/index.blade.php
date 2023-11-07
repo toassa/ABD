@@ -59,12 +59,10 @@
                                         <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->num_USP}}</p>
                                         <!-- <p class="col-md-1 text-center col-text"> -->
                                             <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}" class="col-md-1 text-center col-text row-hover">
-                                                <span class="material-symbols-outlined" style="color: red !important; font-weight: 800 !important;">
+                                                <span class="material-symbols-outlined" style="color: #78a82a !important; font-weight: 800 !important;">
                                                     edit
                                                 </span>
                                             </a>
-                                        <!-- </p> -->
-                                        <!-- <p class="col-md-1 text-center col-text"> -->
                                             <a href="{{route('medicamento.excluir', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}" class="col-md-1 text-center col-text row-hover">
                                                 <span class="material-symbols-outlined" style="color: red !important; font-weight: 800 !important;">
                                                     close
@@ -81,36 +79,6 @@
             {{route('medicamento.cadastrar', $dados->num_registro)}}
             @endslot
         @endcomponent
-            {{-- @component('components.items.paciente-item')
-                @slot('coluna')
-                    col-md-auto
-                @endslot
-                @slot('icon')
-                    <span class="material-symbols-outlined">
-                        library_add
-                    </span>
-                @endslot
-                @slot('button')
-                    Cadastrar Medicamentos
-                @endslot
-                @slot('href')
-                    {{route('medicamento.cadastrar', $dados->num_registro)}}
-                @endslot
-            @endcomponent
-            @foreach ($tratamento_medicamentos as $tratamento_medicamento)
-            @if ($tratamento_medicamento->num_registro == $dados->num_registro)
-                @component('components.items.medicamentos-item')
-                    
-                    @slot('href')
-                        {{route('medicamento.cadastrar', $dados->num_registro)}}
-                    @endslot
-                @endcomponent
-                <div class="square-content square-content--medicamento_item">
-                    {{$tratamento_medicamento->nome}}    
-                    {{$tratamento_medicamento->posologia}}
-                </div>        
-            @endif
-            @endforeach --}}
         </div>
     </section>
 @endsection
