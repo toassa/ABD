@@ -3,13 +3,14 @@
 @section('titulo-pagina', 'Redefinição de senha')
 
 @section('content')
-    <div class="leave">
-        <span class="material-symbols-outlined">
-            arrow_back_ios
-        </span>
-        <input type="button" value="Voltar" onClick="history.go(-1)"> 
-        <!-- <a class="btn btn-primary" href="{{route('admin.opcoes')}}">VOLTAR À PÁGINA INICIAL</a> -->
-    </div>
+            <div class="leave">
+                <a href="{{ route('admin.login') }}">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span>
+                    <input type="button" value="Voltar">
+                </a>
+            </div>
     {{-- ícone de para alternar entre modo escuro e claro --}}
     <div class="check-theme">
         <input type="checkbox" name="change-theme" id="change-theme">

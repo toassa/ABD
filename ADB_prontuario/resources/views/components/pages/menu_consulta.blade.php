@@ -16,7 +16,7 @@
             <div class="menu-sections" id="menu_consulta">
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia primeiro_diagnostico
+                    primeiro_diagnostico
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -33,7 +33,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia diagnostico_atual
+                    diagnostico_atual
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -50,7 +50,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia complicacoes 
+                    complicacoes 
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -67,7 +67,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia tratamento
+                    tratamento
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -84,7 +84,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia automonitorizacao
+                    automonitorizacao
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -101,7 +101,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia nascimento
+                    nascimento
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -118,7 +118,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia dados_ginecologicos
+                    dados_ginecologicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -135,7 +135,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia frequencia
+                    frequencia
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -152,7 +152,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia internacoes
+                    internacoes
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -169,7 +169,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia dados_cardiovasculares
+                    dados_cardiovasculares
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -187,7 +187,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia comorbidade
+                    comorbidade
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -205,7 +205,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia historico_familiar
+                    historico_familiar
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -222,7 +222,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia habitos_de_vida
+                    habitos_de_vida
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -239,7 +239,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia exercicios_fisicos
+                    exercicios_fisicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -256,7 +256,7 @@
 
                   @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia dieta
+                    dieta
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -273,7 +273,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia atividades_educativas
+                    atividades_educativas
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -290,7 +290,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia exames_fisicos
+                    exames_fisicos
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -307,7 +307,7 @@
 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia exame_dos_pes
+                    exame_dos_pes
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -324,7 +324,7 @@
                 
                 @component('components.items.menu-section')
                 @slot('id_menu')
-                    section_molestia neuropatico
+                    neuropatico
                 @endslot
                 @slot('icon_menu')
                     <span class="material-symbols-outlined">
@@ -343,10 +343,9 @@
         <div class="content-consulta">
             {{$content_menu}}
         </div>
-    </section>
+    </section>   
 
     <script>
-        // Verifique se há uma posição de rolagem armazenada no localStorage
         var scrollPosition = localStorage.getItem('menuScrollPosition');
 
         if (scrollPosition) {
@@ -357,8 +356,7 @@
             var newPosition = event.target.scrollTop;
             localStorage.setItem('menuScrollPosition', newPosition);
         });
-
-    </script>    
+    </script>
 
     <script src="{{asset('js/show-input.js')}}"></script>
 
@@ -369,8 +367,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="{{asset('js/form-cadastro-paciente.js')}}"></script>
     <script src="{{asset('js/cidades-form.js')}}"></script>
-<script>
-    alert('a');
-    document.getElementById("primeiro_diagnostico").style.backgroundColor="white";
-    </script>
     @endsection
+
+    <script>
+        function trocacor(id, linkElement) {
+            // Primeiro, restaura a cor original de todos os elementos
+            var elements = document.querySelectorAll('.textinho');
+            elements.forEach(function (element) {
+                element.style.backgroundColor = "";
+            });
+        
+            // Em seguida, altera a cor do elemento clicado
+            linkElement.style.backgroundColor = "#002595";
+        
+            // Armazena o ID da div no LocalStorage
+            localStorage.setItem('divColorId', id);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            // Verifica se há um ID de div armazenado no LocalStorage
+            var storedDivId = localStorage.getItem('divColorId');
+            if (storedDivId) {
+                // Aplica a cor correta ao elemento com base no ID armazenado
+                var elementToColor = document.getElementById(storedDivId);
+                if (elementToColor) {
+                    elementToColor.style.backgroundColor = "#002595";
+                }
+            }
+        });
+    </script>
