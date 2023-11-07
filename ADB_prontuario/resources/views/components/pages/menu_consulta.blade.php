@@ -13,7 +13,7 @@
             <div class="menu_img">
                 <img src="{{asset('images\logo_ADB.png')}}" alt="Logo da ADB">
             </div>
-            <div class="menu-sections">
+            <div class="menu-sections" id="menu_consulta">
                 @component('components.items.menu-section')
                 @slot('id_menu')
                     section_molestia
@@ -344,6 +344,22 @@
             {{$content_menu}}
         </div>
     </section>
+
+    <script>
+        // Verifique se há uma posição de rolagem armazenada no localStorage
+        var scrollPosition = localStorage.getItem('menuScrollPosition');
+
+        if (scrollPosition) {
+            document.querySelector('#menu_consulta').scrollTop = parseInt(scrollPosition);
+        }
+
+        document.querySelector('#menu_consulta').addEventListener('scroll', function (event) {
+            var newPosition = event.target.scrollTop;
+            localStorage.setItem('menuScrollPosition', newPosition);
+        });
+
+    </script>    
+
     <script src="{{asset('js/show-input.js')}}"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

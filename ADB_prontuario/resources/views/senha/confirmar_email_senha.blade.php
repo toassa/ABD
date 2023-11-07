@@ -36,11 +36,13 @@
                     <input type="hidden" class="form-control input-text-resetar" name="codigo" value="{{(string)$info->codigo}}">
                     <input type="hidden" class="form-control input-text-resetar" name="email" value="{{(string)$info->email}}">
                 <button class="btn btn-primary-darker-resetar">Confirmar</button>
-                @if(session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-                @endif 
+                <main>
+                    @if (session('msg'))
+                    <div class="alert alert-danger">
+                        <p class="msg">{{session('msg')}}</p>
+                    </div>
+                    @endif 
+                </main>
                 </form>
             </div>  
         </nav>

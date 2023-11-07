@@ -25,11 +25,13 @@
     @if(Auth::check())
         {{-- Caso o usuário esteja logado, os itens do menu lateral são exibidos --}}
 
-        
+        {{-- Chamada dos components que contém o HTML do menu --}}
         @component('components.items.menu')
+            {{-- Envio do valor da rota --}}
             @slot('rota_sair')
             	{{route('login.sair')}}
             @endslot
+            {{-- Envio do valor do nome --}}
             @slot('nome_user')
             	{{$primeiroNome = explode(' ', Auth::user()->name)[0]}}
             @endslot

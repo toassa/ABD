@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\CustomerRequest;
 use Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -41,10 +42,10 @@ class EmailController extends Controller
         }
     }
 
-    public function gerarCodigo(Request $req){  
-		$this->validate($req, [
-              'email' => 'required|email|exists:users,email',
-                 ]);
+    public function gerarCodigo(CustomerRequest $req){  
+		// $this->validate($req, [
+        //       'email' => 'required|email|exists:users,email',
+        //          ]);
         
         $email = $req->all();
 
@@ -91,7 +92,7 @@ class EmailController extends Controller
         else 
         {   
             // return view('senha.confirmar_email_senha', compact('info'));
-            return redirect()->back()->with('error', 'Os dados não correspondem.');
+            return redirect()->route('confirmar_email')->with('msg', 'ta errado,burro!');
         }
     }
 }

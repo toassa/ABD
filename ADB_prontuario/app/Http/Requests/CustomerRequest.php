@@ -11,7 +11,7 @@ class CustomerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,9 +19,20 @@ class CustomerRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
-    public function rules(): array
+    public function rules() //passa as regras de validação para a variável
     {
         return [
+            'email' => 'required|email|exists:users,email',
+            //
+        ];
+    }
+
+    public function messages() //
+    {
+        return [
+            'email.required' => 'O campo e-mail é obrigatório',
+            'email.exists' => 'O e-mail não está cadastrado',
+        
             //
         ];
     }

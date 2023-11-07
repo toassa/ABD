@@ -1002,6 +1002,10 @@ textarea{
     border: 1px solid rgb(190, 190, 190);
 }
 
+.menu-section.active {
+    border: 5px solid green;
+}
+
 .menu-sections a{
     background-color: var(--background-primarier);
     display: flex;

@@ -30,6 +30,14 @@
             <div class="form-group col-md-8 centralizado">
                 <label class="label-resetar">E-mail</label>
                 <input type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="Insira seu e-mail" required>
+
+                @if ($errors->any())
+                <ul class="error-list alert-danger">
+                    @foreach($errors->all() as $error)
+                        <li class= "error">{{$error}}</li>
+                    @endforeach
+                </ul>
+                @endif
             <button class="btn btn-primary-darker-resetar">Confirmar</button>   
         </form>
         </div>
