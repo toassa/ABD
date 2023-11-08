@@ -7,7 +7,11 @@
     <section class="square-content square-content--cadastro">
         {{-- action:route ALTERAR --}}
         @if($num_existente != false)
-            <script type="text/javascript">alert("Já existe um usuário cadastrado com esse {{$num_existente}}. Pof favor, insira outro valor para o campo.");</script>
+            @if ($num_existente == 'emailInv')
+                <script type="text/javascript">alert("Email inválido. Pof favor, insira outro valor para o campo.");</script>
+            @else
+                <script type="text/javascript">alert("Já existe um usuário cadastrado com esse {{$num_existente}}. Pof favor, insira outro valor para o campo.");</script>
+            @endif
         @endif
         <h1 class="text-center">Cadastro de Usuários</h1>
         <form action="{{route('users.salvar')}}" method="post" class="row g-3 needs-validation" novalidate>

@@ -146,6 +146,22 @@ body{
     font-size: var(--size-grid);
 }
 
+/* Responsividade do aviso de cookies: */
+@media(max-width: 770px){
+    .cookies .cookies-content{
+        display: block;
+    }
+
+    .cookies .cookies-img{
+        display: none;
+    }
+
+    .cookies .cookies-btn{
+        float: right;
+        margin-bottom: 20px;
+    }
+}
+
 .square-content--termos{
     width: 80%;
     position: absolute;

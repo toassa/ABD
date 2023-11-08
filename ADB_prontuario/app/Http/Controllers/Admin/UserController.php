@@ -20,6 +20,11 @@ class UserController extends Controller
     }
 
     public function salvar(Request $req){
+        $req->validate([
+            'email' => 'required|email',
+        ]);
+
+        
         $dados = $req->all();
         $page = 'cadastrar';
         
@@ -31,6 +36,14 @@ class UserController extends Controller
         
         $email = $dados['email'];
         $emailExistente = User::where('email', $email)->first();
+
+        $emailValida = $req->input('email');
+        if (filter_var($emailValida, FILTER_VALIDATE_EMAIL)) {
+            $page = '';
+        } else {
+            $num_existente = 'emailInv';
+            return view('site.usuario.cadastrar', compact('num_existente', 'page'));
+        }
 
         if ($usuarioExistente) {
             $num_existente = 'número USP';
@@ -46,7 +59,7 @@ class UserController extends Controller
             $num_existente = 'e-mail';
             return view('site.usuario.cadastrar', compact('num_existente', 'page'));
         }
-        
+
         User::create($dados);
 
         $rows = User::all();

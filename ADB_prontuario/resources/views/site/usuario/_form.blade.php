@@ -14,7 +14,7 @@
 </div>
 <div class="col-md-4">
     <label for="validationCustomUserCPF" class="form-label textinho">CPF<b> *</b></label>
-    <input type="text" class="text-center form-control" id="validationCustomUserCPF" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" onInput="mascara(this)" name="CPF" maxlength="11" placeholder="Digite o CPF (ex: 000.000.000.00)" required>
+    <input type="text" class="text-center form-control" id="validationCustomUserCPF" value="{{isset($rows->CPF) ? $rows->CPF : ''}}" onInput="mascara(this)" name="CPF" maxlength="14" minlength="14" placeholder="Digite o CPF (ex: 000.000.000.00)" required>
     <div class="invalid-feedback">
         CPF inválido
     </div>
