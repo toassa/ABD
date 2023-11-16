@@ -50,7 +50,7 @@
   O código foi produzido majoritariamente através do *framework* PHP Laravel. Além disso, conta com as linguagem de programação JavaScript e as de marcação HTML e CSS, visando proporcionar uma UX (experiência do usuário) mais adequada através da plataforma *web*.
   Os arquivos de código estão comentados, visando que as equipes que forem dar continuidade ao projeto compreendam as funcionalidades do sistema da melhor forma possível.
 
-###Programação
+### Programação
   
 > [!IMPORTANT]
 > Nem todos os arquivos estão comentados, já que muitos seguem os mesmos princípios para as funcionalidades. Assim, serão listados os arquivos parecidos e o que está comentado, visando localizar os novos desenvolvedores:
