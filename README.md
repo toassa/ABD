@@ -34,12 +34,13 @@
        - Configurações de paciente: que conta com:
          - Edição dos dados pessoais do paciente;
          - Desativação do paciente;
-> [!WARNING]
->  O paciente não pode ter seus dados excluídos do banco de dados, já que essas informações são utilizadas para pesquisas na Universidade de São Paulo (USP) de Bauru
-       - Medicamentos: onde é possível fazer o gerenciamento (cadastro, edição e exclusão) dos medicamentos utilizados pelo paciente
-       - Primeiro atendimento: ao selecionar a funcionalidade, será possível visualizar três opções. Porém, apenas uma está desenvolvida:
+         - Medicamentos: onde é possível fazer o gerenciamento (cadastro, edição e exclusão) dos medicamentos utilizados pelo paciente
+         - Primeiro atendimento: ao selecionar a funcionalidade, será possível visualizar três opções. Porém, apenas uma está desenvolvida:
          - Primeira Consulta: aqui, será aberta uma página com um menu lateral que contém todos os diagnósticos do paciente. Assim, ao selecionar um dos itens será possível cadastrar o diagnóstico do paciente referente àqueles dados, como: comprometimento neuropático, dados cardiovasculares, dieta, complicações...
       - Demais opções
+> [!WARNING]
+>  O paciente não pode ter seus dados excluídos do banco de dados, já que essas informações são utilizadas para pesquisas na Universidade de São Paulo (USP) de Bauru;
+      
 > [!IMPORTANT]
 >  As outras funcionalidades do menu não estão desenvolvidas e ficarão a cargo dos desenvolvedores posteriores.
      
