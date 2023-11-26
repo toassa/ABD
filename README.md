@@ -19,7 +19,8 @@
    - Login;
    - 'Esqueceu a senha';
   > [!NOTE]
-  > As duas primeiras funcionalidades, ao fazer login, podem ser acessadas no menu localizado no canto superior direito, que ainda com=nta com opção de *logout*, acesso ao 'Help do Sistema' e o nome do usuário logado.
+  > As duas primeiras funcionalidades, ao fazer login, podem ser acessadas no menu localizado no canto superior direito, que ainda conta com opção de *logout*, acesso ao 'Help do Sistema' e o nome do usuário logado.
+  
   --> Após o *login*, o usuário é direcionado à página com as funionalidades de 'Organização' e 'Pacientes', divididas entre:
      
   2. **Organização** : opção disponível apenas para administradores da plataforma, aborda as funcionalidades:
