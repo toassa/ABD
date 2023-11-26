@@ -97,19 +97,6 @@
 </div>
 
 <div class="col-md-4">
-    <label for="validationCustomTotalPontos" class="form-label">Total de Pontos <b>*</b> </label>
-    <select class="form-select" id="validationCustomTotalPontos" name="total_pontos" required>
-         <option selected disabled value="">Clique para escolher...</option>
-        <option value="Sinais leves" {{ isset($dados->total_pontos) && $dados->total_pontos === 'Sinais leves' ? 'selected' : '' }}>Sinais leves</option>
-        <option value="Sinais moderados" {{ isset($dados->total_pontos) && $dados->total_pontos === 'Sinais moderados' ? 'selected' : '' }}>Sinais moderados</option>
-        <option value="Sinais graves" {{ isset($dados->total_pontos) && $dados->total_pontos === 'Sinais graves' ? 'selected' : '' }}>Sinais graves</option>
-    </select>
-    <div class="invalid-feedback">
-        Selecione o total de pontos
-    </div>
-</div>
-
-<div class="col-md-4">
     <label for="validationCustomDiagnosticoNeuropatiaPeriferica" class="form-label">Diagnóstico de Neuropatia Periférica <b>*</b> </label>
     <select class="form-select" id="validationCustomDiagnosticoNeuropatiaPeriferica" name="diagnostico_neuropatia_periferica" required>
          <option selected disabled value="">Clique para escolher...</option>

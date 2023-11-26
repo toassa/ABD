@@ -97,7 +97,7 @@
     <input class="form-check-input" type="hidden" value="false" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->administrador) && $rows->administrador == true ? 'checked' : '' }} name="administrador" id="invalidCheck">
     <label class="form-check-label textinho" for="invalidCheck">
-        Administrador?<b> *</b>
+        Administrador?
     </label>
     </div>
 </div>
@@ -108,7 +108,7 @@
         @if ($rows->ativo == true)
         <input class="form-check-input" type="checkbox" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
         @else
-        <input class="form-check-input" type="checkbox" value="false" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+        <input class="form-check-input" type="checkbox" value="false" {{ isset($rows->ativo) && $rows->ativo == false ? 'checked' : '' }} name="ativo" id="invalidCheck">
         @endif
     @elseif($page == 'cadastrar')
     <input class="form-check-input" type="hidden" value="true" {{ isset($rows->ativo) && $rows->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">

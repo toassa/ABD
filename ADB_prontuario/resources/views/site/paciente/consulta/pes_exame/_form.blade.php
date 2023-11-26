@@ -1,9 +1,8 @@
-{{-- MUDAR FORMA --}}
 <div class="row g-3 needs-validation page page1">
     <div class="col-md-12">
         <label for="validationCustomSelectDefine" class="form-label">Casos de Úlceras? <b>*</b></label>
-        <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="casos_ulceras" required>
-            <option selected disabled value="">Clique para escolher...</option>
+        <select class="form-select" id="validationCustomSelectDefine" onchange="mostraDados()" onfocus="mostraDados()" name="casos_ulceras" required>
+            <option selected disabled value="0">Clique para escolher...</option>
             <option value="1" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 1 ? 'selected' : '' }}>Sim</option>
             <option value="0" {{ isset($dados->casos_ulceras) && $dados->casos_ulceras == 0 ? 'selected' : '' }}>Não</option>
         </select>
@@ -13,7 +12,7 @@
     </div>
     
 
-    <div class="col-md-12" id="input_show_multiple">
+    <div class="col-md-12" id="input_show">
         <label class="form-label">Regiões das Úlceras <b>*</b></label>
         <div class="row">
             <div class="col-md-4">
@@ -64,12 +63,18 @@
                     <label class="col-md-4-label form-check-label label_check" for="regiao_outros">Outros...</label>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="form-check mb-3">
+                    <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="regioes_ulceras[]" value=null >
+                    <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                </div>
+            </div>
         </div>
         <div class="invalid-feedback">
             Selecione pelo menos uma opção
         </div>
     </div>
-        <div class="col-md-12" id="input_show_multiple2">
+        <div class="col-md-12" id="input_show_multiple">
             <label for="validationCustomLetra" class="form-label">Características das Úlceras <b>*</b></label>
             <div class="row align-content">
                 <div class="col-md-4">
@@ -102,6 +107,12 @@
                         <label class="form-check-label label_check" for="caracteristicas_outros">Outros...</label>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="caracteristicas_ulceras[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
+                </div>
             </div>
             <div class="invalid-feedback">
                 Selecione pelo menos uma opção
@@ -111,7 +122,7 @@
 </div>
 
 <div class="row g-3 needs-validation page page2">
-    <div class="col-md-12" id="input_show_multiple3">
+    <div class="col-md-12" id="input_show_multiple2">
         <div class="row">
         <label class="form-label">Assinale as alterações que estiverem presentes em cada pé</label>
         <div class="col-md-4">
@@ -330,17 +341,25 @@
                 <label class="form-check-label" for="outros">Outros…</label>
             </div>
         </div>
-        
-        <div class="invalid-feedback">
-            Selecione pelo menos uma opção
-        </div>        
+            
+        <div class="col-md-4">
+            <div class="form-check mb-3">
+                <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="alteracoes[]" value=null >
+                <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+            </div>
+        </div>
+
+              
     </div>
+    <div class="invalid-feedback">
+            Selecione pelo menos uma opção
+        </div>  
     </div>
     
     </div>
     
     <div class="row g-3 needs-validation page page3">
-    <div class="col-md-12" id="input_show_multiple4">
+    <div class="col-md-12" id="input_show_multiple3">
         <div class="row">
         <label class="form-label">Acerca das seguintes deformidades, assinale aquelas que estão presentes em cada pé</label>
         <div class="col-md-4">
@@ -391,7 +410,12 @@
                 <label class="form-check-label" for="charcot_pe_d">Charcot no pé D</label>
             </div>
         </div>
-        
+        <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="deformidades[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
+        </div>
         <div class="invalid-feedback">
             Selecione pelo menos uma opção
         </div>        
@@ -399,7 +423,7 @@
         </div>
      
     
-        <div class="col-md-12" id="input_show_multiple5">
+        <div class="col-md-12" id="input_show_multiple4">
             <div class="row">
                 <label class="form-label">Assinale os pulsos que estão presentes à palpação</label>
                 <div class="col-md-4">        
@@ -426,6 +450,12 @@
                         <label class="form-check-label" for="tibial_esquerdo">Tibial esquerdo</label>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="pulsos[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
+        </div>
                 <div class="invalid-feedback">
                     Selecione pelo menos uma opção
                 </div>
@@ -435,7 +465,7 @@
         </div>
         
     <div class="row g-3 needs-validation page page4">
-        <div class="col-md-12" id="input_show_multiple6">
+        <div class="col-md-12" id="input_show_multiple5">
             <div class="row">
                 <label class="form-label">Assinale a presença de alterações neuropáticas</label>
                 <div class="col-md-4">        
@@ -504,6 +534,12 @@
                         <label class="form-check-label" for="outros_neuropaticas">Outros…</label>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="alteracoes_neuropaticas[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
+        </div>
                 <div class="invalid-feedback">
                     Selecione pelo menos uma opção
                 </div>
@@ -512,7 +548,7 @@
     </div>
     
     <div class="row g-3 needs-validation page page5">
-        <div class="col-md-12" id="input_show_multiple7">
+        <div class="col-md-12" id="input_show_multiple6">
             <div class="row">
                 <label class="form-label">Assinale as demais alterações que estiverem presentes</label>
                 <div class="col-md-4">
@@ -563,6 +599,12 @@
                         <label class="form-check-label" for="outros_demais_alteracoes">Outros…</label>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="demais_alteracoes[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
+        </div>
                 <div class="invalid-feedback">
                     Selecione pelo menos uma opção
                 </div>
@@ -571,8 +613,8 @@
     
     
     <div class="col-md-4" id="input_show_multiple8">
-        <label for="validationCustomObservacoes1" class="form-label">Observações <b>*</b> </label>
-        <input type="text" class="form-control" id="validationCustomObservacoes1" value="{{ isset($dados->observacoes) ? $dados->observacoes : '' }}" name="observacoes" required>
+        <label for="validationCustomObservacoes1" class="form-label">Observações </label>
+        <input type="text" class="form-control" id="validationCustomObservacoes1" value="{{ isset($dados->observacoes) ? $dados->observacoes : '' }}" name="observacoes" >
         <div class="invalid-feedback">
             Insira observações
         </div>

@@ -4,7 +4,11 @@
     <div class="overlay-content">
     <p>{{$nome_user}}</p>
     <a href="{{route('cookies')}}">Política de privacidade</a>
-    <a href="{{route('cookies')}}">Precisa de ajuda?</a>
+    @if(Auth::user()->administrador == true)
+    <a href="https://drive.google.com/file/d/1ly6houAfwCPTdzpWZ-ycW26Tdp4Uk3pI/view?usp=sharing" target="_blank" rel="noopener noreferrer">Precisa de ajuda?</a>
+    @else
+    <a href="https://drive.google.com/file/d/1NyzsgdI6SuJz33WC3cWBHwwkzGBeDNVc/view?usp=sharing" target="_blank" rel="noopener noreferrer">Precisa de ajuda?</a>
+    @endif
     <a href="#">
         <input type="checkbox" name="change-theme" id="change-theme">
         <label for="change-theme">

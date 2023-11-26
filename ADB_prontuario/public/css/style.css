@@ -181,7 +181,7 @@ body{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     right: 0;
     background-color: rgb(0,0,0);
@@ -289,6 +289,20 @@ span#icon-theme:hover{
 .square-content--listar{
     width: 95%;
     margin: 11vh;
+}
+
+#num_USP, #email, #mesa, #cargo, #administrador, #ativo{
+    display: block;
+}
+
+@media(max-width: 770px){
+    .row-pesquisar{
+        width: 95% !important;
+    }
+
+    #num_USP, #email, #mesa, #cargo, #administrador{
+        display: none;
+    }
 }
 
 .btn-list-editar{
@@ -424,6 +438,15 @@ b{
     cursor: pointer;
     font-size: 25px !important;
 }
+/* show resetar a senha */
+.show-password2 {
+    position: absolute;
+    top: 82%;
+    right: 111px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 25px !important;
+}
 
 .popup {
     position: relative;
@@ -543,6 +566,20 @@ a.login-link{
     padding: 5px 10px;
 }
 
+.primas_usuario{
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 5vh !important;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+a#name_paciente {
+    color: var(--text-color);
+}
+
 #name_usuario{
     position: absolute;
     top: 0;
@@ -559,6 +596,7 @@ a.login-link{
 
 #name_paciente, #name_paciente .material-symbols-outlined{
     color: var(--text-color) !important;
+    text-decoration: none;
 }
 
 .leave a, .usuario a, #name_usuario span{
@@ -589,13 +627,13 @@ a.login-link{
     font-size: 15px !important;
 }
 
-.sair{
-    margin-top: 30px;
+.primas_usuario .material-symbols-outlined{
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
 }
 
-.usuario .material-symbols-outlined{
-    color: #fff !important;
-    font-size: 15px !important;
+.sair{
+    margin-top: 30px;
 }
 
 
@@ -619,6 +657,22 @@ a.login-link{
     margin: 30px 0px auto;
     padding: 10px;
     width: 200px;
+}
+
+
+/* Responsividade do index (página de opções): */
+@media(max-width: 770px){
+    #senhor-computador{
+        display: none;
+    }
+
+    .square-content--opcoes{
+        padding: 15%;
+    }
+
+    .button-white-blue--opcoes{
+        width: 220px;
+    }
 }
 
 
@@ -686,7 +740,7 @@ a.login-link{
 
 .user-index h1{
     color: #fff;
-    margin: 10vh 0vh 2vh 0;
+    margin: 10vh 0vh 6vh 0;
 }
 
 .item-circle--user{
@@ -775,7 +829,7 @@ a.login-link{
     align-items: center;
     align-content: center;
     border: 0 !important;
-    z-index: 1000;
+    z-index: 10;
     background-color: var(--background-color);
 }
 
@@ -789,13 +843,12 @@ dialog::backdrop{
 
 .square-content--confirma-excluir button, .square-content--confirma-excluir a{
     border: none;
-    color: var(--background-color);;
     border-radius: 5px;
     width: 110px;
     text-align: center;
     padding: 20px;
     margin: 20px auto;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .square-content--confirma-excluir #btn_execute{
@@ -967,6 +1020,11 @@ svg {
     padding: 0;
     width: 80%;
     margin: 80px auto;
+}
+
+.form-consulta{
+    max-height: 530px;
+    overflow-x: scroll;
 }
 
 /* Form ----------------------------- */
@@ -1186,6 +1244,10 @@ textarea{
     top: 50px !important;
 }
 
+#top-error-403{
+    top: 88px !important;
+}
+
 #content-error{
     padding: 5% !important;
 }
@@ -1217,6 +1279,21 @@ textarea{
     float: left; /* Faz o rótulo flutuar à esquerda */
     margin-right: 10px; /* Define uma margem direita para criar espaço entre o rótulo e o campo de entrada */
     line-height: 34px; /* Ajusta a altura de linha para alinhar verticalmente com o campo de entrada */
+}
+
+/* Mensagem de Erros Validação ---------------------------- */
+.error-list {
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+    color: #ff0000;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error-list .error {
+    margin: 5px 0;
 }
 
 /* GUSTAVO */

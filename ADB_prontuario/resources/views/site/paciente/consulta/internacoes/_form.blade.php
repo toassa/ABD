@@ -24,7 +24,7 @@
 
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomquantidade_dias" class="form-label">Quantos dias ficou internado(a)? <b>*</b> </label>
-    <input type="number" class="form-control" id="validationCustomquantidade_dias" value="{{ isset($dados->quantidade_dias) ? $dados->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado">
+    <input type="number" class="form-control" id="validationCustomquantidade_dias" value="{{ isset($dados->quantidade_dias) ? $dados->quantidade_dias : '' }}" name="quantidade_dias" placeholder="Insira a quantidade de dias internado" required>
     <div class="invalid-feedback">
         Insira a quantidade de dias internado
     </div>
@@ -32,7 +32,7 @@
 
 <div class="col-md-6" id="input_show_multiple2">
     <label for="validationCustomLocalInternacao" class="form-label">Qual o local onde ficou internado(a)? <b>*</b></label>
-    <select class="form-select" id="validationCustomLocalInternacao" name="local">
+    <select class="form-select" id="validationCustomLocalInternacao" name="local" required>
         <option selected disabled value="">Clique para escolher...</option>
         <option selected hidden value="null">Clique para escolher...</option>
         <option value="null" hidden selected></option>
@@ -47,9 +47,10 @@
 
 <div class="col-md-12" id="input_show_multiple3">
     <label for="validationCustomFatorDesencadeante" class="form-label">Acha que teve algum fator desencadeante para sua internação? <b>*</b> </label>
-    <select class="form-select" id="validationCustomFatorDesencadeante" name="fator_desencadeante">
+    <select class="form-select" id="validationCustomFatorDesencadeante" name="fator_desencadeante" required>
         <option selected disabled value="">Clique para escolher...</option>
         <option selected hidden value="null">Clique para escolher...</option>
+        <option value="null" hidden selected></option>
         <option value="Infecção" {{ isset($dados->fator_desencadeante) && $dados->fator_desencadeante === 'Infecção' ? 'selected' : '' }}>Infecção</option>
         <option value="Erro de administração de insulina" {{ isset($dados->fator_desencadeante) && $dados->fator_desencadeante === 'Erro de administração de insulina' ? 'selected' : '' }}>Erro de administração de insulina</option>
         <option value="Estresse" {{ isset($dados->fator_desencadeante) && $dados->fator_desencadeante === 'Estresse' ? 'selected' : '' }}>Estresse</option>

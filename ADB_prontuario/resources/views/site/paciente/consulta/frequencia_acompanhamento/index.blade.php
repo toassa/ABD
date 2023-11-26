@@ -20,6 +20,14 @@
             @endif
 
             <h1 class="text-center">Frequência de Acompanhamento</h1>
+            <div class="primas_usuario">
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
+                    <span class="material-symbols-outlined">
+                    settings
+                    </span>
+                </a>
+            </div>
             @include('site.paciente.consulta.frequencia_acompanhamento._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>

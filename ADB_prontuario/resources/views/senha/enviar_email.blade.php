@@ -41,6 +41,13 @@
                     @endforeach
                 </ul>
                 @endif
+                <main>
+                    @if (session('msg'))
+                    <div class="error-list alert-danger">
+                        <p class="msg">{{session('msg')}}</p>
+                    </div>
+                @endif 
+            </main>
             <button class="btn btn-primary-darker-resetar">Confirmar</button>   
         </form>
         </div>

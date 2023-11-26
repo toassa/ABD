@@ -9,7 +9,7 @@
 <div class="col-md-6">
     <label for="validationCustomSelectDefine2" class="form-label">Faz uso de insulina? <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="uso_insulina">
-         <option selected value="">Clique para escolher...</option>
+         <option selected value="0">Clique para escolher...</option>
         <option value="1" {{ isset($dados->uso_insulina) && $dados->uso_insulina == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->uso_insulina) && $dados->uso_insulina == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -61,6 +61,13 @@
                 <input type="checkbox" class="form-check-input" id="checkboxAnalogosUltraRapidos" name="tipos_insulinas[]" value="Análogos de ação ultrarrápida (asparte ultrarrápida)" {{ isset($dados->tipos_insulinas) && in_array('Análogos de ação ultrarrápida (asparte ultrarrápida)', json_decode($dados->tipos_insulinas)) ? 'checked' : '' }}>
                 <label class="form-check-label label_check" for="checkboxAnalogosUltraRapidos">Análogos de ação ultrarrápida (asparte ultrarrápida)</label>
             </div>
+        </div>
+
+        <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="tipos_insulinas[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
         </div>
     </div>
     <div class="invalid-feedback">
@@ -132,7 +139,7 @@
         
         <div class="col-md-4 form-check mb-3">
             <input type="checkbox" class="form-check-input" id="checkboxFarmaciaComum" name="origem_utensilho[]" value="Compra em farmácia comum" {{ isset($dados->origem_utensilho) && in_array('Compra em farmácia comum', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
-            <label class="form-check-label label_check" for "checkboxFarmaciaComum">Compra em farmácia comum</label>
+            <label class="form-check-label label_check" for "checkboxFarmaciaComum" >Compra em farmácia comum</label>
         </div>
         
         <div class="col-md-4 form-check mb-3">
@@ -143,6 +150,13 @@
         <div class="col-md-4 form-check mb-3">
             <input type="checkbox" class="form-check-input" id="checkboxOutros" name="origem_utensilho[]" value="Outros" {{ isset($dados->origem_utensilho) && in_array('Outros', json_decode($dados->origem_utensilho)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxOutros">Outros</label>
+        </div>
+
+        <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="origem_utensilho[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
         </div>
         
     </div>
@@ -195,6 +209,13 @@
         <div class="col-md-12 form-check mb-3">
             <input type="checkbox" class="form-check-input" id="checkboxNuncaEsqueci" name="aderencia[]" value="Nunca esqueci de aplicar" {{ isset($dados->aderencia) && in_array('Nunca esqueci de aplicar', json_decode($dados->aderencia)) ? 'checked' : '' }}>
             <label class="form-check-label label_check" for="checkboxNuncaEsqueci">Nunca esqueci de aplicar</label>
+        </div>
+
+        <div class="col-md-4">
+                    <div class="form-check mb-3">
+                        <input type="hidden" class="col-md-4-input form-check-input" id="hidden" name="aderencia[]" value=null >
+                        <label class="col-md-4-label form-check-label label_check" for="hidden"></label>
+                    </div>
         </div>
         
     </div>

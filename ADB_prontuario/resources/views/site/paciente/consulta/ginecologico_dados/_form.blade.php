@@ -1,8 +1,8 @@
 {{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomSelectDefine" class="form-label">Já entrou na menopausa?  <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" name="menopausa" required>
-         <option selected disabled value="">Clique para escolher...</option>
+    <select class="form-select" id="validationCustomSelectDefine" onclick="mostraDados()" onchange="mostraDados()" onfocus="mostraDados()" onload="mostraDados()" name="menopausa" required>
+         <option selected disabled value="0">Clique para escolher...</option>
         <option value="1" {{ isset($dados->menopausa) && $dados->menopausa == 1 ? 'selected' : '' }}>Sim</option>
         <option value="0" {{ isset($dados->menopausa) && $dados->menopausa == 0 ? 'selected' : '' }}>Não</option>
     </select>
@@ -13,7 +13,7 @@
 
 <div class="col-md-4 input-translate-less" id="input_show">
     <label for="validationCustomidade_menopausa" class="form-label">Qual a idade que entrou na menopausa? <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomidade_menopausa" value="{{ isset($dados->idade_menopausa) ? $dados->idade_menopausa : '' }}" name="idade_menopausa" placeholder="Insira a idade na menopausa">
+    <input type="number" class="text-center form-control" id="validationCustomidade_menopausa" value="{{ isset($dados->idade_menopausa) ? $dados->idade_menopausa : '' }}" name="idade_menopausa" placeholder="Insira a idade na menopausa" >
     <div class="invalid-feedback">
         Insira a idade na menopausa
     </div>
@@ -21,7 +21,7 @@
 
 <div class="col-md-4" id="input_show_multiple">
     <label for="validationCustomMenopausaCirurgica" class="form-label">A menopausa foi cirúrgica? <b>*</b> </label>
-    <select class="form-select" id="validationCustomMenopausaCirurgica" name="menopausa_cirurgica">
+    <select class="form-select" id="validationCustomMenopausaCirurgica" name="menopausa_cirurgica" >
         <option selected disabled value="">Clique para escolher...</option>
         <option selected hidden value="null">Clique para escolher...</option>
         <option value="1" {{ isset($dados->menopausa_cirurgica) && $dados->menopausa_cirurgica == 1 ? 'selected' : '' }}>Sim</option>
@@ -32,7 +32,6 @@
     </div>
 </div>
 
-{{-- MUDAR FORMA --}}
 <div class="col-md-4">
     <label for="validationCustomSelectDefine2" class="form-label">Já menstruou pela primeira vez? <b>*</b> </label>
     <select class="form-select" id="validationCustomSelectDefine2" onclick="mostraDados2()" onchange="mostraDados2()" onfocus="mostraDados2()" name="menstruacao" required>
@@ -47,7 +46,7 @@
 
 <div class="col-md-4 input-translate-less" id="input_show2">
     <label for="validationCustomidade_menstruacao" class="form-label">Qual foi a idade na primeira menstruação <b>*</b> </label>
-    <input type="number" class="text-center form-control" id="validationCustomidade_menstruacao" value="{{ isset($dados->idade_menstruacao) ? $dados->idade_menstruacao : '' }}" name="idade_menstruacao" placeholder="Insira a idade na menstruação">
+    <input type="number" class="text-center form-control" id="validationCustomidade_menstruacao" value="{{ isset($dados->idade_menstruacao) ? $dados->idade_menstruacao : '' }}" name="idade_menstruacao" placeholder="Insira a idade na menstruação" >
     <div class="invalid-feedback">
         Insira a idade na menstruação
     </div>
@@ -84,7 +83,7 @@
 
 <div class="col-md-6" id="input_show_double">
     <label for="validationCustommetodos_contraceptivos" class="form-label">Quais métodos contraceptivos são utilizados? <b>*</b> </label>
-    <input type="text" class="form-control" id="validationCustommetodos_contraceptivos" value="{{ isset($dados->metodos_contraceptivos) ? $dados->metodos_contraceptivos : '' }}" name="metodos_contraceptivos" placeholder="Insira os métodos contraceptivos">
+    <input type="text" class="form-control" id="validationCustommetodos_contraceptivos" value="{{ isset($dados->metodos_contraceptivos) ? $dados->metodos_contraceptivos : '' }}" name="metodos_contraceptivos" placeholder="Insira os métodos contraceptivos" >
     <div class="invalid-feedback">
         Insira os métodos contraceptivos utilizados
     </div>

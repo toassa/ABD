@@ -8,21 +8,19 @@
             {{route('opcao.users')}}
         @endslot
     @endcomponent
-    @if ($user_avaiable == false)
-        <script type="text/javascript">alert("É impossível excluir esse usuário");</script>
-    @elseif ($user_avaiable == false)
-    <script type="text/javascript">alert("Usuário excluído com sucesso!");</script>
+    @if ($user_avaiable == true)
+        <script type="text/javascript">alert("Usuário excluído com sucesso!");</script>
     @endif
     <section class="square-content square-content--listar content-list-excluir">
         <h1 class="text-center">Excluir Usuários</h1>
         <div class="grid">
             <div class="row row-title">
                 <div class="col text-center col-title">Nome</div>
-                <div class="col text-center col-title">Num. USP</div>
-                <div class="col text-center col-title">E-mail</div>
-                <div class="col text-center col-title">Mesa</div>
-                <div class="col text-center col-title">Cargo</div>
-                <div class="col text-center col-title">Permissão</div>
+                <div class="col text-center col-title" id="num_USP">Num. USP</div>
+                <div class="col text-center col-title" id="email">E-mail</div>
+                <div class="col text-center col-title" id="mesa">Mesa</div>
+                <div class="col text-center col-title" id="cargo">Cargo</div>
+                <div class="col text-center col-title" id="administrador">Permissão</div>
                 <div class="col text-center col-title">Situação</div>
                 <div class="col text-center col-title"></div>
             </div>
@@ -37,13 +35,12 @@
                     @if($row->ativo == false)
                         <div class="row row-text row-hover row-inactivated">
                     @endif
-       
-                            <p class="col text-center col-text">{{$row->name}}</p>
-                            <p class="col text-center col-mail">{{$row->num_USP}}</p>
-                            <p class="col text-center col-mail">{{$row->email}}</p>
-                            <p class="col text-center col-text">{{$row->mesa}}</p>
-                            <p class="col text-center col-text">{{$row->cargo}}</p>
-                            <p class="col text-center col-text">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
+                        <p class="col text-center col-text" id="nome">{{$row->name}}</p>
+                        <p class="col text-center col-mail" id="num_USP">{{$row->num_USP}}</p>
+                        <p class="col text-center col-mail" id="email">{{$row->email}}</p>
+                        <p class="col text-center col-text" id="mesa">{{$row->mesa}}</p>
+                        <p class="col text-center col-text" id="cargo">{{$row->cargo}}</p>
+                        <p class="col text-center col-text" id="administrador">{{($row->administrador) ? 'Administrador' : 'Usuário'}}</p>
                             <p class="col text-center col-text">{{($row->ativo) ? 'Ativo' : 'Inativo'}}</p>
                             <p class="col text-center col-text">
                                 <span class="material-symbols-outlined">
@@ -72,5 +69,7 @@
             <script src="{{asset('js/excluirgustavo.js')}}"></script>
         </div>
     </section>
-    
+    <script>
+        reload();
+    </script>
 @endsection

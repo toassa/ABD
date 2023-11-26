@@ -105,13 +105,13 @@ class UserController extends Controller
     }
 
     public function list_excluir(){
-        $user_avaiable = true;
+        $user_avaiable = false;
         $rows = User::all();
         return view('site.usuario.list-excluir', compact('rows', 'user_avaiable'));
     }
 
     public function excluir($num_USP){
-        $user_avaiable = true;
+        $user_avaiable = false;
         $rows = User::all();
 
         $adminUsers = User::where('administrador', 1)->where('ativo', 1)->get();

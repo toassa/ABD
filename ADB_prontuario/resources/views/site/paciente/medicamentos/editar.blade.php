@@ -8,7 +8,7 @@
         <h1 class="text-center">Edição de Medicamentos</h1>
         <div class="usuario">
             <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
-                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">Paciente: {{$dados->nome}}</a>
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados->nome}}</a>
                 <span class="material-symbols-outlined">
                     settings
                 </span>

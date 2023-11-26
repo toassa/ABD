@@ -92,7 +92,7 @@ class EmailController extends Controller
         }        
         else 
         {   
-            return redirect()->route('enviar_email')->with('msg', 'ta errado,burro!');
+            return redirect()->route('enviar_email')->with('msg', 'O código está incorreto ou o tempo expirado.                   Por favor,tente novamente!');
             // Caso o codigo ou o tempo esteja errado/expirado, retornara erro na view enviar_email
         }
     }

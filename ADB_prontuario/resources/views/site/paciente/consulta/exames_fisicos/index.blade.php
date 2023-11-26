@@ -10,15 +10,23 @@
     @endslot
     @slot('content_menu')
         @if ($page == 'cadastrar')
-            <form action="{{route('exames_fisicos.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+            <form action="{{route('exames_fisicos.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation form-consulta" novalidate>
         @else
-            <form action="{{route('exames_fisicos.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
+            <form action="{{route('exames_fisicos.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation form-consulta" novalidate>
         @endif
             {{ csrf_field() }}
             @if ($page != 'cadastrar')
                 <input type="hidden" name="_method" value="put">
             @endif
             <h1 class="text-center">Exames físicos</h1>
+            <div class="primas_usuario">
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
+                    <span class="material-symbols-outlined">
+                    settings
+                    </span>
+                </a>
+            </div>
             <p>Atenção, seguir o roteiro físico para guiar o exame. Adicionar aqui as alterações observadas em cada aparelho. Caso não se observe alterações, anotar NDN (nada digno de nota), especificando no roteiro físico os achados.</p>
             @include('site.paciente.consulta.exames_fisicos._form')
             <div class="col-12 col-btn-form">

@@ -97,6 +97,7 @@ Route::middleware(['active.check'])->group(function () {
     });
 
     Route::group(['middleware' => 'auth'], function(){
+
         Route::prefix('paciente')->group(function(){
             Route::get('/', [PacienteController::class, 'listar'])->name('opcao.pacientes');
         
@@ -379,7 +380,7 @@ Route::middleware(['active.check'])->group(function () {
                 Route::prefix('/form')->group(function(){
                     Route::post('/salvar/{num_registro}/{num_USP}', [MedicamentoController::class, 'salvar'])->name('medicamento.salvar');
 
-                    Route::put('/atualizar/{num_registro}/{nome}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
+                    Route::put('/atualizar/{num_registro}/{nome}/{num_USP}', [MedicamentoController::class, 'atualizar'])->name('medicamento.atualizar');
                     
                     Route::get('/excluir/{num_registro}/{nome}', [MedicamentoController::class, 'excluir'])->name('medicamento.excluir');
                 });
@@ -400,6 +401,10 @@ Route::get('/419', function(){
 Route::get('/404', function(){
     return view('errors/404');
 })->name('404error');
+
+Route::get('/403', function(){
+    return view('errors/403');
+})->name('403error');
 
 
 // ARRUMAR:

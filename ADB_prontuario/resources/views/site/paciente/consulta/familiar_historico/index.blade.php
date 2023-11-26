@@ -14,14 +14,20 @@
         @else
             <form action="{{route('familiar_historico.atualizar', ['num_registro' => $dados->num_registro, 'num_USP' => Auth::user()->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
         @endif
-
-        <form action="{{route('familiar_historico.salvar', ['num_registro' => $dados->num_registro, 'num_USP' => $dados->num_USP])}}" method="post" class="row g-3 needs-validation" novalidate>
             {{ csrf_field() }}
-	@if ($page != 'cadastrar')
+        	@if ($page != 'cadastrar')
                 <input type="hidden" name="_method" value="put">
             @endif
 
             <h1 class="text-center">Histórico Familiar</h1>
+            <div class="primas_usuario">
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
+                    <span class="material-symbols-outlined">
+                    settings
+                    </span>
+                </a>
+            </div>
             <div class="pagination-container"> 
                 <div class="pagination-content">
                     @include('site.paciente.consulta.familiar_historico._form')

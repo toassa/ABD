@@ -19,6 +19,14 @@
                 <input type="hidden" name="_method" value="put">
             @endif
             <h1 class="text-center">Exame dos pés</h1>
+            <div class="primas_usuario">
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
+                    <span class="material-symbols-outlined">
+                    settings
+                    </span>
+                </a>
+            </div>
             <div class="pagination-container">
                 <div class="pagination-content">
                     @include('site.paciente.consulta.pes_exame._form')
@@ -49,7 +57,7 @@
         <script>
             const observacoes_pes_exame = document.getElementById('validationCustomObservacoes1')
         </script>
-        <script>
+        <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var checkboxes = document.querySelectorAll('input[name="regioes_ulceras[]"]');
                 var labels = document.querySelectorAll('label[for^="validationFormCheck"]');
@@ -411,7 +419,7 @@
             });
         });
     });
-</script>
+</script> -->
 
 
     @endslot

@@ -26,13 +26,13 @@
 
       @slot('grid_titles')
         <div class="row row-title">
-          <div class="col col-title">Nome</div>
-          <div class="col col-title">Num. de Registro</div>
-          <div class="col col-title">Telefone</div>
-          <div class="col col-title">Idade</div>
-          <div class="col col-title">Sexo</div>
-          <div class="col col-title">Profissão</div>
-          <div class="col col-title">Numero USP</div>
+          <div class="col col-title text-center">Nome</div>
+          <div class="col col-title text-center">Num. de Registro</div>
+          <div class="col col-title text-center" id="email">Telefone</div>
+          <div class="col col-title text-center" id="cargo">Idade</div>
+          <div class="col col-title text-center" id="mesa">Sexo</div>
+          <div class="col col-title text-center" id="administrador">Profissão</div>
+          <div class="col col-title text-center" id="num_USP">Numero USP</div>
         </div>
       @endslot
 
@@ -72,13 +72,13 @@
           </dialog>
           <a class="row row-text row-inactivated" style="text-decoration: none" onclick="show_dialog_excluir()">
           @endif
-              <p class="col col-text">{{$dado->nome}}</p>
-              <p class="col col-mail">{{$dado->num_registro}}</p>
-              <p class="col col-mail">{{$dado->telefone}}</p>
-              <p class="col col-text">{{$dado->idade}}</p>
-              <p class="col col-text">{{$dado->sexo}}</p>
-              <p class="col col-text">{{$dado->profissao}}</p>
-              <p class="col col-text">
+              <p class="col col-text text-center">{{$dado->nome}}</p>
+              <p class="col col-mail text-center">{{$dado->num_registro}}</p>
+              <p class="col col-mail text-center" id="cargo">{{$dado->telefone}}</p>
+              <p class="col col-text text-center" id="administrador">{{$dado->idade}}</p>
+              <p class="col col-text text-center" id="mesa">{{$dado->sexo}}</p>
+              <p class="col col-text text-center" id="num_USP">{{$dado->profissao}}</p>
+              <p class="col col-text text-center" id="email">
                 @if ($dado->num_USP == null)
                   Usuário excluído
                 @else

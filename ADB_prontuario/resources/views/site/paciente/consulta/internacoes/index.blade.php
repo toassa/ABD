@@ -21,6 +21,14 @@
                 <input type="hidden" name="_method" value="put">
             @endif
             <h1 class="text-center">Internações</h1>
+            <div class="primas_usuario">
+                <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
+                    <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
+                    <span class="material-symbols-outlined">
+                    settings
+                    </span>
+                </a>
+            </div>
             @include('site.paciente.consulta.internacoes._form')
             <div class="col-12 col-btn-form">
                 <button class="btn btn-giga btn-primary" type="reset">Limpar</button>

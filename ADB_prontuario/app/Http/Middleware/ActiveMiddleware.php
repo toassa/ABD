@@ -15,6 +15,6 @@ class ActiveMiddleware
         {
             return $next($request);
         }
-        return redirect()->route('404error');
+        return redirect()->route('403error');
     }
 }

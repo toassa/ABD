@@ -19,7 +19,7 @@
                 <input type="hidden" name="_method" value="put">
             @endif
             <h1 class="text-center">Primeiro Diagnóstico</h1>
-            <div class="usuario">
+            <div class="primas_usuario">
                 <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
                     <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados_paciente->nome}}</a>
                     <span class="material-symbols-outlined">

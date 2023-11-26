@@ -8,7 +8,7 @@
     <section class="align-content">
         {{-- Verifica se o usuário está ativo para que, só assim, tenha acesso às funcionalidades --}}
         @if (Auth::user()->ativo == true)
-            <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador">
+            <img src="{{asset('images/pack/senhor-computador.png')}}" alt="Médico sentado ao computador" id="senhor-computador">
             <nav class="square-content square-content--opcoes">
                 <h2>Escolha entre as opções:</h2>
                 <a href="{{route('opcao.pacientes')}}" class="button-white-blue button-white-blue--opcoes">Paciente</a><br>

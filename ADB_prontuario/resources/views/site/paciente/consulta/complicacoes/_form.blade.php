@@ -20,7 +20,6 @@
     </div>
 </div>
 
-{{-- MUDAR FORMA --}}
 <div class="col-md-6" id="input_show_multiple">
     <label for="validationCustomSelectDefineDouble" class="form-label">Já foi internado por alguma complicação? <b>*</b> </label>
     {{-- <select class="form-select" id="validationCustomSelectDefineDouble" name=""> --}}
@@ -45,7 +44,7 @@
 
 <div class="col-md-4">
     <label for="validationCustomSelectDefine3" class="form-label">Já teve episódio(s) de hipoglicemia? <b>*</b> </label>
-    <select class="form-select" id="validationCustomSelectDefine3" onclick="mostraDados3()" onchange="mostraDados3()" onfocus="mostraDados3()" name="episodio_hipoglicemia"  required>
+    <select class="form-select" id="validationCustomSelectDefine3" onclick="mostraDados3()" onchange="mostraDados3()" onfocus="mostraDados3()" name="episodio_hipoglicemia" required >
         <option selected disabled value="">Clique para escolher...</option>
         <option value="Sim" {{ isset($dados->episodio_hipoglicemia) && $dados->episodio_hipoglicemia === 'Sim' ? 'selected' : '' }}>Sim</option>
         <option value="Não" {{ isset($dados->episodio_hipoglicemia) && $dados->episodio_hipoglicemia === 'Não' ? 'selected' : '' }}>Não</option>

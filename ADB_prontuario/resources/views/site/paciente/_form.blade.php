@@ -210,10 +210,10 @@
 
     <div class="col-md-6" style="padding: 2% 15%">
       <div class="form-check">
-      <input class="form-check-input" type="hidden" value="false" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
+      <input class="form-check-input" type="hidden" value="false" name="ativo" id="invalidCheck">
       <input class="form-check-input" type="checkbox" value="true" {{ isset($dados->ativo) && $dados->ativo == true ? 'checked' : '' }} name="ativo" id="invalidCheck">
       <label class="form-check-label textinho" for="invalidCheck">
-          Ativo?<b>*</b>
+          Ativo?
       </label>
       </div>
     </div>
@@ -261,7 +261,7 @@
   <!-- Complemento -->
   <div class="col-md-4">
     <label for="validationCustomComplemento" class="form-label textinho">Complemento</label>
-    <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento" placeholder="Digite um complemento" required>
+    <input type="text" class="form-control text-center" id="validationCustomComplemento" value="{{isset($dados->complemento) ? $dados->complemento : ''}}" maxlength="50" name="complemento" placeholder="Digite um complemento">
     <div class="invalid-feedback" id="customComplementoError">
         Complemento inválido
     </div>

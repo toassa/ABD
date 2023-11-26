@@ -26,7 +26,8 @@ function hide_dialog_excluir(){
 document.querySelectorAll('.btn-excluir').forEach(function(button) {
     button.addEventListener('click', function(event) {
 
-
+        // Ao excluir, envia para o link diretamente no servidor.
+        // É necessário alterar o endereço para uso em outro servidor ou no projeto local
         window.location.href="http://projetoscti.com.br/projetoscti22/user/form/excluir/"+ID;
     });
 });

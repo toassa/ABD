@@ -14,7 +14,7 @@
                 <h1 class="text-center">Medicamentos Utilizados</h1>
                 <div class="usuario">
                     <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">
-                        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}">Paciente: {{$dados->nome}}</a>
+                        <a href="{{route('paciente.configuracoes', $dados->num_registro)}}" id="name_paciente">Paciente: {{$dados->nome}}</a>
                         <span class="material-symbols-outlined">
                             settings
                         </span>
@@ -34,9 +34,9 @@
                     <div class="row row-title">
                         <div class="col-md-2 text-center col-title">Nome</div>
                         <div class="col-md-2 text-center col-title">Tipo</div>
-                        <div class="col-md-2 text-center col-title">Posologia</div>
-                        <div class="col-md-2 text-center col-title">Aderência</div>
-                        <div class="col-md-2 text-center col-title">Num USP</div>
+                        <div class="col-md-2 text-center col-title" id="mesa">Posologia</div>
+                        <div class="col-md-2 text-center col-title" id="administrador">Aderência</div>
+                        <div class="col-md-2 text-center col-title" id="num_USP">Num USP</div>
                         <div class="col-md-1 text-center col-title"></div>
                         <div class="col-md-1 text-center col-title"></div>
                     </div>
@@ -51,12 +51,12 @@
                     @foreach ($tratamento_medicamentos as $tratamento_medicamento)
                             @if ($tratamento_medicamento->num_registro == $dados->num_registro)
                                 <!-- <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}"> -->
-                                    <div class="row row-text" style="cursor: none;">
+                                    <div class="row row-text" style="cursor:default;">
                                         <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->nome}}</p>
                                         <p class="col-md-2 text-center col-mail">{{$tratamento_medicamento->tipo}}</p>
-                                        <p class="col-md-2 text-center col-mail">{{$tratamento_medicamento->posologia}}</p>
-                                        <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->aderencia}}</p>
-                                        <p class="col-md-2 text-center col-text">{{$tratamento_medicamento->num_USP}}</p>
+                                        <p class="col-md-2 text-center col-mail" id="mesa">{{$tratamento_medicamento->posologia}}</p>
+                                        <p class="col-md-2 text-center col-text" id="administrador">{{$tratamento_medicamento->aderencia}}</p>
+                                        <p class="col-md-2 text-center col-text" id="num_USP">{{$tratamento_medicamento->num_USP}}</p>
                                         <!-- <p class="col-md-1 text-center col-text"> -->
                                             <a href="{{route('medicamento.editar', ['num_registro' => $dados->num_registro, 'nome' => $tratamento_medicamento->nome])}}" class="col-md-1 text-center col-text row-hover">
                                                 <span class="material-symbols-outlined" style="color: #78a82a !important; font-weight: 800 !important;">

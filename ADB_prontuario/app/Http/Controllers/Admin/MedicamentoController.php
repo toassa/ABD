@@ -25,13 +25,6 @@ class MedicamentoController extends Controller
 
     public function salvar(Request $req, $num_registro, $num_USP){
         $dados = $req->all();
-        // // existis ou first
-        // $existe = TratamentoMedicamento::where('nome', $dados['nome']);
-        // if($existe == true){        
-        //     dd($existe);
-        // }else{
-        //     dd('else');
-        // }
 
         TratamentoMedicamento::create([
             'num_registro'=>$num_registro,
@@ -57,40 +50,24 @@ class MedicamentoController extends Controller
         return view('site.paciente.medicamentos.editar', compact('dados', 'medicamentos', 'tratamento_medicamentos'));
     }
 
-    public function atualizar(Request $req, $num_registro, $num_USP)
+    public function atualizar(Request $req, $num_registro, $nome, $num_USP)
     {
         $dados = $req->except('_token');
-        Paciente::where('num_registro',$num_registro)->update([
-            'num_registro' => $dados['num_registro'],
+        $dados_nome = $dados['nome'];
+        TratamentoMedicamento::where('num_registro',$num_registro)->where('nome', $dados_nome)->update([
+            'num_registro' => $num_registro,
             'nome' => $dados['nome'],
-            'data_nascimento' => $dados['data_nascimento'],
-            'idade' => $dados['idade'],  
-            'sexo' => $dados['sexo'],
-            'cor' => $dados['cor'],
-            'estado_civil' => $dados['estado_civil'],
-            'desempregado_aposentado_diabetes' => $dados['desempregado_aposentado_diabetes'],
-            'profissao' => $dados['profissao'],
-            'escolaridade' => $dados['escolaridade'],
-            'renda_mensal' => $dados['renda_mensal'],
-            'dependentes_renda' => $dados['dependentes_renda'],
-            'transporte' => $dados['transporte'],
-            'plano_saude' => $dados['plano_saude'],
-            'telefone' => $dados['telefone'],
-            'segundo_telefone' => $dados['segundo_telefone'],
-            'pertence_segundo_telefone' => $dados['pertence_segundo_telefone'],
-            'CEP' => $dados['CEP'],
-            'numero_moradia' => $dados['numero_moradia'],
-            'rua' => $dados['rua'],
-            'bairro' => $dados['bairro'],
-            'cidade' => $dados['cidade'],
-            'estado' => $dados['estado'],
-            'complemento' => $dados['complemento'],
-            'estado_nascimento' => $dados['estado_nascimento'],
-            'cidade_nascimento' => $dados['cidade_nascimento'],
-            'ativo' => $dados['ativo'],
-            'num_USP' => $num_USP,
+            'tipo'=>$dados['tipo'],
+            'posologia'=>$dados['posologia'],
+            'origem'=>$dados['origem'],
+            'consulta'=>$dados['consulta'],
+            'dose'=>$dados['dose'],
+            'periodo'=>$dados['periodo'],
+            'observacao'=>$dados['observacao'],
+            'aderencia'=>$dados['aderencia'],
+            'num_USP'=>$num_USP,
         ]);
-        return redirect()->route('Pacientes.listar');
+        return redirect()->route('medicamento.index', $num_registro);
     }
 
     public function excluir($num_registro, $nome){

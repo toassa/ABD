@@ -27,11 +27,21 @@
                 e-mail. Insira o código abaixo para redefinir a senha</p>
             <form class="" action="{{route('confirmar_email_senha')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                     </div>
+                @endif
                 <div class="form-group col-md-8 centralizado">
                     <label class="label-resetar">Código</label>
                     <input type="text" class="form-control input-text-resetar" name="codigoresp" placeholder="Digite o código" maxlength="5" required>
                     <label class="label-resetar">Senha</label>
-                    <input type="password" class="form-control input-text-resetar" name="senhaNova" placeholder="Nova senha" required>
+
+		<input type="password" class="form-control input-text-resetar" id="validationCustomPass" name="senhaNova" placeholder="Nova senha" required>
+                    <span class="material-symbols-outlined show-password2" id="olhinho" onclick="togglePasswordVisibility()">
+                        visibility_off
+                    </span>
+
                     <input type="hidden" class="form-control input-text-resetar" name="time" value="{{(string)$info->time}}">
                     <input type="hidden" class="form-control input-text-resetar" name="codigo" value="{{(string)$info->codigo}}">
                     <input type="hidden" class="form-control input-text-resetar" name="email" value="{{(string)$info->email}}">
