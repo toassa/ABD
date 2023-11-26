@@ -56,6 +56,7 @@
 > Nem todos os arquivos estão comentados, já que muitos seguem os mesmos princípios para as funcionalidades. Assim, serão listados os arquivos parecidos e o que está comentado, visando localizar os novos desenvolvedores:
 
    - Os arquivos de Controllers localizados no endereço: '/ADB_prontuario/app/Http/Controllers/Admin/Consulta' seguem o mesmo padrão de funcionalidades, por isso o comentado é o 'NeuropaticoComprometimentoController'; 
+   - O arvivo JavaScript localizado no endereço '\ADB_prontuario\public\js\excluirgustavo.js' é responsável por mostrar o pop-up na seção de excluir usuários. Ao excluir, o usuário é redirecionado à rota indicada para que a página atualize, no entanto, essa é um endereço do servidor no qual o projeto estava alocado. Siga as instruções do arquivo para rodá-lo corretamente.
 
 
 
